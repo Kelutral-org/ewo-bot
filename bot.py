@@ -20,11 +20,20 @@ with open("wordgame_words.json", encoding ='utf-8') as f:
 with open("compact_database.json", encoding ='utf-8') as f:
     search_database = json.load(f)
 
+with open("swear_database.json", encoding ='utf-8') as f:
+    swear_database = json.load(f)
+
 
 async def randomWord():
     word = random.choices(search_database)
     word = word[0]
-    word = word['name'] + ' ' + word['pos'] + ' = \n' + word['definition']
+    word = word['name'] + ' ' + word['pos'] + ' = \n' + word['definition'].replace('\n', '; ')
+    return word
+
+async def randomSwear():
+    word = random.choices(swear_database)
+    word = word[0]
+    word = word['name'] + '!'
     return word
 
 
@@ -44,8 +53,8 @@ async def on_message(message):
     lowermsg = message.content.lower()
     if message.content.startswith(config.prefix + 'help'):
         await message.author.send(embed=discord.Embed(description=config.help, colour=0x5b2076))
-    if "í" in message.content:
-        await message.channel.send(message.content.replace('í','ì') + '*')
+    if "í" in lowermsg:
+        await message.channel.send(message.content.replace('í','ì').replace('Í','Ì') + '*')
     if lowermsg.startswith("ma ewo', repeat after me: "):
         await message.channel.send(message.content.lower().replace("ma ewo', repeat after me: ", ''))
     await bot.process_commands(message)
@@ -60,7 +69,7 @@ async def exit(ctx):
         await ctx.send(embed=discord.Embed(title="DENIED!", description="You do not have access to run this command!", colour=0xff0000))
 
 
-@bot.command(name='scream', aliases=['zawng'])
+@bot.command(name='scream')
 async def scream(ctx, args):
     screech = "SKR"
     length = int(args)
@@ -68,6 +77,28 @@ async def scream(ctx, args):
         length = 100
     while length > 0:
         screech = screech + "E"
+        length -= 1
+    await ctx.send(screech)
+
+@bot.command(name='zawng')
+async def zawng(ctx, args):
+    screech = "S"
+    length = int(args)
+    if length > 100:
+        length = 100
+    while length > 0:
+        screech = screech + "A"
+        length -= 1
+    await ctx.send(screech)
+
+@bot.command(name='hiss', aliases=['oìsss'])
+async def hiss(ctx, args):
+    screech = "OÌ"
+    length = int(args)
+    if length > 100:
+        length = 100
+    while length > 0:
+        screech = screech + "S"
         length -= 1
     await ctx.send(screech)
 
@@ -91,18 +122,23 @@ async def react(ctx,args,emojiname):
     emoji = '<' + emojiname + '>'
     channel = ctx.message.channel
     if ctx.message.author.id in config.operators:
-        ctx.message.delete()
-        messages = await channel.history(limit=amount + 1).flatten()
-        messages.pop(0)
+        await ctx.message.delete()
+        messages = await channel.history(limit=amount).flatten()
         for message in messages:
             await message.add_reaction(emoji)
+
 @bot.command()
 async def reactmsg(ctx,msg,emojiname):
     if ctx.message.author.id in config.operators:
-        ctx.message.delete()
+        await ctx.message.delete()
         emoji = '<' + emojiname + '>'
         message = await ctx.fetch_message(msg)
         await message.add_reaction(emoji)
+
+@bot.command(name='swear', aliases=['räptum'])
+async def swear(ctx):
+    randomswear = await randomSwear()
+    await ctx.send(randomswear)
 bot.load_extension('searcher')
 bot.load_extension('numbers')
 bot.run(config.token)
