@@ -51,12 +51,13 @@ async def on_ready():
 @bot.event
 async def on_message(message):
     lowermsg = message.content.lower()
+
     if message.content.startswith(config.prefix + 'help'):
         await message.author.send(embed=discord.Embed(description=config.help, colour=0x5b2076))
-    if "í" in lowermsg:
-        await message.channel.send(message.content.replace('í','ì').replace('Í','Ì') + '*')
+
     if lowermsg.startswith("ma ewo', repeat after me: "):
         await message.channel.send(message.content.lower().replace("ma ewo', repeat after me: ", ''))
+
     await bot.process_commands(message)
 
 
@@ -140,5 +141,6 @@ async def swear(ctx):
     randomswear = await randomSwear()
     await ctx.send(randomswear)
 bot.load_extension('searcher')
+bot.load_extension('wordgame')
 bot.load_extension('numbers')
 bot.run(config.token)

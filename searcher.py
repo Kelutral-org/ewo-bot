@@ -66,3 +66,4 @@ class SearchCog(commands.Cog):
                 resultit += 1
 def setup(bot):
     bot.add_cog(SearchCog(bot))
+    print('Added new Cog: ' + str(SearchCog))
