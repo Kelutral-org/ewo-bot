@@ -25,7 +25,7 @@ def checkdigit(digit):
     return affix
 
 # Replace RandomCog with something that describes the cog.  E.G. SearchCog for a search engine, sl.
-class NumbersCog(commands.Cog):
+class Numbers(commands.Cog):
     def __init__(self,bot):
         self.bot = bot
 
@@ -165,4 +165,5 @@ class NumbersCog(commands.Cog):
 
 
 def setup(bot):
-    bot.add_cog(NumbersCog(bot))
+    bot.add_cog(Numbers(bot))
+    print('Added new Cog: ' + str(Numbers))

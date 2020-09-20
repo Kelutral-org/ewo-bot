@@ -2,8 +2,12 @@ import discord
 from discord.ext import commands
 import re
 import bot
+import json
 
-class SearchCog(commands.Cog):
+with open("cogs/compact_database.json", encoding='utf-8') as f:
+    search_database = json.load(f)
+
+class Search(commands.Cog):
     def __init__(self,bot):
         self.bot = bot
 
@@ -20,7 +24,7 @@ class SearchCog(commands.Cog):
             options = []
             wordlist = args
         for word in wordlist:
-            for dictionary in bot.search_database:
+            for dictionary in search_database:
                 foundname = dictionary["name"]
                 info = ''
                 founddef = dictionary["definition"]
@@ -65,5 +69,5 @@ class SearchCog(commands.Cog):
                 await ctx.send(embed=discord.Embed(title = item,description=resultinfo[resultit], colour=0xff0000))
                 resultit += 1
 def setup(bot):
-    bot.add_cog(SearchCog(bot))
-    print('Added new Cog: ' + str(SearchCog))
+    bot.add_cog(Search(bot))
+    print('Added new Cog: ' + str(Search))

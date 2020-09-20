@@ -10,7 +10,10 @@ class RandomCog(commands.Cog):
 
     # commands have this format instead.  For any variables from the main file, use bot.variable.
     @commands.command()
+    async def wordgame(self, ctx, *args):
+        print('do things')
 
 
 def setup(bot):
-    bot.add_cog(MembersCog(bot))
+    bot.add_cog(RandomCog(bot))
+    print('Added new Cog: ' + str(RandomCog))

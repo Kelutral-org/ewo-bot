@@ -1,0 +1,67 @@
+[
+  {"command": "**?help**",
+    "usage": "?help *<command>",
+    "description": "Show info about a command or list all commands.",
+    "example": "?help scream"
+  },
+  {"command": "**?wordgame**",
+    "usage": "?wordgame <args>",
+    "description": "The main command for Ewo's wordgame.",
+    "arg_types": {
+      "[start/begin]": "Start a wordgame session in this channel with defined args. Default args are [multiplayer, casual]",
+      "[stop/end]": "Stop the current wordgame session.",
+      "solo": "Set game to solo mode (Ewo' says a word instead of having to wait for another player).",
+      "multiplayer": "Set game to multiplayer mode (Ewo' only records other players words and the same player cannot say a word twice in a row).",
+      "competitive": "Set game to competitive mode (Words cannot be reused and the player who says a word ending with a letter that no unused words start with will win).",
+      "casual": "Set game to casual mode (Words can be reused and the game will not end unless stopped with the command.)"
+    },
+    "example": "?wordgame begin solo competitive"
+  },
+  {"command": "**?search**",
+    "aliases": ["fwew", "word", "lì'u", "pelì'u"],
+    "usage": "?search *-<arg1><arg2>... <word>",
+    "description": "Look up a Na'vi or English word and get a definition.",
+    "arg_types": {
+      "p":  "Shows the part of speech of the word in the definition.",
+      "i":  "Shows the IPA of the word in the definition.",
+      "f":  "Shows the stress of the word in the definition.",
+      "s":  "Shows the source of the word in the definition.",
+      "t":  "Shows the topic of the word in the definition.",
+      "e":  "Searches in match mode (only entries containing direct matches will be shown)."
+    },
+    "example": "?search -pfe sunu"
+  },
+  {"command": "**?scream**",
+    "usage": "?scream <number>",
+    "description": "Make Ewo' scream. One number = one 'E'",
+    "example": "?scream 10"
+  },
+  {"command": "**?zawng**",
+    "usage": "?zawng <number>",
+    "description": "It's just ?scream but Na'vi",
+    "example": "?zawng 10"
+  },
+  {"command": "**?hiss**",
+    "aliases": ["oìsss"],
+    "usage": "?hiss <number>",
+    "description": "It's just ?scream but with less screaming and more ssssss",
+    "example": "?hiss 10"
+  },
+  {"command": "**?random**",
+    "aliases": ["renulke"],
+    "usage": "?random <number>",
+    "description": "Generates random Na'vi words and their meanings.",
+    "example": "?random 5"
+  },
+  {"command": "**?react**",
+    "usage": "?react <message_id> <emoji>",
+    "description": "Make Ewo' react to a message.",
+    "example": "?react 757381393947951114 :navitroll:"
+  },
+  {
+    "command": "**?swear**",
+    "usage": "?swear",
+    "description": "Do you feel like swearing? Keep yourself clean, Ewo' can do it for you.",
+    "example": "?swear"
+  }
+]

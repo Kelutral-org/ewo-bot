@@ -6,14 +6,14 @@ import bot
 
 import random
 
-with open("compact_database.json", encoding ='utf-8') as f:
+with open("cogs/compact_database.json", encoding ='utf-8') as f:
     search_database = json.load(f)
 
-with open("swear_database.json", encoding ='utf-8') as f:
+with open("cogs/fun/swear_database.json", encoding ='utf-8') as f:
     swear_database = json.load(f)
 
 
-class FunCog(commands.Cog):
+class Fun(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
@@ -100,5 +100,5 @@ class FunCog(commands.Cog):
 
 
 def setup(bot):
-    bot.add_cog(FunCog(bot))
-    print('Added new Cog: ' + str(FunCog))
+    bot.add_cog(Fun(bot))
+    print('Added new Cog: ' + str(Fun))

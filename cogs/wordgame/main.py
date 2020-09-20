@@ -7,19 +7,19 @@ import discord
 from discord.ext import commands
 import bot
 
-with open("wordgame_words.json", encoding='utf-8') as f:
+with open("cogs/wordgame/wordgame_words.json", encoding='utf-8') as f:
     wordgame_words = json.load(f)
 
-with open("wordgame_channels.json", encoding='utf-8') as f:
+with open("cogs/wordgame/wordgame_channels.json", encoding='utf-8') as f:
     wordgame_channels = json.load(f)
 
-with open("wordgame_players.yaml", encoding='utf-8') as f:
+with open("cogs/wordgame/wordgame_players.yaml", encoding='utf-8') as f:
     wordgame_players = yaml.load(f, Loader=yaml.FullLoader)
 
 players = {}
 for key, value in sorted(wordgame_players.items(), key=lambda x: int(x[1]), reverse=True):
     players[key] = value
-with open("wordgame_players.yaml", 'w') as f:
+with open("cogs/wordgame/wordgame_players.yaml", 'w') as f:
     yaml.safe_dump(players, f, default_flow_style=False, sort_keys=False)
     f.close()
 wordgame_players = players
@@ -27,7 +27,7 @@ wordgame_players = players
 
 # Replace RandomCog with something that describes the cog.  E.G. SearchCog for a search engine, sl.
 
-class WordgameCog(commands.Cog):
+class Wordgame(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
@@ -92,43 +92,43 @@ class WordgameCog(commands.Cog):
         await ctx.send(embed=discord.Embed(title="Points:", description=newlist, colour=899718))
 
     # commands have this format instead.  For any variables from the main file, use bot.variable.
-    @commands.command(name='wordgame', aliases=['lì\'uyä'])
+    @commands.command(name='wordgame', aliases=['uvanlì\'uyä'])
     async def wordgame(self, ctx, *args):
         options = list(args)
         print('?wordgame run with following args: ' + str(options) + '\n')
         channels = wordgame_channels
 
-        if 'solo' in options:
+        if 'solo' in options and not 'multiplayer' in options:
             if ctx.channel.id in self.wordgame_activechannels:
                 await ctx.channel.send(
                     embed=discord.Embed(description="This game is now solo!", colour=899718))
             self.solo = True
             print('Solo = True')
-        if 'multiplayer' in options:
+        if 'multiplayer' in options and not 'solo' in options:
             if ctx.channel.id in self.wordgame_activechannels:
                 await ctx.channel.send(
                     embed=discord.Embed(description="This game is now multiplayer!", colour=899718))
             self.solo = False
             print('Solo = False')
-        if 'competitive' in options:
+        if 'competitive' in options and not 'casual' in options:
             if ctx.channel.id in self.wordgame_activechannels:
                 await ctx.channel.send(
                     embed=discord.Embed(description="This game is now competitive!", colour=899718))
             self.competitive = True
             print('Competitive = True')
-        if 'casual' in options:
+        if 'casual' in options and not 'competitive' in options:
             if ctx.channel.id in self.wordgame_activechannels:
                 await ctx.channel.send(
                     embed=discord.Embed(description="This game is now casual!", colour=899718))
             self.competitive = False
             print('Competitive = False')
 
-        if options == ['add'] or options == ['new']:
+        if options == ['add'] or options == ['new'] and not options == ['remove'] or options == ['delete']:
             if ctx.message.author.id in bot.config.operators:
                 if not ctx.channel.id in channels:
                     print("Creating new wordgame channel: " + str(ctx.channel.id))
                     channels.append(ctx.channel.id)
-                    with open("wordgame_channels.json", 'w') as f:
+                    with open("cogs/wordgame/wordgame_channels.json", 'w') as f:
                         json.dump(channels, f)
                         f.close()
                     await ctx.send(embed=discord.Embed(description="Added this channel (" + str(
@@ -140,12 +140,12 @@ class WordgameCog(commands.Cog):
                                             colour=0xff0000))
                     print('Current channel is already a wordgame channel.')
 
-        if options == ['remove'] or options == ['delete']:
+        if options == ['remove'] or options == ['delete'] and not options == ['add'] or options == ['new']:
             if ctx.message.author.id in bot.config.operators:
                 if ctx.channel.id in channels:
                     print("Removing current wordgame channel: " + str(ctx.channel.id))
                     channels.remove(ctx.channel.id)
-                    with open("wordgame_channels.json", 'w') as f:
+                    with open("cogs/wordgame/wordgame_channels.json", 'w') as f:
                         json.dump(channels, f)
                         f.close()
                     await ctx.send(embed=discord.Embed(description="Removed this channel (" + str(
@@ -157,7 +157,7 @@ class WordgameCog(commands.Cog):
                                             colour=0xff0000))
                     print('Current channel is not a wordgame channel.')
 
-        if 'start' in options or 'begin' in options:
+        if 'start' or 'begin' in options and not 'stop' or 'end' in options:
             if ctx.channel.id in channels:
                 if not ctx.channel.id in self.wordgame_activechannels:
                     print('Found current channel in wordgame_channels: ' + str(ctx.channel.id) + ", activating it...")
@@ -177,7 +177,7 @@ class WordgameCog(commands.Cog):
                         embed=discord.Embed(description="There is already a game in this channel!",
                                             colour=0xff0000))
 
-        if 'stop' in options or 'end' in options:
+        if 'stop' or 'end' in options and not 'start' or 'begin' in options:
             if ctx.channel.id in channels:
                 if ctx.channel.id in self.wordgame_activechannels:
                     print('Found current channel in wordgame_activechannels: ' + str(
@@ -277,7 +277,7 @@ class WordgameCog(commands.Cog):
                                     for key, value in sorted(self.players.items(), key=lambda x: int(x[1]),
                                                              reverse=True):
                                         playerdata[key] = value
-                                    with open("wordgame_players.yaml", 'w') as f:
+                                    with open("cogs/wordgame/wordgame_players.yaml", 'w') as f:
                                         yaml.safe_dump(playerdata, f, default_flow_style=False,
                                                        sort_keys=False)
                                         f.close()
@@ -309,7 +309,7 @@ class WordgameCog(commands.Cog):
                             for key, value in sorted(self.players.items(), key=lambda x: int(x[1]),
                                                      reverse=True):
                                 playerdata[key] = value
-                            with open("wordgame_players.yaml", 'w') as f:
+                            with open("cogs/wordgame/wordgame_players.yaml", 'w') as f:
                                 yaml.safe_dump(playerdata, f, default_flow_style=False, sort_keys=False)
                                 f.close()
                             self.players = playerdata
@@ -409,5 +409,5 @@ class WordgameCog(commands.Cog):
 
 
 def setup(bot):
-    bot.add_cog(WordgameCog(bot))
-    print('Added new Cog: ' + str(WordgameCog))
+    bot.add_cog(Wordgame(bot))
+    print('Added new Cog: ' + str(Wordgame))
