@@ -1,11 +1,10 @@
 import json
+import yaml
 import random
 from collections import OrderedDict
 
 import discord
-import yaml
 from discord.ext import commands
-import re
 import bot
 
 with open("wordgame_words.json", encoding='utf-8') as f:
@@ -28,7 +27,7 @@ wordgame_players = players
 
 # Replace RandomCog with something that describes the cog.  E.G. SearchCog for a search engine, sl.
 
-class GameCog(commands.Cog):
+class WordgameCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
@@ -173,19 +172,6 @@ class GameCog(commands.Cog):
                     await ctx.send(embed=discord.Embed(description="Starting game (WIP)!\nSolo: " + str(
                         self.solo) + "\nCompetitive: " + str(
                         self.competitive) + "\n\nThe first word is " + displayword + "!", colour=899718))
-                    self.competitivehistory = ["pa'li", "pa'o", "pak", "palaŋ", "palon", "palukantsyìp", "palulukan",
-                                               "pam", "pamrel", "pamrelfya", "pamrelsiyu", "pamrelvi", "pamrelvul",
-                                               "pamtseo", "pamtseoŋopyu", "pamtseotu", "pamuvan", "pan", "pari",
-                                               "parul", "parulŋa'", "parultsyìp", "paskalin", "pasuk", "pate", "pák",
-                                               "pám", "pà", "pàfya", "pàìva", "pàŋa'", "pàoaŋ", "pàsena", "pàsmuŋ",
-                                               "pàsyul", "pàdé", "pähem", "pänu", "pänutìŋ", "päŋgo", "päŋgoyu",
-                                               "päsketpol", "pätsì", "pe", "pe'un", "pefnel", "pefya", "pehem",
-                                               "pela'a", "pelì'u", "pelìmsim", "pelun", "pensìl", "peŋ", "peŋhʀap",
-                                               "peseŋ", "pesu", "peu", "pén", "pè", "pèä", "pèral", "piak", "pil",
-                                               "pinvul", "pizàu", "pìlok", "pìmdan", "pìsá", "pìwob", "pìwobtsyìp",
-                                               "pjŋà", "pjde", "pjdepam", "pjdèu", "po", "poan", "poe", "polbà", "pom",
-                                               "pon", "poŋu", "postì", "pʀku", "pʀnen", "pʀnesyul", "pʀsmuŋ", "pʀte'",
-                                               "puk", "pukap", "puktsyìp", "pum", "pup", "puve"]
                 else:
                     await ctx.send(
                         embed=discord.Embed(description="There is already a game in this channel!",
@@ -263,7 +249,7 @@ class GameCog(commands.Cog):
 
                             name = bot.discord.Guild.get_member(message.guild, message.author.id)
                             name = str(name.nick)
-                            if name == "!" + 'None' + "!":
+                            if name == 'None':
                                 name = bot.bot.get_user(message.author.id)
                                 name = str(name.display_name)
 
@@ -423,5 +409,5 @@ class GameCog(commands.Cog):
 
 
 def setup(bot):
-    bot.add_cog(GameCog(bot))
-    print('Added new Cog: ' + str(GameCog))
+    bot.add_cog(WordgameCog(bot))
+    print('Added new Cog: ' + str(WordgameCog))
