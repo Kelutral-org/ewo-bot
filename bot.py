@@ -115,7 +115,7 @@ async def random_word(ctx, args):
         randomwords.append(randomword)
         number -= 1
     randomwords = '\n\n'.join(randomwords)
-    await ctx.send(embed=discord.Embed(title="Ewo'", description=randomwords))
+    await ctx.send(embed=discord.Embed(title="Random Words:", description=randomwords))
 
 @bot.command()
 async def react(ctx,args,emojiname):

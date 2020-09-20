@@ -1,5 +1,6 @@
 import json
 import random
+from collections import OrderedDict
 
 import discord
 import yaml
@@ -16,6 +17,14 @@ with open("wordgame_channels.json", encoding='utf-8') as f:
 with open("wordgame_players.yaml", encoding='utf-8') as f:
     wordgame_players = yaml.load(f, Loader=yaml.FullLoader)
 
+players = {}
+for key, value in sorted(wordgame_players.items(), key=lambda x: int(x[1]), reverse=True):
+    players[key] = value
+with open("wordgame_players.yaml", 'w') as f:
+    yaml.safe_dump(players, f, default_flow_style=False, sort_keys=False)
+    f.close()
+wordgame_players = players
+
 
 # Replace RandomCog with something that describes the cog.  E.G. SearchCog for a search engine, sl.
 
@@ -23,7 +32,7 @@ class GameCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    players = wordgame_players
+    players = OrderedDict(wordgame_players)
     lastword = ''
     lastword_end = ''
     last_player = 0
@@ -33,24 +42,36 @@ class GameCog(commands.Cog):
     soloplayer = 0
     competitivehistory = []
     competitive = False
+    gamepoints = {}
 
     async def solorandom(self):
         possible_words = []
-        for word in wordgame_words:
-            if word.startswith(self.lastword_end) and not word in self.competitivehistory:
-                possible_words.append(word)
-        try:
+        if self.competitive:
+            for word in wordgame_words:
+                if word.startswith(self.lastword_end) and not word in self.competitivehistory:
+                    possible_words.append(word)
+            try:
+                word = random.choices(possible_words)
+                word = word[0]
+                self.lastword_end = word[-1]
+                self.lastword = word
+            except IndexError:
+                return None
+        else:
+            for word in wordgame_words:
+                if word.startswith(self.lastword_end):
+                    possible_words.append(word)
             word = random.choices(possible_words)
             word = word[0]
             self.lastword_end = word[-1]
             self.lastword = word
-        except IndexError:
-            word = None
         return word
 
     async def firstword(self):
         word = random.choices(wordgame_words)
         word = word[0]
+        self.lastword = word
+        self.lastword_end = self.lastword[-1]
         return word
 
     @commands.command(name='points')
@@ -58,13 +79,18 @@ class GameCog(commands.Cog):
         newlist = {}
         for id in self.players:
             user = int(id)
-            name = str(bot.bot.get_user(user))
-            newlist[name] = self.players.__getitem__(id)
+            name = bot.discord.Guild.get_member(ctx.guild, user)
+            name = str("!" + str(name.nick) + "!")
+            if name == "!" + 'None' + "!":
+                name = bot.bot.get_user(user)
+                name = str("!" + name.display_name + "!")
+            newlist[name] = self.players.get(id)
         newlist = str(newlist)
         newlist = newlist.strip('{}')
-        newlist = newlist.replace('\'','')
-        newlist = newlist.replace(', ','\n')
-        await ctx.send(embed=discord.Embed(description=newlist, colour=899718))
+        newlist = newlist.replace('!\'', '')
+        newlist = newlist.replace('\'!', '')
+        newlist = newlist.replace(', ', '\n')
+        await ctx.send(embed=discord.Embed(title="Points:", description=newlist, colour=899718))
 
     # commands have this format instead.  For any variables from the main file, use bot.variable.
     @commands.command(name='wordgame', aliases=['lì\'uyä'])
@@ -74,13 +100,29 @@ class GameCog(commands.Cog):
         channels = wordgame_channels
 
         if 'solo' in options:
+            if ctx.channel.id in self.wordgame_activechannels:
+                await ctx.channel.send(
+                    embed=discord.Embed(description="This game is now solo!", colour=899718))
             self.solo = True
+            print('Solo = True')
         if 'multiplayer' in options:
+            if ctx.channel.id in self.wordgame_activechannels:
+                await ctx.channel.send(
+                    embed=discord.Embed(description="This game is now multiplayer!", colour=899718))
             self.solo = False
+            print('Solo = False')
         if 'competitive' in options:
+            if ctx.channel.id in self.wordgame_activechannels:
+                await ctx.channel.send(
+                    embed=discord.Embed(description="This game is now competitive!", colour=899718))
             self.competitive = True
+            print('Competitive = True')
         if 'casual' in options:
+            if ctx.channel.id in self.wordgame_activechannels:
+                await ctx.channel.send(
+                    embed=discord.Embed(description="This game is now casual!", colour=899718))
             self.competitive = False
+            print('Competitive = False')
 
         if options == ['add'] or options == ['new']:
             if ctx.message.author.id in bot.config.operators:
@@ -89,12 +131,14 @@ class GameCog(commands.Cog):
                     channels.append(ctx.channel.id)
                     with open("wordgame_channels.json", 'w') as f:
                         json.dump(channels, f)
-                    await ctx.send(embed=discord.Embed(
-                        description="Added this channel (" + str(ctx.channel.id) + ") as a wordgame channel!",
-                        colour=899718))
+                        f.close()
+                    await ctx.send(embed=discord.Embed(description="Added this channel (" + str(
+                        ctx.channel.id) + ") as a wordgame channel!",
+                                                       colour=899718))
                 else:
                     await ctx.send(
-                        embed=discord.Embed(description="This channel is already a wordgame channel!", colour=0xff0000))
+                        embed=discord.Embed(description="This channel is already a wordgame channel!",
+                                            colour=0xff0000))
                     print('Current channel is already a wordgame channel.')
 
         if options == ['remove'] or options == ['delete']:
@@ -104,157 +148,278 @@ class GameCog(commands.Cog):
                     channels.remove(ctx.channel.id)
                     with open("wordgame_channels.json", 'w') as f:
                         json.dump(channels, f)
-                    await ctx.send(embed=discord.Embed(
-                        description="Removed this channel (" + str(ctx.channel.id) + ") from wordgame channels!",
-                        colour=899718))
+                        f.close()
+                    await ctx.send(embed=discord.Embed(description="Removed this channel (" + str(
+                        ctx.channel.id) + ") from wordgame channels!",
+                                                       colour=899718))
                 else:
                     await ctx.send(
-                        embed=discord.Embed(description="This channel is not a wordgame channel!", colour=0xff0000))
+                        embed=discord.Embed(description="This channel is not a wordgame channel!",
+                                            colour=0xff0000))
                     print('Current channel is not a wordgame channel.')
 
         if 'start' in options or 'begin' in options:
             if ctx.channel.id in channels:
                 if not ctx.channel.id in self.wordgame_activechannels:
-                    print('Found current channel in wordgame_channels: ' + str(ctx.channel.id))
+                    print('Found current channel in wordgame_channels: ' + str(ctx.channel.id) + ", activating it...")
                     self.wordgame_activechannels.append(ctx.channel.id)
                     print('Current active channels: ' + str(self.wordgame_activechannels))
-                    await ctx.send(embed=discord.Embed(description="Starting game (WIP)!\nSolo: " + str(self.solo) + "\nCompetitive: " + str(self.competitive), colour=899718))
-                    self.lastword = await self.firstword()
+                    await self.firstword()
                     if self.competitive:
                         self.competitivehistory.append(self.lastword)
                     displayword = self.lastword.replace('d', 'tx').replace('g', 'kx').replace('b', 'px').replace(
-            'ŋ', 'ng').replace('á', 'aw').replace('é', 'ew').replace('à', 'ay').replace(
-            'è', 'ey').replace('ʀ', 'rr').replace('j', 'll')
-                    self.lastword_end = self.lastword[-1]
-                    self.competitivehistory = ["tì'iluke", 'nìsti', 'ean', 'nìtoitsye', 'inan', 'okup', 'eo', 'ŋeŋa', 'pàoaŋ', "ue'", 'alu', 'áaiei', "'a'á", 'uniltsa', 'ilu', 'entu', 'adge', 'lenʀa', 'utral', 'anìhèu', 'aba', 'lal', 'unil', "uniltìrantogolo'", "lì'u", "am'ake", "'akra", 'nìtam', 'eampin', 'èwa', 'máè', 'mundatan', 'akum', 'nìksran', 'nìdan', "'ánìm", "nìpʀte'", 'nʀa', 'mowan', 'mektseŋ', 'alìm', 'auŋia', 'ŋa', 'oèk', 'alo', 'èkyu', 'kè', 'kanfpìl', 'uk', 'ŋulpin', "lì'ukìŋ", 'ŋampam', 'naŋ', 'pàsmuŋ', 'mip', "'e'al", "ŋa'", "ke'u", "lì'upuk", 'oe', 'ugo', 'námtoruktek', 'egan', 'letog', 'kelutral', 'mefo', 'gam', 'mal', 'omum', 'mèptu', 'lam', 'makto', 'um', 'europa', 'oare', 'oèä', 'aho', "onvä'", 'äo', "'efu", "'ä'", 'ninat', 'uniltaron', 'etrìp', 'tekre', 'lá', 'pil', 'anurai', 'áŋa', 'ontsaŋ', 'io', 'niŋyen', 'ŋèn', 'inanfya', 'numtseŋvi', 'ŋim', 'afpáŋ', 'kar', 'mek', "ko'on", 'rìk', 'egdu', 'nume', 'uniltìranyu', 'uldatu', 'gener', 'uniltìrantog', "mà'", 'rim', 'gid', "'ág", "rä'ä", 'dur', "tswa'", 'änsìt', 'ioaŋ', "'ampi", "lì'fyavi", 'ŋul', 'ohag', 'irào', 'ŋoŋ', 'gamtseŋ', 'atèo', 'ŋoa', 'ŋip', 'oeŋ', 'ohe', 'po', 'uvan', 'eltu', 'mam', 'nim', "uolì'uvi", 'maru', 'nekán', "i'en", 'äzan', 'nefä', 'àoe', 'nìbà', 'ŋimpup', 'ebaŋ', 'nìkefdo', 'poan', 'ulte', 'ontu', 'èk', 'emrè', 'utu', 'kelku', 'iknimàa', 'utumauti', 'adgerel', "am'a", 'ŋà', 'lìŋ']
-                    await ctx.send(
-                        embed=discord.Embed(description="The first word is " + displayword + "!", colour=899718))
+                        'ŋ', 'ng').replace('á', 'aw').replace('é', 'ew').replace('à', 'ay').replace(
+                        'è', 'ey').replace('ʀ', 'rr').replace('j', 'll')
+                    await ctx.send(embed=discord.Embed(description="Starting game (WIP)!\nSolo: " + str(
+                        self.solo) + "\nCompetitive: " + str(
+                        self.competitive) + "\n\nThe first word is " + displayword + "!", colour=899718))
+                    self.competitivehistory = ["pa'li", "pa'o", "pak", "palaŋ", "palon", "palukantsyìp", "palulukan",
+                                               "pam", "pamrel", "pamrelfya", "pamrelsiyu", "pamrelvi", "pamrelvul",
+                                               "pamtseo", "pamtseoŋopyu", "pamtseotu", "pamuvan", "pan", "pari",
+                                               "parul", "parulŋa'", "parultsyìp", "paskalin", "pasuk", "pate", "pák",
+                                               "pám", "pà", "pàfya", "pàìva", "pàŋa'", "pàoaŋ", "pàsena", "pàsmuŋ",
+                                               "pàsyul", "pàdé", "pähem", "pänu", "pänutìŋ", "päŋgo", "päŋgoyu",
+                                               "päsketpol", "pätsì", "pe", "pe'un", "pefnel", "pefya", "pehem",
+                                               "pela'a", "pelì'u", "pelìmsim", "pelun", "pensìl", "peŋ", "peŋhʀap",
+                                               "peseŋ", "pesu", "peu", "pén", "pè", "pèä", "pèral", "piak", "pil",
+                                               "pinvul", "pizàu", "pìlok", "pìmdan", "pìsá", "pìwob", "pìwobtsyìp",
+                                               "pjŋà", "pjde", "pjdepam", "pjdèu", "po", "poan", "poe", "polbà", "pom",
+                                               "pon", "poŋu", "postì", "pʀku", "pʀnen", "pʀnesyul", "pʀsmuŋ", "pʀte'",
+                                               "puk", "pukap", "puktsyìp", "pum", "pup", "puve"]
                 else:
                     await ctx.send(
-                        embed=discord.Embed(description="There is already a game in this channel!", colour=0xff0000))
+                        embed=discord.Embed(description="There is already a game in this channel!",
+                                            colour=0xff0000))
 
         if 'stop' in options or 'end' in options:
             if ctx.channel.id in channels:
                 if ctx.channel.id in self.wordgame_activechannels:
-                    print('Found current channel in wordgame_channels: ' + str(ctx.channel.id))
+                    print('Found current channel in wordgame_activechannels: ' + str(
+                        ctx.channel.id) + ", deactivating it...")
                     self.wordgame_activechannels.remove(ctx.channel.id)
                     print('Current active channels: ' + str(self.wordgame_activechannels))
-                    await ctx.send(embed=discord.Embed(description="Stopping game!", colour=899718))
+                    pointlist = {}
+                    for id in self.gamepoints:
+                        user = int(id)
+                        name = bot.discord.Guild.get_member(ctx.guild, user)
+                        name = str("!" + str(name.nick) + "!")
+                        if name == "!" + 'None' + "!":
+                            name = bot.bot.get_user(user)
+                            name = str("!" + name.display_name + "!")
+                        pointlist[name] = self.gamepoints.get(id)
+                    pointlist = str(pointlist)
+                    pointlist = pointlist.strip('{}')
+                    pointlist = pointlist.replace('!\'', '')
+                    pointlist = pointlist.replace('\'!', '')
+                    pointlist = pointlist.replace(', ', '\n')
+                    if not self.solo:
+                        await ctx.channel.send(embed=discord.Embed(
+                            description="Stopping game!\n" + "Total points for this round:\n" + pointlist,
+                            colour=899718))
+                    else:
+                        await ctx.channel.send(embed=discord.Embed(description="Stopping game!",
+                                                                   colour=899718))
                     self.last_player = 0
                     self.solo = False
                     self.competitive = False
+                    self.gamepoints = {}
                 else:
                     await ctx.send(
-                        embed=discord.Embed(description="There is no active game in this channel!", colour=0xff0000))
+                        embed=discord.Embed(description="There is no active game in this channel!",
+                                            colour=0xff0000))
         print('---------------------')
 
     @commands.Cog.listener()
     async def on_message(self, message):
+
+        if '’' in message.content:
+            message.content = message.content.replace('’', '\'')
+
         msg = message.content.lower()
-        if message.channel.id in self.wordgame_activechannels:
-            if not message.author.bot:
-                if not msg.startswith('?') and not msg.startswith('!'):
-                    if not ' ' in msg:
-                        if not self.solo:
-                            if not message.author.id == self.last_player:
-                                msg = msg.replace('ng', 'ŋ').replace('tx', 'd').replace('kx', 'g').replace(
-                                    'px', 'b').replace('aw', 'á').replace('ew', 'é').replace('ay', 'à').replace(
-                                    'ey', 'è').replace('rr', 'ʀ').replace('ll', 'j')
-                                if msg.startswith(self.lastword_end):
-                                    if msg in wordgame_words:
-                                        if self.competitive and not msg in self.competitivehistory or not self.competitive:
-                                            newword = msg
-                                            self.lastword_end = newword[-1]
-                                            self.lastword = newword
-                                            if self.competitive:
-                                                self.competitivehistory.append(newword)
-                                            newword = msg.replace('d', 'tx').replace('g', 'kx').replace('b', 'px').replace(
-                                                'ŋ', 'ng').replace('á', 'aw').replace('é', 'ew').replace('à', 'ay').replace(
-                                                'è', 'ey').replace('ʀ', 'rr').replace('j', 'll')
-                                            await message.channel.send(
-                                                embed=discord.Embed(
-                                                    description=str(message.author.name) + " said " + newword + "!",
+        if message.channel.id in self.wordgame_activechannels and not message.author.bot and not msg.startswith(
+                '?') and not msg.startswith('!') and not ' ' in msg:
+            if not self.solo:
+                msg = msg.replace('ng', 'ŋ').replace('tx', 'd').replace('kx', 'g').replace(
+                    'px', 'b').replace('aw', 'á').replace('ew', 'é').replace('ay', 'à').replace(
+                    'ey', 'è').replace('rr', 'ʀ').replace('ll', 'j')
+                if msg.startswith(self.lastword_end):
+                    if msg in wordgame_words and message.author.id == self.last_player:
+                        await message.channel.send(
+                            embed=discord.Embed(description="You already said a word!", colour=0xff0000))
+                    if msg in wordgame_words and not message.author.id == self.last_player:
+                        if self.competitive and msg in self.competitivehistory:
+                            await message.channel.send(
+                                embed=discord.Embed(description="This word has already been used!",
+                                                    colour=0xff0000))
+                        if (self.competitive and not msg in self.competitivehistory) or not self.competitive:
+                            newword = msg
+                            displayword = msg.replace('d', 'tx').replace('g', 'kx').replace('b',
+                                                                                            'px').replace(
+                                'ŋ', 'ng').replace('á', 'aw').replace('é', 'ew').replace('à',
+                                                                                         'ay').replace(
+                                'è', 'ey').replace('ʀ', 'rr').replace('j', 'll')
+                            self.lastword_end = newword[-1]
+                            self.lastword = newword
+
+                            name = bot.discord.Guild.get_member(message.guild, message.author.id)
+                            name = str(name.nick)
+                            if name == "!" + 'None' + "!":
+                                name = bot.bot.get_user(message.author.id)
+                                name = str(name.display_name)
+
+                            await message.channel.send(
+                                embed=discord.Embed(description=str(
+                                    name) + " said " + displayword + "!",
                                                     colour=899718))
-                                            self.last_player = message.author.id
-                                            author = str(message.author.id)
-                                            if author in self.players:
-                                                self.players[author] += 1
-                                            else:
-                                                self.players[
-                                                    self.players.get(author, author)] = 1
-                                            with open("wordgame_players.yaml", 'w') as f:
-                                                yaml.dump(self.players, f)
-                                    if self.competitive and msg in self.competitivehistory:
-                                        await message.channel.send(
-                                            embed=discord.Embed(description="You have already used this word!",
-                                                                colour=0xff0000))
+
+                            if self.competitive:
+                                self.competitivehistory.append(newword)
+
+                                templist = []
+                                for word in wordgame_words:
+                                    if not word in self.competitivehistory and word.startswith(newword[-1]):
+                                        templist.append(word)
+                                if templist == []:
+                                    await self.endcompetitive(message, name)
+                                    author = str(message.author.id)
+                                    if author in self.players:
+                                        self.players[author] += 5
+                                    else:
+                                        self.players[
+                                            self.players.get(author, author)] = 5
+                                    playerdata = {}
+                                    for key, value in sorted(self.players.items(), key=lambda x: int(x[1]),
+                                                             reverse=True):
+                                        playerdata[key] = value
+                                    with open("wordgame_players.yaml", 'w') as f:
+                                        yaml.safe_dump(playerdata, f, default_flow_style=False,
+                                                       sort_keys=False)
+                                        f.close()
+                                    self.players = playerdata
+
+                            # GAME POINTS
+                            gameauthor = str(message.author.id)
+                            if gameauthor in self.gamepoints:
+                                self.gamepoints[gameauthor] += 1
                             else:
+                                self.gamepoints[
+                                    self.gamepoints.get(gameauthor, gameauthor)] = 1
+                            gameplayerdata = {}
+                            for key, value in sorted(self.gamepoints.items(), key=lambda x: int(x[1]),
+                                                     reverse=True):
+                                gameplayerdata[key] = value
+                            self.gamepoints = gameplayerdata
+
+                            # GLOBAL POINTS
+
+                            self.last_player = message.author.id
+                            author = str(message.author.id)
+                            if author in self.players:
+                                self.players[author] += 1
+                            else:
+                                self.players[
+                                    self.players.get(author, author)] = 1
+                            playerdata = {}
+                            for key, value in sorted(self.players.items(), key=lambda x: int(x[1]),
+                                                     reverse=True):
+                                playerdata[key] = value
+                            with open("wordgame_players.yaml", 'w') as f:
+                                yaml.safe_dump(playerdata, f, default_flow_style=False, sort_keys=False)
+                                f.close()
+                            self.players = playerdata
+
+            else:
+                msg = msg.replace('ng', 'ŋ').replace('tx', 'd').replace('kx', 'g').replace(
+                    'px', 'b').replace('aw', 'á').replace('ew', 'é').replace('ay', 'à').replace(
+                    'ey', 'è').replace('rr', 'ʀ').replace('ll', 'j')
+                if msg.startswith(self.lastword_end) and msg in wordgame_words:
+                    if not self.competitive:
+                        self.lastword = msg
+                        self.lastword_end = msg[-1]
+                        newword = await self.solorandom()
+                        try:
+                            displayword = newword.replace('d', 'tx').replace('g', 'kx').replace('b', 'px').replace(
+                                'ŋ', 'ng').replace('á', 'aw').replace('é', 'ew').replace('à', 'ay').replace(
+                                'è', 'ey').replace('ʀ', 'rr').replace('j', 'll')
+                        except AttributeError:
+                            print('displayword is fucked')
+                        await message.channel.send(
+                            embed=discord.Embed(description=displayword + "!", colour=899718))
+                    if self.competitive and msg in self.competitivehistory:
+                        await message.channel.send(
+                            embed=discord.Embed(description="This word has already been used!",
+                                                colour=0xff0000))
+                    if self.competitive and not msg in self.competitivehistory:
+                        self.lastword = msg
+                        self.lastword_end = msg[-1]
+                        newword = await self.solorandom()
+                        try:
+                            displayword = newword.replace('d', 'tx').replace('g', 'kx').replace('b',
+                                                                                                'px').replace(
+                                'ŋ', 'ng').replace('á', 'aw').replace('é', 'ew').replace('à',
+                                                                                         'ay').replace(
+                                'è', 'ey').replace('ʀ', 'rr').replace('j', 'll')
+                        except AttributeError:
+                            print('displayword is fucked')
+                        if self.competitive:
+                            self.competitivehistory.append(newword)
+                            self.competitivehistory.append(msg)
+
+                            templist = []
+                            for word in wordgame_words:
+                                try:
+                                    if not word in self.competitivehistory and word.startswith(newword[-1]):
+                                        templist.append(word)
+                                except TypeError:
+                                    break
+
+                            user = message.author.id
+                            name = bot.discord.Guild.get_member(message.guild, user)
+                            name = name.nick
+                            if name == 'None':
+                                name = bot.bot.get_user(user)
+                                name = str(name.display_name)
+
+                            if newword is None:
+                                await self.endcompetitive(message, name)
+                            if newword is not None:
                                 await message.channel.send(
-                                    embed=discord.Embed(description="You already said a word!", colour=0xff0000))
-                        else:
-                            msg = msg.replace('ng', 'ŋ').replace('tx', 'd').replace('kx', 'g').replace(
-                                'px', 'b').replace('aw', 'á').replace('ew', 'é').replace('ay', 'à').replace(
-                                'ey', 'è').replace('rr', 'ʀ').replace('ll', 'j')
-                            if msg.startswith(self.lastword_end):
-                                if msg in wordgame_words:
-                                    if self.competitive and msg in self.competitivehistory:
-                                        await message.channel.send(
-                                            embed=discord.Embed(description="This word has already been used!",
-                                                                colour=0xff0000))
-                                    if self.competitive and not msg in self.competitivehistory:
-                                        self.lastword = msg
-                                        self.lastword_end = msg[-1]
-                                        newword = await self.solorandom()
-                                        print(newword)
-                                        try:
-                                            displayword = newword.replace('d', 'tx').replace('g', 'kx').replace('b',
-                                                                                                                'px').replace(
-                                                'ŋ', 'ng').replace('á', 'aw').replace('é', 'ew').replace('à',
-                                                                                                         'ay').replace(
-                                                'è', 'ey').replace('ʀ', 'rr').replace('j', 'll')
-                                        except AttributeError:
-                                            return ''
-                                        if self.competitive:
-                                            self.competitivehistory.append(newword)
-                                            self.competitivehistory.append(msg)
-                                            templist = []
-                                            for word in wordgame_words:
-                                                if not word in self.competitivehistory and word in templist:
-                                                    print('not vald: ' + word)
-                                                    await self.endcompetitive(message, bot.bot.user.name)
-                                                    break
-                                                if not word in self.competitivehistory and word.startswith(msg[-1]):
-                                                    templist.append(word)
-                                            if newword is None:
-                                                print('newword was none')
-                                                await self.endcompetitive(message, message.author)
-                                            if newword is not None:
-                                                print('newword was not none')
-                                                await message.channel.send(embed=discord.Embed(description=displayword + "!", colour=899718))
+                                    embed=discord.Embed(description=displayword + "!", colour=899718))
 
-                                    if not self.competitive:
-                                        newword = await self.solorandom()
-                                        try:
-                                            displayword = newword.replace('d', 'tx').replace('g', 'kx').replace('b','px').replace(
-                                                'ŋ', 'ng').replace('á', 'aw').replace('é', 'ew').replace('à', 'ay').replace(
-                                                'è', 'ey').replace('ʀ', 'rr').replace('j', 'll')
-                                        except AttributeError:
-                                            return ''
-                                        self.lastword = newword
-                                        self.lastword_end = newword[-1]
-                                        await message.channel.send(embed=discord.Embed(description=displayword + "!", colour=899718))
+                            if templist == []:
+                                await self.endcompetitive(message, bot.bot.user.name)
 
-    async def endcompetitive(self,message,winner):
-        if message.channel.id in wordgame_channels:
-            print(winner + 'won the game!')
-            print('Found current channel in wordgame_channels: ' + str(message.channel.id))
+    async def endcompetitive(self, message, winner):
+        if message.channel.id in self.wordgame_activechannels:
+            print(str(winner) + ' won the game!')
+            print(
+                'Found current channel in wordgame_activechannels: ' + str(message.channel.id) + ', deactivating it...')
             print('Current active channels: ' + str(self.wordgame_activechannels))
-            print(message.channel.id)
             self.wordgame_activechannels.remove(message.channel.id)
-            await message.channel.send(embed=discord.Embed(description=str(winner) + " won!", colour=899718))
+            pointlist = {}
+            for id in self.gamepoints:
+                user = int(id)
+                name = bot.discord.Guild.get_member(message.guild, user)
+                name = str("!" + str(name.nick) + "!")
+                if name == "!" + 'None' + "!":
+                    name = bot.bot.get_user(user)
+                    name = str("!" + name.display_name + "!")
+                pointlist[name] = self.gamepoints.get(id)
+            pointlist = str(pointlist)
+            pointlist = pointlist.strip('{}')
+            pointlist = pointlist.replace('!\'', '')
+            pointlist = pointlist.replace('\'!', '')
+            pointlist = pointlist.replace(', ', '\n')
+            if not self.solo:
+                await message.channel.send(embed=discord.Embed(description=str(
+                    winner) + " won!\n" + "Total points for this round:\n" + pointlist, colour=899718))
+            else:
+                await message.channel.send(embed=discord.Embed(description=str(
+                    winner) + " won!\n", colour=899718))
             self.last_player = 0
             self.solo = False
             self.competitive = False
+            self.gamepoints = {}
 
 
 def setup(bot):
