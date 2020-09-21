@@ -1,10 +1,12 @@
 [
   {"command": "**?help**",
+    "aliases": ["srung"],
     "usage": "?help *<command>",
     "description": "Show info about a command or list all commands.",
     "example": "?help scream"
   },
   {"command": "**?wordgame**",
+    "aliases": ["uvanlì'uyä"],
     "usage": "?wordgame <args>",
     "description": "The main command for Ewo's wordgame.",
     "arg_types": {
