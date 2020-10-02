@@ -20,6 +20,10 @@ with open("cogs/wordgame/wordgame_channels.json", encoding='utf-8') as f:
 with open("cogs/wordgame/wordgame_players.yaml", encoding='utf-8') as f:
     wordgame_players = yaml.load(f, Loader=yaml.FullLoader)
 
+# Open unusable_words database
+with open("cogs/wordgame/unusable_words.json", encoding='utf-8') as f:
+    unusable_words = json.load(f)
+
 # Sort wordgame_players database numerically
 players = {}
 for key, value in sorted(wordgame_players.items(), key=lambda x: int(x[1]), reverse=True):
@@ -47,7 +51,7 @@ class Wordgame(commands.Cog):
     soloplayer = 0
     competitivehistory = []
     competitive = False
-    session_points = {}
+    session_points = OrderedDict({})
 
     # Select a random possible word for solo gameplay
     async def solorandom(self):
@@ -144,6 +148,27 @@ class Wordgame(commands.Cog):
 
         # Replace comma separator with a new line
         player_list = player_list.replace(', ', '\n')
+
+        # An empty int to reference later
+        x = 0
+        # For every entry in the player list
+        for id in self.players:
+            # Add one to the amount of places
+            x += 1
+            # If the sender of the command has a place in the player list
+            if id == str(ctx.author.id):
+                # Add a section at the end of the string stating the sender's place and amount of points.
+                if x == 1:
+                    player_list += "\n\n You are in " + str(x) + "st place at " + str(
+                        self.players.get(str(ctx.author.id))) + " points."
+                    break
+                if x == 2:
+                    player_list += "\n\n You are in " + str(x) + "nd place at " + str(
+                        self.players.get(str(ctx.author.id))) + " points."
+                    break
+                if x >= 3:
+                    player_list += "\n\n You are in " + str(x) + "th place at " + str(self.players.get(str(ctx.author.id))) + " points."
+                    break
 
         # Send the player list.
         await ctx.send(embed=discord.Embed(title="Points:", description=player_list, colour=899718))
@@ -386,7 +411,7 @@ class Wordgame(commands.Cog):
                                 name = str("!" + name.display_name + "!")
 
                             # Add the player's name to the list
-                            # and set their value to be the value from wordgame_players
+                            # and set their value to be the value from session_players
                             player_list[name] = self.session_points.get(id)
 
                         # Turn the dict into a string
@@ -439,164 +464,125 @@ class Wordgame(commands.Cog):
             
         # Make new variable for lowercase message
         msg = message.content.lower()
-        
+
+        # Replace digraphs in msg with individualized characters
+        msg = msg.replace('ng', 'ŋ').replace('tx', 'd').replace('kx', 'g').replace(
+            'px', 'b').replace('aw', 'á').replace('ew', 'é').replace('ay', 'à').replace(
+            'ey', 'è').replace('rr', 'ʀ').replace('ll', 'j')
+
         # If the current channel is an active wordgame channel
         # and the author is not a bot
-        # and the message does not start with a command prefix
-        # and there are no spaces in the message,
+        # and the message does not start with a command prefix,
         if message.channel.id in self.wordgame_activechannels and not message.author.bot and not msg.startswith(
-                '?') and not msg.startswith('!') and not ' ' in msg:
-            
-            # Replace digraphs in msg with individualized characters
-            msg = msg.replace('ng', 'ŋ').replace('tx', 'd').replace('kx', 'g').replace(
-                'px', 'b').replace('aw', 'á').replace('ew', 'é').replace('ay', 'à').replace(
-                'ey', 'è').replace('rr', 'ʀ').replace('ll', 'j')
-            
-            # If msg is NOT in the list of recent words
-            if msg not in self.recent_words:
-                
-                # If gamemode is NOT solo
-                if not self.solo:
-                    # If msg starts with the final letter of the last word
-                    if msg.startswith(self.last_word_end):
-                        
-                        # If msg is a valid word and the author is the last player to say a word
-                        if msg in wordgame_words and message.author.id == self.last_player:
-                            
-                            # Send a warning message
-                            await message.channel.send(
-                                embed=discord.Embed(description="You already said a word!", colour=0xff0000))
-                            
-                        # If msg is a valid word and the author is NOT the last player to say a word
-                        if msg in wordgame_words and not message.author.id == self.last_player:
-                            
-                            # If the gamemode is competitive and msg is in the competitive-mode history
-                            if self.competitive and msg in self.competitivehistory:
-                                
-                                # Send a warning message
-                                await message.channel.send(
-                                    embed=discord.Embed(description="This word has already been used!",
-                                                        colour=0xff0000))
-                                
-                            # If the gamemode is competitive and msg is NOT in the competitive-mode history,
-                            # or the gamemode is NOT competitive
-                            if (self.competitive and not msg in self.competitivehistory) or not self.competitive:
-                                
-                                # Set local variable
-                                new_word = msg
+                '?') and not msg.startswith('!'):
 
-                                # Replace individualized characters with digraphs and set it in a new variable
-                                display_word = msg.replace('d', 'tx').replace('g', 'kx').replace('b',
-                                                                                                'px').replace(
-                                    'ŋ', 'ng').replace('á', 'aw').replace('é', 'ew').replace('à',
-                                                                                             'ay').replace(
-                                    'è', 'ey').replace('ʀ', 'rr').replace('j', 'll')
-                                
-                                # Set last word to current word
-                                self.last_word_end = new_word[-1]
-                                self.last_word = new_word
-                                
-                                # Get the member of the message author
-                                name = bot.discord.Guild.get_member(message.guild, message.author.id)
-                                # Get their nickname
-                                name = str(name.nick)
-                                
-                                # If the user has no nickname
-                                if name == 'None':
-                                    # Get the user of the message author
-                                    name = bot.bot.get_user(message.author.id)
-                                    # Get their display name
-                                    name = str(name.display_name)
-                                    
-                                # Record the new player and word
-                                await message.channel.send(
-                                    embed=discord.Embed(description=str(
-                                        name) + " said " + display_word + "!",
-                                                        colour=899718))
+            # If the message is not in the list of valid wordgame words
+            if msg not in wordgame_words:
 
-                                # Get message author's id
-                                session_author = str(message.author.id)
-                                
-                                # If the message author is in the session points list
-                                if session_author in self.session_points:
-                                    
-                                    # Add 1 to their points
-                                    self.session_points[session_author] += 1
-                                    
-                                # If the message author is NOT in the session points list
-                                else:
-                                    
-                                    # Create a new key for the author and set their score to 1
-                                    self.session_points[
-                                        self.session_points.get(session_author, session_author)] = 1
-                                
-                                # Empty dict to reference later
-                                session_player_data = {}
-                                
-                                # Sort session points list numerically and set game_player_points to it
-                                for key, value in sorted(self.session_points.items(), key=lambda x: int(x[1]),
-                                                         reverse=True):
-                                    session_player_data[key] = value
-                                    
-                                # Set the global variable to the sorted version
-                                self.session_points = session_player_data
+                # Replace individualized characters with digraphs and set it in a new variable
+                display_word = msg.replace('d', 'tx').replace('g', 'kx').replace('b',
+                                                                                 'px').replace(
+                    'ŋ', 'ng').replace('á', 'aw').replace('é', 'ew').replace('à',
+                                                                             'ay').replace(
+                    'è', 'ey').replace('ʀ', 'rr').replace('j', 'll')
 
-                                # Get message author's id
-                                author = str(message.author.id)
+                # If msg ends with aw
+                if msg in unusable_words['aw']:
+                    # Send a warning message
+                    await message.channel.send(
+                        embed=discord.Embed(title="Unusable word: " + msg,
+                                            description="Words that end with 'aw' cannot be used"
+                                                        " because not enough words start with it!",
+                                            colour=0xff0000))
 
-                                # If the message author is in the player list
-                                if author in self.players:
+                # If message ends with ew
+                if msg in unusable_words['ew']:
+                    # Send a warning message
+                    await message.channel.send(
+                        embed=discord.Embed(title="Unusable word: " + msg,
+                                            description="Words that end with 'ew' cannot be used"
+                                                        " because not enough words start with it!",
+                                            colour=0xff0000))
 
-                                    # Add 1 to their points
-                                    self.players[author] += 1
-                                    
-                                # If the message author is NOT in the player list
-                                else:
+                # If message ends with rr
+                if msg in unusable_words['rr']:
+                    # Send a warning message
+                    await message.channel.send(
+                        embed=discord.Embed(title="Unusable word: " + msg,
+                                            description="Words that end with 'rr' cannot be used"
+                                                        " because words cannot start with it!",
+                                            colour=0xff0000))
 
-                                    # Create a new key for the author and set their score to 1
-                                    self.players[
-                                        self.players.get(author, author)] = 1
-                                    
-                                # Empty dict to reference later
-                                player_data = {}
+                # If message ends with ll
+                if msg in unusable_words['ll']:
+                    # Send a warning message
+                    await message.channel.send(
+                        embed=discord.Embed(title="Unusable word: " + msg,
+                                            description="Words that end with 'll' cannot be used"
+                                                        " because words cannot start with it!",
+                                            colour=0xff0000))
 
-                                # Sort player list numerically and set game_player_points to it
-                                for key, value in sorted(self.players.items(), key=lambda x: int(x[1]),
-                                                         reverse=True):
-                                    player_data[key] = value
-                                    
-                                # Open wordgame_players database
-                                with open("cogs/wordgame/wordgame_players.yaml", 'w') as f:
-                                    
-                                    # Update file and close it
-                                    yaml.safe_dump(player_data, f, default_flow_style=False, sort_keys=False)
-                                    f.close()
-                                    
-                                # Set the global variable to the sorted version
-                                self.players = player_data
-                                
-                                # Set the last player to the message author
-                                self.last_player = message.author.id
-                                
-                                # If gamemode is competitive
-                                if self.competitive:
-                                    # Add the new word to the competitive-mode history
-                                    self.competitivehistory.append(new_word)
-                                    
-                                    # Empty list to reference later
-                                    valid_words = []
+            # If there are no spaces in the message
+            if not ' ' in msg:
 
-                                    # For every word in the wordgame_words database
-                                    for word in wordgame_words:
+                # If msg is NOT in the list of recent words
+                if msg not in self.recent_words:
 
-                                        # If the word is not in the competitive-mode history
-                                        # and the word starts with the final letter of the new word,
-                                        # add it to the list of valid words
-                                        if not word in self.competitivehistory and word.startswith(new_word[-1]):
-                                            valid_words.append(word)
+                    # If msg starts with the final letter of the last word and msg is a valid word
+                    if msg.startswith(self.last_word_end) and msg in wordgame_words:
 
-                                    # If there are no more valid words
-                                    if valid_words == []:
+                        # If the author is the last player to say a word
+                        if not message.author.id == self.last_player:
+
+                            # If gamemode is NOT solo
+                            if not self.solo:
+
+                                # If msg is a valid word
+                                if msg in wordgame_words:
+
+                                    # If the gamemode is competitive and msg is in the competitive-mode history
+                                    if self.competitive and msg in self.competitivehistory:
+
+                                        # Send a warning message
+                                        await message.channel.send(
+                                            embed=discord.Embed(description="This word has already been used!",
+                                                                colour=0xff0000))
+
+                                    # If the gamemode is competitive and msg is NOT in the competitive-mode history,
+                                    # or the gamemode is NOT competitive
+                                    if (self.competitive and not msg in self.competitivehistory) or not self.competitive:
+
+                                        # Set local variable
+                                        new_word = msg
+
+                                        # Replace individualized characters with digraphs and set it in a new variable
+                                        display_word = msg.replace('d', 'tx').replace('g', 'kx').replace('b',
+                                                                                                        'px').replace(
+                                            'ŋ', 'ng').replace('á', 'aw').replace('é', 'ew').replace('à',
+                                                                                                     'ay').replace(
+                                            'è', 'ey').replace('ʀ', 'rr').replace('j', 'll')
+
+                                        # Set last word to current word
+                                        self.last_word_end = new_word[-1]
+                                        self.last_word = new_word
+
+                                        # Get the member of the message author
+                                        name = bot.discord.Guild.get_member(message.guild, message.author.id)
+                                        # Get their nickname
+                                        name = str(name.nick)
+
+                                        # If the user has no nickname
+                                        if name == 'None':
+                                            # Get the user of the message author
+                                            name = bot.bot.get_user(message.author.id)
+                                            # Get their display name
+                                            name = str(name.display_name)
+
+                                        # Record the new player and word
+                                        await message.channel.send(
+                                            embed=discord.Embed(description=str(
+                                                name) + " said " + display_word + "!",
+                                                                colour=899718))
 
                                         # Get message author's id
                                         session_author = str(message.author.id)
@@ -604,15 +590,15 @@ class Wordgame(commands.Cog):
                                         # If the message author is in the session points list
                                         if session_author in self.session_points:
 
-                                            # Add 5 to their points
-                                            self.session_points[session_author] += 5
+                                            # Add 1 to their points
+                                            self.session_points[session_author] += 1
 
                                         # If the message author is NOT in the session points list
                                         else:
 
-                                            # Create a new key for the author and set their score to 5
+                                            # Create a new key for the author and set their score to 1
                                             self.session_points[
-                                                self.session_points.get(session_author, session_author)] = 5
+                                                self.session_points.get(session_author, session_author)] = 1
 
                                         # Empty dict to reference later
                                         session_player_data = {}
@@ -631,15 +617,15 @@ class Wordgame(commands.Cog):
                                         # If the message author is in the player list
                                         if author in self.players:
 
-                                            # Add 5 to their points
-                                            self.players[author] += 5
+                                            # Add 1 to their points
+                                            self.players[author] += 1
 
                                         # If the message author is NOT in the player list
                                         else:
 
-                                            # Create a new key for the author and set their score to 5
+                                            # Create a new key for the author and set their score to 1
                                             self.players[
-                                                self.players.get(author, author)] = 5
+                                                self.players.get(author, author)] = 1
 
                                         # Empty dict to reference later
                                         player_data = {}
@@ -659,160 +645,261 @@ class Wordgame(commands.Cog):
                                         # Set the global variable to the sorted version
                                         self.players = player_data
 
-                                        # End the game with the message author as the winner
-                                        await self.endcompetitive(message, name)
+                                        # Set the last player to the message author
+                                        self.last_player = message.author.id
 
-                                # If gamemode is NOT competitive
-                                else:
+                                        # If gamemode is competitive
+                                        if self.competitive:
+                                            # Add the new word to the competitive-mode history
+                                            self.competitivehistory.append(new_word)
+
+                                            # Empty list to reference later
+                                            valid_words = []
+
+                                            # For every word in the wordgame_words database
+                                            for word in wordgame_words:
+
+                                                # If the word is not in the competitive-mode history
+                                                # and the word starts with the final letter of the new word,
+                                                # add it to the list of valid words
+                                                if not word in self.competitivehistory and word.startswith(new_word[-1]):
+                                                    valid_words.append(word)
+
+                                            # If there are no more valid words
+                                            if valid_words == []:
+
+                                                # Get message author's id
+                                                session_author = str(message.author.id)
+
+                                                # If the message author is in the session points list
+                                                if session_author in self.session_points:
+
+                                                    # Add 5 to their points
+                                                    self.session_points[session_author] += 5
+
+                                                # If the message author is NOT in the session points list
+                                                else:
+
+                                                    # Create a new key for the author and set their score to 5
+                                                    self.session_points[
+                                                        self.session_points.get(session_author, session_author)] = 5
+
+                                                # Empty dict to reference later
+                                                session_player_data = {}
+
+                                                # Sort session points list numerically and set game_player_points to it
+                                                for key, value in sorted(self.session_points.items(), key=lambda x: int(x[1]),
+                                                                         reverse=True):
+                                                    session_player_data[key] = value
+
+                                                # Set the global variable to the sorted version
+                                                self.session_points = session_player_data
+
+                                                # Get message author's id
+                                                author = str(message.author.id)
+
+                                                # If the message author is in the player list
+                                                if author in self.players:
+
+                                                    # Add 5 to their points
+                                                    self.players[author] += 5
+
+                                                # If the message author is NOT in the player list
+                                                else:
+
+                                                    # Create a new key for the author and set their score to 5
+                                                    self.players[
+                                                        self.players.get(author, author)] = 5
+
+                                                # Empty dict to reference later
+                                                player_data = {}
+
+                                                # Sort player list numerically and set game_player_points to it
+                                                for key, value in sorted(self.players.items(), key=lambda x: int(x[1]),
+                                                                         reverse=True):
+                                                    player_data[key] = value
+
+                                                # Open wordgame_players database
+                                                with open("cogs/wordgame/wordgame_players.yaml", 'w') as f:
+
+                                                    # Update file and close it
+                                                    yaml.safe_dump(player_data, f, default_flow_style=False, sort_keys=False)
+                                                    f.close()
+
+                                                # Set the global variable to the sorted version
+                                                self.players = player_data
+
+                                                # End the game with the message author as the winner
+                                                await self.endcompetitive(message, name)
+
+                                        # If gamemode is NOT competitive
+                                        else:
+                                            # Add new word to list of recent words
+                                            self.recent_words.append(new_word)
+
+                                            # If the list of recent words has 6 or more entries
+                                            # (after the new word has been added),
+                                            # Remove the first entry in the history
+                                            # (No more than 5 entries should be present)
+                                            if len(self.recent_words) >= 6:
+                                                self.recent_words.remove(self.recent_words[0])
+
+                            # If gamemode is solo
+                            else:
+
+                                # If the gamemode is NOT competitive
+                                if not self.competitive:
+                                    # Set the last word to the msg
+                                    self.last_word = msg
+                                    self.last_word_end = msg[-1]
+
+                                    # Add msg to list of recent words
+                                    self.recent_words.append(msg)
+
+                                    # Generate new word
+                                    new_word = await self.solorandom()
+
                                     # Add new word to list of recent words
                                     self.recent_words.append(new_word)
 
-                                    # If the list of recent words has 6 or more entries
+                                    # If the list of recent words has 7 or more entries
                                     # (after the new word has been added),
-                                    # Remove the first entry in the history
+                                    # Remove the first two entries in the history
                                     # (No more than 5 entries should be present)
-                                    if len(self.recent_words) >= 6:
+                                    if len(self.recent_words) >= 7:
+                                        self.recent_words.remove(self.recent_words[0])
                                         self.recent_words.remove(self.recent_words[0])
 
-                # If gamemode is solo
-                else:
-                    
-                    # If msg starts with the final letter of the last word
-                    # and msg is a valid word
-                    if msg.startswith(self.last_word_end) and msg in wordgame_words:
-                        
-                        # If the gamemode is NOT competitive
-                        if not self.competitive:
-                            # Set the last word to the msg
-                            self.last_word = msg
-                            self.last_word_end = msg[-1]
-                            
-                            # Generate new word
-                            new_word = await self.solorandom()
-                            
-                            # Add msg AND new word to list of recent words
-                            self.recent_words.append(msg)
-                            self.recent_words.append(new_word)
-
-                            # If the list of recent words has 7 or more entries
-                            # (after the new word has been added),
-                            # Remove the first two entries in the history
-                            # (No more than 5 entries should be present)
-                            if len(self.recent_words) >= 7:
-                                self.recent_words.remove(self.recent_words[0])
-                                self.recent_words.remove(self.recent_words[0])
-                                
-                            # Try to set display_word to the digraph version of the new word
-                            try:
-                                display_word = new_word.replace('d', 'tx').replace('g', 'kx').replace('b', 'px').replace(
-                                    'ŋ', 'ng').replace('á', 'aw').replace('é', 'ew').replace('à', 'ay').replace(
-                                    'è', 'ey').replace('ʀ', 'rr').replace('j', 'll')
-                                
-                            # If new_word is None
-                            except AttributeError:
-                                # Do nothing
-                                pass
-                            
-                            # Say the new word
-                            await message.channel.send(
-                                embed=discord.Embed(description=display_word + "!", colour=899718))
-                            
-                        # If gamemode is competitive and msg is in competitive-mode history
-                        if self.competitive and msg in self.competitivehistory:
-                            
-                            # Send a warning message
-                            await message.channel.send(
-                                embed=discord.Embed(description="This word has already been used!",
-                                                    colour=0xff0000))
-                        
-                        # If gamemode is competitive and msg is not in competitive-mode history
-                        if self.competitive and not msg in self.competitivehistory:
-                            # Set last word to msg
-                            self.last_word = msg
-                            self.last_word_end = msg[-1]
-                            
-                            # Generate new word
-                            new_word = await self.solorandom()
-                            
-                            # Try to set display_word to the digraph version of the new word
-                            try:
-                                display_word = new_word.replace('d', 'tx').replace('g', 'kx').replace('b',
-                                                                                                    'px').replace(
-                                    'ŋ', 'ng').replace('á', 'aw').replace('é', 'ew').replace('à',
-                                                                                             'ay').replace(
-                                    'è', 'ey').replace('ʀ', 'rr').replace('j', 'll')
-                            # If display_word is None
-                            except AttributeError:
-                                # Do nothing
-                                pass
-                            
-                            # If gamemode is competitive
-                            if self.competitive:
-                                
-                                # Add new word AND msg to competitive-mode history
-                                self.competitivehistory.append(new_word)
-                                self.competitivehistory.append(msg)
-                                
-                                # Empty list to reference later
-                                valid_words = []
-                                
-                                # For every word in wordgame_words database
-                                for word in wordgame_words:
-                                    
-                                    # Try to add the current word to the list of valid words
-                                    # if word is not in competitive-mode history
-                                    # and word starts with the final letter of the new word
-                                    # and word is not in the list of recent words
+                                    # Try to set display_word to the digraph version of the new word
                                     try:
-                                        if word not in self.competitivehistory and word.startswith(new_word[-1]) and word not in self.recent_words:
-                                            valid_words.append(word)
-                                    
-                                    # If no valid word could be found
-                                    except TypeError:
+                                        display_word = new_word.replace('d', 'tx').replace('g', 'kx').replace('b', 'px').replace(
+                                            'ŋ', 'ng').replace('á', 'aw').replace('é', 'ew').replace('à', 'ay').replace(
+                                            'è', 'ey').replace('ʀ', 'rr').replace('j', 'll')
+
+                                    # If new_word is None
+                                    except AttributeError:
                                         # Do nothing
-                                        continue
-                                        
-                                # Get ID of message author
-                                user = message.author.id
-                                # Get member of message author
-                                name = bot.discord.Guild.get_member(message.guild, user)
-                                # Get server nickame of message author
-                                name = name.nick
-                                
-                                # If message author has no nickname
-                                if name == 'None':
-                                    # Get user of message author
-                                    name = bot.bot.get_user(user)
-                                    # Get display name of message author
-                                    name = str(name.display_name)
-                                    
-                                # If new word is None (a valid word could not be generated)
-                                if new_word is None:
-                                    
-                                    # End competitive game with message author as the winner
-                                    await self.endcompetitive(message, name)
-                                    
-                                # If new word is NOT None
-                                if new_word is not None:
-                                    
+                                        pass
+
                                     # Say the new word
                                     await message.channel.send(
                                         embed=discord.Embed(description=display_word + "!", colour=899718))
-                                    
-                                # If no new valid words can be said
-                                if valid_words == []:
-                                    
-                                    # End competitive game with Ewo' as the winner
-                                    await self.endcompetitive(message, bot.bot.user.name)
 
-            # If msg is in the list of recent words
+                                # If gamemode is competitive and msg is in competitive-mode history
+                                if self.competitive and msg in self.competitivehistory:
+
+                                    # Send a warning message
+                                    await message.channel.send(
+                                        embed=discord.Embed(description="This word has already been used!",
+                                                            colour=0xff0000))
+
+                                # If gamemode is competitive and msg is not in competitive-mode history
+                                if self.competitive and not msg in self.competitivehistory:
+                                    # Set last word to msg
+                                    self.last_word = msg
+                                    self.last_word_end = msg[-1]
+
+                                    # Generate new word
+                                    new_word = await self.solorandom()
+
+                                    # Try to set display_word to the digraph version of the new word
+                                    try:
+                                        display_word = new_word.replace('d', 'tx').replace('g', 'kx').replace('b',
+                                                                                                            'px').replace(
+                                            'ŋ', 'ng').replace('á', 'aw').replace('é', 'ew').replace('à',
+                                                                                                     'ay').replace(
+                                            'è', 'ey').replace('ʀ', 'rr').replace('j', 'll')
+                                    # If display_word is None
+                                    except AttributeError:
+                                        # Do nothing
+                                        pass
+
+                                    # If gamemode is competitive
+                                    if self.competitive:
+
+                                        # Add new word AND msg to competitive-mode history
+                                        self.competitivehistory.append(new_word)
+                                        self.competitivehistory.append(msg)
+
+                                        # Empty list to reference later
+                                        valid_words = []
+
+                                        # For every word in wordgame_words database
+                                        for word in wordgame_words:
+
+                                            # Try to add the current word to the list of valid words
+                                            # if word is not in competitive-mode history
+                                            # and word starts with the final letter of the new word
+                                            # and word is not in the list of recent words
+                                            try:
+                                                if word not in self.competitivehistory and word.startswith(new_word[-1]) and word not in self.recent_words:
+                                                    valid_words.append(word)
+
+                                            # If no valid word could be found
+                                            except TypeError:
+                                                # Do nothing
+                                                continue
+
+                                        # Get ID of message author
+                                        user = message.author.id
+                                        # Get member of message author
+                                        name = bot.discord.Guild.get_member(message.guild, user)
+                                        # Get server nickame of message author
+                                        name = name.nick
+
+                                        # If message author has no nickname
+                                        if name == 'None':
+                                            # Get user of message author
+                                            name = bot.bot.get_user(user)
+                                            # Get display name of message author
+                                            name = str(name.display_name)
+
+                                        # If new word is None (a valid word could not be generated)
+                                        if new_word is None:
+
+                                            # End competitive game with message author as the winner
+                                            await self.endcompetitive(message, name)
+
+                                        # If new word is NOT None
+                                        if new_word is not None:
+
+                                            # Say the new word
+                                            await message.channel.send(
+                                                embed=discord.Embed(description=display_word + "!", colour=899718))
+
+                                        # If no new valid words can be said
+                                        if valid_words == []:
+
+                                            # End competitive game with Ewo' as the winner
+                                            await self.endcompetitive(message, bot.bot.user.name)
+
+                        # If the author is the last player to say a word
+                        else:
+
+                            # Send a warning message
+                            await message.channel.send(
+                                embed=discord.Embed(description="You already said a word!", colour=0xff0000))
+
+                # If msg is in the list of recent words
+                else:
+
+                    # Send a warning message
+                    await message.channel.send(
+                        embed=discord.Embed(description="This word was used recently!",
+                                            colour=0xff0000))
+
+            # If there are spaces in msg
             else:
-                
-                # Send a warning message
-                await message.channel.send(
-                    embed=discord.Embed(description="This word was used recently!",
-                                        colour=0xff0000))
-                
+
+                # If the message is in the list of words with spaces
+                if msg in unusable_words['space']:
+
+                    # Send a warning message
+                    await message.channel.send(
+                        embed=discord.Embed(title="Unusable word: " + msg,
+                                            description="Words with spaces in them cannot be used!",
+                                            colour=0xff0000))
+
     # End a competitive game with a defined winner
     async def endcompetitive(self, message, winner):
         
@@ -870,8 +957,7 @@ class Wordgame(commands.Cog):
             if not self.solo:
 
                 # Send win message with list of session points
-                await message.channel.send(embed=discord.Embed(description=str(
-                    winner) + " won!\n" + "Total points for this round:\n" + player_list, colour=899718))
+                await message.channel.send(embed=discord.Embed(title=str(winner) + " won!", description="Total points for this round:\n" + player_list, colour=899718))
 
             # If gamemode is solo
             else:

@@ -1,4 +1,6 @@
 import json
+import os
+from collections import OrderedDict
 
 import discord
 from discord.ext import commands
@@ -14,9 +16,12 @@ with open("cogs/compact_database.json", encoding ='utf-8') as f:
 with open("cogs/fun/swear_database.json", encoding ='utf-8') as f:
     swear_database = json.load(f)
 
-
 # Cog
 class Fun(commands.Cog):
+    # Open selfie_leaderboard
+    with open("cogs/fun/selfie_leaderboard.json", encoding='utf-8') as f:
+        selfie_leaderboard = json.load(f)
+
     def __init__(self, bot):
         self.bot = bot
         
@@ -45,7 +50,7 @@ class Fun(commands.Cog):
         return word
     
     # Scream command
-    @commands.command(name='msg')
+    @commands.command(name='scream')
     async def scream(self, ctx, args):
         
         # Base string
@@ -134,7 +139,7 @@ class Fun(commands.Cog):
         random_words = '\n\n'.join(random_words)
 
         # Send the message
-        await ctx.send(embed=discord.Embed(title="Random Words:", description=random_words))
+        await ctx.send(embed=discord.Embed(title="Random Words:", description=random_words, colour=899718))
 
     # React history command
     @commands.command()
@@ -187,6 +192,133 @@ class Fun(commands.Cog):
 
         # Send the swear
         await ctx.send(random_swear)
+
+    # Say command
+    @commands.command(name='say', aliases=['speak', 'plltxe'])
+    async def say(self, ctx, msg):
+
+        # Send the message
+        await ctx.send(msg)
+
+        # Delete the command message
+        await ctx.message.delete()
+
+    # Selfie command
+    @commands.command(name='selfie', aliases=['picture', 'rel'])
+    async def selfie(self, ctx):
+
+        # Create a list of every file name from the selfie directory
+        selfie_list = os.listdir("cogs/fun/selfies")
+
+        # Choose a random selection from that list
+        selfie = random.choice(selfie_list)
+
+        # Open the chosen image and send it as a file.
+        with open('cogs/fun/selfies/' + selfie, 'rb') as f:
+            picture = discord.File(f)
+            await ctx.send(file=picture)
+
+        # Try to do the following:
+        if str(ctx.author.id) in self.selfie_leaderboard:
+            # If the chosen image is not in the command sender's list of images found
+            if not selfie in self.selfie_leaderboard[str(ctx.author.id)]:
+
+                # Add the current image and command sender to the current leaderboard
+                self.selfie_leaderboard[str(ctx.author.id)].append(selfie)
+
+                # Open the leaderboard file and write the new leaderboard
+                with open('cogs/fun/selfie_leaderboard.json', 'w') as f:
+                    json.dump(self.selfie_leaderboard, f)
+
+        # If a KeyError occurs, add a new player to the leaderboard
+        else:
+
+            # Add the current image and command sender to the current leaderboard
+            self.selfie_leaderboard[str(ctx.author.id)] = []
+            self.selfie_leaderboard[str(ctx.author.id)].append(selfie)
+
+            # Open the leaderboard file and write the new leaderboard
+            with open('cogs/fun/selfie_leaderboard.json', 'w') as f:
+                json.dump(self.selfie_leaderboard, f)
+
+    # Selfiesfound command
+    @commands.command(name='selfiesfound', aliases=['selfies', 'pictures', 'ayral', 'picturesfound', 'ayralarusun'])
+    async def selfiesfound(self, ctx):
+        # Variables
+        name = ""
+        total_count = 0
+        selfies_found = {}
+        sorted_selfies_found = {}
+        selfies_found_string = ""
+        my_selfies_found = 0
+        
+        # For every user ID in the leadeboard
+        for user in self.selfie_leaderboard:
+            
+            # Integerize the user ID
+            user = int(user)
+            # Get the member from the user ID
+            name = bot.discord.Guild.get_member(ctx.guild, user)
+            # Get their server nickname and surround it in "!"
+            # (To be able to remove the 's later without removing tìftangs)
+            name = str("!" + str(name.nick) + "!")
+            # If the player has no nickname
+            if name == "!" + 'None' + "!":
+                # Get the user from the user ID
+                name = bot.bot.get_user(user)
+                # Get the user's display name
+                name = str("!" + name.display_name + "!")
+            
+            # Make a new section in the variable for the user's name
+            selfies_found[name.strip('!!')] = 0
+            
+            # For every enumerated image in the selfies directory
+            for count, image in enumerate(os.listdir("cogs/fun/selfies")):
+                
+                # If the name of the image is in the user's list of found images
+                if image in self.selfie_leaderboard[str(user)]:
+                    
+                    # Add 1 to the user's selfies found
+                    selfies_found[name.strip('!!')] += 1
+                
+                # Set the amount of total images (counting starts at 0 so a 1 must be added)
+                total_count = count + 1
+            
+        # Sort the dictionary numerically and store the sorted version in a new variable
+        for key, value in sorted(selfies_found.items(), key=lambda x: int(x[1]), reverse=True):
+            sorted_selfies_found[key] = value
+
+        # For ever user in the sorted dictionary
+        for user in sorted_selfies_found:
+
+            # Add the user and their score to the string to be displayed
+            selfies_found_string += str(user + ": " + str(sorted_selfies_found.get(user))) + "/" + str(total_count)
+
+            # Add a new line to the string
+            selfies_found_string += "\n"
+
+        # For every enumerated image in the selfies directory
+        for count, image in enumerate(os.listdir("cogs/fun/selfies")):
+
+            # Try
+            try:
+
+                # If the image is in the user's selfies found
+                if image in self.selfie_leaderboard[str(ctx.author.id)]:
+
+                    # Add 1 to the command sender's selfies found count
+                    my_selfies_found += 1
+
+            # If this user is not in the leaderboard
+            except KeyError:
+                # Do nothing, their count is 0
+                pass
+
+            # Set the amount of total images (counting starts at 0 so a 1 must be added)
+            total_count = count + 1
+
+        # Send the leaderboard and user's count
+        await ctx.send(embed=discord.Embed(title="Selfies Found:", description=selfies_found_string + "\n\n" + 'You have found ' + str(my_selfies_found) + ' selfies out of ' + str(total_count), colour=899718))
 
 
 # Set up cog

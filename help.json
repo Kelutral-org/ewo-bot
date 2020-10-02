@@ -17,7 +17,13 @@
       "competitive": "Set game to competitive mode (Words cannot be reused and the player who says a word ending with a letter that no unused words start with will win).",
       "casual": "Set game to casual mode (Words can be reused and the game will not end unless stopped with the command.)"
     },
-    "example": "?wordgame begin solo competitive"
+    "example": "?wordgame solo competitive start"
+  },
+  {
+    "command": "**?points**",
+    "usage": "?points",
+    "description": "Display the leaderboard of wordgame points.",
+    "example": "?points"
   },
   {"command": "**?search**",
     "aliases": ["fwew", "word", "lì'u", "pelì'u"],
@@ -35,18 +41,18 @@
   },
   {"command": "**?scream**",
     "usage": "?scream <number>",
-    "description": "Make Ewo' scream. One number = one 'E'",
+    "description": "Make Ewo' scream. One number = one 'E'.",
     "example": "?scream 10"
   },
   {"command": "**?zawng**",
     "usage": "?zawng <number>",
-    "description": "It's just ?scream but Na'vi",
+    "description": "It's just ?scream but Na'vi.",
     "example": "?zawng 10"
   },
   {"command": "**?hiss**",
     "aliases": ["oìsss"],
     "usage": "?hiss <number>",
-    "description": "It's just ?scream but with less screaming and more ssssss",
+    "description": "It's just ?scream but with less screaming and more ssssss.",
     "example": "?hiss 10"
   },
   {"command": "**?random**",
@@ -65,5 +71,23 @@
     "usage": "?swear",
     "description": "Do you feel like swearing? Keep yourself clean, Ewo' can do it for you.",
     "example": "?swear"
+  },
+  {"command": "**?say**",
+    "aliases": ["speak", "plltxe"],
+    "usage": "?say \"<message>\"",
+    "description": "Makes Ewo' speak for you.",
+    "example": "?say \"something kind\""
+  },
+  {"command": "**?selfie**",
+    "aliases": ["picture", "rel"],
+    "usage": "?selfie",
+    "description": "I've got a body now and I'm ready to show it... ~~I'm sexy and I know it.~~",
+    "example": "?selfie"
+  },
+  {"command": "**?selfiesfound**",
+    "aliases": ["selfies","pictures","ayrel","picturesfound","ayrelarusun"],
+    "usage": "?selfiesfound",
+    "description": "Turning a random fun command into a competitive sport since 10/1/2020 at 12:57 AM.",
+    "example": "?selfiesfound"
   }
 ]
