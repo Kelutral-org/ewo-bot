@@ -150,10 +150,12 @@ async def exit(ctx):
                                            colour=0xff0000))
 
 
-## Updates the bot and relaunches
+# Updates the bot and relaunches
 @bot.command(name='update')
-async def updateBot(ctx, commit):
+async def update(ctx, commit):
+    print('yes')
     if ctx.message.author.id in config.operators:
+        print('again')
         REPO = config.repo
         g = git.cmd.Git(config.directory)
         COMMIT_MESSAGE = commit
@@ -168,6 +170,8 @@ async def updateBot(ctx, commit):
 
         msg = g.pull()
         await ctx.send("Pulling from the repo...")
+
+        print(msg)
 
         await bot.close()
 
