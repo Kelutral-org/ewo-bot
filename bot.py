@@ -6,8 +6,11 @@ except:
 import json
 from discord.ext import commands
 import config
+import git
 
-bot = commands.Bot(command_prefix=config.prefix, help_command=None, description=config.description)
+intents = discord.Intents.default()
+intents.members = True
+bot = commands.Bot(command_prefix=config.prefix, help_command=None, description=config.description, intents=intents)
 
 # Open file for help menu
 with open("help.json", encoding='utf-8') as f:
@@ -147,11 +150,37 @@ async def exit(ctx):
                                            colour=0xff0000))
 
 
+## Updates the bot and relaunches
+@bot.command(name='update')
+async def updateBot(ctx, commit):
+    if ctx.message.author.id in config.operators:
+        REPO = config.repo
+        g = git.cmd.Git(config.directory)
+        COMMIT_MESSAGE = commit
+
+        repo = git.Repo(REPO)
+        repo.git.add(update=True)
+        repo.index.commit(COMMIT_MESSAGE)
+
+        origin = repo.remote(name='ewo-bot')
+        msg = origin.push()
+        await ctx.send("Updating the bot...")
+
+        msg = g.pull()
+        await ctx.send("Pulling from the repo...")
+
+        await bot.close()
+
+        os.system('python bot.py')
+        quit()
+
+
 # Load cogs
 bot.load_extension('cogs.search.main')
 bot.load_extension('cogs.numbers.main')
 bot.load_extension('cogs.wordgame.main')
 bot.load_extension('cogs.fun.main')
+bot.load_extension('cogs.lessons.main')
 
 # Run bot
 bot.run(config.token)

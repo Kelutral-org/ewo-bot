@@ -116,7 +116,7 @@ class Wordgame(commands.Cog):
     async def points(self, ctx):
 
         # Empty dict to reference later
-        player_list = {}
+        player_list = []
 
         # For every user ID in wordgame_players, add them and their amount of points to the list of players
         for id in self.players:
@@ -125,26 +125,23 @@ class Wordgame(commands.Cog):
             user = int(id)
             # Get the member from the user ID
             name = bot.discord.Guild.get_member(ctx.guild, user)
-            # Get their server nickname and surround it in "!"
-            # (To be able to remove the 's later without removing tìftangs)
-            name = str("!" + str(name.nick) + "!")
+            # Get their server nickname
+            name = str(name.nick)
             # If the player has no nickname
-            if name == "!" + 'None' + "!":
+            if name == "None":
                 # Get the user from the user ID
                 name = bot.bot.get_user(user)
                 # Get the user's display name
-                name = str("!" + name.display_name + "!")
+                name = str(name.name)
 
             # Add the player's name to the list and set their value to be the value from wordgame_players
-            player_list[name] = self.players.get(id)
+            player_list.append(str(name) + ": " + str(self.players.get(id)))
 
-        # Turn the dict into a string
-        player_list = str(player_list)
+        # Turn the list into a string
+        player_list = '\n'.join(player_list)
 
         # Remove the brackets, as well as the string markers with the exclamation marks
         player_list = player_list.strip('{}')
-        player_list = player_list.replace('!\'', '')
-        player_list = player_list.replace('\'!', '')
 
         # Replace comma separator with a new line
         player_list = player_list.replace(', ', '\n')
@@ -389,7 +386,7 @@ class Wordgame(commands.Cog):
                     if not self.solo:
                         
                         # Empty dict to reference later
-                        player_list = {}
+                        player_list = []
 
                         # For every user ID in wordgame_players,
                         # add them and their amount of points to the list of players
@@ -399,23 +396,21 @@ class Wordgame(commands.Cog):
                             user = int(id)
                             # Get the member from the user ID
                             name = bot.discord.Guild.get_member(ctx.guild, user)
-                            # Get their server nickname and surround it in "!"
-                            # (To be able to remove the 's later without removing tìftangs)
-                            name = str("!" + str(name.nick) + "!")
+                            # Get their server nickname
+                            name = str(name.nick)
 
                             # If the player has no nickname
-                            if name == "!" + 'None' + "!":
+                            if name == "None":
                                 # Get the user from the user ID
                                 name = bot.bot.get_user(user)
                                 # Get the user's display name
-                                name = str("!" + name.display_name + "!")
+                                name = str(name.name)
 
-                            # Add the player's name to the list
-                            # and set their value to be the value from session_players
-                            player_list[name] = self.session_points.get(id)
+                            # Add the player's name to the list and set their value to be the value from wordgame_players
+                            player_list.append(str(name) + ": " + str(self.players.get(id)))
 
-                        # Turn the dict into a string
-                        player_list = str(player_list)
+                        # Turn the list into a string
+                        player_list = '\n'.join(player_list)
 
                         # Remove the brackets, as well as the string markers with the exclamation marks
                         player_list = player_list.strip('{}')
@@ -476,21 +471,21 @@ class Wordgame(commands.Cog):
         if message.channel.id in self.wordgame_activechannels and not message.author.bot and not msg.startswith(
                 '?') and not msg.startswith('!'):
 
+            # Replace individualized characters with digraphs and set it in a new variable
+            display_word = msg.replace('d', 'tx').replace('g', 'kx').replace('b',
+                                                                             'px').replace(
+                'ŋ', 'ng').replace('á', 'aw').replace('é', 'ew').replace('à',
+                                                                         'ay').replace(
+                'è', 'ey').replace('ʀ', 'rr').replace('j', 'll')
+
             # If the message is not in the list of valid wordgame words
             if msg not in wordgame_words:
-
-                # Replace individualized characters with digraphs and set it in a new variable
-                display_word = msg.replace('d', 'tx').replace('g', 'kx').replace('b',
-                                                                                 'px').replace(
-                    'ŋ', 'ng').replace('á', 'aw').replace('é', 'ew').replace('à',
-                                                                             'ay').replace(
-                    'è', 'ey').replace('ʀ', 'rr').replace('j', 'll')
 
                 # If msg ends with aw
                 if msg in unusable_words['aw']:
                     # Send a warning message
                     await message.channel.send(
-                        embed=discord.Embed(title="Unusable word: " + msg,
+                        embed=discord.Embed(title="Unusable word: " + display_word,
                                             description="Words that end with 'aw' cannot be used"
                                                         " because not enough words start with it!",
                                             colour=0xff0000))
@@ -499,7 +494,7 @@ class Wordgame(commands.Cog):
                 if msg in unusable_words['ew']:
                     # Send a warning message
                     await message.channel.send(
-                        embed=discord.Embed(title="Unusable word: " + msg,
+                        embed=discord.Embed(title="Unusable word: " + display_word,
                                             description="Words that end with 'ew' cannot be used"
                                                         " because not enough words start with it!",
                                             colour=0xff0000))
@@ -508,7 +503,7 @@ class Wordgame(commands.Cog):
                 if msg in unusable_words['rr']:
                     # Send a warning message
                     await message.channel.send(
-                        embed=discord.Embed(title="Unusable word: " + msg,
+                        embed=discord.Embed(title="Unusable word: " + display_word,
                                             description="Words that end with 'rr' cannot be used"
                                                         " because words cannot start with it!",
                                             colour=0xff0000))
@@ -517,7 +512,7 @@ class Wordgame(commands.Cog):
                 if msg in unusable_words['ll']:
                     # Send a warning message
                     await message.channel.send(
-                        embed=discord.Embed(title="Unusable word: " + msg,
+                        embed=discord.Embed(title="Unusable word: " + display_word,
                                             description="Words that end with 'll' cannot be used"
                                                         " because words cannot start with it!",
                                             colour=0xff0000))
@@ -576,7 +571,7 @@ class Wordgame(commands.Cog):
                                             # Get the user of the message author
                                             name = bot.bot.get_user(message.author.id)
                                             # Get their display name
-                                            name = str(name.display_name)
+                                            name = str(name.name)
 
                                         # Record the new player and word
                                         await message.channel.send(
@@ -852,7 +847,7 @@ class Wordgame(commands.Cog):
                                             # Get user of message author
                                             name = bot.bot.get_user(user)
                                             # Get display name of message author
-                                            name = str(name.display_name)
+                                            name = str(name.name)
 
                                         # If new word is None (a valid word could not be generated)
                                         if new_word is None:
@@ -918,7 +913,7 @@ class Wordgame(commands.Cog):
             print('Current active channels: ' + str(self.wordgame_activechannels))
             
             # Empty dict to reference later
-            player_list = {}
+            player_list = []
             
             # For every user ID in list of session points
             for id in self.session_points:
@@ -927,23 +922,22 @@ class Wordgame(commands.Cog):
                 user = int(id)
                 # Get member of player
                 name = bot.discord.Guild.get_member(message.guild, user)
-                # Get the server nickname of player and surround it in "!"
-                # (To be able to remove the 's later without removing tìftangs)
-                name = str("!" + str(name.nick) + "!")
+                # Get the server nickname of player
+                name = str(name.nick)
 
                 # If player has no nickname
-                if name == "!" + 'None' + "!":
+                if name == "None":
                     # Get user of player
                     name = bot.bot.get_user(user)
                     # Get display name of player and surround it in "!"
                     # (To be able to remove the 's later without removing tìftangs)
-                    name = str("!" + name.display_name + "!")
+                    name = str(name.name)
 
-                # Add player name to list of players and set their points
-                player_list[name] = self.session_points.get(id)
+                # Add the player's name to the list and set their value to be the value from wordgame_players
+                player_list.append(str(name) + ": " + str(self.players.get(id)))
 
-            # Make player_list into a string
-            player_list = str(player_list)
+            # Turn the list into a string
+            player_list = '\n'.join(player_list)
 
             # Remove the brackets, as well as the string markers with the exclamation marks
             player_list = player_list.strip('{}')

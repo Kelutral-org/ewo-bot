@@ -8,7 +8,7 @@
   {"command": "**?wordgame**",
     "aliases": ["uvanlì'uyä"],
     "usage": "?wordgame <args>",
-    "description": "The main command for Ewo's wordgame.",
+    "description": "The main command for my wordgame.",
     "arg_types": {
       "[start/begin]": "Start a wordgame session in this channel with defined args. Default args are [multiplayer, casual]",
       "[stop/end]": "Stop the current wordgame session.",
@@ -41,7 +41,7 @@
   },
   {"command": "**?scream**",
     "usage": "?scream <number>",
-    "description": "Make Ewo' scream. One number = one 'E'.",
+    "description": "Make me scream. One number = one 'E'.",
     "example": "?scream 10"
   },
   {"command": "**?zawng**",
@@ -63,19 +63,19 @@
   },
   {"command": "**?react**",
     "usage": "?react <message_id> <emoji>",
-    "description": "Make Ewo' react to a message.",
+    "description": "Make me react to a message.",
     "example": "?react 757381393947951114 :navitroll:"
   },
   {
     "command": "**?swear**",
     "usage": "?swear",
-    "description": "Do you feel like swearing? Keep yourself clean, Ewo' can do it for you.",
+    "description": "Do you feel like swearing? Keep yourself clean, I can do it for you.",
     "example": "?swear"
   },
   {"command": "**?say**",
     "aliases": ["speak", "plltxe"],
     "usage": "?say \"<message>\"",
-    "description": "Makes Ewo' speak for you.",
+    "description": "Makes me speak for you.",
     "example": "?say \"something kind\""
   },
   {"command": "**?selfie**",
@@ -89,5 +89,22 @@
     "usage": "?selfiesfound",
     "description": "Turning a random fun command into a competitive sport since 10/1/2020 at 12:57 AM.",
     "example": "?selfiesfound"
+  },
+  {"command": "**?lesson**",
+    "aliases": ["lessons","sänumvi","aysänumvi"],
+    "usage": "?lesson <subcommand> *<subcommand_args>...",
+    "description": "I'm a helpful boi now. (WIP)",
+    "arg_types": {
+      "addrole <role>": "TEACHER OR ROLE MANAGER ONLY. Add a new role to the list of teacher roles. <role> must be a mention.",
+      "removerole <role>": "TEACHER OR ROLE MANAGER ONLY. Remove an existing role from the list of teacher roles. <role> must be a mention.",
+      "addlevel": "TEACHER ONLY. Add a level to your custom level system. Follow the prompts to add it properly.",
+      "removelevel <number>": "TEACHER ONLY. Remove a level from your custom level system. This automatically corrects the numbers for the rest.",
+      "editlevel <number>": "TEACHER ONLY. Edit the description of the specified level in your custom level system.",
+      "nudgelevel <number>": "TEACHER ONLY. Replace an old level's position with a new one in your custom level system and nudge the other levels up to fit it.",
+      "setlevel <student> <level> *default": "TEACHER ONLY. Set the level of a student for your custom level system. <student> must be a mention. If \"default\" is used at the end it will set the student's level for the default system.",
+      "systems <teacher>/default": "Display the list of levels in the specified teacher's system. <teacher> must be a mention. If \"default\" is used instead of <teacher>, it will display the default system.",
+      "levels <student>": "Display the specified student's levels in all systems. <student> must be a mention."
+    },
+    "example": "?lesson systems default"
   }
 ]

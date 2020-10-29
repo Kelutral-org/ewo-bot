@@ -16,6 +16,7 @@ with open("cogs/compact_database.json", encoding ='utf-8') as f:
 with open("cogs/fun/swear_database.json", encoding ='utf-8') as f:
     swear_database = json.load(f)
 
+
 # Cog
 class Fun(commands.Cog):
     # Open selfie_leaderboard
@@ -48,25 +49,26 @@ class Fun(commands.Cog):
         
         # Return word
         return word
-    
+
+
     # Scream command
     @commands.command(name='scream')
     async def scream(self, ctx, args):
-        
+
         # Base string
         msg = "SKR"
         # Convert args to integer
         length = int(args)
-        
+
         # If length is bigger than 100, set it to 100
         if length > 100:
             length = 100
-            
+
         # While length is greater than zero, add an 'E' to the end of the string and subtract 1 from length
         while length > 0:
             msg = msg + "E"
             length -= 1
-            
+
         # Send the msg
         await ctx.send(msg)
     
@@ -261,16 +263,16 @@ class Fun(commands.Cog):
             name = bot.discord.Guild.get_member(ctx.guild, user)
             # Get their server nickname and surround it in "!"
             # (To be able to remove the 's later without removing tìftangs)
-            name = str("!" + str(name.nick) + "!")
+            name = str(name.nick)
             # If the player has no nickname
-            if name == "!" + 'None' + "!":
+            if name == "None":
                 # Get the user from the user ID
                 name = bot.bot.get_user(user)
                 # Get the user's display name
-                name = str("!" + name.display_name + "!")
+                name = str(name.name)
             
             # Make a new section in the variable for the user's name
-            selfies_found[name.strip('!!')] = 0
+            selfies_found[name] = 0
             
             # For every enumerated image in the selfies directory
             for count, image in enumerate(os.listdir("cogs/fun/selfies")):
@@ -279,7 +281,7 @@ class Fun(commands.Cog):
                 if image in self.selfie_leaderboard[str(user)]:
                     
                     # Add 1 to the user's selfies found
-                    selfies_found[name.strip('!!')] += 1
+                    selfies_found[name] += 1
                 
                 # Set the amount of total images (counting starts at 0 so a 1 must be added)
                 total_count = count + 1

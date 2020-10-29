@@ -14,3 +14,5 @@ version = "0.0.1"
 # Operators are people with override access to bot admin commands like reload
 operators = [423581502970789889,189504650645471232,205370567614922753,429361033446948864]
 status = "In Dev"
+repo = r"C:\Users\Conner\Desktop\Coding\Python\Discord.py\Ewo'\.git"
+directory = r"C:\Users\Conner\Desktop\Coding\Python\Discord.py\Ewo'"
