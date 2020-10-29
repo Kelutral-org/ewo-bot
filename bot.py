@@ -153,9 +153,7 @@ async def exit(ctx):
 # Updates the bot and relaunches
 @bot.command(name='update')
 async def update(ctx, commit):
-    print('yes')
     if ctx.message.author.id in config.operators:
-        print('again')
         REPO = config.repo
         g = git.cmd.Git(config.directory)
         COMMIT_MESSAGE = commit
@@ -165,16 +163,22 @@ async def update(ctx, commit):
         repo.index.commit(COMMIT_MESSAGE)
 
         origin = repo.remote(name='ewo-bot')
-        msg = origin.push()
         await ctx.send("Updating the bot...")
 
-        msg = g.pull()
         await ctx.send("Pulling from the repo...")
-
-        print(msg)
 
         await bot.close()
 
+        os.system('python bot.py')
+        quit()
+
+
+# Reload command
+@bot.command(name='reload')
+async def reload(ctx):
+    if ctx.message.author.id in config.operators:
+        await ctx.send("Reloading the bot...")
+        await bot.close()
         os.system('python bot.py')
         quit()
 
