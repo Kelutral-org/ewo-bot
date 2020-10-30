@@ -192,6 +192,7 @@ async def update(ctx, commit):
         origin = repo.remote(name='ewo-bot')
         await ctx.send("Updating the bot...")
 
+        msg = g.pull()
         await ctx.send("Pulling from the repo...")
 
         await bot.close()
