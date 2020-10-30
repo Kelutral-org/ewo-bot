@@ -64,10 +64,10 @@ class Search(commands.Cog):
         elif len(resultnames)>9:
             await ctx.send("Too Many Results")
         else:
-            resultit = 0
-            for item in resultnames:
-                await ctx.send(embed=discord.Embed(title = item,description=resultinfo[resultit], colour=0xff0000))
-                resultit += 1
+            embed = discord.Embed(title="Results:", color=0xff0000)
+            for i, item in enumerate(resultnames):
+                embed.add_field(name=item, description=resultinfo[i])
+            await ctx.send(embed=embed)
 def setup(bot):
     bot.add_cog(Search(bot))
     print('Added new Cog: ' + str(Search))
