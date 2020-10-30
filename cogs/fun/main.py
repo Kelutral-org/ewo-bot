@@ -202,8 +202,9 @@ class Fun(commands.Cog):
         # Send the message
         await ctx.send(msg)
 
-        # Delete the command message
-        await ctx.message.delete()
+        if bot.bot_options['delete_?say_context'] == "True":
+            # Delete the command message
+            await ctx.message.delete()
 
     # Selfie command
     @commands.command(name='selfie', aliases=['picture', 'rel'])

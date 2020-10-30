@@ -16,6 +16,10 @@ bot = commands.Bot(command_prefix=config.prefix, help_command=None, description=
 with open("help.json", encoding='utf-8') as f:
     help_file = json.load(f)
 
+# Open file for options
+with open("bot_options.json", encoding='utf-8') as f:
+    bot_options = json.load(f)
+
 
 # Setup presence and print some info
 @bot.event
@@ -24,9 +28,32 @@ async def on_ready():
     print(bot.user.name)
     print(bot.user.id)
     print('-------------------')
-    await bot.change_presence(activity=discord.Game(name=config.status + " V" + config.version))
+    await bot.change_presence(activity=discord.Game(name="Version " + config.version))
     print('status set.')
     print('-------------------')
+
+    if bot_options['display_online_message'] == "True":
+        channel = bot.get_channel(config.bot_channel)
+        await channel.send("I'm online! Running Version " + config.version)
+
+
+@bot.command(name='options')
+async def options(ctx, *args):
+    if ctx.author.id in config.operators:
+        if 'toggle' in args:
+            if 'display_online_message' in args:
+                if bot_options['display_online_message'] == "True":
+                    bot_options['display_online_message'] = "False"
+                else:
+                    bot_options['display_online_message'] = "True"
+            elif 'delete_?say_context' in args:
+                if bot_options['delete_?say_context'] == "True":
+                    bot_options['delete_?say_context'] = "False"
+                else:
+                    bot_options['delete_?say_context'] = "True"
+
+    with open(r'bot_options.json', 'w', encoding='utf-8') as f:
+        json.dump(bot_options, f, indent=4)
 
 
 # Help command

@@ -104,6 +104,48 @@ class Lessons(commands.Cog):
                                 embed=discord.Embed(description="This level does not exist!",
                                                     colour=0xff0000))
 
+            if 'students' in args:
+                if not 'default' in args:
+                    teacher_name = ctx.author.nick
+                    if teacher_name is None:
+                        teacher_name = ctx.author.name
+                    display = "**Students in " + teacher_name + "'s system:**\n\n"
+
+                    for student in self.students:
+                        # Get the member of the user id
+                        student_name = bot.discord.Guild.get_member(ctx.guild, int(student))
+                        # Get their nickname
+                        student_name = student_name.nick
+
+                        # If the user has no nickname
+                        if student_name is None:
+                            # Get the user of the user id
+                            student_name = bot.bot.get_user(int(student))
+                            # Get their display name
+                            student_name = student_name.name
+                        if str(ctx.author.id) in self.students.get(student):
+                            display += student_name + ": " + str(self.students[student].get(str(ctx.author.id))) + "\n"
+                else:
+                    display = "Students in the default system:\n\n"
+
+                    for student in self.students:
+                        # Get the member of the user id
+                        student_name = bot.discord.Guild.get_member(ctx.guild, int(student))
+                        # Get their nickname
+                        student_name = student_name.nick
+
+                        # If the user has no nickname
+                        if student_name is None:
+                            # Get the user of the user id
+                            student_name = bot.bot.get_user(int(student))
+                            # Get their display name
+                            student_name = student_name.name
+                        if 'default' in self.students.get(student):
+                            display += student_name + ": " + str(self.students[student].get('default')) + "\n"
+
+                await ctx.send(
+                    embed=discord.Embed(title="Students", description=display, colour=899718))
+
             if 'editlevel' in args:
                 for count, arg in enumerate(args):
                     if arg.isdigit() and count == 1:
@@ -207,7 +249,7 @@ class Lessons(commands.Cog):
                         embed=discord.Embed(title="Levels", description="That level is not in the specified system!",
                                             colour=0xff0000))
                         
-        if 'systems' in args:
+        if 'system' in args:
             display = ""
             for count, arg in enumerate(args):
                 if re.match(r'<@![0123456789]*?>', arg) and count == 1:

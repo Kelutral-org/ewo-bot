@@ -97,12 +97,13 @@
     "arg_types": {
       "addrole <role>": "TEACHER OR ROLE MANAGER ONLY. Add a new role to the list of teacher roles. <role> must be a mention.",
       "removerole <role>": "TEACHER OR ROLE MANAGER ONLY. Remove an existing role from the list of teacher roles. <role> must be a mention.",
+      "students *default": "TEACHER ONLY. List all students who have a value set in your system. If \"default\" is used, it will display all students who have a value set in the default system.",
       "addlevel": "TEACHER ONLY. Add a level to your custom level system. Follow the prompts to add it properly.",
       "removelevel <number>": "TEACHER ONLY. Remove a level from your custom level system. This automatically corrects the numbers for the rest.",
       "editlevel <number>": "TEACHER ONLY. Edit the description of the specified level in your custom level system.",
       "nudgelevel <number>": "TEACHER ONLY. Replace an old level's position with a new one in your custom level system and nudge the other levels up to fit it.",
       "setlevel <student> <level> *default": "TEACHER ONLY. Set the level of a student for your custom level system. <student> must be a mention. If \"default\" is used at the end it will set the student's level for the default system.",
-      "systems <teacher>/default": "Display the list of levels in the specified teacher's system. <teacher> must be a mention. If \"default\" is used instead of <teacher>, it will display the default system.",
+      "system <teacher>/default": "Display the list of levels in the specified teacher's system. <teacher> must be a mention. If \"default\" is used instead of <teacher>, it will display the default system.",
       "levels <student>": "Display the specified student's levels in all systems. <student> must be a mention."
     },
     "example": "?lesson systems default"
