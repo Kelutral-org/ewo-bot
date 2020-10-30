@@ -50,6 +50,11 @@ class Fun(commands.Cog):
         # Return word
         return word
 
+    # Boop
+    @commands.command(name='boop')
+    async def boop(self, ctx):
+        await ctx.send('*boop*')
+
     # For Halloween
     @commands.command(name='spoopy', aliases=['spooky', 'txewm'])
     async def spoopy(self, ctx):
