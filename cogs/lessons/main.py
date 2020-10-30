@@ -277,7 +277,7 @@ class Lessons(commands.Cog):
                             for level in self.levels.get(arg.strip('<>').replace('@!', '')):
                                 level_list.append(level)
                             level_list_string = ', '.join(level_list)
-                            display = "**" + name + "\'s system contains these levels:**" + "\n" + level_list_string + "\n\n Run \"?lesson levels <teacher> <level_number>\" to see the details for a level."
+                            display = "**" + name + "\'s system contains these levels:**" + "\n" + level_list_string + "\n\n Run \"?lesson system <teacher> <level_number>\" to see the details for a level."
                         else:
                             try:
                                 display = "```Level " + level_number + " in " + name + "\'s system:```" + "\n"
