@@ -12,7 +12,7 @@ prefix = "?"
 description = "Oe skxawng asrunga' lu"
 version = "1.1.2"
 # Operators are people with override access to bot admin commands like reload
-operators = [423581502970789889,189504650645471232,205370567614922753,429361033446948864]
+operators = [423581502970789889,189504650645471232,205370567614922753,429361033446948864, 81105065955303424]
 bot_channel = 718309398048538687
 
 # These need to be Anaru's directory
