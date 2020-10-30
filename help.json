@@ -107,5 +107,11 @@
       "levels <student>": "Display the specified student's levels in all systems. <student> must be a mention."
     },
     "example": "?lesson systems default"
+  },
+  {"command": "**?spoopy**",
+    "aliases": ["spooky","txewm"],
+    "usage": "?spoopy",
+    "description": ":jack_o_lantern: :ghost: :skull: :spider_web: :knife: :black_cat: :full_moon: :wolf: :bat: :owl: :smiling_imp: ",
+    "example": "?spoopy"
   }
 ]
