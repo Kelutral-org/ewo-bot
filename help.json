@@ -74,7 +74,7 @@
   },
   {"command": "**?say**",
     "aliases": ["speak", "plltxe"],
-    "usage": "?say \"<message>\"",
+    "usage": "?say <message>",
     "description": "Makes me speak for you.",
     "example": "?say \"something kind\""
   },

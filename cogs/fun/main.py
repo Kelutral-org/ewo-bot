@@ -197,7 +197,8 @@ class Fun(commands.Cog):
 
     # Say command
     @commands.command(name='say', aliases=['speak', 'plltxe'])
-    async def say(self, ctx, msg):
+    async def say(self, ctx, *msg):
+        msg = ' '.join(msg)
 
         # Send the message
         await ctx.send(msg)
