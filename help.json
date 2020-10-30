@@ -35,9 +35,9 @@
       "f":  "Shows the stress of the word in the definition.",
       "s":  "Shows the source of the word in the definition.",
       "t":  "Shows the topic of the word in the definition.",
-      "e":  "Searches in match mode (only entries containing direct matches will be shown)."
+      "b":  "Searches in broad mode (Distantly related entries will also be shown)."
     },
-    "example": "?search -pfe sunu"
+    "example": "?search -pfb sunu"
   },
   {"command": "**?scream**",
     "usage": "?scream <number>",
