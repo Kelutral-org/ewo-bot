@@ -59,7 +59,7 @@ class Fun(commands.Cog):
                     "Nari si :smiling_imp: :knife: ", "PXU! :ghost: ", "LU FÌ'U HÄLOWIN! :bat: ",
                     "Aysireal tok fìtsengti fìtrr! :ghost: :ghost: ", "Carve your pumpkins! :jack_o_lantern: ",
                     ":spider_web: :spider_web: ", "Nari si! Teraron sute a na nantang fìtxon! :full_moon: ",
-                    "Lu txan oare fìtxon! :full_moon: ", "Hu hu!:owl: ", "Lu vawm fìtxon! :bat: ",
+                    "Lu apxa oare fìtxon! :full_moon: ", "Hu hu!:owl: ", "Lu vawm fìtxon! :bat: ",
                     "Nari si! Ayvämpayrìl terìran fìtxon! :bat: :bat: ",
                     "Layona palulukantsyìpìl si rititsyìpìl tok fratsengti fìtrr! :black_cat: :bat: ",
                     "oooOOOOOooooOOOOooOOOooo! :ghost: ", "Wìtsyì lu txur fìtxon! :full_moon: ",
