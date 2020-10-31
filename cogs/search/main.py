@@ -4,7 +4,7 @@ import re
 import bot
 import json
 
-with open("cogs/compact_database.json", encoding='utf-8') as f:
+with open("cogs/search/compact_database.json", encoding='utf-8') as f:
     search_database = json.load(f)
 
 class Search(commands.Cog):
