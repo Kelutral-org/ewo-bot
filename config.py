@@ -15,5 +15,5 @@ operators = [423581502970789889,189504650645471232,205370567614922753,4293610334
 bot_channel = 718309398048538687
 
 # These need to be Anaru's directory
-repo = r"C:\Users\Conner\Desktop\Coding\Python\Discord.py\Ewo'\.git"
-directory = r"C:\Users\Conner\Desktop\Coding\Python\Discord.py\Ewo'"
+repo = r"F:\Ewo\.git"
+directory = r"F:\Ewo"
