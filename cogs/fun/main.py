@@ -8,10 +8,6 @@ import bot
 
 import random
 
-# Open search_database
-with open("cogs/compact_database.json", encoding ='utf-8') as f:
-    search_database = json.load(f)
-
 # Open swear_database
 with open("cogs/fun/swear_database.json", encoding ='utf-8') as f:
     swear_database = json.load(f)
