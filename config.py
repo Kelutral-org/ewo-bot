@@ -10,10 +10,10 @@ with open('token.txt','r') as file:
 token = token.strip()
 prefix = "?"
 description = "Oe skxawng asrunga' lu."
-version = "1.1.7"
+version = "1.1.8"
 operators = [423581502970789889,189504650645471232,205370567614922753,429361033446948864, 81105065955303424]
 bot_channel = 718309398048538687
 
 # These need to be Anaru's directory
-repo = r"C:\Users\Conner\Desktop\Coding\Python\Discord.py\Ewo'\.git"
-directory = r"C:\Users\Conner\Desktop\Coding\Python\Discord.py\Ewo'"
+repo = r"F:\Ewo\.git"
+directory = r"F:\Ewo"

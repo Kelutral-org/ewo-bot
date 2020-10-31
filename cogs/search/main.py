@@ -52,6 +52,13 @@ class Search(commands.Cog):
                             resultinfo.append(info)
                     except:
                         continue
+                elif 'e' in options:
+                    try:
+                        if re.fullmatch(word, foundname) or re.fullmatch(word, founddef):
+                            resultnames.append(foundname)
+                            resultinfo.append(info)
+                    except:
+                        continue
                 else:
                     try:
                         if re.match(word, foundname) or re.match(word, founddef):

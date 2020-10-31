@@ -35,7 +35,8 @@
       "f":  "Shows the stress of the word in the definition.",
       "s":  "Shows the source of the word in the definition.",
       "t":  "Shows the topic of the word in the definition.",
-      "b":  "Searches in broad mode (Distantly related entries will also be shown)."
+      "b":  "Searches in broad mode (Distantly related entries will also be shown).",
+      "e": "Searches in exact mode (Only exact matches will be displayed)."
     },
     "example": "?search -pfb sunu"
   },
