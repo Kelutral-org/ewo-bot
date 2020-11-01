@@ -77,7 +77,7 @@
     "aliases": ["speak", "plltxe"],
     "usage": "?say <message>",
     "description": "Makes me speak for you.",
-    "example": "?say \"something kind\""
+    "example": "?say something kind"
   },
   {"command": "**?selfie**",
     "aliases": ["picture", "rel"],
