@@ -109,12 +109,6 @@
     },
     "example": "?lesson systems default"
   },
-  {"command": "**?spoopy**",
-    "aliases": ["spooky","txewm"],
-    "usage": "?spoopy",
-    "description": ":jack_o_lantern: :ghost: :skull: :spider_web: :knife: :black_cat: :full_moon: :wolf: :bat: :owl: :smiling_imp: ",
-    "example": "?spoopy"
-  },
   {"command": "**?boop**",
     "usage": "?boop",
     "description": "Boop me I'm into it.",
