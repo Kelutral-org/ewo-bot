@@ -17,7 +17,6 @@ class Search(commands.Cog):
         resultinfo = []
         # Checks for options
         if '-' in list(args[0]):
-            print("options detected")
             options = (list(args[0].lower())[1:])
             wordlist = args[1:]
         else:
