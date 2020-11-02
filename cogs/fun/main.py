@@ -12,6 +12,10 @@ import random
 with open("cogs/fun/swear_database.json", encoding ='utf-8') as f:
     swear_database = json.load(f)
 
+# Open search_database
+with open("cogs/search/compact_database.json", encoding ='utf-8') as f:
+    search_database = json.load(f)
+
 
 # Cog
 class Fun(commands.Cog):
