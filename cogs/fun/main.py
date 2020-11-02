@@ -50,6 +50,20 @@ class Fun(commands.Cog):
         # Return word
         return word
 
+    # Sarcasm
+    @commands.command(name='sarcasm')
+    async def sarcasm(self, ctx, *args):
+        string = ' '.join(args)
+        display = ""
+        for letter in string:
+            caps = random.choice([True, False])
+            if caps:
+                display += letter.upper()
+            else:
+                display+= letter.lower()
+
+        await ctx.send(display)
+
     # Boop
     @commands.command(name='boop')
     async def boop(self, ctx):
