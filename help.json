@@ -113,5 +113,9 @@
     "usage": "?boop",
     "description": "Boop me I'm into it.",
     "example": "?boop"
-  }
+  },
+  {"command": "**?sarcasm**",
+    "usage": "?sarcasm <message>",
+    "description": "thIs IS a saRcAsTIC DEsCRipTioN.",
+    "example": "?sarcasm This is a sarcastic description."}
 ]
