@@ -51,24 +51,6 @@ class Fun(commands.Cog):
     async def boop(self, ctx):
         await ctx.send('*boop*')
 
-    # For Halloween
-    @commands.command(name='spoopy', aliases=['spooky', 'txewm'])
-    async def spoopy(self, ctx):
-        messages = ["BOO! :ghost: ", "Muahahaha... :smiling_imp: ",
-                    "Happy Halloween! :jack_o_lantern: ", "Hälowin lefpom! :jack_o_lantern: ",
-                    "Nari si :smiling_imp: :knife: ", "PXU! :ghost: ", "LU FÌ'U HÄLOWIN! :bat: ",
-                    "Aysireal tok fìtsengti fìtrr! :ghost: :ghost: ", "Carve your pumpkins! :jack_o_lantern: ",
-                    ":spider_web: :spider_web: ", "Nari si! Teraron sute a na nantang fìtxon! :full_moon: ",
-                    "Lu apxa oare fìtxon! :full_moon: ", "Hu hu!:owl: ", "Lu vawm fìtxon! :bat: ",
-                    "Nari si! Ayvämpayrìl terìran fìtxon! :bat: :bat: ",
-                    "Layona palulukantsyìpìl si rititsyìpìl tok fratsengti fìtrr! :black_cat: :bat: ",
-                    "oooOOOOOooooOOOOooOOOooo! :ghost: ", "Wìtsyì lu txur fìtxon! :full_moon: ",
-                    "Awuuuuu... :wolf: :full_moon: ", "Ke tiverkup... :skull: "]
-
-        message = random.choice(messages)
-
-        await ctx.send(message)
-
     # Scream command
     @commands.command(name='scream')
     async def scream(self, ctx, args):
