@@ -46,6 +46,14 @@ with open("help-german.json", encoding='utf-8') as f:
 with open("default_bot_options.json", encoding='utf-8') as f:
     default_bot_options = json.load(f)
 
+# Ensure existence of options file
+if not os.path.exists("bot_options.json"):
+    print('Options Database Missing... Applying fix.')
+    with open("bot_options.json", 'w', encoding='utf-8') as op:
+        json.dump(default_bot_options, op)
+        op.close()
+        pass
+
 # Open file for options
 with open("bot_options.json", encoding='utf-8') as f:
     bot_options = json.load(f)
