@@ -3,3 +3,4 @@ venv/
 __pycache__/
 cogs/search/missingdefs.txt
 token.txt
+bot_options.json
