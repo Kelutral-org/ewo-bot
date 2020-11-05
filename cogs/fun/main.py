@@ -1,23 +1,34 @@
 import json
 import os
-from collections import OrderedDict
+import random
 
 import discord
 from discord.ext import commands
+
 import bot
 
-import random
-
 # Open swear_database
-with open("cogs/fun/swear_database.json", encoding ='utf-8') as f:
+with open("cogs/fun/swear_database.json", encoding='utf-8') as f:
     swear_database = json.load(f)
 
 # Open search_database
-with open("cogs/search/compact_database.json", encoding ='utf-8') as f:
+with open("cogs/search/compact_database.json", encoding='utf-8') as f:
     search_database = json.load(f)
 
 
 # Cog
+async def random_word():
+    # Choose random word from search_database
+    word = random.choices(search_database)
+    # Select object
+    word = word[0]
+    # Get word, part of speech, and definition
+    word = word['name'] + ' ' + word['pos'] + ' = \n' + word['definition'].replace('\n', '; ')
+
+    # Return word
+    return word
+
+
 class Fun(commands.Cog):
     # Open selfie_leaderboard
     with open("cogs/fun/selfie_leaderboard.json", encoding='utf-8') as f:
@@ -25,28 +36,17 @@ class Fun(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
-        
-    # Generate random Na'vi word
-    async def random_word(self):
-        # Choose random word from search_database
-        word = random.choices(search_database)
-        # Select object
-        word = word[0]
-        # Get word, part of speech, and definition
-        word = word['name'] + ' ' + word['pos'] + ' = \n' + word['definition'].replace('\n', '; ')
-        
-        # Return word
-        return word
-    
+
     # Generate random Na'vi swear
-    async def random_swear(self):
+    @staticmethod
+    async def random_swear():
         # Choose random word from search_database
         word = random.choices(swear_database)
         # Select object
         word = word[0]
         # Get word and add exclamation mark
         word = word['name'] + '!'
-        
+
         # Return word
         return word
 
@@ -89,7 +89,7 @@ class Fun(commands.Cog):
 
         # Send the msg
         await ctx.send(msg)
-    
+
     @commands.command(name='zawng')
     async def zawng(self, ctx, args):
 
@@ -106,10 +106,10 @@ class Fun(commands.Cog):
         while length > 0:
             msg = msg + "A"
             length -= 1
-            
+
         # Send the msg
         await ctx.send(msg)
-    
+
     @commands.command(name='hiss', aliases=['oìsss', 'fauch'])
     async def hiss(self, ctx, args):
         # Base string
@@ -145,12 +145,11 @@ class Fun(commands.Cog):
 
         # While number is greater than 0
         while number > 0:
-
             # Generate random word
-            random_word = await self.random_word()
+            rand_word = await random_word()
 
             # Append random word to the end of the list
-            random_words.append(random_word)
+            random_words.append(rand_word)
 
             # Subtract 1 from number
             number -= 1
@@ -159,7 +158,8 @@ class Fun(commands.Cog):
         random_words = '\n\n'.join(random_words)
 
         # Send the message
-        await ctx.send(embed=discord.Embed(title=bot.lang.get(str(ctx.guild.id)).get('random_title') + ":", description=random_words, colour=899718))
+        await ctx.send(embed=discord.Embed(title=bot.lang.get(str(ctx.guild.id)).get('random_title') + ":",
+                                           description=random_words, colour=899718))
 
     # React command
     @commands.command(name='react', aliases=['reaktion'])
@@ -208,8 +208,8 @@ class Fun(commands.Cog):
                 print(str(guild.id))
                 self.selfie_leaderboard[str(guild.id)] = {}
 
-                with open("cogs/fun/selfie_leaderboard.json", 'w', encoding='utf-8') as f:
-                    json.dump(self.selfie_leaderboard, f, indent=4)
+                with open("cogs/fun/selfie_leaderboard.json", 'w', encoding='utf-8') as doc:
+                    json.dump(self.selfie_leaderboard, doc, indent=4)
 
         # Create a list of every file name from the selfie directory
         selfie_list = os.listdir("cogs/fun/selfies")
@@ -218,21 +218,20 @@ class Fun(commands.Cog):
         selfie = random.choice(selfie_list)
 
         # Open the chosen image and send it as a file.
-        with open('cogs/fun/selfies/' + selfie, 'rb') as f:
-            picture = discord.File(f)
+        with open('cogs/fun/selfies/' + selfie, 'rb') as doc:
+            picture = discord.File(doc)
             await ctx.send(file=picture)
 
         # Try to do the following:
         if str(ctx.author.id) in self.selfie_leaderboard.get(str(ctx.guild.id)):
             # If the chosen image is not in the command sender's list of images found
-            if not selfie in self.selfie_leaderboard.get(str(ctx.guild.id)).get(str(ctx.author.id)):
-
+            if selfie not in self.selfie_leaderboard.get(str(ctx.guild.id)).get(str(ctx.author.id)):
                 # Add the current image and command sender to the current leaderboard
                 self.selfie_leaderboard.get(str(ctx.guild.id)).get(str(ctx.author.id)).append(selfie)
 
                 # Open the leaderboard file and write the new leaderboard
-                with open('cogs/fun/selfie_leaderboard.json', 'w') as f:
-                    json.dump(self.selfie_leaderboard, f, indent=4)
+                with open('cogs/fun/selfie_leaderboard.json', 'w') as doc:
+                    json.dump(self.selfie_leaderboard, doc, indent=4)
 
         # If a KeyError occurs, add a new player to the leaderboard
         else:
@@ -242,23 +241,23 @@ class Fun(commands.Cog):
             self.selfie_leaderboard.get(str(ctx.guild.id)).get(str(ctx.author.id)).append(selfie)
 
             # Open the leaderboard file and write the new leaderboard
-            with open('cogs/fun/selfie_leaderboard.json', 'w') as f:
-                json.dump(self.selfie_leaderboard, f, indent=4)
+            with open('cogs/fun/selfie_leaderboard.json', 'w') as doc:
+                json.dump(self.selfie_leaderboard, doc, indent=4)
 
     # Selfiesfound command
-    @commands.command(name='selfiesfound', aliases=['selfies', 'pictures', 'ayral', 'picturesfound', 'ayralarusun', 'alleselfies'])
+    @commands.command(name='selfiesfound',
+                      aliases=['selfies', 'pictures', 'ayral', 'picturesfound', 'ayralarusun', 'alleselfies'])
     async def selfiesfound(self, ctx):
         # Variables
-        name = ""
         total_count = 0
         selfies_found = {}
         sorted_selfies_found = {}
         selfies_found_string = ""
         my_selfies_found = 0
-        
+
         # For every user ID in the leadeboard
         for user in self.selfie_leaderboard.get(str(ctx.guild.id)):
-            
+
             # Integerize the user ID
             user = int(user)
             # Get the member from the user ID
@@ -271,29 +270,27 @@ class Fun(commands.Cog):
                 name = bot.bot.get_user(user)
                 # Get the user's display name
                 name = str(name.name)
-            
+
             # Make a new section in the variable for the user's name
             selfies_found[name] = 0
-            
+
             # For every enumerated image in the selfies directory
             for count, image in enumerate(os.listdir("cogs/fun/selfies")):
-                
+
                 # If the name of the image is in the user's list of found images
                 if image in self.selfie_leaderboard.get(str(ctx.guild.id))[str(user)]:
-                    
                     # Add 1 to the user's selfies found
                     selfies_found[name] += 1
-                
+
                 # Set the amount of total images (counting starts at 0 so a 1 must be added)
                 total_count = count + 1
-            
+
         # Sort the dictionary numerically and store the sorted version in a new variable
         for key, value in sorted(selfies_found.items(), key=lambda x: int(x[1]), reverse=True):
             sorted_selfies_found[key] = value
 
         # For ever user in the sorted dictionary
         for user in sorted_selfies_found:
-
             # Add the user and their score to the string to be displayed
             selfies_found_string += str(user + ": " + str(sorted_selfies_found.get(user))) + "/" + str(total_count)
 
@@ -308,7 +305,6 @@ class Fun(commands.Cog):
 
                 # If the image is in the user's selfies found
                 if image in self.selfie_leaderboard.get(str(ctx.guild.id)).get(str(ctx.author.id)):
-
                     # Add 1 to the command sender's selfies found count
                     my_selfies_found += 1
 
@@ -321,7 +317,10 @@ class Fun(commands.Cog):
             total_count = count + 1
 
         # Send the leaderboard and user's count
-        await ctx.send(embed=discord.Embed(title=bot.lang.get(str(ctx.guild.id)).get('selfies_found_title') + ":", description=selfies_found_string + "\n\n" + bot.lang.get(str(ctx.guild.id)).get('selfies_found').replace('&1', str(my_selfies_found)).replace('&2', str(total_count)), colour=899718))
+        await ctx.send(embed=discord.Embed(title=bot.lang.get(str(ctx.guild.id)).get('selfies_found_title') + ":",
+                                           description=selfies_found_string + "\n\n" + bot.lang.get(
+                                               str(ctx.guild.id)).get('selfies_found').replace('&1', str(
+                                                my_selfies_found)).replace('&2', str(total_count)), colour=899718))
 
 
 # Set up cog
