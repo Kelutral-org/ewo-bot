@@ -6,6 +6,10 @@
 with open('token.txt', 'r') as file:
     token = file.read()
 
+# Library Requirements
+with open('requirements.txt', 'r') as f:
+    requirements = f.read()
+
 # System Basics
 token = token.strip()
 prefix = "?"
