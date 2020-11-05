@@ -1,34 +1,34 @@
 [
-  {"command": "**?help**",
+  {"command": "**?hilfe**",
     "aliases": ["srung"],
-    "usage": "?help *<command>",
-    "description": "Show info about a command or list all commands.",
-    "example": "?help scream"
+    "usage": "?hilfe *<command>",
+    "description": "Zeigt Infos über einen Befehl oder eine Liste aller Befehle.",
+    "example": "?hilfe schrei"
   },
-  {"command": "**?wordgame**",
+  {"command": "**?wortspiel**",
     "aliases": ["uvanlì'uyä"],
-    "usage": "?wordgame <args>",
-    "description": "The main command for my wordgame.",
+    "usage": "?wortspiel <args>",
+    "description": "Der Hauptbefehl für mein Wortspiel.",
     "arg_types": {
-      "[start/begin]": "Start a wordgame session in this channel with defined args. Default args are [multiplayer, casual]",
+      "[start/begin]": "Start a wordgame session in this channel with defined args. Default args are [multiplayer, casual].",
       "[stop/end]": "Stop the current wordgame session.",
       "solo": "Set game to solo mode (Ewo' says a word instead of having to wait for another player).",
       "multiplayer": "Set game to multiplayer mode (Ewo' only records other players words and the same player cannot say a word twice in a row).",
       "competitive": "Set game to competitive mode (Words cannot be reused and the player who says a word ending with a letter that no unused words start with will win).",
       "casual": "Set game to casual mode (Words can be reused and the game will not end unless stopped with the command.)"
     },
-    "example": "?wordgame solo competitive start"
+    "example": "?wortspiel solo competitive start"
   },
   {
-    "command": "**?points**",
-    "usage": "?points",
-    "description": "Display the leaderboard of wordgame points.",
-    "example": "?points"
+    "command": "**?punkte**",
+    "usage": "?punkte",
+    "description": "Zeigt eine Bestenliste der erzielten Wortspielpunkte.",
+    "example": "?punkte"
   },
-  {"command": "**?search**",
-    "aliases": ["fwew", "word", "lì'u", "pelì'u"],
-    "usage": "?search *-<arg1><arg2>... <word>",
-    "description": "Look up a Na'vi or English word and get a definition.",
+  {"command": "**?suche**",
+    "aliases": ["fwew", "wort", "lì'u", "pelì'u"],
+    "usage": "?suche *-<arg1><arg2>... <wort>",
+    "description": "Suche nach einem Wort auf Na'vi oder Deutsch und erhalte dessen Definition.",
     "arg_types": {
       "p":  "Shows the part of speech of the word in the definition.",
       "i":  "Shows the IPA of the word in the definition.",
@@ -38,63 +38,63 @@
       "b":  "Searches in broad mode (Distantly related entries will also be shown).",
       "e": "Searches in exact mode (Only exact matches will be displayed)."
     },
-    "example": "?search -pfb sunu"
+    "example": "?suche -pfb sunu"
   },
-  {"command": "**?scream**",
-    "usage": "?scream <number>",
-    "description": "Make me scream. One number = one 'E'.",
-    "example": "?scream 10"
+  {"command": "**?schrei**",
+    "usage": "?schrei <number>",
+    "description": "Schreie! Eine Ziffer ergibt ein \"E\" - z.B. 5 für 5x \"E\".",
+    "example": "?schrei 10"
   },
   {"command": "**?zawng**",
     "usage": "?zawng <number>",
-    "description": "It's just ?scream but Na'vi.",
+    "description": "Ein Schrei wie ?schrei, aber auf Na'vi.",
     "example": "?zawng 10"
   },
-  {"command": "**?hiss**",
+  {"command": "**?fauch**",
     "aliases": ["oìsss"],
-    "usage": "?hiss <number>",
-    "description": "It's just ?scream but with less screaming and more ssssss.",
-    "example": "?hiss 10"
+    "usage": "?fauch <number>",
+    "description": "Ein Schrei ?schrei, aber mit weniger Schreien und mehr Fauchen (\"sssss\").",
+    "example": "?fauch 10"
   },
-  {"command": "**?random**",
+  {"command": "**?zufall**",
     "aliases": ["renulke"],
-    "usage": "?random <number>",
-    "description": "Generates random Na'vi words and their meanings.",
-    "example": "?random 5"
+    "usage": "?zufall <number>",
+    "description": "Generiert zufällige Na'viwörter und ihre Bedeutung.",
+    "example": "?zufall 5"
   },
-  {"command": "**?react**",
-    "usage": "?react <message_id> <emoji>",
-    "description": "Make me react to a message.",
-    "example": "?react 757381393947951114 :navitroll:"
+  {"command": "**?reaktion**",
+    "usage": "?reaktion <message_id> <emoji>",
+    "description": "Bring mich dazu auf eine Nachricht zu reagieren.",
+    "example": "?reaktion 757381393947951114 :navitroll:"
   },
   {
-    "command": "**?swear**",
-    "usage": "?swear",
-    "description": "Do you feel like swearing? Keep yourself clean, I can do it for you.",
-    "example": "?swear"
+    "command": "**?fluch**",
+    "usage": "?fluch",
+    "description": "Dir ist nach Fluchen? Kein Grund selbst ausfällig zu werden, ich kann das gerne für dich übernehmen.",
+    "example": "?fluch"
   },
-  {"command": "**?say**",
+  {"command": "**?sprich**",
     "aliases": ["speak", "plltxe"],
-    "usage": "?say <message>",
-    "description": "Makes me speak for you.",
-    "example": "?say something kind"
+    "usage": "?sprich <message>",
+    "description": "Lässt mich für dich sprechen.",
+    "example": "?sprich something kind"
   },
   {"command": "**?selfie**",
     "aliases": ["picture", "rel"],
     "usage": "?selfie",
-    "description": "I've got a body now and I'm ready to show it... ~~I'm sexy and I know it.~~",
+    "description": "Ich habe nun einen Körper und bin bereit ihn zu zeigen... ~~I'm sexy and I know it.~~",
     "example": "?selfie"
   },
-  {"command": "**?selfiesfound**",
+  {"command": "**?alleselfies**",
     "aliases": ["selfies","pictures","ayrel","picturesfound","ayrelarusun"],
-    "usage": "?selfiesfound",
-    "description": "Turning a random fun command into a competitive sport since 10/1/2020 at 12:57 AM.",
-    "example": "?selfiesfound"
+    "usage": "?alleselfies",
+    "description": "Verändert einen zufälligen Spaßbefehl zu einem kompetitiven Sport - und das bereits seit dem 1.10.2020 um 00:57 Uhr.",
+    "example": "?alleselfies"
   },
-  {"command": "**?lesson**",
+  {"command": "**?lektion**",
     "aliases": ["lessons","sänumvi","aysänumvi"],
-    "usage": "?lesson <subcommand> *<subcommand_args>...",
-    "description": "I'm a helpful boi now. (WIP)",
+    "usage": "?lektion <subcommand> *<subcommand_args>...",
+    "description": "Ich bin jetzt ein hilfreicher Junge. (noch in Arbeit)",
     "arg_types": {
       "addrole <role>": "TEACHER OR ROLE MANAGER ONLY. Add a new role to the list of teacher roles. <role> must be a mention.",
       "removerole <role>": "TEACHER OR ROLE MANAGER ONLY. Remove an existing role from the list of teacher roles. <role> must be a mention.",
@@ -107,15 +107,15 @@
       "system <teacher>/default": "Display the list of levels in the specified teacher's system. <teacher> must be a mention. If \"default\" is used instead of <teacher>, it will display the default system.",
       "levels <student>": "Display the specified student's levels in all systems. <student> must be a mention."
     },
-    "example": "?lesson systems default"
+    "example": "?lektion systems default"
   },
-  {"command": "**?boop**",
-    "usage": "?boop",
-    "description": "Boop me I'm into it.",
-    "example": "?boop"
+  {"command": "**?stups**",
+    "usage": "?stups",
+    "description": "Stups mich an, mir gefällt das.",
+    "example": "?stups"
   },
-  {"command": "**?sarcasm**",
-    "usage": "?sarcasm <message>",
-    "description": "thIs IS a saRcAsTIC DEsCRipTioN.",
-    "example": "?sarcasm This is a sarcastic description."}
+  {"command": "**?sarkasmus**",
+    "usage": "?sarkasmus <message>",
+    "description": "diEs iSt EiNe SaRkAsTiScHe BeScHrEiBuNg.",
+    "example": "?sarkasmus Dies ist eine sarkastische Beschreibung."}
 ]

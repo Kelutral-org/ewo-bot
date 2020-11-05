@@ -11,7 +11,7 @@ class Search(commands.Cog):
     def __init__(self,bot):
         self.bot = bot
 
-    @commands.command(name='search', aliases=['fwew', 'word', 'lì\'u', 'pelì\'u'])
+    @commands.command(name='search', aliases=['fwew', 'word', 'lì\'u', 'pelì\'u', 'suche'])
     async def search(self, ctx, *args):
         resultnames = []
         resultinfo = []
@@ -29,7 +29,7 @@ class Search(commands.Cog):
                 founddef = dictionary["definition"]
                 info = info + founddef+'\n'
                 if 'p' in options:
-                    info = info +'\nPart of Speech: '+ dictionary['pos']
+                    info = info + '\n' + bot.lang.get(str(ctx.guild.id)).get('part_of_speech') + ': ' + dictionary['pos']
                 if 'i' in options:
                     info = info + '\nIPA: (' + dictionary['ipa'] + ')'
                 if 'f' in options:
@@ -39,11 +39,11 @@ class Search(commands.Cog):
                         stress += 1
                         if re.match('\u02c8',item):
                             break
-                    info = info + '\nStressed Syllable: '+str(stress)
+                    info = info + '\n' + bot.lang.get(str(ctx.guild.id)).get('stressed_syllable') + ': ' + str(stress)
                 if 's' in options:
-                    info = info + '\nSource: ' + dictionary['source']
+                    info = info + '\n' + bot.lang.get(str(ctx.guild.id)).get('source') + ': ' + dictionary['source']
                 if 't' in options:
-                    info = info + '\nTopic: '+ dictionary['topic']
+                    info = info + '\n' + bot.lang.get(str(ctx.guild.id)).get('topic') + ': ' + dictionary['topic']
                 if 'b' in options:
                     try:
                         if re.search(word, foundname) or re.search(word, founddef):
@@ -66,11 +66,11 @@ class Search(commands.Cog):
                     except:
                         continue
         if resultnames == []:
-            await ctx.send(embed=discord.Embed(title="Search", description="No Results", color=0xff0000))
+            await ctx.send(embed=discord.Embed(title=bot.lang.get(str(ctx.guild.id)).get('search_title'), description=bot.lang.get(str(ctx.guild.id)).get('search_no_results'), color=0xff0000))
         elif len(resultnames)> 20:
-            await ctx.send(embed=discord.Embed(title="Search", description="Too Many Results", color=0xff0000))
+            await ctx.send(embed=discord.Embed(title=bot.lang.get(str(ctx.guild.id)).get('search_title'), description=bot.lang.get(str(ctx.guild.id)).get('search_many_results'), color=0xff0000))
         else:
-            embed = discord.Embed(title="Results:", color=899718)
+            embed = discord.Embed(title=bot.lang.get(str(ctx.guild.id)).get('search_results_title'), color=899718)
             for i, item in enumerate(resultnames):
                 embed.add_field(name=item, value=resultinfo[i])
             await ctx.send(embed=embed)

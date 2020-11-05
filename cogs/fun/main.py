@@ -51,7 +51,7 @@ class Fun(commands.Cog):
         return word
 
     # Sarcasm
-    @commands.command(name='sarcasm')
+    @commands.command(name='sarcasm', aliases=['sarkasmus'])
     async def sarcasm(self, ctx, *args):
         string = ' '.join(args)
         display = ""
@@ -60,17 +60,17 @@ class Fun(commands.Cog):
             if caps:
                 display += letter.upper()
             else:
-                display+= letter.lower()
+                display += letter.lower()
 
         await ctx.send(display)
 
     # Boop
-    @commands.command(name='boop')
+    @commands.command(name='boop', aliases=['stups'])
     async def boop(self, ctx):
-        await ctx.send('*boop*')
+        await ctx.send('*' + bot.lang.get(str(ctx.guild.id)).get('boop') + '*')
 
     # Scream command
-    @commands.command(name='scream')
+    @commands.command(name='scream', aliases=['schrei'])
     async def scream(self, ctx, args):
 
         # Base string
@@ -110,7 +110,7 @@ class Fun(commands.Cog):
         # Send the msg
         await ctx.send(msg)
     
-    @commands.command(name='hiss', aliases=['oìsss'])
+    @commands.command(name='hiss', aliases=['oìsss', 'fauch'])
     async def hiss(self, ctx, args):
         # Base string
         msg = "OÌ"
@@ -130,7 +130,7 @@ class Fun(commands.Cog):
         await ctx.send(msg)
 
     # Random word command
-    @commands.command(name='random', aliases=['renulke'])
+    @commands.command(name='random', aliases=['renulke', 'zufall'])
     async def random(self, ctx, args):
 
         # Empty list to be referenced later
@@ -159,36 +159,10 @@ class Fun(commands.Cog):
         random_words = '\n\n'.join(random_words)
 
         # Send the message
-        await ctx.send(embed=discord.Embed(title="Random Words:", description=random_words, colour=899718))
-
-    # React history command
-    @commands.command()
-    async def reacthistory(self, ctx,args,emojiname):
-
-        # Convert args to integer
-        amount = int(args)
-
-        # Get the emoji that was entered
-        emoji = '<' + emojiname + '>'
-
-        # Get current channel
-        channel = ctx.message.channel
-
-        # If the sender of the command is an Ewo' operator
-        if ctx.message.author.id in bot.config.operators:
-
-            # Delete the command message
-            await ctx.message.delete()
-
-            # Get history of chat
-            messages = await channel.history(limit=amount).flatten()
-
-            # For each message in the history of the chat, react with the emoji specified
-            for message in messages:
-                await message.add_reaction(emoji)
+        await ctx.send(embed=discord.Embed(title=bot.lang.get(str(ctx.guild.id)).get('random_title') + ":", description=random_words, colour=899718))
 
     # React command
-    @commands.command()
+    @commands.command(name='react', aliases=['reaktion'])
     async def react(self, ctx, msg, emojiname):
 
         # Delete the command message
@@ -204,7 +178,7 @@ class Fun(commands.Cog):
         await message.add_reaction(emoji)
 
     # Swear command
-    @commands.command(name='swear', aliases=['räptum'])
+    @commands.command(name='swear', aliases=['räptum', 'fluch'])
     async def swear(self, ctx):
 
         # Generate random swear
@@ -214,20 +188,28 @@ class Fun(commands.Cog):
         await ctx.send(random_swear)
 
     # Say command
-    @commands.command(name='say', aliases=['speak', 'plltxe'])
+    @commands.command(name='say', aliases=['speak', 'plltxe', 'sprich'])
     async def say(self, ctx, *msg):
         msg = ' '.join(msg)
 
         # Send the message
         await ctx.send(msg)
 
-        if bot.bot_options['delete_?say_context'] == "True":
+        if bot.bot_options.get(str(ctx.guild.id)).get('delete_?say_context') == "True":
             # Delete the command message
             await ctx.message.delete()
 
     # Selfie command
     @commands.command(name='selfie', aliases=['picture', 'rel'])
     async def selfie(self, ctx):
+
+        for guild in bot.bot.guilds:
+            if not str(guild.id) in self.selfie_leaderboard:
+                print(str(guild.id))
+                self.selfie_leaderboard[str(guild.id)] = {}
+
+                with open("cogs/fun/selfie_leaderboard.json", 'w', encoding='utf-8') as f:
+                    json.dump(self.selfie_leaderboard, f, indent=4)
 
         # Create a list of every file name from the selfie directory
         selfie_list = os.listdir("cogs/fun/selfies")
@@ -241,30 +223,30 @@ class Fun(commands.Cog):
             await ctx.send(file=picture)
 
         # Try to do the following:
-        if str(ctx.author.id) in self.selfie_leaderboard:
+        if str(ctx.author.id) in self.selfie_leaderboard.get(str(ctx.guild.id)):
             # If the chosen image is not in the command sender's list of images found
-            if not selfie in self.selfie_leaderboard[str(ctx.author.id)]:
+            if not selfie in self.selfie_leaderboard.get(str(ctx.guild.id)).get(str(ctx.author.id)):
 
                 # Add the current image and command sender to the current leaderboard
-                self.selfie_leaderboard[str(ctx.author.id)].append(selfie)
+                self.selfie_leaderboard.get(str(ctx.guild.id)).get(str(ctx.author.id)).append(selfie)
 
                 # Open the leaderboard file and write the new leaderboard
                 with open('cogs/fun/selfie_leaderboard.json', 'w') as f:
-                    json.dump(self.selfie_leaderboard, f)
+                    json.dump(self.selfie_leaderboard, f, indent=4)
 
         # If a KeyError occurs, add a new player to the leaderboard
         else:
 
             # Add the current image and command sender to the current leaderboard
-            self.selfie_leaderboard[str(ctx.author.id)] = []
-            self.selfie_leaderboard[str(ctx.author.id)].append(selfie)
+            self.selfie_leaderboard.get(str(ctx.guild.id))[str(ctx.author.id)] = []
+            self.selfie_leaderboard.get(str(ctx.guild.id)).get(str(ctx.author.id)).append(selfie)
 
             # Open the leaderboard file and write the new leaderboard
             with open('cogs/fun/selfie_leaderboard.json', 'w') as f:
-                json.dump(self.selfie_leaderboard, f)
+                json.dump(self.selfie_leaderboard, f, indent=4)
 
     # Selfiesfound command
-    @commands.command(name='selfiesfound', aliases=['selfies', 'pictures', 'ayral', 'picturesfound', 'ayralarusun'])
+    @commands.command(name='selfiesfound', aliases=['selfies', 'pictures', 'ayral', 'picturesfound', 'ayralarusun', 'alleselfies'])
     async def selfiesfound(self, ctx):
         # Variables
         name = ""
@@ -275,14 +257,13 @@ class Fun(commands.Cog):
         my_selfies_found = 0
         
         # For every user ID in the leadeboard
-        for user in self.selfie_leaderboard:
+        for user in self.selfie_leaderboard.get(str(ctx.guild.id)):
             
             # Integerize the user ID
             user = int(user)
             # Get the member from the user ID
             name = bot.discord.Guild.get_member(ctx.guild, user)
-            # Get their server nickname and surround it in "!"
-            # (To be able to remove the 's later without removing tìftangs)
+            # Get their server nickname
             name = str(name.nick)
             # If the player has no nickname
             if name == "None":
@@ -298,7 +279,7 @@ class Fun(commands.Cog):
             for count, image in enumerate(os.listdir("cogs/fun/selfies")):
                 
                 # If the name of the image is in the user's list of found images
-                if image in self.selfie_leaderboard[str(user)]:
+                if image in self.selfie_leaderboard.get(str(ctx.guild.id))[str(user)]:
                     
                     # Add 1 to the user's selfies found
                     selfies_found[name] += 1
@@ -326,7 +307,7 @@ class Fun(commands.Cog):
             try:
 
                 # If the image is in the user's selfies found
-                if image in self.selfie_leaderboard[str(ctx.author.id)]:
+                if image in self.selfie_leaderboard.get(str(ctx.guild.id)).get(str(ctx.author.id)):
 
                     # Add 1 to the command sender's selfies found count
                     my_selfies_found += 1
@@ -340,7 +321,7 @@ class Fun(commands.Cog):
             total_count = count + 1
 
         # Send the leaderboard and user's count
-        await ctx.send(embed=discord.Embed(title="Selfies Found:", description=selfies_found_string + "\n\n" + 'You have found ' + str(my_selfies_found) + ' selfies out of ' + str(total_count), colour=899718))
+        await ctx.send(embed=discord.Embed(title=bot.lang.get(str(ctx.guild.id)).get('selfies_found_title') + ":", description=selfies_found_string + "\n\n" + bot.lang.get(str(ctx.guild.id)).get('selfies_found').replace('&1', str(my_selfies_found)).replace('&2', str(total_count)), colour=899718))
 
 
 # Set up cog

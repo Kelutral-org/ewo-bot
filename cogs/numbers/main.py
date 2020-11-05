@@ -24,30 +24,26 @@ def checkdigit(digit):
         affix = 'ERROR'
     return affix
 
-# Replace RandomCog with something that describes the cog.  E.G. SearchCog for a search engine, sl.
+
 class Numbers(commands.Cog):
     def __init__(self,bot):
         self.bot = bot
 
-
-    # commands have this format instead.  For any variables from the main file, use bot.variable.
     @commands.command(name='number',aliases=['num','holpxay'])
     async def number(self, ctx, *args):
         if '-' in args[0]:
-            print("options detected")
             options = args[0]
             args = args[1:]
         else:
             options = []
         for item in args:
-            print(item)
             try:
                 i = len(item)-1
                 item = int(item)
                 if 'o' in options:
                     decimal = 0
                     if '8' in str(item) or '9' in str(item):
-                        await ctx.send('Invalid octal number: 8 and 9 are not valid octal digits!')
+                        await ctx.send(bot.lang.get(str(ctx.guild.id)).get('numbers_invalid_octal'))
                     for digit in str(item):
                         digit = 8**i * int(digit)
                         decimal = decimal+digit
@@ -59,10 +55,11 @@ class Numbers(commands.Cog):
                     octal = int(''.join(list(str(octal))[2:]))
                     octstring = str(octal)
                 if 'c' in options:
-                    await ctx.send("Decimal: " + str(decimal) + "\nOctal: " + str(octal))
+                    await ctx.send(bot.lang.get(str(ctx.guild.id)).get('decimal') + ": " + str(decimal) + "\n" +
+                                   bot.lang.get(str(ctx.guild.id)).get('octal') + ": " + str(octal))
                     continue
                 elif len(octstring) > 5:
-                    await ctx.send('Too large to translate!\nPlease choose a number between 0 and 32767 decimal or 77777 octal.\nUse the -c flag to convert without translating.')
+                    await ctx.send(bot.lang.get(str(ctx.guild.id)).get('numbers_too_large'))
                     break
                 elif len(octstring) == 1:
                     digit = octstring
@@ -158,9 +155,11 @@ class Numbers(commands.Cog):
                             navinum = navinum + affix + 'zazam'
                             i-=1
 
-                await ctx.send("Decimal: "+str(decimal)+"\nOctal: "+str(octal)+'\nNa\'vi: '+navinum)
+                await ctx.send(bot.lang.get(str(ctx.guild.id)).get('decimal') + ": " + str(decimal) + "\n" +
+                               bot.lang.get(str(ctx.guild.id)).get('octal') + ": " + str(octal) + "\n" +
+                               'Na\'vi: ' + navinum)
             except:
-                await ctx.send("Not a number!")
+                await ctx.send(bot.lang.get(str(ctx.guild.id)).get('numbers_nan'))
                 pass
 
 

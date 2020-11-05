@@ -25,7 +25,7 @@ class Lessons(commands.Cog):
         with open("cogs/lessons/students.json", encoding="utf-8") as f:
             self.students = json.load(f)
 
-    @commands.command(name='lesson', aliases=['lessons', 'sänumvi', 'aysänumvi'])
+    @commands.command(name='lesson', aliases=['lessons', 'sänumvi', 'aysänumvi', 'lektion'])
     async def lesson(self, ctx, *args):
         args = list(args)
         teacher_roles = []
