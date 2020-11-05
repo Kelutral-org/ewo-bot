@@ -1,12 +1,26 @@
+import os
+import sys
+if sys.version_info[0] < 3:
+    sys.exit("Please Run the bot using Python 3.5 or higher")
+elif sys.version_info[1] < 5:
+    sys.exit("Please Run the bot using Python 3.5 or higher")
+elif sys.version_info[0] > 3:
+    print("Python 3 is the only officially supported version of python, be warned there may be errors.")
 try:
-    import discord, os, random
-except:
-    os.system("pip install --upgrade discord.py[voice]")
-    import discord, os, random
+    import discord
+    import yaml
+    import git
+except ImportError:
+    if sys.platform == "linux":
+        os.system("pip3 install --upgrade discord.py[voice] gitpython pyyaml")
+    else:
+        os.system("pip install --upgrade discord.py[voice] gitpython pyyaml")
+    import discord
+    import yaml
+    import git
 import json
 from discord.ext import commands
 import config
-import git
 
 intents = discord.Intents.default()
 intents.members = True
@@ -31,6 +45,14 @@ with open("help-german.json", encoding='utf-8') as f:
 # Open default options file
 with open("default_bot_options.json", encoding='utf-8') as f:
     default_bot_options = json.load(f)
+
+# Ensure existence of options file
+if not os.path.exists("bot_options.json"):
+    print('Options Database Missing... Applying fix.')
+    with open("bot_options.json", 'w', encoding='utf-8') as op:
+        json.dump(default_bot_options, op)
+        op.close()
+        pass
 
 # Open file for options
 with open("bot_options.json", encoding='utf-8') as f:
@@ -62,8 +84,8 @@ async def on_ready():
         if not str(guild.id) in bot_options:
             bot_options[str(guild.id)] = default_bot_options
 
-    with open("bot_options.json", 'w', encoding='utf-8') as f:
-        json.dump(bot_options, f, indent=4)
+    with open("bot_options.json", 'w', encoding='utf-8') as opt:
+        json.dump(bot_options, opt, indent=4)
 
     await set_lang()
 
@@ -75,15 +97,16 @@ async def on_ready():
 
 @bot.command(name='options', aliases=['optionen'])
 async def options(ctx, *args):
-    display = ""
     try:
         mode = args[0]
-        option = args[1]
-        value = args[2]
     except IndexError:
-        pass
+        return False
     if ctx.author.id in config.operators:
         if mode == 'toggle':
+            try:
+                option = args[1]
+            except IndexError:
+                return False
             if bot_options.get(str(ctx.guild.id)).get(option).get('values') == ["True", "False"]:
                 if bot_options.get(str(ctx.guild.id)).get(option)['value'] == "True":
                     bot_options.get(str(ctx.guild.id)).get(option)['value'] = "False"
@@ -91,48 +114,65 @@ async def options(ctx, *args):
                     bot_options.get(str(ctx.guild.id)).get(option)['value'] = "True"
 
                 await ctx.send(
-                    embed=discord.Embed(title=lang.get(str(ctx.guild.id)).get('options_title'), description=lang.get(str(ctx.guild.id)).get('option_set').replace('&1', option).replace('&2', bot_options.get(str(ctx.guild.id)).get(option).get('value')),
+                    embed=discord.Embed(title=lang.get(str(ctx.guild.id)).get('options_title'),
+                                        description=lang.get(str(ctx.guild.id)).get('option_set').replace('&1',
+                                                                                                          option).replace(
+                                            '&2', bot_options.get(str(ctx.guild.id)).get(option).get('value')),
                                         colour=899718))
             else:
                 await ctx.send(
-                    embed=discord.Embed(title=lang.get(str(ctx.guild.id)).get('options_title'), description=lang.get(str(ctx.guild.id)).get('option_not_boolean').replace('&1', option),
+                    embed=discord.Embed(title=lang.get(str(ctx.guild.id)).get('options_title'),
+                                        description=lang.get(str(ctx.guild.id)).get('option_not_boolean').replace('&1',
+                                                                                                                  option),
                                         colour=0xff0000))
         if mode == 'set':
+            try:
+                option = args[1]
+                value = args[2]
+            except IndexError:
+                return False
             if bot_options.get(str(ctx.guild.id)).get(option).get('values') is None:
                 bot_options.get(str(ctx.guild.id)).get(option)['value'] = value
 
                 await ctx.send(
                     embed=discord.Embed(title=lang.get(str(ctx.guild.id)).get('options_title'),
-                                        description=lang.get(str(ctx.guild.id)).get('option_set').replace('&1', option).replace('&2', bot_options.get(str(ctx.guild.id)).get(option).get('value')),
+                                        description=lang.get(str(ctx.guild.id)).get('option_set').replace('&1',
+                                                                                                          option).replace(
+                                            '&2', bot_options.get(str(ctx.guild.id)).get(option).get('value')),
                                         colour=899718))
             elif value in bot_options.get(str(ctx.guild.id)).get(option).get('values'):
                 bot_options.get(str(ctx.guild.id)).get(option)['value'] = value
 
                 await ctx.send(
                     embed=discord.Embed(title=lang.get(str(ctx.guild.id)).get('options_title'),
-                                        description=lang.get(str(ctx.guild.id)).get('option_set').replace('&1', option).replace('&2', bot_options.get(str(ctx.guild.id)).get(option).get('value')),
+                                        description=lang.get(str(ctx.guild.id)).get('option_set').replace('&1',
+                                                                                                          option).replace(
+                                            '&2', bot_options.get(str(ctx.guild.id)).get(option).get('value')),
                                         colour=899718))
             else:
                 await ctx.send(
-                    embed=discord.Embed(title=lang.get(str(ctx.guild.id)).get('options_title'), description=lang.get(str(ctx.guild.id)).get('option_invalid_value').replace('&1', option).replace('&2', value),
+                    embed=discord.Embed(title=lang.get(str(ctx.guild.id)).get('options_title'),
+                                        description=lang.get(str(ctx.guild.id)).get('option_invalid_value').replace(
+                                            '&1', option).replace('&2', value),
                                         colour=0xff0000))
+            if option == 'server_language':
+                await set_lang()
         if mode == 'list':
             display = "**" + lang.get(str(ctx.guild.id)).get('options_list') + ":**\n\n"
             for option in bot_options.get(str(ctx.guild.id)):
-                display += option.replace('_', '\_') + ": \n"
-                display += "・" + lang.get(str(ctx.guild.id)).get('options_value') + ": " + bot_options.get(str(ctx.guild.id)).get(option).get('value') + "\n"
-                display += "・" + lang.get(str(ctx.guild.id)).get('options_values') + ": " + str(bot_options.get(str(ctx.guild.id)).get(option).get('values')) + "\n\n"
+                display += option.replace('_', '\\_') + ": \n"
+                display += "・" + lang.get(str(ctx.guild.id)).get('options_value') + ": " + bot_options.get(
+                    str(ctx.guild.id)).get(option).get('value') + "\n"
+                display += "・" + lang.get(str(ctx.guild.id)).get('options_values') + ": " + str(
+                    bot_options.get(str(ctx.guild.id)).get(option).get('values')) + "\n\n"
 
             await ctx.send(
                 embed=discord.Embed(title=lang.get(str(ctx.guild.id)).get('options_title'),
                                     description=display,
                                     colour=899718))
 
-        if option == 'server_language':
-            await set_lang()
-
-    with open(r'bot_options.json', 'w', encoding='utf-8') as f:
-        json.dump(bot_options, f, indent=4)
+    with open(r'bot_options.json', 'w', encoding='utf-8') as opt:
+        json.dump(bot_options, opt, indent=4)
 
 
 # Help command
@@ -147,55 +187,54 @@ async def help(ctx, *args):
     # Try to select first section of args
     try:
         args = args[0]
-        
+
     # If args cannot be indexed (if it is None), set it to an empty string
     except IndexError:
         args = ""
-        
+
     # Remove prefixes from beginning of arg (For more intuitive arguments)
-    args = args.replace('?','')
+    args = args.replace('?', '')
 
     # Empty string to reference later
     display_help = ""
-    
+
     # If user has run ?help with no args, display the main help menu
     if not args:
-        
+
         # Begin by setting the string to the instructions
         display_help = lang.get(str(ctx.guild.id)).get('help_info') + "\n"
-        
+
         # For each command in the help file
         for command in help_file:
-            
             # Add this command's command name and description to the string
             display_help += "\n" + command["command"] + ": " + command["description"]
-            
+
     # If there are arguments
     else:
-        
+
         # For each command in the help file
         for command in help_file:
-            
+
             # Find command for argument by stripping the current command's command name of its formatting and prefix,
             # then testing if the result is equal to the argument
             if str(command["command"]).strip('**{?}**') == args:
-                
+
                 # Add command name and description
                 display_help += "\n\n" + command["command"] + ": " + command["description"] + "\n"
-                
+
                 # Try to find aliases for command
                 try:
                     # Empty list to reference later
                     alias_list = []
-                    
+
                     # If there are aliases, add a section for them to the string
                     if command["aliases"]:
                         display_help += "**Aliases**: "
-                        
+
                     # Add any aliases to alias_list
                     for alias in command["aliases"]:
                         alias_list.append(alias)
-                    
+
                     # Join alias_list into a string and add it to display_help
                     display_help += ', '.join(alias_list)
 
@@ -216,7 +255,6 @@ async def help(ctx, *args):
 
                     # If there is an arg_types section
                     if command["arg_types"]:
-
                         # Add section for them to display_help
                         display_help += "**Args**:\n"
 
@@ -235,7 +273,10 @@ async def help(ctx, *args):
         # If display_help has not been changed from its default (nothing was found for the args), send a warning
         if display_help == lang.get(str(ctx.guild.id)).get('help_info') + "\n" or display_help == "":
             await ctx.send(
-                embed=discord.Embed(title=ctx.message.content, description=lang.get(str(ctx.guild.id)).get('help_invalid_command').replace('&1', str(args)),
+                embed=discord.Embed(title=ctx.message.content,
+                                    description=lang.get(str(ctx.guild.id)).get('help_invalid_command').replace('&1',
+                                                                                                                str(
+                                                                                                                    args)),
                                     colour=0xff0000))
 
     # If display_help has been changed from its default (values were found for the args), send the finished help menu
@@ -246,19 +287,19 @@ async def help(ctx, *args):
 # Exit command
 @bot.command()
 async def exit(ctx):
-
     # If the sender of the command is an Ewo' operator
     if ctx.message.author.id in config.operators:
 
         # Send a shutdown message and exit
         await ctx.send(embed=discord.Embed(description=lang.get(str(ctx.guild.id)).get('exit_message'), colour=899718))
-        os._exit(0)
+        sys.exit(0)
 
     # If the sender of the command is NOT an Ewo' operator
     else:
 
         # Send a deny message and do nothing
-        await ctx.send(embed=discord.Embed(title=lang.get(str(ctx.guild.id)).get('denied'), description=lang.get(str(ctx.guild.id)).get('no_access'),
+        await ctx.send(embed=discord.Embed(title=lang.get(str(ctx.guild.id)).get('denied'),
+                                           description=lang.get(str(ctx.guild.id)).get('no_access'),
                                            colour=0xff0000))
 
 
@@ -266,24 +307,23 @@ async def exit(ctx):
 @bot.command(name='update')
 async def update(ctx, commit):
     if ctx.message.author.id in config.operators:
-        REPO = config.repo
-        g = git.cmd.Git(config.directory)
-        COMMIT_MESSAGE = commit
+        g = git.cmd.Git(os.path.dirname(os.path.realpath(__file__)))
+        commit_message = commit
 
-        repo = git.Repo(REPO)
+        repo = git.Repo(os.path.dirname(os.path.realpath(__file__)) + "/.git")
         repo.git.add(update=True)
-        repo.index.commit(COMMIT_MESSAGE)
+        repo.index.commit(commit_message)
 
         origin = repo.remote(name='ewo-bot')
         await ctx.send(lang.get(str(ctx.guild.id)).get('updating'))
 
-        msg = g.pull()
+        g.pull()
         await ctx.send(lang.get(str(ctx.guild.id)).get('pulling'))
 
         await bot.close()
 
         os.system('python bot.py')
-        quit()
+        sys.exit()
 
 
 # Reload command
@@ -293,7 +333,7 @@ async def reload(ctx):
         await ctx.send(lang.get(str(ctx.guild.id)).get('reloading'))
         await bot.close()
         os.system('python bot.py')
-        quit()
+        sys.exit()
 
 
 # Load cogs
