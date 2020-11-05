@@ -1,8 +1,7 @@
-import discord
 from discord.ext import commands
-import re
+from pyasn1.type.univ import Null
+
 import bot
-import math
 
 
 def checkdigit(digit):
@@ -26,11 +25,12 @@ def checkdigit(digit):
 
 
 class Numbers(commands.Cog):
-    def __init__(self,bot):
+    def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(name='number',aliases=['num','holpxay'])
+    @commands.command(name='number', aliases=['num', 'holpxay'])
     async def number(self, ctx, *args):
+        octstring = Null
         if '-' in args[0]:
             options = args[0]
             args = args[1:]
@@ -38,16 +38,16 @@ class Numbers(commands.Cog):
             options = []
         for item in args:
             try:
-                i = len(item)-1
+                i = len(item) - 1
                 item = int(item)
                 if 'o' in options:
                     decimal = 0
                     if '8' in str(item) or '9' in str(item):
                         await ctx.send(bot.lang.get(str(ctx.guild.id)).get('numbers_invalid_octal'))
                     for digit in str(item):
-                        digit = 8**i * int(digit)
-                        decimal = decimal+digit
-                        i-=1
+                        digit = 8 ** i * int(digit)
+                        decimal = decimal + digit
+                        i -= 1
                     octal = item
                 else:
                     decimal = item
@@ -88,12 +88,12 @@ class Numbers(commands.Cog):
                     check = 'done'
                     for digit in octstring:
                         if digit == '0':
-                            i-=1
+                            i -= 1
                             continue
                         elif i == 0:
                             if digit == '1':
                                 if navinum[-1] == 'o':
-                                    navinum = navinum+'l'
+                                    navinum = navinum + 'l'
                                 ones = 'aw'
                             elif digit == '2':
                                 if navinum[-1] == 'm':
@@ -128,9 +128,9 @@ class Numbers(commands.Cog):
                             else:
                                 navinum = navinum + affix + 'vo'
                             if octstring[-1] == '0':
-                                navinum = navinum+'l'
+                                navinum = navinum + 'l'
                             check = 'done'
-                            i-=1
+                            i -= 1
                         elif i == 2:
                             affix = checkdigit(digit)
                             if (digit == '0'):
@@ -140,7 +140,7 @@ class Numbers(commands.Cog):
                                     navinum = navinum[:-1]
                                 check = 'check'
                             navinum = navinum + affix + 'zam'
-                            i-=1
+                            i -= 1
                         elif i == 3:
                             affix = checkdigit(digit)
                             if (digit == '0'):
@@ -149,11 +149,11 @@ class Numbers(commands.Cog):
                                 if navinum[-1] == 'm':
                                     navinum = navinum[:-1]
                             navinum = navinum + affix + 'vozam'
-                            i-=1
+                            i -= 1
                         elif i == 4:
                             affix = checkdigit(digit)
                             navinum = navinum + affix + 'zazam'
-                            i-=1
+                            i -= 1
 
                 await ctx.send(bot.lang.get(str(ctx.guild.id)).get('decimal') + ": " + str(decimal) + "\n" +
                                bot.lang.get(str(ctx.guild.id)).get('octal') + ": " + str(octal) + "\n" +
