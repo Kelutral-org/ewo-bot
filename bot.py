@@ -258,7 +258,8 @@ async def exit(ctx):
     else:
 
         # Send a deny message and do nothing
-        await ctx.send(embed=discord.Embed(title=lang.get(str(ctx.guild.id)).get('denied'), description=lang.get(str(ctx.guild.id)).get('no_access'),
+        await ctx.send(embed=discord.Embed(title=lang.get(str(ctx.guild.id)).get('denied'),
+                                           description=lang.get(str(ctx.guild.id)).get('no_access'),
                                            colour=0xff0000))
 
 
@@ -266,13 +267,12 @@ async def exit(ctx):
 @bot.command(name='update')
 async def update(ctx, commit):
     if ctx.message.author.id in config.operators:
-        REPO = config.repo
-        g = git.cmd.Git(config.directory)
-        COMMIT_MESSAGE = commit
+        g = git.cmd.Git(os.path.dirname(os.path.realpath(__file__)))
+        commit_message = commit
 
-        repo = git.Repo(REPO)
+        repo = git.Repo(os.path.dirname(os.path.realpath(__file__)) + "/.git")
         repo.git.add(update=True)
-        repo.index.commit(COMMIT_MESSAGE)
+        repo.index.commit(commit_message)
 
         origin = repo.remote(name='ewo-bot')
         await ctx.send(lang.get(str(ctx.guild.id)).get('updating'))
