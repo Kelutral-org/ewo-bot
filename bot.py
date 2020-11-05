@@ -84,8 +84,8 @@ async def on_ready():
         if not str(guild.id) in bot_options:
             bot_options[str(guild.id)] = default_bot_options
 
-    with open("bot_options.json", 'w', encoding='utf-8') as f:
-        json.dump(bot_options, f, indent=4)
+    with open("bot_options.json", 'w', encoding='utf-8') as opt:
+        json.dump(bot_options, opt, indent=4)
 
     await set_lang()
 
@@ -97,15 +97,16 @@ async def on_ready():
 
 @bot.command(name='options', aliases=['optionen'])
 async def options(ctx, *args):
-    display = ""
     try:
         mode = args[0]
-        option = args[1]
-        value = args[2]
     except IndexError:
-        pass
+        return False
     if ctx.author.id in config.operators:
         if mode == 'toggle':
+            try:
+                option = args[1]
+            except IndexError:
+                return False
             if bot_options.get(str(ctx.guild.id)).get(option).get('values') == ["True", "False"]:
                 if bot_options.get(str(ctx.guild.id)).get(option)['value'] == "True":
                     bot_options.get(str(ctx.guild.id)).get(option)['value'] = "False"
@@ -125,6 +126,11 @@ async def options(ctx, *args):
                                                                                                                   option),
                                         colour=0xff0000))
         if mode == 'set':
+            try:
+                option = args[1]
+                value = args[2]
+            except IndexError:
+                return False
             if bot_options.get(str(ctx.guild.id)).get(option).get('values') is None:
                 bot_options.get(str(ctx.guild.id)).get(option)['value'] = value
 
@@ -149,10 +155,12 @@ async def options(ctx, *args):
                                         description=lang.get(str(ctx.guild.id)).get('option_invalid_value').replace(
                                             '&1', option).replace('&2', value),
                                         colour=0xff0000))
+            if option == 'server_language':
+                await set_lang()
         if mode == 'list':
             display = "**" + lang.get(str(ctx.guild.id)).get('options_list') + ":**\n\n"
             for option in bot_options.get(str(ctx.guild.id)):
-                display += option.replace('_', '\_') + ": \n"
+                display += option.replace('_', '\\_') + ": \n"
                 display += "・" + lang.get(str(ctx.guild.id)).get('options_value') + ": " + bot_options.get(
                     str(ctx.guild.id)).get(option).get('value') + "\n"
                 display += "・" + lang.get(str(ctx.guild.id)).get('options_values') + ": " + str(
@@ -163,11 +171,8 @@ async def options(ctx, *args):
                                     description=display,
                                     colour=899718))
 
-        if option == 'server_language':
-            await set_lang()
-
-    with open(r'bot_options.json', 'w', encoding='utf-8') as f:
-        json.dump(bot_options, f, indent=4)
+    with open(r'bot_options.json', 'w', encoding='utf-8') as opt:
+        json.dump(bot_options, opt, indent=4)
 
 
 # Help command
@@ -312,7 +317,7 @@ async def update(ctx, commit):
         origin = repo.remote(name='ewo-bot')
         await ctx.send(lang.get(str(ctx.guild.id)).get('updating'))
 
-        msg = g.pull()
+        g.pull()
         await ctx.send(lang.get(str(ctx.guild.id)).get('pulling'))
 
         await bot.close()
