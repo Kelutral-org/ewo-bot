@@ -7,7 +7,6 @@ import discord
 from discord.ext import commands
 import bot
 
-
 # Open wordgame_words database
 with open("cogs/wordgame/wordgame_words.json", encoding='utf-8') as f:
     wordgame_words = json.load(f)
@@ -95,7 +94,7 @@ class Wordgame(commands.Cog):
             word = word[0]
             self.last_word_end = word[-1]
             self.last_word = word
-            
+
         # Return the chosen word
         return word
 
@@ -156,20 +155,29 @@ class Wordgame(commands.Cog):
             if id == str(ctx.author.id):
                 # Add a section at the end of the string stating the sender's place and amount of points.
                 if x == 1:
-                    player_list += "\n\n" + bot.lang.get(str(ctx.guild.id)).get('points_first_place').replace('&1', str(x)).replace('&2', str(self.players.get(str(ctx.author.id))))
+                    player_list += "\n\n" + bot.lang.get(str(ctx.guild.id)).get('points_first_place').replace('&1', str(
+                        x)).replace('&2', str(self.players.get(str(ctx.author.id))))
                     break
                 if x == 2:
-                    player_list += "\n\n" + bot.lang.get(str(ctx.guild.id)).get('points_second_place').replace('&1', str(x)).replace('&2', str(self.players.get(str(ctx.author.id))))
+                    player_list += "\n\n" + bot.lang.get(str(ctx.guild.id)).get('points_second_place').replace('&1',
+                                                                                                               str(
+                                                                                                                   x)).replace(
+                        '&2', str(self.players.get(str(ctx.author.id))))
                     break
                 if x == 3:
-                    player_list += "\n\n" + bot.lang.get(str(ctx.guild.id)).get('points_third_place').replace('&1', str(x)).replace('&2', str(self.players.get(str(ctx.author.id))))
+                    player_list += "\n\n" + bot.lang.get(str(ctx.guild.id)).get('points_third_place').replace('&1', str(
+                        x)).replace('&2', str(self.players.get(str(ctx.author.id))))
                     break
                 if x > 3:
-                    player_list += "\n\n" + bot.lang.get(str(ctx.guild.id)).get('points_general_place').replace('&1', str(x)).replace('&2', str(self.players.get(str(ctx.author.id))))
+                    player_list += "\n\n" + bot.lang.get(str(ctx.guild.id)).get('points_general_place').replace('&1',
+                                                                                                                str(
+                                                                                                                    x)).replace(
+                        '&2', str(self.players.get(str(ctx.author.id))))
                     break
 
         # Send the player list.
-        await ctx.send(embed=discord.Embed(title=bot.lang.get(str(ctx.guild.id)).get('points_title') + ":", description=player_list, colour=899718))
+        await ctx.send(embed=discord.Embed(title=bot.lang.get(str(ctx.guild.id)).get('points_title') + ":",
+                                           description=player_list, colour=899718))
 
     # Main command
     @commands.command(name='wordgame', aliases=['uvanlì\'uyä', 'wortspiel'])
@@ -183,14 +191,14 @@ class Wordgame(commands.Cog):
         channels = wordgame_channels
 
         # If the options contains 'solo'
-        if 'solo' in options and not 'multiplayer' in options:
+        if 'solo' in options and 'multiplayer' not in options:
 
             # If the current channel is in the list of active wordgame channels
             if ctx.channel.id in self.wordgame_activechannels:
-
                 # Send a message informing players of the change
                 await ctx.channel.send(
-                    embed=discord.Embed(description=bot.lang.get(str(ctx.guild.id)).get('wordgame_solo'), colour=899718))
+                    embed=discord.Embed(description=bot.lang.get(str(ctx.guild.id)).get('wordgame_solo'),
+                                        colour=899718))
 
             # Set solo boolean to true
             self.solo = True
@@ -198,13 +206,14 @@ class Wordgame(commands.Cog):
             print('Solo = True')
 
         # If the options contains 'multiplayer'
-        if 'multiplayer' in options and not 'solo' in options:
+        if 'multiplayer' in options and 'solo' not in options:
 
             # If the current channel is in the list of active wordgame channels
             if ctx.channel.id in self.wordgame_activechannels:
                 # Send a message informing players of the change
                 await ctx.channel.send(
-                    embed=discord.Embed(description=bot.lang.get(str(ctx.guild.id)).get('wordgame_multiplayer'), colour=899718))
+                    embed=discord.Embed(description=bot.lang.get(str(ctx.guild.id)).get('wordgame_multiplayer'),
+                                        colour=899718))
 
             # Set solo boolean to false
             self.solo = False
@@ -212,14 +221,14 @@ class Wordgame(commands.Cog):
             print('Solo = False')
 
         # If the options contains 'casual'
-        if 'casual' in options and not 'competitive' in options:
+        if 'casual' in options and 'competitive' not in options:
 
             # If the current channel is in the list of active wordgame channels
             if ctx.channel.id in self.wordgame_activechannels:
-
                 # Send a message informing players of the change
                 await ctx.channel.send(
-                    embed=discord.Embed(description=bot.lang.get(str(ctx.guild.id)).get('wordgame_casual'), colour=899718))
+                    embed=discord.Embed(description=bot.lang.get(str(ctx.guild.id)).get('wordgame_casual'),
+                                        colour=899718))
 
             # Set competitive boolean to false
             self.competitive = False
@@ -227,14 +236,14 @@ class Wordgame(commands.Cog):
             print('Competitive = False')
 
         # If the options contains 'competitive'
-        if 'competitive' in options and not 'casual' in options:
+        if 'competitive' in options and 'casual' not in options:
 
             # If the current channel is in the list of active wordgame channels
             if ctx.channel.id in self.wordgame_activechannels:
-
                 # Send a message informing players of the change
                 await ctx.channel.send(
-                    embed=discord.Embed(description=bot.lang.get(str(ctx.guild.id)).get('wordgame_competitive'), colour=899718))
+                    embed=discord.Embed(description=bot.lang.get(str(ctx.guild.id)).get('wordgame_competitive'),
+                                        colour=899718))
 
             # Set the competitive boolean to true
             self.competitive = True
@@ -248,7 +257,7 @@ class Wordgame(commands.Cog):
             if ctx.message.author.id in bot.config.operators:
 
                 # If the current channel is NOT already a wordgame channel
-                if not ctx.channel.id in channels:
+                if ctx.channel.id not in channels:
 
                     # Print some info
                     print("Creating new wordgame channel: " + str(ctx.channel.id))
@@ -257,15 +266,17 @@ class Wordgame(commands.Cog):
                     channels.append(ctx.channel.id)
 
                     # Open the wordgame_channels database
-                    with open("cogs/wordgame/wordgame_channels.json", 'w') as f:
+                    with open("cogs/wordgame/wordgame_channels.json", 'w') as file:
 
                         # Update the file and close it
-                        json.dump(channels, f)
-                        f.close()
+                        json.dump(channels, file)
+                        file.close()
 
                     # Send a confirmation message
-                    await ctx.send(embed=discord.Embed(description=bot.lang.get(str(ctx.guild.id)).get('wordgame_added').replace('&1', str(ctx.channel.id)),
-                                                       colour=899718))
+                    await ctx.send(embed=discord.Embed(
+                        description=bot.lang.get(str(ctx.guild.id)).get('wordgame_added').replace('&1',
+                                                                                                  str(ctx.channel.id)),
+                        colour=899718))
 
                 # If the current channel is already a wordgame channel
                 else:
@@ -293,34 +304,37 @@ class Wordgame(commands.Cog):
                     channels.remove(ctx.channel.id)
 
                     # Open the wordgame_channels database
-                    with open("cogs/wordgame/wordgame_channels.json", 'w') as f:
+                    with open("cogs/wordgame/wordgame_channels.json", 'w') as file:
 
                         # Update the file and close it
-                        json.dump(channels, f)
-                        f.close()
+                        json.dump(channels, file)
+                        file.close()
 
                     # Send a confirmation message
-                    await ctx.send(embed=discord.Embed(description=bot.lang.get(str(ctx.guild.id)).get('wordgame_removed').replace('&1', str(ctx.channel.id)),
-                                                       colour=899718))
+                    await ctx.send(embed=discord.Embed(
+                        description=bot.lang.get(str(ctx.guild.id)).get('wordgame_removed').replace('&1', str(
+                            ctx.channel.id)),
+                        colour=899718))
 
                 # If the current channel is NOT currently a wordgame channel
                 else:
 
                     # Send a warning message
                     await ctx.send(
-                        embed=discord.Embed(description=bot.lang.get(str(ctx.guild.id)).get('wordgame_channel_nonexistent'),
-                                            colour=0xff0000))
+                        embed=discord.Embed(
+                            description=bot.lang.get(str(ctx.guild.id)).get('wordgame_channel_nonexistent'),
+                            colour=0xff0000))
                     # Print some info
                     print('Current channel is not a wordgame channel.')
 
         # If the options contains 'start' or 'begin'
-        if ('start' in options or 'begin' in options) and not ('stop'in options or 'end' in options):
+        if ('start' in options or 'begin' in options) and not ('stop' in options or 'end' in options):
 
             # If current channel is a wordgame channel
             if ctx.channel.id in channels:
 
                 # If the current channel is NOT already active
-                if not ctx.channel.id in self.wordgame_activechannels:
+                if ctx.channel.id not in self.wordgame_activechannels:
                     # Print some info
                     print('Found current channel in wordgame_channels: ' + str(ctx.channel.id) + ", activating it...")
 
@@ -348,12 +362,16 @@ class Wordgame(commands.Cog):
                     display_word = self.last_word.replace('d', 'tx').replace('g', 'kx').replace('b', 'px').replace(
                         'ŋ', 'ng').replace('á', 'aw').replace('é', 'ew').replace('à', 'ay').replace(
                         'è', 'ey').replace('ʀ', 'rr').replace('j', 'll')
-                    
+
                     # Send a startup message
-                    await ctx.send(embed=discord.Embed(description=bot.lang.get(str(ctx.guild.id)).get('wordgame_starting') + "\n" +
-                                                                   bot.lang.get(str(ctx.guild.id)).get('solo') + ": " + str(self.solo) + "\n" +
-                                                                   bot.lang.get(str(ctx.guild.id)).get('competitive') + ": " + str(self.competitive) + "\n\n" +
-                                                                   bot.lang.get(str(ctx.guild.id)).get('wordgame_first_word').replace('&1', display_word), colour=899718))
+                    await ctx.send(embed=discord.Embed(
+                        description=bot.lang.get(str(ctx.guild.id)).get('wordgame_starting') + "\n" +
+                                    bot.lang.get(str(ctx.guild.id)).get('solo') + ": " + str(self.solo) + "\n" +
+                                    bot.lang.get(str(ctx.guild.id)).get('competitive') + ": " + str(
+                            self.competitive) + "\n\n" +
+                                    bot.lang.get(str(ctx.guild.id)).get('wordgame_first_word').replace('&1',
+                                                                                                       display_word),
+                        colour=899718))
 
                 # If the current channel is already active
                 else:
@@ -379,10 +397,10 @@ class Wordgame(commands.Cog):
                     self.wordgame_activechannels.remove(ctx.channel.id)
                     # Print some info
                     print('Current active channels: ' + str(self.wordgame_activechannels))
-                    
+
                     # If gamemode is NOT solo
                     if not self.solo:
-                        
+
                         # Empty dict to reference later
                         player_list = []
 
@@ -417,20 +435,22 @@ class Wordgame(commands.Cog):
 
                         # Replace comma separator with a new line
                         player_list = player_list.replace(', ', '\n')
-                        
+
                         # Send stop message with player_list
                         await ctx.channel.send(embed=discord.Embed(
                             description=bot.lang.get(str(ctx.guild.id)).get('wordgame_stopping') + "\n" +
-                                        bot.lang.get(str(ctx.guild.id)).get('wordgame_round_points') + ":\n" + player_list,
+                                        bot.lang.get(str(ctx.guild.id)).get(
+                                            'wordgame_round_points') + ":\n" + player_list,
                             colour=899718))
 
                     # If gamemode is solo
                     else:
-                        
+
                         # Send stop message without player_list
-                        await ctx.channel.send(embed=discord.Embed(description=bot.lang.get(str(ctx.guild.id)).get('wordgame_stopping'),
-                                                                   colour=899718))
-                        
+                        await ctx.channel.send(
+                            embed=discord.Embed(description=bot.lang.get(str(ctx.guild.id)).get('wordgame_stopping'),
+                                                colour=899718))
+
                     # Set variables back to default
                     self.last_player = 0
                     self.solo = False
@@ -441,21 +461,22 @@ class Wordgame(commands.Cog):
 
                 # If current channel is NOT currently active
                 else:
-                    
+
                     # Send a warning message
                     await ctx.send(
-                        embed=discord.Embed(description=bot.lang.get(str(ctx.guild.id)).get('wordgame_channel_inactive'),
-                                            colour=0xff0000))
+                        embed=discord.Embed(
+                            description=bot.lang.get(str(ctx.guild.id)).get('wordgame_channel_inactive'),
+                            colour=0xff0000))
         # Print a separator
         print('---------------------')
 
     @commands.Cog.listener()
     async def on_message(self, message):
-        
+
         # If there is a wonky tìftang in the message, replace it with a normal tìftang
         if '’' in message.content:
             message.content = message.content.replace('’', '\'')
-            
+
         # Make new variable for lowercase message
         msg = message.content.lower()
 
@@ -484,36 +505,40 @@ class Wordgame(commands.Cog):
                 if msg in unusable_words['aw']:
                     # Send a warning message
                     await message.channel.send(
-                        embed=discord.Embed(title=bot.lang.get(str(message.guild.id)).get('wordgame_unusable') + ": " + display_word,
-                                            description=bot.lang.get(str(message.guild.id)).get('wordgame_unusable_aw'),
-                                            colour=0xff0000))
+                        embed=discord.Embed(
+                            title=bot.lang.get(str(message.guild.id)).get('wordgame_unusable') + ": " + display_word,
+                            description=bot.lang.get(str(message.guild.id)).get('wordgame_unusable_aw'),
+                            colour=0xff0000))
 
                 # If message ends with ew
                 if msg in unusable_words['ew']:
                     # Send a warning message
                     await message.channel.send(
-                        embed=discord.Embed(title=bot.lang.get(str(message.guild.id)).get('wordgame_unusable') + ": " + display_word,
-                                            description=bot.lang.get(str(message.guild.id)).get('wordgame_unusable_ew'),
-                                            colour=0xff0000))
+                        embed=discord.Embed(
+                            title=bot.lang.get(str(message.guild.id)).get('wordgame_unusable') + ": " + display_word,
+                            description=bot.lang.get(str(message.guild.id)).get('wordgame_unusable_ew'),
+                            colour=0xff0000))
 
                 # If message ends with rr
                 if msg in unusable_words['rr']:
                     # Send a warning message
                     await message.channel.send(
-                        embed=discord.Embed(title=bot.lang.get(str(message.guild.id)).get('wordgame_unusable') + ": " + display_word,
-                                            description=bot.lang.get(str(message.guild.id)).get('wordgame_unusable_rr'),
-                                            colour=0xff0000))
+                        embed=discord.Embed(
+                            title=bot.lang.get(str(message.guild.id)).get('wordgame_unusable') + ": " + display_word,
+                            description=bot.lang.get(str(message.guild.id)).get('wordgame_unusable_rr'),
+                            colour=0xff0000))
 
                 # If message ends with ll
                 if msg in unusable_words['ll']:
                     # Send a warning message
                     await message.channel.send(
-                        embed=discord.Embed(title=bot.lang.get(str(message.guild.id)).get('wordgame_unusable') + ": " + display_word,
-                                            description=bot.lang.get(str(message.guild.id)).get('wordgame_unusable_ll'),
-                                            colour=0xff0000))
+                        embed=discord.Embed(
+                            title=bot.lang.get(str(message.guild.id)).get('wordgame_unusable') + ": " + display_word,
+                            description=bot.lang.get(str(message.guild.id)).get('wordgame_unusable_ll'),
+                            colour=0xff0000))
 
             # If there are no spaces in the message
-            if not ' ' in msg:
+            if ' ' not in msg:
 
                 # If msg is NOT in the list of recent words
                 if msg not in self.recent_words:
@@ -532,22 +557,23 @@ class Wordgame(commands.Cog):
 
                                     # If the gamemode is competitive and msg is in the competitive-mode history
                                     if self.competitive and msg in self.competitivehistory:
-
                                         # Send a warning message
                                         await message.channel.send(
-                                            embed=discord.Embed(description=bot.lang.get(str(message.guild.id)).get('wordgame_already_used'),
-                                                                colour=0xff0000))
+                                            embed=discord.Embed(description=bot.lang.get(str(message.guild.id)).get(
+                                                'wordgame_already_used'),
+                                                colour=0xff0000))
 
                                     # If the gamemode is competitive and msg is NOT in the competitive-mode history,
                                     # or the gamemode is NOT competitive
-                                    if (self.competitive and not msg in self.competitivehistory) or not self.competitive:
+                                    if (
+                                            self.competitive and msg not in self.competitivehistory) or not self.competitive:
 
                                         # Set local variable
                                         new_word = msg
 
                                         # Replace individualized characters with digraphs and set it in a new variable
                                         display_word = msg.replace('d', 'tx').replace('g', 'kx').replace('b',
-                                                                                                        'px').replace(
+                                                                                                         'px').replace(
                                             'ŋ', 'ng').replace('á', 'aw').replace('é', 'ew').replace('à',
                                                                                                      'ay').replace(
                                             'è', 'ey').replace('ʀ', 'rr').replace('j', 'll')
@@ -570,7 +596,9 @@ class Wordgame(commands.Cog):
 
                                         # Record the new player and word
                                         await message.channel.send(
-                                            embed=discord.Embed(description=bot.lang.get(str(message.guild.id)).get('wordgame_word_said').replace('&1', str(name)).replace('&2', display_word),
+                                            embed=discord.Embed(description=bot.lang.get(str(message.guild.id)).get(
+                                                'wordgame_word_said').replace('&1', str(name)).replace('&2',
+                                                                                                       display_word),
                                                                 colour=899718))
 
                                         # Get message author's id
@@ -651,11 +679,12 @@ class Wordgame(commands.Cog):
                                                 # If the word is not in the competitive-mode history
                                                 # and the word starts with the final letter of the new word,
                                                 # add it to the list of valid words
-                                                if not word in self.competitivehistory and word.startswith(new_word[-1]):
+                                                if word not in self.competitivehistory and word.startswith(
+                                                        new_word[-1]):
                                                     valid_words.append(word)
 
                                             # If there are no more valid words
-                                            if valid_words == []:
+                                            if not valid_words:
 
                                                 # Get message author's id
                                                 session_author = str(message.author.id)
@@ -677,7 +706,8 @@ class Wordgame(commands.Cog):
                                                 session_player_data = {}
 
                                                 # Sort session points list numerically and set game_player_points to it
-                                                for key, value in sorted(self.session_points.items(), key=lambda x: int(x[1]),
+                                                for key, value in sorted(self.session_points.items(),
+                                                                         key=lambda x: int(x[1]),
                                                                          reverse=True):
                                                     session_player_data[key] = value
 
@@ -712,7 +742,8 @@ class Wordgame(commands.Cog):
                                                 with open("cogs/wordgame/wordgame_players.yaml", 'w') as f:
 
                                                     # Update file and close it
-                                                    yaml.safe_dump(player_data, f, default_flow_style=False, sort_keys=False)
+                                                    yaml.safe_dump(player_data, f, default_flow_style=False,
+                                                                   sort_keys=False)
                                                     f.close()
 
                                                 # Set the global variable to the sorted version
@@ -761,7 +792,8 @@ class Wordgame(commands.Cog):
 
                                     # Try to set display_word to the digraph version of the new word
                                     try:
-                                        display_word = new_word.replace('d', 'tx').replace('g', 'kx').replace('b', 'px').replace(
+                                        display_word = new_word.replace('d', 'tx').replace('g', 'kx').replace('b',
+                                                                                                              'px').replace(
                                             'ŋ', 'ng').replace('á', 'aw').replace('é', 'ew').replace('à', 'ay').replace(
                                             'è', 'ey').replace('ʀ', 'rr').replace('j', 'll')
 
@@ -776,14 +808,14 @@ class Wordgame(commands.Cog):
 
                                 # If gamemode is competitive and msg is in competitive-mode history
                                 if self.competitive and msg in self.competitivehistory:
-
                                     # Send a warning message
                                     await message.channel.send(
-                                        embed=discord.Embed(description=bot.lang.get(str(message.guild.id)).get('wordgame_already_used'),
-                                                            colour=0xff0000))
+                                        embed=discord.Embed(description=bot.lang.get(str(message.guild.id)).get(
+                                            'wordgame_already_used'),
+                                            colour=0xff0000))
 
                                 # If gamemode is competitive and msg is not in competitive-mode history
-                                if self.competitive and not msg in self.competitivehistory:
+                                if self.competitive and msg not in self.competitivehistory:
                                     # Set last word to msg
                                     self.last_word = msg
                                     self.last_word_end = msg[-1]
@@ -794,7 +826,7 @@ class Wordgame(commands.Cog):
                                     # Try to set display_word to the digraph version of the new word
                                     try:
                                         display_word = new_word.replace('d', 'tx').replace('g', 'kx').replace('b',
-                                                                                                            'px').replace(
+                                                                                                              'px').replace(
                                             'ŋ', 'ng').replace('á', 'aw').replace('é', 'ew').replace('à',
                                                                                                      'ay').replace(
                                             'è', 'ey').replace('ʀ', 'rr').replace('j', 'll')
@@ -821,7 +853,8 @@ class Wordgame(commands.Cog):
                                             # and word starts with the final letter of the new word
                                             # and word is not in the list of recent words
                                             try:
-                                                if word not in self.competitivehistory and word.startswith(new_word[-1]) and word not in self.recent_words:
+                                                if word not in self.competitivehistory and word.startswith(
+                                                        new_word[-1]) and word not in self.recent_words:
                                                     valid_words.append(word)
 
                                             # If no valid word could be found
@@ -845,20 +878,17 @@ class Wordgame(commands.Cog):
 
                                         # If new word is None (a valid word could not be generated)
                                         if new_word is None:
-
                                             # End competitive game with message author as the winner
                                             await self.endcompetitive(message, name)
 
                                         # If new word is NOT None
                                         if new_word is not None:
-
                                             # Say the new word
                                             await message.channel.send(
                                                 embed=discord.Embed(description=display_word + "!", colour=899718))
 
                                         # If no new valid words can be said
-                                        if valid_words == []:
-
+                                        if not valid_words:
                                             # End competitive game with Ewo' as the winner
                                             await self.endcompetitive(message, bot.bot.user.name)
 
@@ -867,48 +897,51 @@ class Wordgame(commands.Cog):
 
                             # Send a warning message
                             await message.channel.send(
-                                embed=discord.Embed(description=bot.lang.get(str(message.guild.id)).get('wordgame_already_said'), colour=0xff0000))
+                                embed=discord.Embed(
+                                    description=bot.lang.get(str(message.guild.id)).get('wordgame_already_said'),
+                                    colour=0xff0000))
 
                 # If msg is in the list of recent words
                 else:
 
                     # Send a warning message
                     await message.channel.send(
-                        embed=discord.Embed(description=bot.lang.get(str(message.guild.id)).get('wordgame_used_recently'),
-                                            colour=0xff0000))
+                        embed=discord.Embed(
+                            description=bot.lang.get(str(message.guild.id)).get('wordgame_used_recently'),
+                            colour=0xff0000))
 
             # If there are spaces in msg
             else:
 
                 # If the message is in the list of words with spaces
                 if msg in unusable_words['space']:
-
                     # Send a warning message
                     await message.channel.send(
-                        embed=discord.Embed(title=bot.lang.get(str(message.guild.id)).get('wordgame_unusable') + ": " + display_word,
-                                            description=bot.lang.get(str(message.guild.id)).get('wordgame_no_spaces'),
-                                            colour=0xff0000))
+                        embed=discord.Embed(
+                            title=bot.lang.get(str(message.guild.id)).get('wordgame_unusable') + ": " + display_word,
+                            description=bot.lang.get(str(message.guild.id)).get('wordgame_no_spaces'),
+                            colour=0xff0000))
 
     # End a competitive game with a defined winner
     async def endcompetitive(self, message, winner):
-        
+
         # If the current channel is an active wordgame channel
         if message.channel.id in self.wordgame_activechannels:
-            
+
             # Print some info
             print(str(winner) + ' won the game!')
             print(
                 'Found current channel in wordgame_activechannels: ' + str(message.channel.id) + ', deactivating it...')
-            
+
             # Remove current channel from list of active wordgame channels
             self.wordgame_activechannels.remove(message.channel.id)
-            
+
             # Print some info
             print('Current active channels: ' + str(self.wordgame_activechannels))
-            
+
             # Empty dict to reference later
             player_list = []
-            
+
             # For every user ID in list of session points
             for id in self.session_points:
 
@@ -945,13 +978,18 @@ class Wordgame(commands.Cog):
             if not self.solo:
 
                 # Send win message with list of session points
-                await message.channel.send(embed=discord.Embed(title=bot.lang.get(str(message.guild.id)).get('wordgame_win').replace('&1', str(winner)), description=bot.lang.get(str(message.guild.id)).get('wordgame_round_points') + ":\n" + player_list, colour=899718))
+                await message.channel.send(embed=discord.Embed(
+                    title=bot.lang.get(str(message.guild.id)).get('wordgame_win').replace('&1', str(winner)),
+                    description=bot.lang.get(str(message.guild.id)).get('wordgame_round_points') + ":\n" + player_list,
+                    colour=899718))
 
             # If gamemode is solo
             else:
 
                 # Send win message without list of session points
-                await message.channel.send(embed=discord.Embed(description=bot.lang.get(str(message.guild.id)).get('wordgame_win').replace('&1', str(winner)), colour=899718))
+                await message.channel.send(embed=discord.Embed(
+                    description=bot.lang.get(str(message.guild.id)).get('wordgame_win').replace('&1', str(winner)),
+                    colour=899718))
 
             # Set variables back to defaults
             self.last_player = 0
