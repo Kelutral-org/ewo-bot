@@ -8,7 +8,6 @@ import bot
 
 # Cog
 class Lessons(commands.Cog):
-
     message_listens = {}
     listen_for_messages = False
     confirm_adding_level = False
@@ -69,10 +68,11 @@ class Lessons(commands.Cog):
                 self.listen_for_messages = True
                 await ctx.send(
                     embed=discord.Embed(title="New Level", description="Please supply a description for this level. "
-                                                    "This should include any topics to discuss "
-                                                    "during lessons for this level, "
-                                                    "as well as any notes you have to members of this level"
-                                                    ".\n Say \"cancel\" to cancel adding the new level.",
+                                                                       "This should include any topics to discuss "
+                                                                       "during lessons for this level, "
+                                                                       "as well as any notes you have to members of "
+                                                                       "this level "
+                                                                       ".\n Say \"cancel\" to cancel adding the new level.",
                                         colour=899718))
 
             if 'removelevel' in args:
@@ -97,7 +97,7 @@ class Lessons(commands.Cog):
                             with open("cogs/lessons/levels.json", 'w', encoding="utf-8") as f:
                                 json.dump(self.levels, f, indent=4)
                             await ctx.send(
-                                embed=discord.Embed(title="Remove Level" ,description="Removed level " + arg + "!",
+                                embed=discord.Embed(title="Remove Level", description="Removed level " + arg + "!",
                                                     colour=899718))
                         else:
                             await ctx.send(
@@ -105,7 +105,7 @@ class Lessons(commands.Cog):
                                                     colour=0xff0000))
 
             if 'students' in args:
-                if not 'default' in args:
+                if 'default' not in args:
                     teacher_name = ctx.author.nick
                     if teacher_name is None:
                         teacher_name = ctx.author.name
@@ -159,11 +159,12 @@ class Lessons(commands.Cog):
                             self.message_listens[ctx.author.id] = ctx.channel.id
                             self.listen_for_messages = True
                             await ctx.send(
-                                embed=discord.Embed(title="New Level", description="Please supply a description for this level. "
-                                                                                   "This should include any topics to discuss "
-                                                                                   "during lessons for this level, "
-                                                                                   "as well as any notes you have to members of this level"
-                                                                                   ".\n Say \"cancel\" to cancel adding the new level.",
+                                embed=discord.Embed(title="New Level",
+                                                    description="Please supply a description for this level. "
+                                                                "This should include any topics to discuss "
+                                                                "during lessons for this level, "
+                                                                "as well as any notes you have to members of this level"
+                                                                ".\n Say \"cancel\" to cancel adding the new level.",
                                                     colour=899718))
 
                         else:
@@ -184,7 +185,8 @@ class Lessons(commands.Cog):
                             self.message_listens[ctx.author.id] = ctx.channel.id
                             self.listen_for_messages = True
                             await ctx.send(
-                                embed=discord.Embed(title="New Level", description="Please supply a description for this level. "
+                                embed=discord.Embed(title="New Level",
+                                                    description="Please supply a description for this level. "
                                                                 "This should include any topics to discuss "
                                                                 "during lessons for this level, "
                                                                 "as well as any notes you have to members of this level"
@@ -232,10 +234,11 @@ class Lessons(commands.Cog):
                             teacher_name = str(teacher_name.name)
                     if arg.isdigit() and count == 2:
                         level = int(arg)
-                if not 'default' in args and str(level) in self.levels.get(str(teacher_id)):
+                if 'default' not in args and str(level) in self.levels.get(str(teacher_id)):
                     self.set_level(str(teacher_id), str(student_id), str(level))
                     await ctx.send(
-                        embed=discord.Embed(title="Set Level", description=student_name + " was set to level " + str(level) + " in " + teacher_name + "'s system",
+                        embed=discord.Embed(title="Set Level", description=student_name + " was set to level " + str(
+                            level) + " in " + teacher_name + "'s system",
                                             colour=899718))
                 if 'default' in args and str(level) in self.levels.get(str(teacher_id)):
                     teacher_id = 'default'
@@ -248,9 +251,8 @@ class Lessons(commands.Cog):
                     await ctx.send(
                         embed=discord.Embed(title="Levels", description="That level is not in the specified system!",
                                             colour=0xff0000))
-                        
+
         if 'system' in args:
-            display = ""
             for count, arg in enumerate(args):
                 if re.match(r'<@![0123456789]*?>', arg) and count == 1:
                     if arg.strip('<>').replace('@!', '') in self.levels:
@@ -291,7 +293,7 @@ class Lessons(commands.Cog):
                     else:
                         await ctx.send(
                             embed=discord.Embed(title="Levels", description="This user either is not a teacher "
-                                                            "or has not set a custom level system!",
+                                                                            "or has not set a custom level system!",
                                                 colour=0xff0000))
                 elif arg == 'default' and count == 1:
                     try:
@@ -314,7 +316,6 @@ class Lessons(commands.Cog):
                         embed=discord.Embed(title="Levels", description=display,
                                             colour=899718))
         if 'levels' in args:
-            display = ""
             for count, arg in enumerate(args):
                 if re.match(r'<@![0123456789]*?>', arg) and count == 1:
                     if arg.strip('<>').replace('@!', '') in self.students:
@@ -337,7 +338,8 @@ class Lessons(commands.Cog):
 
                         for system in self.students.get(arg.strip('<>').replace('@!', '')):
                             if system == "default":
-                                display += "・Default System: " + str(self.students[arg.strip('<>').replace('@!', '')].get(system)) + "\n"
+                                display += "・Default System: " + str(
+                                    self.students[arg.strip('<>').replace('@!', '')].get(system)) + "\n"
                             else:
                                 # Get user id
                                 user = int(system)
@@ -353,7 +355,8 @@ class Lessons(commands.Cog):
                                     # Get their display name
                                     system_name = str(system_name.name)
 
-                                display += "・" + system_name + "'s System: " + str(self.students[arg.strip('<>').replace('@!', '')].get(system)) + "\n"
+                                display += "・" + system_name + "'s System: " + str(
+                                    self.students[arg.strip('<>').replace('@!', '')].get(system)) + "\n"
 
                         await ctx.send(
                             embed=discord.Embed(title="Student Levels", description=display,
@@ -361,9 +364,10 @@ class Lessons(commands.Cog):
 
                     else:
                         await ctx.send(
-                            embed=discord.Embed(title="Student Levels", description="This user has not been set to any levels",
+                            embed=discord.Embed(title="Student Levels",
+                                                description="This user has not been set to any levels",
                                                 colour=0xff0000))
-                        
+
         elif ctx.author.guild_permissions.manage_roles:
             if 'addrole' in args:
                 for arg in args:
@@ -391,10 +395,12 @@ class Lessons(commands.Cog):
                                 self.description = ""
                                 self.confirm_adding_level = False
                                 await message.channel.send(
-                                    embed=discord.Embed(title="New Level", description="Please supply a description for this level. "
+                                    embed=discord.Embed(title="New Level",
+                                                        description="Please supply a description for this level. "
                                                                     "This should include any topics to discuss "
                                                                     "during lessons for this level, "
-                                                                    "as well as any notes you have to members of this level"
+                                                                    "as well as any notes you have to members of this "
+                                                                    "level "
                                                                     ".\n Say \"cancel\" to cancel adding the new level.",
                                                         colour=899718))
                             elif message.content == 'confirm':
@@ -405,8 +411,8 @@ class Lessons(commands.Cog):
                                 self.listen_type = ""
                                 await message.channel.send(
                                     embed=discord.Embed(title="New Level", description="Level " + str(self.level) +
-                                                                    " was added with the description:\n\n" +
-                                                                    self.description,
+                                                                                       " was added with the description:\n\n" +
+                                                                                       self.description,
                                                         colour=899718))
                         else:
                             if message.content.lower() == 'cancel':
@@ -421,10 +427,10 @@ class Lessons(commands.Cog):
                                 await message.channel.send(
                                     embed=discord.Embed(title="New Level", description="Is this correct for level " +
                                                                                        str(self.level) +
-                                                                            "?:\n\n" + self.description +
-                                                                            "\n\n Say \"confirm\" to confirm. "
-                                                                            "Say \"redo\" to change the description. "
-                                                                            "Say \"cancel\" to cancel adding the new level."
+                                                                                       "?:\n\n" + self.description +
+                                                                                       "\n\n Say \"confirm\" to confirm. "
+                                                                                       "Say \"redo\" to change the description. "
+                                                                                       "Say \"cancel\" to cancel adding the new level."
                                                         , colour=899718))
 
                     elif self.listen_type == 'nudge':
@@ -441,7 +447,8 @@ class Lessons(commands.Cog):
                                 self.description = ""
                                 self.confirm_adding_level = False
                                 await message.channel.send(
-                                    embed=discord.Embed(title="New Level", description="Please supply a description for this level. "
+                                    embed=discord.Embed(title="New Level",
+                                                        description="Please supply a description for this level. "
                                                                     "This should include any topics to discuss "
                                                                     "during lessons for this level, "
                                                                     "as well as any notes you have to members of this level"
@@ -455,8 +462,8 @@ class Lessons(commands.Cog):
                                 self.listen_type = ""
                                 await message.channel.send(
                                     embed=discord.Embed(title="New Level", description="Level " + str(self.level) +
-                                                                    " was added with the description:\n\n" +
-                                                                    self.description,
+                                                                                       " was added with the description:\n\n" +
+                                                                                       self.description,
                                                         colour=899718))
                         else:
                             if message.content.lower() == 'cancel':
@@ -471,10 +478,10 @@ class Lessons(commands.Cog):
                                 await message.channel.send(
                                     embed=discord.Embed(title="New Level", description="Is this correct for level " +
                                                                                        str(self.level) +
-                                                                            "?:\n\n" + self.description +
-                                                                            "\n\n Say \"confirm\" to confirm. "
-                                                                            "Say \"redo\" to change the description. "
-                                                                            "Say \"cancel\" to cancel adding the new level."
+                                                                                       "?:\n\n" + self.description +
+                                                                                       "\n\n Say \"confirm\" to confirm. "
+                                                                                       "Say \"redo\" to change the description. "
+                                                                                       "Say \"cancel\" to cancel adding the new level."
                                                         , colour=899718))
 
     def add_level(self, teacher_id, level_number, level_description):
@@ -499,7 +506,7 @@ class Lessons(commands.Cog):
             json.dump(self.levels, f, indent=4)
 
     def set_level(self, teacher_id, student_id, level):
-        if not student_id in self.students:
+        if student_id not in self.students:
             self.students[student_id] = {}
         self.students[student_id][teacher_id] = level
         with open("cogs/lessons/students.json", 'w', encoding="utf-8") as f:
