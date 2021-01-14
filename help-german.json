@@ -7,17 +7,17 @@
   },
   {"command": "**?wortspiel**",
     "aliases": ["uvanlì'uyä"],
-    "usage": "?wortspiel <args>",
+    "usage": "?wortspiel <Befehle>",
     "description": "Der Hauptbefehl für mein Wortspiel.",
     "arg_types": {
-      "[start/begin]": "Start a wordgame session in this channel with defined args. Default args are [multiplayer, casual].",
-      "[stop/end]": "Stop the current wordgame session.",
-      "solo": "Set game to solo mode (Ewo' says a word instead of having to wait for another player).",
-      "multiplayer": "Set game to multiplayer mode (Ewo' only records other players words and the same player cannot say a word twice in a row).",
-      "competitive": "Set game to competitive mode (Words cannot be reused and the player who says a word ending with a letter that no unused words start with will win).",
-      "casual": "Set game to casual mode (Words can be reused and the game will not end unless stopped with the command.)"
+      "Start": "Beginne Wortspiel in diesem Channel mit den gewählten Einstellungen. Standardeinstellung ist [Multiplayer, Casual].",
+      "Ende": "Beende das laufende Wortspiel.",
+      "Solo": "Stellt ein Spiel auf Solomodus um. (Ewo' gibt dir ein Wort vor anstelle eines echten Mitspielers.)",
+      "Multiplayer": "Stellt ein Spiel auf Multiplayer um. (Ewo' registriert nur die Anworten anderer Mitspieler und jeder Spieler kann ein Wort nicht zwei Mal hintereinander sagen.)",
+      "Wettstreit": "Stellt ein Spiel auf kompetitiven Wettstreitmodus. (Wörter können nicht mehrfach genannt weden und der Spieler, der ein Wort sagt, das mit einem Buchstaben endet, mit dem keine unbenutzten Wörter beginnen, gewinnt.)",
+      "Casual": "Stellt ein Spiel auf Casual. (Wörter können erneut verwendet werden und das Spiel wird nicht enden, es sei denn, man beendet es via Befehl.)"
     },
-    "example": "?wortspiel solo competitive start"
+    "example": "?wortspiel Solo Wettstreit Start"
   },
   {
     "command": "**?punkte**",
@@ -27,43 +27,43 @@
   },
   {"command": "**?suche**",
     "aliases": ["fwew", "wort", "lì'u", "pelì'u"],
-    "usage": "?suche *-<arg1><arg2>... <wort>",
+    "usage": "?suche *-<Befehl1><Befehl2>... <wort>",
     "description": "Suche nach einem Wort auf Na'vi oder Deutsch und erhalte dessen Definition.",
     "arg_types": {
-      "p":  "Shows the part of speech of the word in the definition.",
-      "i":  "Shows the IPA of the word in the definition.",
-      "f":  "Shows the stress of the word in the definition.",
-      "s":  "Shows the source of the word in the definition.",
-      "t":  "Shows the topic of the word in the definition.",
-      "b":  "Searches in broad mode (Distantly related entries will also be shown).",
-      "e": "Searches in exact mode (Only exact matches will be displayed)."
+      "p":  "Zeigt die Wortklasse des Wortes in der Übersetzung.",
+      "i":  "Zeigt das IPA des Wortes in der Übersetzung.",
+      "f":  "Zeigt die Betonung des Wortes in der Übersetzung.",
+      "s":  "Zeigt die Quelle des Wortes in der Übersetzung.",
+      "t":  "Zeigt das Thema des Wortes in der Übersetzung.",
+      "b":  "Sucht im breitgefächerten Modus (entfernt verwandte Einträge werden ebenfalls gezeigt).",
+      "e": "Sucht im exakten Modus (nur exakte Treffer werden gezeigt)."
     },
     "example": "?suche -pfb sunu"
   },
   {"command": "**?schrei**",
-    "usage": "?schrei <number>",
+    "usage": "?schrei <Nummer>",
     "description": "Schreie! Eine Ziffer ergibt ein \"E\" - z.B. 5 für 5x \"E\".",
     "example": "?schrei 10"
   },
   {"command": "**?zawng**",
-    "usage": "?zawng <number>",
+    "usage": "?zawng <Nummer>",
     "description": "Ein Schrei wie ?schrei, aber auf Na'vi.",
     "example": "?zawng 10"
   },
   {"command": "**?fauch**",
     "aliases": ["oìsss"],
-    "usage": "?fauch <number>",
+    "usage": "?fauch <Nummer>",
     "description": "Ein Schrei ?schrei, aber mit weniger Schreien und mehr Fauchen (\"sssss\").",
     "example": "?fauch 10"
   },
   {"command": "**?zufall**",
     "aliases": ["renulke"],
-    "usage": "?zufall <number>",
+    "usage": "?zufall <Nummer>",
     "description": "Generiert zufällige Na'viwörter und ihre Bedeutung.",
     "example": "?zufall 5"
   },
   {"command": "**?reaktion**",
-    "usage": "?reaktion <message_id> <emoji>",
+    "usage": "?reaktion <Nachrichten_ID> <Emoji>",
     "description": "Bring mich dazu auf eine Nachricht zu reagieren.",
     "example": "?reaktion 757381393947951114 :navitroll:"
   },
@@ -74,40 +74,22 @@
     "example": "?fluch"
   },
   {"command": "**?sprich**",
-    "aliases": ["speak", "plltxe"],
-    "usage": "?sprich <message>",
+    "aliases": ["plltxe"],
+    "usage": "?sprich <Nachricht>",
     "description": "Lässt mich für dich sprechen.",
-    "example": "?sprich something kind"
+    "example": "?sprich etwas nettes"
   },
   {"command": "**?selfie**",
-    "aliases": ["picture", "rel"],
+    "aliases": ["Bild", "rel"],
     "usage": "?selfie",
     "description": "Ich habe nun einen Körper und bin bereit ihn zu zeigen... ~~I'm sexy and I know it.~~",
     "example": "?selfie"
   },
   {"command": "**?alleselfies**",
-    "aliases": ["selfies","pictures","ayrel","picturesfound","ayrelarusun"],
+    "aliases": ["selfies","Bilder","ayrel","gefundeneBilder","ayrelarusun"],
     "usage": "?alleselfies",
     "description": "Verändert einen zufälligen Spaßbefehl zu einem kompetitiven Sport - und das bereits seit dem 1.10.2020 um 00:57 Uhr.",
     "example": "?alleselfies"
-  },
-  {"command": "**?lektion**",
-    "aliases": ["lessons","sänumvi","aysänumvi"],
-    "usage": "?lektion <subcommand> *<subcommand_args>...",
-    "description": "Ich bin jetzt ein hilfreicher Junge. (noch in Arbeit)",
-    "arg_types": {
-      "addrole <role>": "TEACHER OR ROLE MANAGER ONLY. Add a new role to the list of teacher roles. <role> must be a mention.",
-      "removerole <role>": "TEACHER OR ROLE MANAGER ONLY. Remove an existing role from the list of teacher roles. <role> must be a mention.",
-      "students *default": "TEACHER ONLY. List all students who have a value set in your system. If \"default\" is used, it will display all students who have a value set in the default system.",
-      "addlevel": "TEACHER ONLY. Add a level to your custom level system. Follow the prompts to add it properly.",
-      "removelevel <number>": "TEACHER ONLY. Remove a level from your custom level system. This automatically corrects the numbers for the rest.",
-      "editlevel <number>": "TEACHER ONLY. Edit the description of the specified level in your custom level system.",
-      "nudgelevel <number>": "TEACHER ONLY. Replace an old level's position with a new one in your custom level system and nudge the other levels up to fit it.",
-      "setlevel <student> <level> *default": "TEACHER ONLY. Set the level of a student for your custom level system. <student> must be a mention. If \"default\" is used at the end it will set the student's level for the default system.",
-      "system <teacher>/default": "Display the list of levels in the specified teacher's system. <teacher> must be a mention. If \"default\" is used instead of <teacher>, it will display the default system.",
-      "levels <student>": "Display the specified student's levels in all systems. <student> must be a mention."
-    },
-    "example": "?lektion systems default"
   },
   {"command": "**?stups**",
     "usage": "?stups",
@@ -115,7 +97,7 @@
     "example": "?stups"
   },
   {"command": "**?sarkasmus**",
-    "usage": "?sarkasmus <message>",
+    "usage": "?sarkasmus <Nachricht>",
     "description": "diEs iSt EiNe SaRkAsTiScHe BeScHrEiBuNg.",
     "example": "?sarkasmus Dies ist eine sarkastische Beschreibung."}
 ]

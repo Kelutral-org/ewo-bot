@@ -200,7 +200,7 @@ class Fun(commands.Cog):
             await ctx.message.delete()
 
     # Selfie command
-    @commands.command(name='selfie', aliases=['picture', 'rel'])
+    @commands.command(name='selfie', aliases=['picture', 'rel', 'Bild'])
     async def selfie(self, ctx):
 
         for guild in bot.bot.guilds:
@@ -246,7 +246,7 @@ class Fun(commands.Cog):
 
     # Selfiesfound command
     @commands.command(name='selfiesfound',
-                      aliases=['selfies', 'pictures', 'ayral', 'picturesfound', 'ayralarusun', 'alleselfies'])
+                      aliases=['selfies', 'pictures', 'ayral', 'picturesfound', 'ayralarusun', 'alleselfies', 'Bilder', 'gefundeneBilder'])
     async def selfiesfound(self, ctx):
         # Variables
         total_count = 0

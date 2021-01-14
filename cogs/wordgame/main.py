@@ -111,7 +111,7 @@ class Wordgame(commands.Cog):
         return word
 
     # Points command
-    @commands.command(name='points')
+    @commands.command(name='points', aliases=['punkte'])
     async def points(self, ctx):
 
         # Empty dict to reference later
@@ -191,7 +191,7 @@ class Wordgame(commands.Cog):
         channels = wordgame_channels
 
         # If the options contains 'solo'
-        if 'solo' in options and 'multiplayer' not in options:
+        if ('solo' in options or 'Solo' in options) and not ('multiplayer' in options or 'Multiplayer' in options):
 
             # If the current channel is in the list of active wordgame channels
             if ctx.channel.id in self.wordgame_activechannels:
@@ -206,7 +206,7 @@ class Wordgame(commands.Cog):
             print('Solo = True')
 
         # If the options contains 'multiplayer'
-        if 'multiplayer' in options and 'solo' not in options:
+        if ('multiplayer' in options or 'Multiplayer' in options) and not ('solo' in options or 'Solo' in options):
 
             # If the current channel is in the list of active wordgame channels
             if ctx.channel.id in self.wordgame_activechannels:
@@ -221,7 +221,7 @@ class Wordgame(commands.Cog):
             print('Solo = False')
 
         # If the options contains 'casual'
-        if 'casual' in options and 'competitive' not in options:
+        if ('casual' in options or 'Casual' in options) and not ('competitive' in options or 'Wettstreit' in options):
 
             # If the current channel is in the list of active wordgame channels
             if ctx.channel.id in self.wordgame_activechannels:
@@ -236,7 +236,7 @@ class Wordgame(commands.Cog):
             print('Competitive = False')
 
         # If the options contains 'competitive'
-        if 'competitive' in options and 'casual' not in options:
+        if ('competitive' in options or 'Wettstreit' in options) and not ('casual' in options or 'Casual' in options):
 
             # If the current channel is in the list of active wordgame channels
             if ctx.channel.id in self.wordgame_activechannels:
@@ -328,7 +328,7 @@ class Wordgame(commands.Cog):
                     print('Current channel is not a wordgame channel.')
 
         # If the options contains 'start' or 'begin'
-        if ('start' in options or 'begin' in options) and not ('stop' in options or 'end' in options):
+        if ('start' in options or 'begin' in options or 'Start' in options) and not ('stop' in options or 'end' in options or 'Ende' in options):
 
             # If current channel is a wordgame channel
             if ctx.channel.id in channels:
@@ -382,7 +382,7 @@ class Wordgame(commands.Cog):
                                             colour=0xff0000))
 
         # If the options contain 'stop' or 'end'
-        if ('stop' in options or 'end' in options) and not ('start' in options or 'begin' in options):
+        if ('stop' in options or 'end' in options or 'Ende' in options) and not ('start' in options or 'begin' in options or 'Start' in options):
 
             # If current channel is a wordgame channel
             if ctx.channel.id in channels:

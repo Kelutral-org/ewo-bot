@@ -49,9 +49,12 @@ with open("default_bot_options.json", encoding='utf-8') as f:
 # Ensure existence of options file
 if not os.path.exists("bot_options.json"):
     print('Options Database Missing... Applying fix.')
-    with open("bot_options.json", 'w', encoding='utf-8') as op:
-        json.dump(default_bot_options, op)
-        op.close()
+    with open("bot_options.json", 'w', encoding='utf-8') as f:
+        dictionary = {}
+        for guild in bot.guilds:
+            dictionary[str(guild.id)] = default_bot_options
+        json.dump(dictionary, f)
+        f.close()
         pass
 
 # Open file for options
@@ -338,10 +341,9 @@ async def reload(ctx):
 
 # Load cogs
 bot.load_extension('cogs.search.main')
-bot.load_extension('cogs.numbers.main')
+#bot.load_extension('cogs.numbers.main')
 bot.load_extension('cogs.wordgame.main')
 bot.load_extension('cogs.fun.main')
-bot.load_extension('cogs.lessons.main')
 
 # Run bot
 bot.run(config.token)
