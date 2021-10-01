@@ -1,0 +1,71 @@
+[
+  {"command": "**?hilfe**",
+    "aliases": ["srung"],
+    "usage": "?hilfe *<command>",
+    "description": "Zeigt Infos über einen Befehl oder eine Liste aller Befehle.",
+    "example": "?hilfe schrei"
+  },
+  {"command": "**?wortspiel**",
+    "aliases": ["uvanlì'uyä"],
+    "usage": "?wortspiel <Befehle>",
+    "description": "Der Hauptbefehl für mein Wortspiel.",
+    "arg_types": {
+      "Start": "Beginne Wortspiel in diesem Channel mit den gewählten Einstellungen. Standardeinstellung ist [Multiplayer, Casual].",
+      "Ende": "Beende das laufende Wortspiel.",
+      "Solo": "Stellt ein Spiel auf Solomodus um. (Ewo' gibt dir ein Wort vor anstelle eines echten Mitspielers.)",
+      "Multiplayer": "Stellt ein Spiel auf Multiplayer um. (Ewo' registriert nur die Anworten anderer Mitspieler und jeder Spieler kann ein Wort nicht zwei Mal hintereinander sagen.)",
+      "Wettstreit": "Stellt ein Spiel auf kompetitiven Wettstreitmodus. (Wörter können nicht mehrfach genannt weden und der Spieler, der ein Wort sagt, das mit einem Buchstaben endet, mit dem keine unbenutzten Wörter beginnen, gewinnt.)",
+      "Casual": "Stellt ein Spiel auf Casual. (Wörter können erneut verwendet werden und das Spiel wird nicht enden, es sei denn, man beendet es via Befehl.)"
+    },
+    "example": "?wortspiel Solo Wettstreit Start"
+  },
+  {
+    "command": "**?punkte**",
+    "usage": "?punkte",
+    "description": "Zeigt eine Bestenliste der erzielten Wortspielpunkte.",
+    "example": "?punkte"
+  },
+  {"command": "**?schrei**",
+    "usage": "?schrei <Nummer>",
+    "description": "Schreie! Eine Ziffer ergibt ein \"E\" - z.B. 5 für 5x \"E\".",
+    "example": "?schrei 10"
+  },
+  {"command": "**?zawng**",
+    "usage": "?zawng <Nummer>",
+    "description": "Ein Schrei wie ?schrei, aber auf Na'vi.",
+    "example": "?zawng 10"
+  },
+  {"command": "**?fauch**",
+    "aliases": ["oìsss"],
+    "usage": "?fauch <Nummer>",
+    "description": "Ein Schrei ?schrei, aber mit weniger Schreien und mehr Fauchen (\"sssss\").",
+    "example": "?fauch 10"
+  },
+  {"command": "**?zufall**",
+    "aliases": ["renulke"],
+    "usage": "?zufall <Nummer>",
+    "description": "Generiert zufällige Na'viwörter und ihre Bedeutung.",
+    "example": "?zufall 5"
+  },
+  {
+    "command": "**?fluch**",
+    "usage": "?fluch",
+    "description": "Dir ist nach Fluchen? Kein Grund selbst ausfällig zu werden, ich kann das gerne für dich übernehmen.",
+    "example": "?fluch"
+  },
+  {"command": "**?sprich**",
+    "aliases": ["plltxe"],
+    "usage": "?sprich <Nachricht>",
+    "description": "Lässt mich für dich sprechen.",
+    "example": "?sprich etwas nettes"
+  },
+  {"command": "**?stups**",
+    "usage": "?stups",
+    "description": "Stups mich an, mir gefällt das.",
+    "example": "?stups"
+  },
+  {"command": "**?sarkasmus**",
+    "usage": "?sarkasmus <Nachricht>",
+    "description": "diEs iSt EiNe SaRkAsTiScHe BeScHrEiBuNg.",
+    "example": "?sarkasmus Dies ist eine sarkastische Beschreibung."}
+]

@@ -1,0 +1,28 @@
+{
+    "715043968886505484": {
+        "display_online_message": {
+            "value": "True",
+            "values": [
+                "True",
+                "False"
+            ]
+        },
+        "delete_?say_context": {
+            "value": "True",
+            "values": [
+                "True",
+                "False"
+            ]
+        },
+        "server_language": {
+            "value": "English",
+            "values": [
+                "English",
+                "German"
+            ]
+        },
+        "bot_channel": {
+            "value": "718309398048538687"
+        }
+    }
+}

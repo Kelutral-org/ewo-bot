@@ -1,0 +1,71 @@
+[
+  {"command": "**?help**",
+    "aliases": ["srung"],
+    "usage": "?help *<command>",
+    "description": "Show info about a command or list all commands.",
+    "example": "?help scream"
+  },
+  {"command": "**?wordgame**",
+    "aliases": ["uvanlì'uyä"],
+    "usage": "?wordgame <args>",
+    "description": "The main command for my wordgame.",
+    "arg_types": {
+      "[start/begin]": "Start a wordgame session in this channel with defined args. Default args are [multiplayer, casual].",
+      "[stop/end]": "Stop the current wordgame session.",
+      "solo": "Set game to solo mode (Ewo' says a word instead of having to wait for another player).",
+      "multiplayer": "Set game to multiplayer mode (Ewo' only records other players words and the same player cannot say a word twice in a row).",
+      "competitive": "Set game to competitive mode (Words cannot be reused and the player who says a word ending with a letter that no unused words start with will win).",
+      "casual": "Set game to casual mode (Words can be reused and the game will not end unless stopped with the command.)"
+    },
+    "example": "?wordgame solo competitive start"
+  },
+  {
+    "command": "**?points**",
+    "usage": "?points",
+    "description": "Display the leaderboard of wordgame points.",
+    "example": "?points"
+  },
+  {"command": "**?scream**",
+    "usage": "?scream <number>",
+    "description": "Make me scream. One number = one 'E'.",
+    "example": "?scream 10"
+  },
+  {"command": "**?zawng**",
+    "usage": "?zawng <number>",
+    "description": "It's just ?scream but Na'vi.",
+    "example": "?zawng 10"
+  },
+  {"command": "**?hiss**",
+    "aliases": ["oìsss"],
+    "usage": "?hiss <number>",
+    "description": "It's just ?scream but with less screaming and more ssssss.",
+    "example": "?hiss 10"
+  },
+  {"command": "**?random**",
+    "aliases": ["renulke"],
+    "usage": "?random <number>",
+    "description": "Generates random Na'vi words and their meanings.",
+    "example": "?random 5"
+  },
+  {
+    "command": "**?swear**",
+    "usage": "?swear",
+    "description": "Do you feel like swearing? Keep yourself clean, I can do it for you.",
+    "example": "?swear"
+  },
+  {"command": "**?say**",
+    "aliases": ["speak", "plltxe"],
+    "usage": "?say <message>",
+    "description": "Makes me speak for you.",
+    "example": "?say something kind"
+  },
+  {"command": "**?boop**",
+    "usage": "?boop",
+    "description": "Boop me I'm into it.",
+    "example": "?boop"
+  },
+  {"command": "**?sarcasm**",
+    "usage": "?sarcasm <message>",
+    "description": "thIs IS a saRcAsTIC DEsCRipTioN.",
+    "example": "?sarcasm This is a sarcastic description."}
+]
