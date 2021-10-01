@@ -3,4 +3,4 @@ venv/
 __pycache__/
 cogs/frequency/frequency_list.db
 token.txt
-options.db
+.db
