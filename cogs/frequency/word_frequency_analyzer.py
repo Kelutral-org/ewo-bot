@@ -44,9 +44,9 @@ def execute_read_query(connection, query):
 
 try:
     while True:
-        input = input("Please supply text to analyze...\n")
+        text = input("Please supply text to analyze...\n")
 
-        input = input.lower().replace('>', '').replace('<', '').replace('!', '').replace(
+        text = text.lower().replace('>', '').replace('<', '').replace('!', '').replace(
             '%', '').replace('&', '').replace('^', '').replace('(', '').replace(')', '').replace('$',
                                                                                                  '').replace(
             '#', '').replace('@', '').replace('*', '').replace('{', '').replace('}', '').replace('/',
@@ -55,7 +55,7 @@ try:
                                                                                                   '').replace(
             '?', '').replace(':', '').replace(';', '')
         try:
-            response = requests.get('https://reykunyu.wimiso.nl/api/fwew?t%C3%ACpawm=' + input).json()
+            response = requests.get('https://reykunyu.wimiso.nl/api/fwew?t%C3%ACpawm=' + text).json()
             for word in response:
                 try:
                     root_object = word.get('sì\'eyng')[0]
