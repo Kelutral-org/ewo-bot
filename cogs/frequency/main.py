@@ -1,15 +1,10 @@
-import io
 import json
-import operator
+import re
+import sqlite3
+from sqlite3 import Error
 
-import disnake
 import requests
 from disnake.ext import commands
-import re
-import bot
-import sqlite3
-
-from sqlite3 import Error
 
 
 def create_connection(path):
@@ -60,6 +55,11 @@ CREATE TABLE IF NOT EXISTS words (
 class FrequencyCog(commands.Cog):
     def __init__(self,bot):
         self.bot = bot
+        count = 0
+        words = execute_read_query(wordlist, "SELECT * FROM words")
+        for word in words:
+            count += word[1]
+        word_frequency_total_processed = count
 
     @commands.Cog.listener()
     async def on_message(self, message):
