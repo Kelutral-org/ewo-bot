@@ -14,5 +14,5 @@ with open('requirements.txt', 'r') as f:
 token = token.strip()
 prefix = "?"
 description = "Oe skxawng asrunga' lu."
-version = "2.0.0 pre-1"
+version = "2.0.0 pre-3"
 operators = [423581502970789889, 189504650645471232, 205370567614922753, 429361033446948864, 81105065955303424]
