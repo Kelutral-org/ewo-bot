@@ -20,52 +20,35 @@
     "example": "?wortspiel Solo Wettstreit Start"
   },
   {
-    "command": "**?punkte**",
-    "usage": "?punkte",
+    "command": "**?points**",
+    "usage": "?points",
     "description": "Zeigt eine Bestenliste der erzielten Wortspielpunkte.",
-    "example": "?punkte"
+    "example": "?points"
   },
-  {"command": "**?schrei**",
-    "usage": "?schrei <Nummer>",
+  {"command": "**?scream**",
+    "usage": "?scream <Nummer>",
     "description": "Schreie! Eine Ziffer ergibt ein \"E\" - z.B. 5 für 5x \"E\".",
-    "example": "?schrei 10"
-  },
-  {"command": "**?zawng**",
-    "usage": "?zawng <Nummer>",
-    "description": "Ein Schrei wie ?schrei, aber auf Na'vi.",
-    "example": "?zawng 10"
-  },
-  {"command": "**?fauch**",
-    "aliases": ["oìsss"],
-    "usage": "?fauch <Nummer>",
-    "description": "Ein Schrei ?schrei, aber mit weniger Schreien und mehr Fauchen (\"sssss\").",
-    "example": "?fauch 10"
-  },
-  {"command": "**?zufall**",
-    "aliases": ["renulke"],
-    "usage": "?zufall <Nummer>",
-    "description": "Generiert zufällige Na'viwörter und ihre Bedeutung.",
-    "example": "?zufall 5"
+    "example": "?scream 10"
   },
   {
-    "command": "**?fluch**",
-    "usage": "?fluch",
+    "command": "**?swear**",
+    "usage": "?swear",
     "description": "Dir ist nach Fluchen? Kein Grund selbst ausfällig zu werden, ich kann das gerne für dich übernehmen.",
-    "example": "?fluch"
+    "example": "?swear"
   },
-  {"command": "**?sprich**",
+  {"command": "**?say**",
     "aliases": ["plltxe"],
-    "usage": "?sprich <Nachricht>",
+    "usage": "?say <Nachricht>",
     "description": "Lässt mich für dich sprechen.",
-    "example": "?sprich etwas nettes"
+    "example": "?say etwas nettes"
   },
-  {"command": "**?stups**",
-    "usage": "?stups",
+  {"command": "**?boop**",
+    "usage": "?boop",
     "description": "Stups mich an, mir gefällt das.",
-    "example": "?stups"
+    "example": "?boop"
   },
-  {"command": "**?sarkasmus**",
-    "usage": "?sarkasmus <Nachricht>",
+  {"command": "**?sarcasm**",
+    "usage": "?sarcasm <Nachricht>",
     "description": "diEs iSt EiNe SaRkAsTiScHe BeScHrEiBuNg.",
-    "example": "?sarkasmus Dies ist eine sarkastische Beschreibung."}
+    "example": "?sarcasm Dies ist eine sarkastische Beschreibung."}
 ]

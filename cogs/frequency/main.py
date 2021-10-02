@@ -55,11 +55,6 @@ CREATE TABLE IF NOT EXISTS words (
 class FrequencyCog(commands.Cog):
     def __init__(self,bot):
         self.bot = bot
-        count = 0
-        words = execute_read_query(wordlist, "SELECT * FROM words")
-        for word in words:
-            count += word[1]
-        word_frequency_total_processed = count
 
     @commands.Cog.listener()
     async def on_message(self, message):

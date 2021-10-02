@@ -24,9 +24,11 @@ import config
 import sqlite3
 from sqlite3 import Error
 
+test_guilds = [715043968886505484, 771967854002176010]
+
 intents = disnake.Intents.default()
 intents.members = True
-bot = commands.Bot(command_prefix=config.prefix, help_command=None, description=config.description, intents=intents)
+bot = commands.Bot(command_prefix=config.prefix, help_command=None, description=config.description, intents=intents, test_guilds=test_guilds, sync_commands_debug=True)
 
 # Open files for lang settings
 with open("lang/messages-english.json", encoding='utf-8') as f:
@@ -112,7 +114,6 @@ async def set_lang():
         elif lang_value == "German":
             lang[str(guild)] = german_lang
 
-
 # Setup presence and print some info
 @bot.event
 async def on_ready():
@@ -139,13 +140,6 @@ async def on_ready():
                                     VALUES
                                       ('language','English','""" + str(guild.id) + """');
                                     """)
-        # Create entry for delete_?say_context setting
-        execute_query(options_db, """
-                                    INSERT INTO
-                                      options (option, value, guild_id)
-                                    VALUES
-                                      ('delete_?say_context','True','""" + str(guild.id) + """');
-                                    """)
         # Create entry for bot_channel setting
         execute_query(options_db, """
                                     INSERT INTO
@@ -166,19 +160,6 @@ async def on_ready():
                                         VALUES
                                           ('German','language');
                                         """)
-    # Create possible values for delete_?say_context setting
-    execute_query(options_db, """
-                                            INSERT INTO
-                                              possible_values (possible_value, option)
-                                            VALUES
-                                              ('True','delete_?say_context');
-                                            """)
-    execute_query(options_db, """
-                                            INSERT INTO
-                                              possible_values (possible_value, option)
-                                            VALUES
-                                              ('False','delete_?say_context');
-                                            """)
     # Create possible values for bot_channel setting
     execute_query(options_db, """
                                             INSERT INTO
@@ -191,18 +172,19 @@ async def on_ready():
 
 
 # Help command
-@bot.command(name='option', aliases=['options', 'optionen'])
-async def option(ctx, action_type, option, *value):
+@bot.slash_command(name="options", description="Manage server options.", default_permission=True, guild_ids=test_guilds)
+async def option(inter, action_type: str, option: str, value: str):
+
     # Confirm the player has operator permissions, either through guild perms or through the bot operators
     is_op = False
-    for perm in ctx.author.permissions_in(ctx.channel):
-        if (perm == ('manage_guild', True)) or (perm == ('administrator', True)) or (ctx.author.id in config.operators):
+    for perm in inter.permissions:
+        if (perm == ('manage_guild', True)) or (perm == ('administrator', True)) or (inter.author.id in config.operators):
             is_op = True
 
     # If the player has permission
     if is_op:
         # Find results in the database for the searched option
-        database_options = execute_read_query("SELECT [option], [value], [guild_id] FROM options WHERE ([guild_id] = '" + str(ctx.guild.id) + "') AND ([option] = '" + option + "')")
+        database_options = execute_read_query("SELECT [option], [value], [guild_id] FROM options WHERE ([guild_id] = '" + str(inter.guild_id) + "') AND ([option] = '" + option + "')")
         # Find results in the database for the possible values of the searched option
         database_possible_options = execute_read_query("SELECT [option], [possible_value] FROM possible_values WHERE ([option] = '" + option + "')")
 
@@ -212,7 +194,7 @@ async def option(ctx, action_type, option, *value):
             if option == "all":
 
                 # Record the values of every option in the database
-                all_database_options = execute_read_query("SELECT [option], [value], [guild_id] FROM options WHERE ([guild_id] = '" + str(ctx.guild.id) + "')")
+                all_database_options = execute_read_query("SELECT [option], [value], [guild_id] FROM options WHERE ([guild_id] = '" + str(inter.guild_id) + "')")
                 # An empty string to fill later
                 list_string = ""
 
@@ -221,19 +203,19 @@ async def option(ctx, action_type, option, *value):
                     list_string += "**" + database_option[0] + "**: " + database_option[1] + "\n"
 
                 # Send the resulting string
-                await ctx.send(embed=disnake.Embed(
-                    title="**" + lang.get(str(ctx.guild.id)).get('all_options') + "**",
+                await inter.response.send_message(embed=disnake.Embed(
+                    title="**" + lang.get(str(inter.guild_id)).get('all_options') + "**",
                     description=list_string,
                     colour=899718))
 
             # Otherwise, set some text for the specified option,
             # then iterate over all possible values and add them to the string
             else:
-                list_string = "**" + lang.get(str(ctx.guild.id)).get('value') + "**: " + database_options[0][1] + "\n"
-                list_string += "**" + lang.get(str(ctx.guild.id)).get('possible_values') + "**:"
+                list_string = "**" + lang.get(str(inter.guild_id)).get('value') + "**: " + database_options[0][1] + "\n"
+                list_string += "**" + lang.get(str(inter.guild_id)).get('possible_values') + "**:"
                 for database_possible_option in database_possible_options:
                     list_string += "\n - " + database_possible_option[1]
-                await ctx.send(embed=disnake.Embed(
+                await inter.response.send_message(embed=disnake.Embed(
                     title="**" + database_options[0][0] + "**",
                     description=list_string,
                     colour=899718))
@@ -253,38 +235,38 @@ async def option(ctx, action_type, option, *value):
                         success = True
                         execute_query(options_db, """
                                             UPDATE options
-                                            SET value = '""" + value[0] + """'
-                                            WHERE ([guild_id] = '""" + str(ctx.guild.id) + """')
+                                            SET value = '""" + value + """'
+                                            WHERE ([guild_id] = '""" + str(inter.guild_id) + """')
                                             AND ([option] = '""" + option + """')
                                             """)
-                        await ctx.send(embed=disnake.Embed(description=lang.get(str(ctx.guild.id)).get('options_set').replace('&1', option).replace('&2', value[0]), colour=899718))
+                        await inter.response.send_message(embed=disnake.Embed(description=lang.get(str(inter.guild_id)).get('options_set').replace('&1', option).replace('&2', value), colour=899718))
 
                     # If the possible value matches the value specified
-                    elif value[0] == database_possible_option[1]:
+                    elif value == database_possible_option[1]:
                         success = True
                         execute_query(options_db, """
                                             UPDATE options
-                                            SET value = '""" + value[0] + """'
-                                            WHERE ([guild_id] = '""" + str(ctx.guild.id) + """')
+                                            SET value = '""" + value + """'
+                                            WHERE ([guild_id] = '""" + str(inter.guild_id) + """')
                                             AND ([option] = '""" + option + """')
                                             """)
                         # Ensure that we recalculate the language if it is changed
                         if option == 'language':
                             await set_lang()
-                        await ctx.send(embed=disnake.Embed(description=lang.get(str(ctx.guild.id)).get('options_set').replace('&1', option).replace('&2',value[0]),colour=899718))
+                        await inter.response.send_message(embed=disnake.Embed(description=lang.get(str(inter.guild_id)).get('options_set').replace('&1', option).replace('&2', value),colour=899718))
 
                 # If the the option can't be set to the value, send an error message
                 if not success:
-                    await ctx.send(
-                        embed=disnake.Embed(title=lang.get(str(ctx.guild.id)).get('options_title'),
-                                            description=lang.get(str(ctx.guild.id)).get('options_invalid_value').replace('&1', option).replace('&2', value[0]),
+                    await inter.response.send_message(
+                        embed=disnake.Embed(title=lang.get(str(inter.guild_id)).get('options_title'),
+                                            description=lang.get(str(inter.guild_id)).get('options_invalid_value').replace('&1', option).replace('&2', value),
                                             colour=0xff0000))
 
             # If the user has NOT specified a value, send an error message
             else:
-                await ctx.send(
-                    embed=disnake.Embed(title=lang.get(str(ctx.guild.id)).get('options_title'),
-                                        description=lang.get(str(ctx.guild.id)).get('incorrect_usage'),
+                await inter.response.send_message(
+                    embed=disnake.Embed(title=lang.get(str(inter.guild_id)).get('options_title'),
+                                        description=lang.get(str(inter.guild_id)).get('incorrect_usage'),
                                         colour=0xff0000))
 
         # If the action type is "toggle"
@@ -299,9 +281,9 @@ async def option(ctx, action_type, option, *value):
 
             # If the variable is still false, the selected option is not a boolean, and we can return an error
             if not is_bool:
-                await ctx.send(
-                    embed=disnake.Embed(title=lang.get(str(ctx.guild.id)).get('options_title'),
-                                        description=lang.get(str(ctx.guild.id)).get('options_not_boolean').replace('&1', option),
+                await inter.response.send_message(
+                    embed=disnake.Embed(title=lang.get(str(inter.guild_id)).get('options_title'),
+                                        description=lang.get(str(inter.guild_id)).get('options_not_boolean').replace('&1', option),
                                         colour=0xff0000))
 
             # Otherwise, it is a boolean option, and we can continue
@@ -312,68 +294,54 @@ async def option(ctx, action_type, option, *value):
                         execute_query(options_db, """
                         UPDATE options
                         SET value = 'False'
-                        WHERE ([guild_id] = '""" + str(ctx.guild.id) + """')
+                        WHERE ([guild_id] = '""" + str(inter.guild_id) + """')
                         AND ([option] = '""" + option + """')
                         """)
-                        await ctx.send(embed=disnake.Embed(description=lang.get(str(ctx.guild.id)).get('options_set').replace('&1', option).replace('&2', 'False'),colour=899718))
+                        await inter.response.send_message(embed=disnake.Embed(description=lang.get(str(inter.guild_id)).get('options_set').replace('&1', option).replace('&2', 'False'),colour=899718))
                     # Otherwise, value is False, and we can set it to True
                     else:
                         execute_query(options_db, """
                                             UPDATE options
                                             SET value = 'True'
-                                            WHERE ([guild_id] = '""" + str(ctx.guild.id) + """')
+                                            WHERE ([guild_id] = '""" + str(inter.guild_id) + """')
                                             AND ([option] = '""" + option + """')
                                             """)
-                        await ctx.send(embed=disnake.Embed(description=lang.get(str(ctx.guild.id)).get('options_set').replace('&1', option).replace('&2', 'True'),colour=899718))
+                        await inter.response.send_message(embed=disnake.Embed(description=lang.get(str(inter.guild_id)).get('options_set').replace('&1', option).replace('&2', 'True'),colour=899718))
 
 
 
         # If the action type is anything else, it's incorrect usage and we can send an error
         else:
-            await ctx.send(
-                embed=disnake.Embed(title=lang.get(str(ctx.guild.id)).get('options_title'),
-                                    description=lang.get(str(ctx.guild.id)).get('incorrect_usage'),
+            await inter.response.send_message(
+                embed=disnake.Embed(title=lang.get(str(inter.guild_id)).get('options_title'),
+                                    description=lang.get(str(inter.guild_id)).get('incorrect_usage'),
                                     colour=0xff0000))
 
     # If the player does NOT have permission, send an error
     else:
-        await ctx.send(embed=disnake.Embed(title=lang.get(str(ctx.guild.id)).get('denied'),
-                                           description=lang.get(str(ctx.guild.id)).get('no_access'),
+        await inter.response.send_message(embed=disnake.Embed(title=lang.get(str(inter.guild_id)).get('denied'),
+                                           description=lang.get(str(inter.guild_id)).get('no_access'),
                                            colour=0xff0000))
-
-    # Set the variable back to false, ready for the next activation
-    is_op = False
 
 
 # Help command
-@bot.command(name='help', aliases=['srung', 'hilfe'])
-async def help(ctx, *args):
+@bot.slash_command(name="help", description="Show info about a command or list all commands.", default_permission=True, guild_ids=test_guilds)
+async def help(inter, command_name: str = ""):
     # Set the language of this help menu instance
-    lang_value = execute_read_query("SELECT [value] FROM options WHERE ([option] = 'language') AND ([guild_id] = '" + str(ctx.guild.id) + "')")[0][0]
+    lang_value = execute_read_query("SELECT [value] FROM options WHERE ([option] = 'language') AND ([guild_id] = '" + str(inter.guild_id) + "')")[0][0]
     if lang_value == "English":
         help_file = english_help_file
     elif lang_value == "German":
         help_file = german_help_file
 
-    # Try to select first section of args
-    try:
-        args = args[0]
-
-    # If args cannot be indexed (if it is None), set it to an empty string
-    except IndexError:
-        args = ""
-
-    # Remove prefixes from beginning of arg (For more intuitive arguments)
-    args = args.replace('?', '')
-
     # Empty string to reference later
     display_help = ""
 
     # If user has run ?help with no args, display the main help menu
-    if not args:
+    if not command_name:
 
         # Begin by setting the string to the instructions
-        display_help = lang.get(str(ctx.guild.id)).get('help_info') + "\n"
+        display_help = lang.get(str(inter.guild_id)).get('help_info') + "\n"
 
         # For each command in the help file
         for command in help_file:
@@ -383,12 +351,15 @@ async def help(ctx, *args):
     # If there are arguments
     else:
 
+        # Remove prefixes from beginning of arg (For more intuitive arguments)
+        command_name = command_name.replace('?', '')
+
         # For each command in the help file
         for command in help_file:
 
             # Find command for argument by stripping the current command's command name of its formatting and prefix,
             # then testing if the result is equal to the argument
-            if str(command["command"]).strip('**{?}**') == args:
+            if str(command["command"]).strip('**{?}**') == command_name:
 
                 # Add command name and description
                 display_help += "\n\n" + command["command"] + ": " + command["description"] + "\n"
@@ -442,36 +413,14 @@ async def help(ctx, *args):
                 display_help += "**Example**: " + command["example"]
 
         # If display_help has not been changed from its default (nothing was found for the args), send a warning
-        if display_help == lang.get(str(ctx.guild.id)).get('help_info') + "\n" or display_help == "":
-            await ctx.send(
-                embed=disnake.Embed(title=ctx.message.content,
-                                    description=lang.get(str(ctx.guild.id)).get('help_invalid_command').replace('&1',
-                                                                                                                str(
-                                                                                                                    args)),
-                                    colour=0xff0000))
+        if display_help == lang.get(str(inter.guild_id)).get('help_info') + "\n" or display_help == "":
+            await inter.response.send_message(
+                embed=disnake.Embed(title=lang.get(str(inter.guild_id)).get('help_title'),
+                                    description=lang.get(str(inter.guild_id)).get('help_invalid_command').replace('&1', command_name), colour=0xff0000))
 
     # If display_help has been changed from its default (values were found for the args), send the finished help menu
-    if not display_help == lang.get(str(ctx.guild.id)).get('help_info') + "\n" and not display_help == "":
-        await ctx.send(embed=disnake.Embed(title=ctx.message.content, description=display_help, colour=899718))
-
-
-# Exit command
-@bot.command()
-async def exit(ctx):
-    # If the sender of the command is an Ewo' operator
-    if ctx.message.author.id in config.operators:
-
-        # Send a shutdown message and exit
-        await ctx.send(embed=disnake.Embed(description=lang.get(str(ctx.guild.id)).get('exit_message'), colour=899718))
-        sys.exit(0)
-
-    # If the sender of the command is NOT an Ewo' operator
-    else:
-
-        # Send a deny message and do nothing
-        await ctx.send(embed=disnake.Embed(title=lang.get(str(ctx.guild.id)).get('denied'),
-                                           description=lang.get(str(ctx.guild.id)).get('no_access'),
-                                           colour=0xff0000))
+    if not display_help == lang.get(str(inter.guild_id)).get('help_info') + "\n" and not display_help == "":
+        await inter.response.send_message(embed=disnake.Embed(title=lang.get(str(inter.guild_id)).get('help_title'), description=display_help, colour=899718))
 
 
 # Load cogs

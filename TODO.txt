@@ -1,1 +1,2 @@
-CREATE FREQUENCY PROCESSOR, PROCESS EXTERNAL DATA
+COMMENT CURRENT WORDGAME CODE
+Begin implementing word game channel activation/deactivation

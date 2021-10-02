@@ -30,23 +30,6 @@
     "description": "Make me scream. One number = one 'E'.",
     "example": "?scream 10"
   },
-  {"command": "**?zawng**",
-    "usage": "?zawng <number>",
-    "description": "It's just ?scream but Na'vi.",
-    "example": "?zawng 10"
-  },
-  {"command": "**?hiss**",
-    "aliases": ["oìsss"],
-    "usage": "?hiss <number>",
-    "description": "It's just ?scream but with less screaming and more ssssss.",
-    "example": "?hiss 10"
-  },
-  {"command": "**?random**",
-    "aliases": ["renulke"],
-    "usage": "?random <number>",
-    "description": "Generates random Na'vi words and their meanings.",
-    "example": "?random 5"
-  },
   {
     "command": "**?swear**",
     "usage": "?swear",
