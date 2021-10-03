@@ -1,4 +1,4 @@
-!!! COMMENT CURRENT WORDGAME CODE !!!
+WORK ON /WORDGAME INFO (Shows info about the gamemodes, playermodes, and game as a whole)
 
 
 
