@@ -24,7 +24,7 @@ import config
 import sqlite3
 from sqlite3 import Error
 
-test_guilds = [715043968886505484, 771967854002176010]
+test_guilds = [715043968886505484, 715656323995271168, 771967854002176010]
 
 intents = disnake.Intents.default()
 intents.members = True
@@ -173,7 +173,7 @@ async def on_ready():
 
 # Help command
 @bot.slash_command(name="options", description="Manage server options.", default_permission=True, guild_ids=test_guilds)
-async def option(inter, action_type: str, option: str, value: str):
+async def options(inter, action_type: str, option: str, value: str):
 
     # Confirm the player has operator permissions, either through guild perms or through the bot operators
     is_op = False
@@ -206,7 +206,7 @@ async def option(inter, action_type: str, option: str, value: str):
                 await inter.response.send_message(embed=disnake.Embed(
                     title="**" + lang.get(str(inter.guild_id)).get('all_options') + "**",
                     description=list_string,
-                    colour=899718))
+                    colour=899718), ephemeral=True)
 
             # Otherwise, set some text for the specified option,
             # then iterate over all possible values and add them to the string
@@ -218,7 +218,7 @@ async def option(inter, action_type: str, option: str, value: str):
                 await inter.response.send_message(embed=disnake.Embed(
                     title="**" + database_options[0][0] + "**",
                     description=list_string,
-                    colour=899718))
+                    colour=899718), ephemeral=True)
 
         # If the action type is "set"
         elif action_type == "set":
@@ -239,7 +239,7 @@ async def option(inter, action_type: str, option: str, value: str):
                                             WHERE ([guild_id] = '""" + str(inter.guild_id) + """')
                                             AND ([option] = '""" + option + """')
                                             """)
-                        await inter.response.send_message(embed=disnake.Embed(description=lang.get(str(inter.guild_id)).get('options_set').replace('&1', option).replace('&2', value), colour=899718))
+                        await inter.response.send_message(embed=disnake.Embed(description=lang.get(str(inter.guild_id)).get('options_set').replace('&1', option).replace('&2', value), colour=899718), ephemeral=True)
 
                     # If the possible value matches the value specified
                     elif value == database_possible_option[1]:
@@ -253,21 +253,21 @@ async def option(inter, action_type: str, option: str, value: str):
                         # Ensure that we recalculate the language if it is changed
                         if option == 'language':
                             await set_lang()
-                        await inter.response.send_message(embed=disnake.Embed(description=lang.get(str(inter.guild_id)).get('options_set').replace('&1', option).replace('&2', value),colour=899718))
+                        await inter.response.send_message(embed=disnake.Embed(description=lang.get(str(inter.guild_id)).get('options_set').replace('&1', option).replace('&2', value),colour=899718), ephemeral=True)
 
                 # If the the option can't be set to the value, send an error message
                 if not success:
                     await inter.response.send_message(
                         embed=disnake.Embed(title=lang.get(str(inter.guild_id)).get('options_title'),
                                             description=lang.get(str(inter.guild_id)).get('options_invalid_value').replace('&1', option).replace('&2', value),
-                                            colour=0xff0000))
+                                            colour=0xff0000), ephemeral=True)
 
             # If the user has NOT specified a value, send an error message
             else:
                 await inter.response.send_message(
                     embed=disnake.Embed(title=lang.get(str(inter.guild_id)).get('options_title'),
                                         description=lang.get(str(inter.guild_id)).get('incorrect_usage'),
-                                        colour=0xff0000))
+                                        colour=0xff0000), ephemeral=True)
 
         # If the action type is "toggle"
         elif action_type == "toggle":
@@ -284,7 +284,7 @@ async def option(inter, action_type: str, option: str, value: str):
                 await inter.response.send_message(
                     embed=disnake.Embed(title=lang.get(str(inter.guild_id)).get('options_title'),
                                         description=lang.get(str(inter.guild_id)).get('options_not_boolean').replace('&1', option),
-                                        colour=0xff0000))
+                                        colour=0xff0000), ephemeral=True)
 
             # Otherwise, it is a boolean option, and we can continue
             else:
@@ -297,7 +297,7 @@ async def option(inter, action_type: str, option: str, value: str):
                         WHERE ([guild_id] = '""" + str(inter.guild_id) + """')
                         AND ([option] = '""" + option + """')
                         """)
-                        await inter.response.send_message(embed=disnake.Embed(description=lang.get(str(inter.guild_id)).get('options_set').replace('&1', option).replace('&2', 'False'),colour=899718))
+                        await inter.response.send_message(embed=disnake.Embed(description=lang.get(str(inter.guild_id)).get('options_set').replace('&1', option).replace('&2', 'False'),colour=899718), ephemeral=True)
                     # Otherwise, value is False, and we can set it to True
                     else:
                         execute_query(options_db, """
@@ -306,7 +306,7 @@ async def option(inter, action_type: str, option: str, value: str):
                                             WHERE ([guild_id] = '""" + str(inter.guild_id) + """')
                                             AND ([option] = '""" + option + """')
                                             """)
-                        await inter.response.send_message(embed=disnake.Embed(description=lang.get(str(inter.guild_id)).get('options_set').replace('&1', option).replace('&2', 'True'),colour=899718))
+                        await inter.response.send_message(embed=disnake.Embed(description=lang.get(str(inter.guild_id)).get('options_set').replace('&1', option).replace('&2', 'True'),colour=899718), ephemeral=True)
 
 
 
@@ -315,13 +315,13 @@ async def option(inter, action_type: str, option: str, value: str):
             await inter.response.send_message(
                 embed=disnake.Embed(title=lang.get(str(inter.guild_id)).get('options_title'),
                                     description=lang.get(str(inter.guild_id)).get('incorrect_usage'),
-                                    colour=0xff0000))
+                                    colour=0xff0000), ephemeral=True)
 
     # If the player does NOT have permission, send an error
     else:
         await inter.response.send_message(embed=disnake.Embed(title=lang.get(str(inter.guild_id)).get('denied'),
                                            description=lang.get(str(inter.guild_id)).get('no_access'),
-                                           colour=0xff0000))
+                                           colour=0xff0000), ephemeral=True)
 
 
 # Help command
@@ -416,11 +416,26 @@ async def help(inter, command_name: str = ""):
         if display_help == lang.get(str(inter.guild_id)).get('help_info') + "\n" or display_help == "":
             await inter.response.send_message(
                 embed=disnake.Embed(title=lang.get(str(inter.guild_id)).get('help_title'),
-                                    description=lang.get(str(inter.guild_id)).get('help_invalid_command').replace('&1', command_name), colour=0xff0000))
+                                    description=lang.get(str(inter.guild_id)).get('help_invalid_command').replace('&1', command_name), colour=0xff0000), ephemeral=True)
 
     # If display_help has been changed from its default (values were found for the args), send the finished help menu
     if not display_help == lang.get(str(inter.guild_id)).get('help_info') + "\n" and not display_help == "":
-        await inter.response.send_message(embed=disnake.Embed(title=lang.get(str(inter.guild_id)).get('help_title'), description=display_help, colour=899718))
+        await inter.response.send_message(embed=disnake.Embed(title=lang.get(str(inter.guild_id)).get('help_title'), description=display_help, colour=899718), ephemeral=True)
+
+
+@bot.slash_command(name="info", description="Some basic info about me.", default_permission=True, guild_ids=test_guilds)
+async def info(inter):
+    embed = disnake.Embed(
+        title=lang.get(str(inter.guild_id)).get('info_title'),
+        description=lang.get(str(inter.guild_id)).get('info_basic')
+    )
+
+    embed.add_field(name=lang.get(str(inter.guild_id)).get('info_version') + ":",value=config.version)
+    embed.add_field(name=lang.get(str(inter.guild_id)).get('info_repo') + ":", value=config.repository)
+    embed.add_field(name=lang.get(str(inter.guild_id)).get('info_discord') + ":", value=config.test_server_link)
+    embed.add_field(name=config.discord_library + ":", value=str(disnake.version_info.major) + "." + str(disnake.version_info.minor) + "." + str(disnake.version_info.micro))
+
+    await inter.response.send_message(embed=embed, ephemeral=True)
 
 
 # Load cogs

@@ -67,14 +67,14 @@ class Fun(commands.Cog):
         await inter.response.send_message(msg)
 
     # Swear command
-    @commands.command(name='swear', aliases=['räptum', 'fluch'])
-    async def swear(self, ctx):
+    @commands.slash_command(name="swear", description="Do you feel like swearing? Keep yourself clean, I can do it for you.", default_permission=True, guild_ids=bot.test_guilds)
+    async def swear(self, inter):
 
         # Generate random swear
         random_swear = await self.random_swear()
 
         # Send the swear
-        await ctx.send(random_swear)
+        await inter.response.send_message(random_swear)
 
     # Say command
     @commands.slash_command(name="say", description="Makes me speak for you.", default_permission=True, guild_ids=bot.test_guilds)

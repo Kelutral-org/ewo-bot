@@ -1,2 +1,5 @@
-COMMENT CURRENT WORDGAME CODE
-Begin implementing word game channel activation/deactivation
+!!! COMMENT CURRENT WORDGAME CODE !!!
+
+
+
+start work on wordgame gameplay
