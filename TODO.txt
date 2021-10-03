@@ -1,5 +1,8 @@
-WORK ON /WORDGAME INFO (Shows info about the gamemodes, playermodes, and game as a whole)
+!!! WORK ON /WORDGAME INFO (Shows info about the gamemodes, playermodes, and game as a whole) !!!
+!!! ADD COLONS TO WORDGAME FIRST WORD AND START FIELD NAMES !!!
 
 
 
 start work on wordgame gameplay
+
+add some data to README.md

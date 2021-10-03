@@ -372,7 +372,7 @@ class WordgameCog(commands.Cog):
                                         description=bot.lang.get(str(inter.guild_id)).get('wordgame_start_prompt'),
                                         colour=899718), ephemeral=True, view=view)
                 # Wait until the ui has been used before continuing (all start code is handled in the ui class above)
-                await view.wait()
+                #await view.wait()
         # If this channel is not a wordgame channel, send an error
         else:
             await inter.response.send_message(
