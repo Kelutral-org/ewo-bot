@@ -88,7 +88,7 @@ CREATE TABLE IF NOT EXISTS options (
   option TEXT NOT NULL, 
   value TEXT NOT NULL, 
   guild_id TEXT NOT NULL, 
-  UNIQUE (option, value, guild_id),
+  UNIQUE (option, guild_id),
   FOREIGN KEY (guild_id) REFERENCES guilds (id)
 );
 """)
@@ -223,7 +223,6 @@ async def options(inter, action_type: str, option: str, value: str):
         # If the action type is "set"
         elif action_type == "set":
             # A variable to track set action success
-            global success
             success = False
 
             # If the user has specified a value
@@ -232,24 +231,28 @@ async def options(inter, action_type: str, option: str, value: str):
                 for database_possible_option in database_possible_options:
                     # If the possible value is ANY
                     if database_possible_option[1] == 'ANY':
-                        success = True
+                        # Change the option
                         execute_query(options_db, """
                                             UPDATE options
                                             SET value = '""" + value + """'
                                             WHERE ([guild_id] = '""" + str(inter.guild_id) + """')
                                             AND ([option] = '""" + option + """')
                                             """)
+                        # Set success to be true
+                        success = True
                         await inter.response.send_message(embed=disnake.Embed(description=lang.get(str(inter.guild_id)).get('options_set').replace('&1', option).replace('&2', value), colour=899718), ephemeral=True)
 
                     # If the possible value matches the value specified
                     elif value == database_possible_option[1]:
-                        success = True
+                        # Change the option
                         execute_query(options_db, """
                                             UPDATE options
                                             SET value = '""" + value + """'
                                             WHERE ([guild_id] = '""" + str(inter.guild_id) + """')
                                             AND ([option] = '""" + option + """')
                                             """)
+                        # Set success to be true
+                        success = True
                         # Ensure that we recalculate the language if it is changed
                         if option == 'language':
                             await set_lang()
@@ -272,7 +275,6 @@ async def options(inter, action_type: str, option: str, value: str):
         # If the action type is "toggle"
         elif action_type == "toggle":
             # A variable to hold whether or not the selected option is boolean
-            global is_bool
             is_bool = False
 
             for database_possible_option in database_possible_options:

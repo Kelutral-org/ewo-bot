@@ -1,0 +1,45 @@
+```
+Game
+```
+Wordgame is a basic word-based game designed to enhance a student's vocabulary, speed, and understanding of the sound system.
+The exact goal of the game depends on the gamemode, but the basic principle is universal: Say a word that **begins** with *the same letter* that the previous word **ends** with.
+For example:
+``plltxe``
+``eltu``
+``utral``
+etc.
+
+```
+Playmodes
+```
+Wordgame has two playmodes: Solo and Multiplayer.
+**Solo:**
+    ・The bot will automatically respond.
+    ・Only the player who started the game can play.
+    ・Points cannot be earned.
+
+**Multiplayer:**
+    ・The bot will *not* respond.
+    ・More than one player *is required*.
+    ・Points can be earned.
+
+```
+Gamemodes
+```
+Wordgame has 3 gamemodes: Casual, Competitive, and Deathmatch.
+**Casual:**
+    ・Words can be reused, just not too frequently (five other words must be used in order for a word to be reused).
+    ・The game will not end until manually stopped.
+    ・Points are awarded to everyone, and no bonuses are given.
+
+**Competitive**:
+    ・Words *cannot* be reused.
+    ・The first player to say a word that leaves no more options for other players wins.
+    ・Points are still awarded to everyone, but the winner is given a bonus.
+
+**Deathmatch**:
+    ・You must join the game when it starts.
+    ・If a player says a word that has already been used, they are eliminated.
+    ・The last player left wins.
+    ・Points are still awarded to everyone, but the winner is given a bonus.
+    ・Forces multiplayer.
