@@ -70,6 +70,7 @@
   "wordgame_unusable_aw": "Words that end with 'aw' cannot be used because not enough words start with it!",
   "wordgame_unusable_ew": "Words that end with 'ew' cannot be used because not enough words start with it!",
   "wordgame_unusable_ay": "Words that end with 'ay' cannot be used because not enough words start with it!",
+  "wordgame_unusable_ey": "Words that end with 'ey' cannot be used because not enough words start with it!",
   "wordgame_unusable_rr": "Words that end with 'rr' cannot be used because words cannot start with it!",
   "wordgame_unusable_ll": "Words that end with 'll' cannot be used because words cannot start with it!",
   "wordgame_unusable_space": "Words with spaces in them cannot be used!",

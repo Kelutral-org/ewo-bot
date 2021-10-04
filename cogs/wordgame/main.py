@@ -81,30 +81,33 @@ def convert_to_monographic(word):
 
 # Chooses a random word from the list of valid words and returns it
 # (returns only the name, to get the data use valid_words.get(word))
-def choose_word(channel_id: int, sound: str):
-    try:
-        if active_channels.get(channel_id).get("gamemode") == "casual":
-            word = random.choice(active_channels.get(channel_id).get("word_initial_lookup").get(sound))
+def choose_first_word(channel_id: int, sound: str):
+    word = random.choice(full_word_initial_lookup.get(sound))
+    return word
 
-            if word in active_channels.get(channel_id).get("recent_words"):
+
+# Chooses a random word from the list of valid words and returns it
+# (returns only the name, to get the data use valid_words.get(word))
+def choose_word(channel_id: int, sound: str):
+    if active_channels.get(str(channel_id)).get("gamemode") == "casual":
+        word = random.choice(active_channels.get(channel_id).get("word_initial_lookup").get(sound))
+
+        if word in active_channels.get(channel_id).get("recent_words"):
+            choose_word(channel_id, sound)
+        else:
+            return word
+    if active_channels.get(str(channel_id)).get("gamemode") == "competitive":
+        if active_channels.get(str(channel_id)).get("word_initial_lookup").get(sound):
+            word = random.choice(active_channels.get(str(channel_id)).get("word_initial_lookup").get(sound))
+
+            if word in active_channels.get(str(channel_id)).get("recent_words"):
                 choose_word(channel_id, sound)
             else:
                 return word
-        if active_channels.get(channel_id).get("gamemode") == "competitive":
-            if active_channels.get(channel_id).get("word_initial_lookup").get(sound):
-                word = random.choice(active_channels.get(channel_id).get("word_initial_lookup").get(sound))
-
-                if word in active_channels.get(channel_id).get("recent_words"):
-                    choose_word(channel_id, sound)
-                else:
-                    return word
-            else:
-                return None
-        if active_channels.get(channel_id).get("gamemode") == "deathmatch":
-            pass
-    except AttributeError:
-        word = random.choice(full_word_initial_lookup.get(sound))
-        return word
+        else:
+            return None
+    if active_channels.get(str(channel_id)).get("gamemode") == "deathmatch":
+        pass
 
 
 # Ends the game in the given channel. Does not check if a game is active.
@@ -114,6 +117,7 @@ def end_game(channel_id: int):
 
 def win(winner_id: int, channel_id: int):
     print(winner_id, channel_id)
+    active_channels.pop(str(channel_id))
 
 
 # The class for the playermode dropdown in the wordgame start ui.
@@ -178,7 +182,7 @@ class DeathmatchStartView(disnake.ui.View):
                 word_initial_lookup = full_word_initial_lookup
 
                 # Chose the first word by randomly choosing a sound from the list of possible sounds
-                first_word = choose_word(inter.channel_id, random.choice(navi_letters))
+                first_word = choose_first_word(inter.channel_id, random.choice(navi_letters))
                 # Get the first word's data
                 first_word_data = valid_words.get(first_word)
 
@@ -293,7 +297,7 @@ class StartGameView(disnake.ui.View):
                 word_initial_lookup = full_word_initial_lookup
 
                 # Chose the first word by randomly choosing a sound from the list of possible sounds
-                first_word = choose_word(inter.channel_id, random.choice(navi_letters))
+                first_word = choose_first_word(inter.channel_id, random.choice(navi_letters))
                 # Get the first word's data
                 first_word_data = valid_words.get(first_word)
 
@@ -387,7 +391,7 @@ class WordgameCog(commands.Cog):
 
         print("WORDGAME: Compiling valid word list...")
         # List of unusable words, soon to be filled
-        self.invalid_words = {"aw": [], "ew": [], "ay": [], "ll": [], "rr": [], "space": []}
+        self.invalid_words = {"aw": [], "ew": [], "ay": [], "ey": [], "ll": [], "rr": [], "space": []}
         # Get the list of every word in Na'vi from reykunyu
         reykunyu_all = requests.get("https://reykunyu.wimiso.nl/api/frau").json()
 
@@ -395,101 +399,117 @@ class WordgameCog(commands.Cog):
         for word in reykunyu_all:
             # If the word ends in aw, add it to unusable words. Not enough words start with it.
             if (reykunyu_all.get(word).get("na'vi").lower().endswith('aw')) and (not ' ' in reykunyu_all.get(word).get("na'vi").lower()):
-                self.invalid_words["aw"].append(reykunyu_all.get(word).get("na'vi").lower())
+                if reykunyu_all.get(word).get("na'vi").lower() not in self.invalid_words.get("aw"):
+                    self.invalid_words["aw"].append(reykunyu_all.get(word).get("na'vi").lower())
             # If the word ends in ew, add it to unusable words. Not enough words start with it.
             elif (reykunyu_all.get(word).get("na'vi").lower().endswith('ew')) and (not ' ' in reykunyu_all.get(word).get("na'vi").lower()):
-                self.invalid_words["ew"].append(reykunyu_all.get(word).get("na'vi").lower())
+                if reykunyu_all.get(word).get("na'vi").lower() not in self.invalid_words.get("ew"):
+                    self.invalid_words["ew"].append(reykunyu_all.get(word).get("na'vi").lower())
             # If the word ends in ay, add it to unusable words. Not enough words start with it.
             elif (reykunyu_all.get(word).get("na'vi").lower().endswith('ay')) and (not ' ' in reykunyu_all.get(word).get("na'vi").lower()):
-                self.invalid_words["ay"].append(reykunyu_all.get(word).get("na'vi").lower())
+                if reykunyu_all.get(word).get("na'vi").lower() not in self.invalid_words.get("ay"):
+                    self.invalid_words["ay"].append(reykunyu_all.get(word).get("na'vi").lower())
+            # If the word ends in ay, add it to unusable words. Not enough words start with it.
+            elif (reykunyu_all.get(word).get("na'vi").lower().endswith('ey')) and (not ' ' in reykunyu_all.get(word).get("na'vi").lower()):
+                if reykunyu_all.get(word).get("na'vi").lower() not in self.invalid_words.get("ey"):
+                    self.invalid_words["ey"].append(reykunyu_all.get(word).get("na'vi").lower())
             # If the word ends in ll, add it to unusable words. No words end with it.
             elif (reykunyu_all.get(word).get("na'vi").lower().endswith('ll')) and (not ' ' in reykunyu_all.get(word).get("na'vi").lower()):
-                self.invalid_words["ll"].append(reykunyu_all.get(word).get("na'vi").lower())
+                if reykunyu_all.get(word).get("na'vi").lower() not in self.invalid_words.get("ll"):
+                    self.invalid_words["ll"].append(reykunyu_all.get(word).get("na'vi").lower())
             # If the word ends in r, add it to unusable words. No words end with it.
             elif (reykunyu_all.get(word).get("na'vi").lower().endswith('rr')) and (not ' ' in reykunyu_all.get(word).get("na'vi").lower()):
-                self.invalid_words["rr"].append(reykunyu_all.get(word).get("na'vi").lower())
-            # If the word contains a space, add it to unusable words. They're usually just multiple other words or si verbs.
+                if reykunyu_all.get(word).get("na'vi").lower() not in self.invalid_words.get("rr"):
+                    self.invalid_words["rr"].append(reykunyu_all.get(word).get("na'vi").lower())
+            # If the word contains a space, add it to unusable words.
+            # They're usually just multiple other words or si verbs.
             elif ' ' in reykunyu_all.get(word).get("na'vi").lower():
-                self.invalid_words["space"].append(reykunyu_all.get(word).get("na'vi").lower())
+                if reykunyu_all.get(word).get("na'vi").lower() not in self.invalid_words.get("space"):
+                    self.invalid_words["space"].append(reykunyu_all.get(word).get("na'vi").lower())
 
             # If all above tests pass, we know the word is valid and can add it to the list
             else:
-                # Add the word to the list alongside some daya
-                valid_words[reykunyu_all.get(word).get("na'vi").lower()] = {}
-                valid_words[reykunyu_all.get(word).get("na'vi").lower()]["translations"] = reykunyu_all.get(word).get("translations")[0]
+                if reykunyu_all.get(word).get("na'vi").lower() not in valid_words:
+                    # Add the word to the list alongside some data
+                    valid_words[reykunyu_all.get(word).get("na'vi").lower()] = {}
+                    valid_words[reykunyu_all.get(word).get("na'vi").lower()]["translations"] = reykunyu_all.get(word).get("translations")[0]
 
-                # Placeholder string, soon to be filled
-                monographic = ""
-                try:
-                    # Get pronunciation and stress data if it exists
-                    pronunciation = reykunyu_all.get(word).get("pronunciation")[0].lower()
-                    reykunyu_stress = reykunyu_all.get(word).get("pronunciation")[1]
+                    # Placeholder string, soon to be filled
+                    monographic = ""
+                    try:
+                        # Get pronunciation and stress data if it exists
+                        pronunciation = reykunyu_all.get(word).get("pronunciation")[0].lower()
+                        reykunyu_stress = reykunyu_all.get(word).get("pronunciation")[1]
 
-                    # Split the pronunciation data into syllables
-                    split_pronunciation = pronunciation.split('-')
+                        # Split the pronunciation data into syllables
+                        split_pronunciation = pronunciation.split('-')
 
-                    # Copy that to modify it (copied because more code uses the original)
-                    stressed_pronunciation = copy.deepcopy(split_pronunciation)
+                        # Copy that to modify it (copied because more code uses the original)
+                        stressed_pronunciation = copy.deepcopy(split_pronunciation)
 
-                    # Indicate the stressed syllable by making it uppercase and join it back together
-                    stressed_pronunciation[reykunyu_stress - 1] = split_pronunciation[reykunyu_stress - 1].upper()
-                    word_pronunciation = '-'.join(stressed_pronunciation)
+                        # Indicate the stressed syllable by making it uppercase and join it back together
+                        stressed_pronunciation[reykunyu_stress - 1] = split_pronunciation[reykunyu_stress - 1].upper()
+                        word_pronunciation = '-'.join(stressed_pronunciation)
 
-                    # Copy the pronunciation again
-                    monographic_syllables = copy.deepcopy(split_pronunciation)
+                        # Copy the pronunciation again
+                        monographic_syllables = copy.deepcopy(split_pronunciation)
 
-                    # For every syllable, convert it to monographic using the function
-                    # (done to fix exceptions like eyawr)
-                    for num, syllable in enumerate(split_pronunciation):
-                        monographic_syllables[num] = convert_to_monographic(syllable)
+                        # For every syllable, convert it to monographic using the function
+                        # (done to fix exceptions like eyawr)
+                        for num, syllable in enumerate(split_pronunciation):
+                            monographic_syllables[num] = convert_to_monographic(syllable)
 
-                    # Set the placeholder string to the new, joined monographic word
-                    monographic = ''.join(monographic_syllables)
+                        # Set the placeholder string to the new, joined monographic word
+                        monographic = ''.join(monographic_syllables)
 
-                    # Add the word's pronunciation to the data
-                    valid_words[reykunyu_all.get(word).get("na'vi").lower()]["pronunciation"] = word_pronunciation
+                        # Add the word's pronunciation to the data
+                        valid_words[reykunyu_all.get(word).get("na'vi").lower()]["pronunciation"] = word_pronunciation
 
-                # If either of these exeptions are thrown,
-                # the list doesn't contain any pronunciation info for this word, and this entire step can be skipped.
-                except TypeError:
-                    valid_words[reykunyu_all.get(word).get("na'vi").lower()]["pronunciation"] = "N/A"
-                except IndexError:
-                    valid_words[reykunyu_all.get(word).get("na'vi").lower()]["pronunciation"] = "N/A"
+                    # If either of these exeptions are thrown,
+                    # the list doesn't contain any pronunciation info for this word, and this entire step can be skipped.
+                    except TypeError:
+                        valid_words[reykunyu_all.get(word).get("na'vi").lower()]["pronunciation"] = "N/A"
+                    except IndexError:
+                        valid_words[reykunyu_all.get(word).get("na'vi").lower()]["pronunciation"] = "N/A"
 
-                # Add the part of speech to the data
-                valid_words[reykunyu_all.get(word).get("na'vi").lower()]["pos"] = reykunyu_all.get(word).get(
-                    "type")
+                    # Add the part of speech to the data
+                    valid_words[reykunyu_all.get(word).get("na'vi").lower()]["pos"] = reykunyu_all.get(word).get(
+                        "type")
 
-                # Get the frequency of this word from the word frequency list
-                word_frequency = execute_read_query(word_frequency_db,
-                                                    "SELECT count FROM words WHERE (word = '" + reykunyu_all.get(
-                                                        word).get("na'vi").lower().replace('\'', '’') + "')")
-                try:
-                    # Calculate the frequency percentage
-                    frequency_percentage = round(word_frequency[0][0] / word_frequency_total_processed * 100, 2)
-                # If this exception is thrown, the word is not in the list, and the percentage is then zero
-                except IndexError:
-                    frequency_percentage = 0
+                    # Get the frequency of this word from the word frequency list
+                    word_frequency = execute_read_query(word_frequency_db,
+                                                        "SELECT count FROM words WHERE (word = '" + reykunyu_all.get(
+                                                            word).get("na'vi").lower().replace('\'', '’') + "')")
+                    try:
+                        # Calculate the frequency percentage
+                        frequency_percentage = round(word_frequency[0][0] / word_frequency_total_processed * 100, 2)
+                    # If this exception is thrown, the word is not in the list, and the percentage is then zero
+                    except IndexError:
+                        frequency_percentage = 0
 
-                # Add the frequency to the data
-                valid_words[reykunyu_all.get(word).get("na'vi").lower()]["frequency"] = frequency_percentage
+                    # Add the frequency to the data
+                    valid_words[reykunyu_all.get(word).get("na'vi").lower()]["frequency"] = frequency_percentage
 
-                # If there is no monographic form (pronunciation information was not available),
-                # simply use the word and hope for the best
-                if not monographic:
-                    monographic = convert_to_monographic(reykunyu_all.get(word).get("na'vi").lower())
+                    # If there is no monographic form (pronunciation information was not available),
+                    # simply use the word and hope for the best
+                    if not monographic:
+                        monographic = convert_to_monographic(reykunyu_all.get(word).get("na'vi").lower())
 
-                # Add the first and last sounds of the word to the data
-                valid_words[reykunyu_all.get(word).get("na'vi").lower()]["first_sound"] = monographic[0]
-                valid_words[reykunyu_all.get(word).get("na'vi").lower()]["last_sound"] = monographic[-1]
+                    # Add the first and last sounds of the word to the data
+                    valid_words[reykunyu_all.get(word).get("na'vi").lower()]["first_sound"] = monographic[0]
+                    valid_words[reykunyu_all.get(word).get("na'vi").lower()]["last_sound"] = monographic[-1]
 
-                # Append the word into the correct entry in the lookup table, using the monographic info used above
-                full_word_initial_lookup[monographic[0]].append(reykunyu_all.get(word).get("na'vi").lower())
+                    if reykunyu_all.get(word).get("na'vi").lower() not in full_word_initial_lookup.get(monographic[0]):
+                        # Append the word into the correct entry in the lookup table,
+                        # using the monographic info used above
+                        full_word_initial_lookup[monographic[0]].append(reykunyu_all.get(word).get("na'vi").lower())
 
-        # with open("cogs/wordgame/tempjson.json", 'w', encoding='utf-8') as f:
-        #     json.dump(valid_words, f, indent=4, ensure_ascii=False)
-        # with open("cogs/wordgame/forbidden_words.json", 'w', encoding='utf-8') as f:
-        #     json.dump(self.invalid_words, f, indent=4, ensure_ascii=False)
+        with open("cogs/wordgame/tempjson.json", 'w', encoding='utf-8') as f:
+            json.dump(valid_words, f, indent=4, ensure_ascii=False)
+        with open("cogs/wordgame/forbidden_words.json", 'w', encoding='utf-8') as f:
+            json.dump(self.invalid_words, f, indent=4, ensure_ascii=False)
+        with open("cogs/wordgame/lookup.json", 'w', encoding='utf-8') as f:
+            json.dump(full_word_initial_lookup, f, indent=4, ensure_ascii=False)
 
         print("WORDGAME: Complete!")
 
@@ -699,6 +719,12 @@ class WordgameCog(commands.Cog):
                                                     description=bot.lang.get(str(message.guild.id)).get('wordgame_unusable_ay'),
                                                     colour=0xff0000))
 
+                        elif (msg.endswith('ey')) and (not ' ' in msg) and (msg in self.invalid_words.get("ey")):
+                            await message.channel.send(
+                                embed=disnake.Embed(title=bot.lang.get(str(message.guild.id)).get('wordgame_title'),
+                                                    description=bot.lang.get(str(message.guild.id)).get('wordgame_unusable_ey'),
+                                                    colour=0xff0000))
+
                         elif (msg.endswith('ll')) and (not ' ' in msg) and (msg in self.invalid_words.get("ll")):
                             await message.channel.send(
                                 embed=disnake.Embed(title=bot.lang.get(str(message.guild.id)).get('wordgame_title'),
@@ -726,145 +752,154 @@ class WordgameCog(commands.Cog):
                                     embed=disnake.Embed(title=bot.lang.get(str(message.guild.id)).get('wordgame_title'),
                                                         description=bot.lang.get(str(message.guild.id)).get('wordgame_incorrect_word_end'),
                                                         colour=0xff0000))
+                            elif msg not in active_channels.get(str(message.channel.id)).get("word_initial_lookup").get(valid_words.get(msg).get("first_sound")):
+                                await message.channel.send(
+                                    embed=disnake.Embed(title=bot.lang.get(str(message.guild.id)).get('wordgame_title'),
+                                                        description=bot.lang.get(str(message.guild.id)).get('wordgame_already_used'),
+                                                        colour=0xff0000))
+                            # If the word was used recently
+                            elif msg in active_channels.get(str(message.channel.id)).get("recent_words"):
+                                await message.channel.send(
+                                    embed=disnake.Embed(title=bot.lang.get(str(message.guild.id)).get('wordgame_title'),
+                                                        description=bot.lang.get(str(message.guild.id)).get('wordgame_used_recently'),
+                                                        colour=0xff0000))
+                            # If the user already said a word
+                            elif message.author.id == active_channels.get(str(message.channel.id)).get("previous_player_id"):
+                                await message.channel.send(
+                                    embed=disnake.Embed(title=bot.lang.get(str(message.guild.id)).get('wordgame_title'),
+                                                        description=bot.lang.get(str(message.guild.id)).get('wordgame_already_said'),
+                                                        colour=0xff0000))
                             else:
-                                # If the word was used recently
-                                if msg in active_channels.get(str(message.channel.id)).get("recent_words"):
-                                    await message.channel.send(
-                                        embed=disnake.Embed(title=bot.lang.get(str(message.guild.id)).get('wordgame_title'),
-                                                            description=bot.lang.get(str(message.guild.id)).get('wordgame_used_recently'),
-                                                            colour=0xff0000))
-                                else:
-                                    # If the user already said a word
-                                    if message.author.id == active_channels.get(str(message.channel.id)).get("previous_player_id"):
+                                # If we've gotten to this point, we know the word is a valid Na'vi word,
+                                # and ends with the correct sound. Now we can branch into mode-specific tests.
+
+                                # If the playmode is solo
+                                if playmode == "solo":
+                                    # If the player is not the player who started the game
+                                    if message.author.id != active_channels.get(str(message.channel.id)).get("player"):
                                         await message.channel.send(
                                             embed=disnake.Embed(title=bot.lang.get(str(message.guild.id)).get('wordgame_title'),
-                                                                description=bot.lang.get(str(message.guild.id)).get('wordgame_already_said'),
+                                                                description=bot.lang.get(str(message.guild.id)).get('wordgame_not_in'),
                                                                 colour=0xff0000))
                                     else:
-                                        # If we've gotten to this point, we know the word is a valid Na'vi word,
-                                        # and ends with the correct sound. Now we can branch into mode-specific tests.
 
-                                        # If the playmode is solo
-                                        if playmode == "solo":
-                                            # If the player is not the player who started the game
-                                            if message.author.id != active_channels.get(str(message.channel.id)).get("player"):
-                                                await message.channel.send(
-                                                    embed=disnake.Embed(title=bot.lang.get(str(message.guild.id)).get('wordgame_title'),
-                                                                        description=bot.lang.get(str(message.guild.id)).get('wordgame_not_in'),
-                                                                        colour=0xff0000))
+                                        # If the gamemode is casual
+                                        if gamemode == "casual":
+                                            if len(active_channels[str(message.channel.id)].get("recent_words")) >= 5:
+                                                active_channels[str(message.channel.id)]["recent_words"].pop(0)
+
+                                            new_word = choose_word(message.channel.id, valid_words.get(msg).get("last_sound"))
+
+                                            new_word_data = valid_words.get(new_word)
+
+                                            active_channels[str(message.channel.id)]["previous_player_id"] = bot.bot.user.id
+                                            active_channels[str(message.channel.id)]["previous_word_end"] = new_word_data.get("last_sound")
+                                            active_channels[str(message.channel.id)]["recent_words"].append(new_word)
+
+                                            print(active_channels[str(message.channel.id)]["previous_word_end"])
+
+                                            # Create an embed to hold data about the first word
+                                            embed = disnake.Embed(
+                                                title=bot.lang.get(str(message.guild.id)).get('wordgame_title'),
+                                                description=bot.lang.get(str(message.guild.id)).get(
+                                                    'wordgame_first_word').replace('&1',
+                                                                                   "**" + new_word + "**"),
+                                                colour=899718)
+
+                                            # Get language data from the current guild
+                                            lang_value = bot.execute_read_query(
+                                                "SELECT [value] FROM options WHERE ([option] = 'language') AND ([guild_id] = '" + str(
+                                                    message.guild.id) + "')")[0][0]
+                                            if lang_value == "English":
+                                                # If language is English, set the Meaning entry to be the English translation
+                                                embed.add_field(name=bot.lang.get(str(message.guild.id)).get(
+                                                    'wordgame_meaning') + ":",
+                                                                value=new_word_data.get("translations").get(
+                                                                    "en"))
+                                            elif lang_value == "German":
+                                                # If language is German, set the Meaning entry to be the German translation
+                                                embed.add_field(name=bot.lang.get(str(message.guild.id)).get(
+                                                    'wordgame_meaning') + ":",
+                                                                value=new_word_data.get("translations").get(
+                                                                    "de"))
+
+                                            # Set the rest of the fields for the first word data
+                                            embed.add_field(name=bot.lang.get(str(message.guild.id)).get(
+                                                'wordgame_pronunciation') + ":",
+                                                            value=new_word_data.get("pronunciation"))
+                                            embed.add_field(name=bot.lang.get(str(message.guild.id)).get(
+                                                'wordgame_pos') + ":", value=new_word_data.get("pos"))
+                                            embed.add_field(name=bot.lang.get(str(message.guild.id)).get(
+                                                'wordgame_frequency') + ":",
+                                                            value=str(new_word_data.get("frequency")) + "%")
+
+                                            # Send above embed publicly
+                                            await message.channel.send(embed=embed)
+
+                                        # If the gamemode is competitive
+                                        if gamemode == "competitive":
+                                            if len(active_channels[str(message.channel.id)].get(
+                                                    "recent_words")) >= 5:
+                                                active_channels[str(message.channel.id)]["recent_words"].pop(0)
+
+                                            new_word = choose_word(message.channel.id, valid_words.get(msg).get("last_sound"))
+
+                                            if new_word is None:
+                                                win(message.author.id, message.channel.id)
                                             else:
+                                                new_word_data = valid_words.get(new_word)
 
-                                                # If the gamemode is casual
-                                                if gamemode == "casual":
-                                                    if len(active_channels[str(message.channel.id)].get("recent_words")) >= 5:
-                                                        active_channels[str(message.channel.id)]["recent_words"].pop(0)
+                                                active_channels[str(message.channel.id)][
+                                                    "previous_player_id"] = bot.bot.user.id
+                                                active_channels[str(message.channel.id)][
+                                                    "previous_word_end"] = new_word_data.get("last_sound")
+                                                active_channels[str(message.channel.id)]["recent_words"].append(new_word)
 
-                                                    new_word = choose_word(message.channel.id, valid_words.get(msg).get("last_sound"))
+                                                print(active_channels[str(message.channel.id)]["previous_word_end"])
 
-                                                    new_word_data = valid_words.get(new_word)
+                                                # Create an embed to hold data about the first word
+                                                embed = disnake.Embed(
+                                                    title=bot.lang.get(str(message.guild.id)).get('wordgame_title'),
+                                                    description=bot.lang.get(str(message.guild.id)).get('wordgame_first_word').replace('&1', "**" + new_word + "**"),
+                                                    colour=899718)
 
-                                                    active_channels[str(message.channel.id)]["previous_player_id"] = bot.bot.user.id
-                                                    active_channels[str(message.channel.id)]["previous_word_end"] = new_word_data.get("last_sound")
-                                                    active_channels[str(message.channel.id)]["recent_words"].append(new_word)
+                                                # Get language data from the current guild
+                                                lang_value = bot.execute_read_query(
+                                                    "SELECT [value] FROM options WHERE ([option] = 'language') AND ([guild_id] = '" + str(message.guild.id) + "')")[0][0]
+                                                if lang_value == "English":
+                                                    # If language is English, set the Meaning entry to be the English translation
+                                                    embed.add_field(name=bot.lang.get(str(message.guild.id)).get('wordgame_meaning') + ":",
+                                                                    value=new_word_data.get("translations").get("en"))
+                                                elif lang_value == "German":
+                                                    # If language is German, set the Meaning entry to be the German translation
+                                                    embed.add_field(name=bot.lang.get(str(message.guild.id)).get('wordgame_meaning') + ":",
+                                                                    value=new_word_data.get("translations").get("de"))
 
-                                                    print(active_channels[str(message.channel.id)]["previous_word_end"])
+                                                # Set the rest of the fields for the first word data
+                                                embed.add_field(name=bot.lang.get(str(message.guild.id)).get('wordgame_pronunciation') + ":",
+                                                                value=new_word_data.get("pronunciation"))
+                                                embed.add_field(name=bot.lang.get(str(message.guild.id)).get('wordgame_pos') + ":",
+                                                                value=new_word_data.get("pos"))
+                                                embed.add_field(name=bot.lang.get(str(message.guild.id)).get('wordgame_frequency') + ":",
+                                                                value=str(new_word_data.get("frequency")) + "%")
 
-                                                    # Create an embed to hold data about the first word
-                                                    embed = disnake.Embed(
-                                                        title=bot.lang.get(str(message.guild.id)).get('wordgame_title'),
-                                                        description=bot.lang.get(str(message.guild.id)).get(
-                                                            'wordgame_first_word').replace('&1',
-                                                                                           "**" + new_word + "**"),
-                                                        colour=899718)
+                                                # Send above embed publicly
+                                                await message.channel.send(embed=embed)
 
-                                                    # Get language data from the current guild
-                                                    lang_value = bot.execute_read_query(
-                                                        "SELECT [value] FROM options WHERE ([option] = 'language') AND ([guild_id] = '" + str(
-                                                            message.guild.id) + "')")[0][0]
-                                                    if lang_value == "English":
-                                                        # If language is English, set the Meaning entry to be the English translation
-                                                        embed.add_field(name=bot.lang.get(str(message.guild.id)).get(
-                                                            'wordgame_meaning') + ":",
-                                                                        value=new_word_data.get("translations").get(
-                                                                            "en"))
-                                                    elif lang_value == "German":
-                                                        # If language is German, set the Meaning entry to be the German translation
-                                                        embed.add_field(name=bot.lang.get(str(message.guild.id)).get(
-                                                            'wordgame_meaning') + ":",
-                                                                        value=new_word_data.get("translations").get(
-                                                                            "de"))
+                                                print(active_channels[str(message.channel.id)]["word_initial_lookup"][new_word_data.get("first_sound")])
+                                                print(active_channels[str(message.channel.id)]["word_initial_lookup"][valid_words.get(msg).get("first_sound")])
 
-                                                    # Set the rest of the fields for the first word data
-                                                    embed.add_field(name=bot.lang.get(str(message.guild.id)).get(
-                                                        'wordgame_pronunciation') + ":",
-                                                                    value=new_word_data.get("pronunciation"))
-                                                    embed.add_field(name=bot.lang.get(str(message.guild.id)).get(
-                                                        'wordgame_pos') + ":", value=new_word_data.get("pos"))
-                                                    embed.add_field(name=bot.lang.get(str(message.guild.id)).get(
-                                                        'wordgame_frequency') + ":",
-                                                                    value=str(new_word_data.get("frequency")) + "%")
+                                                if not active_channels.get(str(message.channel.id)).get("word_initial_lookup").get(new_word_data.get("last_sound")):
+                                                    win(bot.bot.user.id, message.channel.id)
 
-                                                    # Send above embed publicly
-                                                    await message.channel.send(embed=embed)
-
-                                                # If the gamemode is competitive
-                                                if gamemode == "competitive":
-                                                    if len(active_channels[str(message.channel.id)].get(
-                                                            "recent_words")) >= 5:
-                                                        active_channels[str(message.channel.id)]["recent_words"].pop(0)
-
-                                                    new_word = choose_word(message.channel.id,valid_words.get(msg).get("last_sound"))
-
-                                                    if new_word is None:
-                                                        win(message.author.id, message.channel.id)
-                                                    else:
-                                                        new_word_data = valid_words.get(new_word)
-
-                                                        active_channels[str(message.channel.id)][
-                                                            "previous_player_id"] = bot.bot.user.id
-                                                        active_channels[str(message.channel.id)][
-                                                            "previous_word_end"] = new_word_data.get("last_sound")
-                                                        active_channels[str(message.channel.id)]["recent_words"].append(new_word)
-
-                                                        print(active_channels[str(message.channel.id)]["previous_word_end"])
-
-                                                        # Create an embed to hold data about the first word
-                                                        embed = disnake.Embed(
-                                                            title=bot.lang.get(str(message.guild.id)).get('wordgame_title'),
-                                                            description=bot.lang.get(str(message.guild.id)).get('wordgame_first_word').replace('&1', "**" + new_word + "**"),
-                                                            colour=899718)
-
-                                                        # Get language data from the current guild
-                                                        lang_value = bot.execute_read_query(
-                                                            "SELECT [value] FROM options WHERE ([option] = 'language') AND ([guild_id] = '" + str(message.guild.id) + "')")[0][0]
-                                                        if lang_value == "English":
-                                                            # If language is English, set the Meaning entry to be the English translation
-                                                            embed.add_field(name=bot.lang.get(str(message.guild.id)).get('wordgame_meaning') + ":",
-                                                                            value=new_word_data.get("translations").get("en"))
-                                                        elif lang_value == "German":
-                                                            # If language is German, set the Meaning entry to be the German translation
-                                                            embed.add_field(name=bot.lang.get(str(message.guild.id)).get('wordgame_meaning') + ":",
-                                                                            value=new_word_data.get("translations").get("de"))
-
-                                                        # Set the rest of the fields for the first word data
-                                                        embed.add_field(name=bot.lang.get(str(message.guild.id)).get('wordgame_pronunciation') + ":",
-                                                                        value=new_word_data.get("pronunciation"))
-                                                        embed.add_field(name=bot.lang.get(str(message.guild.id)).get('wordgame_pos') + ":",
-                                                                        value=new_word_data.get("pos"))
-                                                        embed.add_field(name=bot.lang.get(str(message.guild.id)).get('wordgame_frequency') + ":",
-                                                                        value=str(new_word_data.get("frequency")) + "%")
-
-                                                        # Send above embed publicly
-                                                        await message.channel.send(embed=embed)
-
-                                        # If the playmode is multiplayer
-                                        if playmode == "multiplayer":
-                                            if gamemode == "casual":
-                                                pass
-                                            if gamemode == "competitive":
-                                                pass
-                                            if gamemode == "deathmatch":
-                                                pass
+                                # If the playmode is multiplayer
+                                if playmode == "multiplayer":
+                                    if gamemode == "casual":
+                                        pass
+                                    if gamemode == "competitive":
+                                        pass
+                                    if gamemode == "deathmatch":
+                                        pass
 
 
 def setup(bot):
