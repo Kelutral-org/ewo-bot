@@ -1,3 +1,8 @@
-start work on wordgame gameplay
+NOT A BOT THING BUT PUBLISH FINISHED YOUTUBE VIDEO
+
+START WORK ON MULTIPLAYER GAMEPLAY (A points entry needs to be given to any player who joins)
+^^^ MAKE win() AND end_game() DO THINGS ^^^
+
+Implement frequency of words used in wordgame
 
 add some data to README.md

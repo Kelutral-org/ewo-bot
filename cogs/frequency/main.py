@@ -28,7 +28,7 @@ def execute_query(connection, query):
         cursor.execute(query)
         connection.commit()
     except Error as e:
-        if str(e) != 'UNIQUE constraint failed: words.word':
+        if str(e) != 'UNIQUE constraint failed: words.word_info':
             print(f"The error '{e}' occurred")
 
 

@@ -24,9 +24,9 @@ class Fun(commands.Cog):
     # Generate random Na'vi swear
     @staticmethod
     async def random_swear():
-        # Choose random word from swears and add exclamation mark
+        # Choose random word_info from swears and add exclamation mark
         word = random.choice(swears) + '!'
-        # Return word
+        # Return word_info
         return word
 
     # Sarcasm

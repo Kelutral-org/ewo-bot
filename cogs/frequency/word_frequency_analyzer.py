@@ -28,7 +28,7 @@ def execute_query(connection, query):
         cursor.execute(query)
         connection.commit()
     except Error as e:
-        if str(e) != 'UNIQUE constraint failed: words.word':
+        if str(e) != 'UNIQUE constraint failed: words.word_info':
             print(f"The error '{e}' occurred")
 
 
@@ -61,10 +61,10 @@ try:
                     root_object = word.get('sì\'eyng')[0]
                     word = root_object.get('na\'vi').replace('\'', '’')
 
-                    if not execute_read_query(wordlist, "SELECT * FROM words WHERE word = '" + word + "'"):
+                    if not execute_read_query(wordlist, "SELECT * FROM words WHERE word_info = '" + word + "'"):
                         execute_query(wordlist, """
                                         INSERT INTO
-                                          words (word, count, meaning, type)
+                                          words (word_info, count, meaning, type)
                                         VALUES
                                         ('""" + word + """', """ + str(1) + """, '""" + root_object.get('translations')[0].get('en').replace('\'', '’') + """', '""" + root_object.get('type') + """')
                                         """)
@@ -73,9 +73,9 @@ try:
                                         UPDATE
                                           words
                                         SET
-                                          count = """ + str(execute_read_query(wordlist, "SELECT count FROM words WHERE word = '" + word + "'")[0][0] + 1) + """
+                                          count = """ + str(execute_read_query(wordlist, "SELECT count FROM words WHERE word_info = '" + word + "'")[0][0] + 1) + """
                                         WHERE
-                                          word = '""" + str(word) + """'
+                                          word_info = '""" + str(word) + """'
                                         """)
                     try:
                         for affix in root_object.get('affixes'):
@@ -83,10 +83,10 @@ try:
                             if 'adp' in affix.get('type'):
                                 affix_word = affix.get('na\'vi').replace('\'', '’')
 
-                                if not execute_read_query(wordlist, "SELECT * FROM words WHERE word = '" + affix_word + "'"):
+                                if not execute_read_query(wordlist, "SELECT * FROM words WHERE word_info = '" + affix_word + "'"):
                                     execute_query(wordlist, """
                                                     INSERT INTO
-                                                      words (word, count, meaning, type)
+                                                      words (word_info, count, meaning, type)
                                                     VALUES
                                                     ('""" + affix_word + """', """ + str(1) + """, '""" + affix.get('translations')[0].get('en').replace('\'', '’') + """', '""" + affix.get('type') + """')
                                                     """)
@@ -95,9 +95,9 @@ try:
                                                     UPDATE
                                                       words
                                                     SET
-                                                      count = """ + str(execute_read_query(wordlist,"SELECT count FROM words WHERE word = '" + affix_word + "'")[0][0] + 1) + """
+                                                      count = """ + str(execute_read_query(wordlist,"SELECT count FROM words WHERE word_info = '" + affix_word + "'")[0][0] + 1) + """
                                                     WHERE
-                                                      word = '""" + str(affix_word) + """'
+                                                      word_info = '""" + str(affix_word) + """'
                                                     """)
                     except TypeError:
                         pass

@@ -63,7 +63,7 @@ def execute_query(connection, query):
         cursor.execute(query)
         connection.commit()
     except Error as e:
-        if str(e) != 'UNIQUE constraint failed: words.word':
+        if str(e) != 'UNIQUE constraint failed: words.word_info':
             print(f"The error '{e}' occurred")
 
 
@@ -113,6 +113,24 @@ async def set_lang():
             lang[str(guild)] = english_lang
         elif lang_value == "German":
             lang[str(guild)] = german_lang
+
+
+def get_name(id: int, guild: disnake.Guild):
+    # Get user id
+    user = id
+    # Get the member from the user ID
+    name = disnake.Guild.get_member(guild, user)
+    # Get their server nickname
+    name = str(name.nick)
+
+    # If the player has no nickname
+    if name == "None":
+        # Get the user from the user ID
+        name = bot.get_user(user)
+        # Get the user's display name
+        name = str(name.name)
+    return name
+
 
 # Setup presence and print some info
 @bot.event

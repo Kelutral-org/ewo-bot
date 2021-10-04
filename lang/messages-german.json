@@ -73,6 +73,8 @@
   "wordgame_unusable_ey": "Wörter, die auf 'ey' enden, können nicht verwendet werden, da es zu wenige gibt, die damit beginnen!",
   "wordgame_unusable_rr": "Wörter, die auf 'rr' enden, können nicht verwendet werden, da Wörter damit nicht beginnen dürfen!",
   "wordgame_unusable_ll": "Wörter, die auf 'll' enden, können nicht verwendet werden, da Wörter damit nicht beginnen dürfen!",
+  "wordgame_unusable_ì": "Wörter, die auf 'ì' enden, können nicht verwendet werden, da Wörter damit nicht beginnen dürfen!",
+  "wordgame_unusable_ä": "Wörter, die auf 'ä' enden, können nicht verwendet werden, da Wörter damit nicht beginnen dürfen!",
   "wordgame_unusable_space": "Wörter, die ein Leerzeichen beinhalten, können nicht verwendet werden!",
   "wordgame_already_used": "Dieses Wort wurde bereits verwendet!",
   "wordgame_word_said": "&1 sagte &2!",
