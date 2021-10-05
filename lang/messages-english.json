@@ -38,7 +38,7 @@
   "stressed_syllable": "Stressed Syllable",
   "source": "Source",
   "topic": "Topic",
-  "points_title": "Points",
+  "points": "Points",
   "points_first_place": "You are in &1st place at &2 points.",
   "points_second_place": "You are in &1nd place at &2 points.",
   "points_third_place": "You are in &1rd place at &2 points.",

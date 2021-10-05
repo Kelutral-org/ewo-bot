@@ -111,7 +111,36 @@ def choose_word(channel_id: int, sound: str):
 
 
 # Ends the game in the given channel. Does not check if a game is active.
-def end_game(channel_id: int):
+async def end_game(channel_id: int, inter: disnake.Interaction):
+    channel = await bot.bot.fetch_channel(channel_id)
+
+    embed = disnake.Embed(title=bot.lang.get(str(channel.guild.id)).get('wordgame_starting'),
+                                        description=bot.lang.get(str(channel.guild.id)).get('wordgame_stopping'),
+                                        colour=899718)
+
+    if active_channels.get(str(channel_id)).get("playmode") == "multiplayer":
+
+        points = ""
+        sorted_points = sorted(active_channels.get(str(channel_id)).get("points").items(), key=lambda x: x[1], reverse=True)
+        for player in sorted_points:
+            points += "・" + bot.get_name(int(player[0]), channel.guild) + ": " + str(player[1]) + "\n"
+
+            players = execute_read_query(players_db, "SELECT * FROM players WHERE player_id = " + player[0] + " AND guild_id = " + str(channel.guild.id))
+            if not players:
+                execute_query(players_db, """
+                                            INSERT INTO
+                                              players (player_id, points, guild_id)
+                                            VALUES
+                                              ('""" + player[0] + """', '""" + str(player[1]) + """', '""" + str(channel.guild.id) + """');
+                                            """)
+            else:
+                execute_query(players_db, "UPDATE players SET points = " + str(players[0][1] + player[1]) + " WHERE player_id = " + player[0] + " AND guild_id = " + str(channel.guild.id))
+
+        if active_channels.get(str(channel_id)).get("gamemode") == "casual":
+            embed.add_field(name=bot.lang.get(str(channel.guild.id)).get('points') + ":", value=points)
+
+    await inter.response.send_message(embed=embed)
+
     active_channels.pop(str(channel_id))
 
 
@@ -528,12 +557,12 @@ class WordgameCog(commands.Cog):
         self.channels = execute_read_query(channels_db, "SELECT * FROM channels")
 
     # This does nothing, it just holds the subcommands
-    @commands.slash_command(name="wordgame", description="A basic word_info game to help learn vocabulary!", default_permission=True, guild_ids=bot.test_guilds)
+    @commands.slash_command(name="wordgame", description="A basic wordgame to help learn vocabulary!", default_permission=True, guild_ids=bot.test_guilds)
     async def wordgame(self, inter):
         pass
 
     # Start command :D
-    @wordgame.sub_command(name="start", description="Start a word_info game in the current channel.")
+    @wordgame.sub_command(name="start", description="Start a wordgame in the current channel.")
     async def start(self, inter):
         # If this channel is a wordgame channel
         if tuple([inter.channel_id, inter.guild_id]) in self.channels:
@@ -561,7 +590,7 @@ class WordgameCog(commands.Cog):
                                     colour=0xff0000), ephemeral=True)
 
     # Stop command
-    @wordgame.sub_command(name="stop", description="End the current word_info game.")
+    @wordgame.sub_command(name="stop", description="End the current wordgame.")
     async def stop(self, inter):
         # If this channel is a wordgame channel
         if tuple([inter.channel_id, inter.guild_id]) in self.channels:
@@ -573,12 +602,7 @@ class WordgameCog(commands.Cog):
                                         colour=0xff0000), ephemeral=True)
             else:
                 # End the game using the function
-                end_game(inter.channel_id)
-                # Send a public confirmation message
-                await inter.response.send_message(
-                    embed=disnake.Embed(title=bot.lang.get(str(inter.guild_id)).get('wordgame_starting'),
-                                        description=bot.lang.get(str(inter.guild_id)).get('wordgame_stopping'),
-                                        colour=899718))
+                await end_game(inter.channel_id, inter)
         # If this channel is not a wordgame channel, send an error
         else:
             await inter.response.send_message(
@@ -586,7 +610,7 @@ class WordgameCog(commands.Cog):
                                     description=bot.lang.get(str(inter.guild_id)).get('wordgame_channel_nonexistent'),
                                     colour=0xff0000), ephemeral=True)
 
-    @wordgame.sub_command(name="addchannel", description="Add this channel to the list of word_info game channels.")
+    @wordgame.sub_command(name="addchannel", description="Add this channel to the list of wordgame channels.")
     async def addchannel(self, inter):
         # Permissions test
         is_op = False
@@ -629,7 +653,7 @@ class WordgameCog(commands.Cog):
                                     description=bot.lang.get(str(inter.guild_id)).get('no_access'),
                                     colour=0xff0000), ephemeral=True)
 
-    @wordgame.sub_command(name="removechannel", description="Remove this channel from the list of word_info game channels.")
+    @wordgame.sub_command(name="removechannel", description="Remove this channel from the list of wordgame channels.")
     async def removechannel(self, inter):
         # Permissions test
         is_op = False
@@ -693,7 +717,7 @@ class WordgameCog(commands.Cog):
                                 description=info,
                                 colour=899718), ephemeral=True)
 
-    @wordgame.sub_command(name="points", description="Show the leaderboard of word_info game points.")
+    @wordgame.sub_command(name="points", description="Show the leaderboard of wordgame points.")
     async def points(self, inter):
         pass
 
@@ -906,6 +930,9 @@ class WordgameCog(commands.Cog):
                                                 # Send above embed publicly
                                                 await message.channel.send(embed=embed)
 
+                                                active_channels[str(message.channel.id)]["recent_words"].append(new_word)
+                                                active_channels[str(message.channel.id)]["word_initial_lookup"][valid_words.get(new_word).get("first_sound")].remove(new_word)
+
                                                 if not active_channels.get(str(message.channel.id)).get("word_initial_lookup").get(new_word_data.get("last_sound")):
                                                     win(bot.bot.user.id, message.channel.id)
 
@@ -967,10 +994,62 @@ class WordgameCog(commands.Cog):
                                         else:
                                             active_channels[str(message.channel.id)]["points"][str(message.author.id)] = 1
 
-                                        print(active_channels[str(message.channel.id)]["points"])
-
+                                    # If the gamemode is competitive
                                     if gamemode == "competitive":
-                                        pass
+                                        if len(active_channels[str(message.channel.id)].get(
+                                                "recent_words")) >= 5:
+                                            active_channels[str(message.channel.id)]["recent_words"].pop(0)
+
+                                        new_word = msg
+                                        new_word_data = valid_words.get(new_word)
+
+                                        active_channels[str(message.channel.id)][
+                                            "previous_player_id"] = bot.bot.user.id
+                                        active_channels[str(message.channel.id)][
+                                            "previous_word_end"] = new_word_data.get("last_sound")
+                                        active_channels[str(message.channel.id)]["recent_words"].append(new_word)
+
+                                        # Create an embed to hold data about the new word_info
+                                        embed = disnake.Embed(
+                                            title=bot.lang.get(str(message.guild.id)).get('wordgame_title'),
+                                            description=bot.lang.get(str(message.guild.id)).get(
+                                                'wordgame_word_said').replace('&1', bot.get_name(bot.bot.user.id,
+                                                                                                 message.guild)).replace(
+                                                '&2', "**" + new_word + "**"),
+                                            colour=899718)
+
+                                        # Get language data from the current guild
+                                        lang_value = bot.execute_read_query(
+                                            "SELECT [value] FROM options WHERE ([option] = 'language') AND ([guild_id] = '" + str(
+                                                message.guild.id) + "')")[0][0]
+                                        if lang_value == "English":
+                                            # If language is English, set the Meaning entry to be the English translation
+                                            embed.add_field(name=bot.lang.get(str(message.guild.id)).get(
+                                                'wordgame_meaning') + ":",
+                                                            value=new_word_data.get("translations").get("en"))
+                                        elif lang_value == "German":
+                                            # If language is German, set the Meaning entry to be the German translation
+                                            embed.add_field(name=bot.lang.get(str(message.guild.id)).get(
+                                                'wordgame_meaning') + ":",
+                                                            value=new_word_data.get("translations").get("de"))
+
+                                        # Set the rest of the fields for the new word_info data
+                                        embed.add_field(name=bot.lang.get(str(message.guild.id)).get(
+                                            'wordgame_pronunciation') + ":",
+                                                        value=new_word_data.get("pronunciation"))
+                                        embed.add_field(
+                                            name=bot.lang.get(str(message.guild.id)).get('wordgame_pos') + ":",
+                                            value=new_word_data.get("pos"))
+                                        embed.add_field(name=bot.lang.get(str(message.guild.id)).get(
+                                            'wordgame_frequency') + ":",
+                                                        value=str(new_word_data.get("frequency")) + "%")
+
+                                        # Send above embed publicly
+                                        await message.channel.send(embed=embed)
+
+                                        if not active_channels.get(str(message.channel.id)).get("word_initial_lookup").get(new_word_data.get("last_sound")):
+                                            win(message.author.id, message.channel.id)
+
                                     if gamemode == "deathmatch":
                                         pass
 
