@@ -264,7 +264,7 @@ class DeathmatchStartView(disnake.ui.View):
                 active_channels[str(inter.channel_id)]["word_initial_lookup"] = word_initial_lookup
                 active_channels[str(inter.channel_id)]["previous_player_id"] = bot.bot.user.id
                 active_channels[str(inter.channel_id)]["previous_word_end"] = first_word_data.get("last_sound")
-                active_channels[str(inter.channel_id)]["used_words"] = []
+                active_channels[str(inter.channel_id)]["used_words"] = [first_word]
                 active_channels[str(inter.channel_id)]["players"] = self.players
 
                 # Create an embed to send information about the game
@@ -370,6 +370,8 @@ class StartGameView(disnake.ui.View):
                 first_word = choose_first_word(inter.channel_id, random.choice(navi_letters))
                 # Get the first word_info's data
                 first_word_data = valid_words.get(first_word)
+
+                word_initial_lookup[first_word_data.get("first_sound")].remove(first_word)
 
                 # Set all of the necessary data in the list of active channels
                 active_channels[str(inter.channel_id)] = {}
@@ -760,7 +762,35 @@ class WordgameCog(commands.Cog):
 
     @wordgame.sub_command(name="points", description="Show the leaderboard of wordgame points.")
     async def points(self, inter):
-        pass
+        players = execute_read_query(players_db, "SELECT * FROM players WHERE guild_id = " + str(inter.guild_id) + " ORDER BY points DESC")
+        author_player = execute_read_query(players_db, "SELECT * FROM players WHERE player_id = " + str(inter.author.id) + " AND guild_id = " + str(inter.guild_id))
+
+        string = ""
+        for player in players:
+            string += "・" + bot.get_name(int(player[0]), inter.guild) + ": " + str(player[1]) + "\n"
+        author_place = 1
+        for player in players:
+            if int(player[0]) != inter.author.id:
+                author_place += 1
+            else:
+                break
+        try:
+            if author_place == 1:
+                string += "\n" + bot.lang.get(str(inter.guild_id)).get('points_first_place').replace('&1', str(author_player[0][1]))
+            if author_place == 2:
+                string += "\n" + bot.lang.get(str(inter.guild_id)).get('points_second_place').replace('&1', str(author_player[0][1]))
+            if author_place == 3:
+                string += "\n" + bot.lang.get(str(inter.guild_id)).get('points_third_place').replace('&1', str(author_player[0][1]))
+            if author_place >= 4:
+                string += "\n" + bot.lang.get(str(inter.guild_id)).get('points_general_place').replace('&1', str(author_place)).replace('&2', str(author_player[0][1]))
+        except IndexError:
+            pass
+        print(players)
+
+        embed = disnake.Embed(title=bot.lang.get(str(inter.guild_id)).get('wordgame_title'), colour=899718)
+        embed.add_field(name=bot.lang.get(str(inter.guild_id)).get('points') + ":", value=string)
+
+        await inter.response.send_message(embed=embed, ephemeral=True)
 
     @commands.Cog.listener()
     async def on_message(self, message):
@@ -1155,12 +1185,12 @@ class WordgameCog(commands.Cog):
                                                 active_channels[str(message.channel.id)]["points"][
                                                     str(message.author.id)] = 1
                                         else:
-                                            active_channels[str(message.channel.id)]["players"].remove(str(message.author.id))
-                                            message.channel.send(embed=disnake.Embed(
+                                            active_channels[str(message.channel.id)]["players"].remove(message.author.id)
+                                            await message.channel.send(embed=disnake.Embed(
                                                 title=bot.lang.get(str(message.guild.id)).get('wordgame_title'),
                                                 description=bot.lang.get(str(message.guild.id)).get(
                                                     'wordgame_eliminated').replace('&1', bot.get_name(message.author.id, message.guild)),
-                                                colour=899718))
+                                                colour=0xff0000))
 
                                         if len(active_channels.get(str(message.channel.id)).get("players")) == 1:
                                             await win(active_channels.get(str(message.channel.id)).get("players")[0],

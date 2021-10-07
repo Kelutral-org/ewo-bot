@@ -20,17 +20,17 @@
     "example": "/info"
   },
   {"command": "**/wordgame**",
-    "usage": "/wordgame <args>",
+    "usage": "/wordgame <subcommand>",
     "description": "The main command for my wordgame.",
     "arg_types": {
-      "[start/begin]": "Start a wordgame session in this channel with defined args. Default args are [multiplayer, casual].",
-      "[stop/end]": "Stop the current wordgame session.",
-      "solo": "Set game to solo mode (Ewo' says a word instead of having to wait for another player).",
-      "multiplayer": "Set game to multiplayer mode (Ewo' only records other players words and the same player cannot say a word twice in a row).",
-      "competitive": "Set game to competitive mode (Words cannot be reused and the player who says a word ending with a letter that no unused words start with will win).",
-      "casual": "Set game to casual mode (Words can be reused and the game will not end unless stopped with the command.)"
+      "start": "Begins a game in the current channel.",
+      "stop": "Stops the game in the current channel.",
+      "addchannel": "Admin only. Add this channel to the list of wordgame channels.",
+      "removechannel": "Admin only. Remove this channel from the list of wordgame channels.",
+      "info": "Show important info about the game.",
+      "points": "Show the leaderboard of points in this server."
     },
-    "example": "/wordgame solo competitive start"
+    "example": "/wordgame start"
   },
   {
     "command": "**/points**",

@@ -20,17 +20,17 @@
     "example": "/info"
   },
   {"command": "**/wordgame**",
-    "usage": "/wordgame <Befehle>",
+    "usage": "/wordgame <subcommand>",
     "description": "Der Hauptbefehl für mein Wortspiel.",
     "arg_types": {
-      "Start": "Beginne Wortspiel in diesem Channel mit den gewählten Einstellungen. Standardeinstellung ist [Multiplayer, Casual].",
-      "Ende": "Beende das laufende Wortspiel.",
-      "Solo": "Stellt ein Spiel auf Solomodus um. (Ewo' gibt dir ein Wort vor anstelle eines echten Mitspielers.)",
-      "Multiplayer": "Stellt ein Spiel auf Multiplayer um. (Ewo' registriert nur die Anworten anderer Mitspieler und jeder Spieler kann ein Wort nicht zwei Mal hintereinander sagen.)",
-      "Wettstreit": "Stellt ein Spiel auf kompetitiven Wettstreitmodus. (Wörter können nicht mehrfach genannt weden und der Spieler, der ein Wort sagt, das mit einem Buchstaben endet, mit dem keine unbenutzten Wörter beginnen, gewinnt.)",
-      "Casual": "Stellt ein Spiel auf Casual. (Wörter können erneut verwendet werden und das Spiel wird nicht enden, es sei denn, man beendet es via Befehl.)"
+      "start": "Begins a game in the current channel.",
+      "stop": "Stops the game in the current channel.",
+      "addchannel": "Admin only. Add this channel to the list of wordgame channels.",
+      "removechannel": "Admin only. Remove this channel from the list of wordgame channels.",
+      "info": "Show important info about the game.",
+      "points": "Show the leaderboard of points in this server."
     },
-    "example": "/wordgame Solo Wettstreit Start"
+    "example": "/wordgame start"
   },
   {
     "command": "**/points**",
