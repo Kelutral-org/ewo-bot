@@ -114,7 +114,7 @@ def choose_word(channel_id: int, sound: str):
 async def end_game(channel_id: int, inter: disnake.Interaction):
     channel = await bot.bot.fetch_channel(channel_id)
 
-    embed = disnake.Embed(title=bot.lang.get(str(channel.guild.id)).get('wordgame_starting'),
+    embed = disnake.Embed(title=bot.lang.get(str(channel.guild.id)).get('wordgame_title'),
                                         description=bot.lang.get(str(channel.guild.id)).get('wordgame_stopping'),
                                         colour=899718)
 
@@ -803,20 +803,14 @@ class WordgameCog(commands.Cog):
                                     embed=disnake.Embed(title=bot.lang.get(str(message.guild.id)).get('wordgame_title'),
                                                         description=bot.lang.get(str(message.guild.id)).get('wordgame_already_used'),
                                                         colour=0xff0000))
-                            # If the word_info was used recently
-                            elif msg in active_channels.get(str(message.channel.id)).get("recent_words"):
-                                await message.channel.send(
-                                    embed=disnake.Embed(title=bot.lang.get(str(message.guild.id)).get('wordgame_title'),
-                                                        description=bot.lang.get(str(message.guild.id)).get('wordgame_used_recently'),
-                                                        colour=0xff0000))
-                            # If the user already said a word_info
+                            # If the user already said a word
                             elif message.author.id == active_channels.get(str(message.channel.id)).get("previous_player_id"):
                                 await message.channel.send(
                                     embed=disnake.Embed(title=bot.lang.get(str(message.guild.id)).get('wordgame_title'),
                                                         description=bot.lang.get(str(message.guild.id)).get('wordgame_already_said'),
                                                         colour=0xff0000))
                             else:
-                                # If we've gotten to this point, we know the word_info is a valid Na'vi word_info,
+                                # If we've gotten to this point, we know the word is a valid Na'vi word_info,
                                 # and ends with the correct sound. Now we can branch into mode-specific tests.
 
                                 # If the playmode is solo
@@ -831,53 +825,59 @@ class WordgameCog(commands.Cog):
 
                                         # If the gamemode is casual
                                         if gamemode == "casual":
-                                            active_channels[str(message.channel.id)]["recent_words"].append(msg)
-                                            if len(active_channels[str(message.channel.id)].get("recent_words")) >= 5:
-                                                active_channels[str(message.channel.id)]["recent_words"].pop(0)
+                                            # If the word was used recently
+                                            if msg in active_channels.get(str(message.channel.id)).get("recent_words"):
+                                                await message.channel.send(embed=disnake.Embed(title=bot.lang.get(str(message.guild.id)).get('wordgame_title'),
+                                                                                               description=bot.lang.get(str(message.guild.id)).get('wordgame_used_recently'),
+                                                                                               colour=0xff0000))
+                                            else:
+                                                active_channels[str(message.channel.id)]["recent_words"].append(msg)
+                                                if len(active_channels[str(message.channel.id)].get("recent_words")) >= 5:
+                                                    active_channels[str(message.channel.id)]["recent_words"].pop(0)
 
-                                            new_word = choose_word(message.channel.id, valid_words.get(msg).get("last_sound"))
+                                                new_word = choose_word(message.channel.id, valid_words.get(msg).get("last_sound"))
 
-                                            new_word_data = valid_words.get(new_word)
+                                                new_word_data = valid_words.get(new_word)
 
-                                            active_channels[str(message.channel.id)]["previous_player_id"] = bot.bot.user.id
-                                            active_channels[str(message.channel.id)]["previous_word_end"] = new_word_data.get("last_sound")
-                                            active_channels[str(message.channel.id)]["recent_words"].append(new_word)
+                                                active_channels[str(message.channel.id)]["previous_player_id"] = bot.bot.user.id
+                                                active_channels[str(message.channel.id)]["previous_word_end"] = new_word_data.get("last_sound")
+                                                active_channels[str(message.channel.id)]["recent_words"].append(new_word)
 
-                                            # Create an embed to hold data about the new word_info
-                                            embed = disnake.Embed(
-                                                title=bot.lang.get(str(message.guild.id)).get('wordgame_title'),
-                                                description=bot.lang.get(str(message.guild.id)).get('wordgame_word_said').replace('&1', bot.get_name(bot.bot.user.id, message.guild)).replace('&2', "**" + new_word + "**"),
-                                                colour=899718)
+                                                # Create an embed to hold data about the new word_info
+                                                embed = disnake.Embed(
+                                                    title=bot.lang.get(str(message.guild.id)).get('wordgame_title'),
+                                                    description=bot.lang.get(str(message.guild.id)).get('wordgame_word_said').replace('&1', bot.get_name(bot.bot.user.id, message.guild)).replace('&2', "**" + new_word + "**"),
+                                                    colour=899718)
 
-                                            # Get language data from the current guild
-                                            lang_value = bot.execute_read_query(
-                                                "SELECT [value] FROM options WHERE ([option] = 'language') AND ([guild_id] = '" + str(
-                                                    message.guild.id) + "')")[0][0]
-                                            if lang_value == "English":
-                                                # If language is English, set the Meaning entry to be the English translation
+                                                # Get language data from the current guild
+                                                lang_value = bot.execute_read_query(
+                                                    "SELECT [value] FROM options WHERE ([option] = 'language') AND ([guild_id] = '" + str(
+                                                        message.guild.id) + "')")[0][0]
+                                                if lang_value == "English":
+                                                    # If language is English, set the Meaning entry to be the English translation
+                                                    embed.add_field(name=bot.lang.get(str(message.guild.id)).get(
+                                                        'wordgame_meaning') + ":",
+                                                                    value=new_word_data.get("translations").get(
+                                                                        "en"))
+                                                elif lang_value == "German":
+                                                    # If language is German, set the Meaning entry to be the German translation
+                                                    embed.add_field(name=bot.lang.get(str(message.guild.id)).get(
+                                                        'wordgame_meaning') + ":",
+                                                                    value=new_word_data.get("translations").get(
+                                                                        "de"))
+
+                                                # Set the rest of the fields for the new word_info data
                                                 embed.add_field(name=bot.lang.get(str(message.guild.id)).get(
-                                                    'wordgame_meaning') + ":",
-                                                                value=new_word_data.get("translations").get(
-                                                                    "en"))
-                                            elif lang_value == "German":
-                                                # If language is German, set the Meaning entry to be the German translation
+                                                    'wordgame_pronunciation') + ":",
+                                                                value=new_word_data.get("pronunciation"))
                                                 embed.add_field(name=bot.lang.get(str(message.guild.id)).get(
-                                                    'wordgame_meaning') + ":",
-                                                                value=new_word_data.get("translations").get(
-                                                                    "de"))
+                                                    'wordgame_pos') + ":", value=new_word_data.get("pos"))
+                                                embed.add_field(name=bot.lang.get(str(message.guild.id)).get(
+                                                    'wordgame_frequency') + ":",
+                                                                value=str(new_word_data.get("frequency")) + "%")
 
-                                            # Set the rest of the fields for the new word_info data
-                                            embed.add_field(name=bot.lang.get(str(message.guild.id)).get(
-                                                'wordgame_pronunciation') + ":",
-                                                            value=new_word_data.get("pronunciation"))
-                                            embed.add_field(name=bot.lang.get(str(message.guild.id)).get(
-                                                'wordgame_pos') + ":", value=new_word_data.get("pos"))
-                                            embed.add_field(name=bot.lang.get(str(message.guild.id)).get(
-                                                'wordgame_frequency') + ":",
-                                                            value=str(new_word_data.get("frequency")) + "%")
-
-                                            # Send above embed publicly
-                                            await message.channel.send(embed=embed)
+                                                # Send above embed publicly
+                                                await message.channel.send(embed=embed)
 
                                         # If the gamemode is competitive
                                         if gamemode == "competitive":
@@ -899,7 +899,6 @@ class WordgameCog(commands.Cog):
                                                     "previous_player_id"] = bot.bot.user.id
                                                 active_channels[str(message.channel.id)][
                                                     "previous_word_end"] = new_word_data.get("last_sound")
-                                                active_channels[str(message.channel.id)]["recent_words"].append(new_word)
 
                                                 # Create an embed to hold data about the new word_info
                                                 embed = disnake.Embed(
@@ -941,58 +940,66 @@ class WordgameCog(commands.Cog):
 
                                     # If gamemode is casual
                                     if gamemode == "casual":
-                                        if len(active_channels[str(message.channel.id)].get("recent_words")) >= 5:
-                                            active_channels[str(message.channel.id)]["recent_words"].pop(0)
-
-                                        new_word = msg
-
-                                        new_word_data = valid_words.get(msg)
-
-                                        active_channels[str(message.channel.id)]["previous_player_id"] = message.author.id
-                                        active_channels[str(message.channel.id)]["previous_word_end"] = new_word_data.get("last_sound")
-                                        active_channels[str(message.channel.id)]["recent_words"].append(new_word)
-
-                                        # Create an embed to hold data about the new word_info
-                                        embed = disnake.Embed(
-                                            title=bot.lang.get(str(message.guild.id)).get('wordgame_title'),
-                                            description=bot.lang.get(str(message.guild.id)).get(
-                                                'wordgame_word_said').replace('&1', bot.get_name(message.author.id, message.guild)).replace('&2', "**" + new_word + "**"),
-                                            colour=899718)
-
-                                        # Get language data from the current guild
-                                        lang_value = bot.execute_read_query(
-                                            "SELECT [value] FROM options WHERE ([option] = 'language') AND ([guild_id] = '" + str(
-                                                message.guild.id) + "')")[0][0]
-                                        if lang_value == "English":
-                                            # If language is English, set the Meaning entry to be the English translation
-                                            embed.add_field(name=bot.lang.get(str(message.guild.id)).get(
-                                                'wordgame_meaning') + ":",
-                                                            value=new_word_data.get("translations").get(
-                                                                "en"))
-                                        elif lang_value == "German":
-                                            # If language is German, set the Meaning entry to be the German translation
-                                            embed.add_field(name=bot.lang.get(str(message.guild.id)).get(
-                                                'wordgame_meaning') + ":",
-                                                            value=new_word_data.get("translations").get(
-                                                                "de"))
-
-                                        # Set the rest of the fields for the new word_info data
-                                        embed.add_field(name=bot.lang.get(str(message.guild.id)).get(
-                                            'wordgame_pronunciation') + ":",
-                                                        value=new_word_data.get("pronunciation"))
-                                        embed.add_field(name=bot.lang.get(str(message.guild.id)).get(
-                                            'wordgame_pos') + ":", value=new_word_data.get("pos"))
-                                        embed.add_field(name=bot.lang.get(str(message.guild.id)).get(
-                                            'wordgame_frequency') + ":",
-                                                        value=str(new_word_data.get("frequency")) + "%")
-
-                                        # Send above embed publicly
-                                        await message.channel.send(embed=embed)
-
-                                        if str(message.author.id) in active_channels[str(message.channel.id)].get("points"):
-                                            active_channels[str(message.channel.id)]["points"][str(message.author.id)] += 1
+                                        # If the word_info was used recently
+                                        if msg in active_channels.get(str(message.channel.id)).get("recent_words"):
+                                            await message.channel.send(embed=disnake.Embed(
+                                                title=bot.lang.get(str(message.guild.id)).get('wordgame_title'),
+                                                description=bot.lang.get(str(message.guild.id)).get(
+                                                    'wordgame_used_recently'),
+                                                colour=0xff0000))
                                         else:
-                                            active_channels[str(message.channel.id)]["points"][str(message.author.id)] = 1
+                                            if len(active_channels[str(message.channel.id)].get("recent_words")) >= 5:
+                                                active_channels[str(message.channel.id)]["recent_words"].pop(0)
+
+                                            new_word = msg
+
+                                            new_word_data = valid_words.get(msg)
+
+                                            active_channels[str(message.channel.id)]["previous_player_id"] = message.author.id
+                                            active_channels[str(message.channel.id)]["previous_word_end"] = new_word_data.get("last_sound")
+                                            active_channels[str(message.channel.id)]["recent_words"].append(new_word)
+
+                                            # Create an embed to hold data about the new word_info
+                                            embed = disnake.Embed(
+                                                title=bot.lang.get(str(message.guild.id)).get('wordgame_title'),
+                                                description=bot.lang.get(str(message.guild.id)).get(
+                                                    'wordgame_word_said').replace('&1', bot.get_name(message.author.id, message.guild)).replace('&2', "**" + new_word + "**"),
+                                                colour=899718)
+
+                                            # Get language data from the current guild
+                                            lang_value = bot.execute_read_query(
+                                                "SELECT [value] FROM options WHERE ([option] = 'language') AND ([guild_id] = '" + str(
+                                                    message.guild.id) + "')")[0][0]
+                                            if lang_value == "English":
+                                                # If language is English, set the Meaning entry to be the English translation
+                                                embed.add_field(name=bot.lang.get(str(message.guild.id)).get(
+                                                    'wordgame_meaning') + ":",
+                                                                value=new_word_data.get("translations").get(
+                                                                    "en"))
+                                            elif lang_value == "German":
+                                                # If language is German, set the Meaning entry to be the German translation
+                                                embed.add_field(name=bot.lang.get(str(message.guild.id)).get(
+                                                    'wordgame_meaning') + ":",
+                                                                value=new_word_data.get("translations").get(
+                                                                    "de"))
+
+                                            # Set the rest of the fields for the new word_info data
+                                            embed.add_field(name=bot.lang.get(str(message.guild.id)).get(
+                                                'wordgame_pronunciation') + ":",
+                                                            value=new_word_data.get("pronunciation"))
+                                            embed.add_field(name=bot.lang.get(str(message.guild.id)).get(
+                                                'wordgame_pos') + ":", value=new_word_data.get("pos"))
+                                            embed.add_field(name=bot.lang.get(str(message.guild.id)).get(
+                                                'wordgame_frequency') + ":",
+                                                            value=str(new_word_data.get("frequency")) + "%")
+
+                                            # Send above embed publicly
+                                            await message.channel.send(embed=embed)
+
+                                            if str(message.author.id) in active_channels[str(message.channel.id)].get("points"):
+                                                active_channels[str(message.channel.id)]["points"][str(message.author.id)] += 1
+                                            else:
+                                                active_channels[str(message.channel.id)]["points"][str(message.author.id)] = 1
 
                                     # If the gamemode is competitive
                                     if gamemode == "competitive":
@@ -1003,17 +1010,15 @@ class WordgameCog(commands.Cog):
                                         new_word = msg
                                         new_word_data = valid_words.get(new_word)
 
-                                        active_channels[str(message.channel.id)][
-                                            "previous_player_id"] = bot.bot.user.id
-                                        active_channels[str(message.channel.id)][
-                                            "previous_word_end"] = new_word_data.get("last_sound")
-                                        active_channels[str(message.channel.id)]["recent_words"].append(new_word)
+                                        active_channels[str(message.channel.id)]["previous_player_id"] = message.author.id
+                                        active_channels[str(message.channel.id)]["previous_word_end"] = new_word_data.get("last_sound")
+                                        active_channels[str(message.channel.id)]["word_initial_lookup"][new_word_data.get("first_sound")].remove(new_word)
 
                                         # Create an embed to hold data about the new word_info
                                         embed = disnake.Embed(
                                             title=bot.lang.get(str(message.guild.id)).get('wordgame_title'),
                                             description=bot.lang.get(str(message.guild.id)).get(
-                                                'wordgame_word_said').replace('&1', bot.get_name(bot.bot.user.id,
+                                                'wordgame_word_said').replace('&1', bot.get_name(message.author.id,
                                                                                                  message.guild)).replace(
                                                 '&2', "**" + new_word + "**"),
                                             colour=899718)
