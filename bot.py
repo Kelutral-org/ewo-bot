@@ -372,7 +372,7 @@ async def help(inter, command_name: str = ""):
     else:
 
         # Remove prefixes from beginning of arg (For more intuitive arguments)
-        command_name = command_name.replace('?', '')
+        command_name = command_name.replace('/', '')
 
         # For each command in the help file
         for command in help_file:
