@@ -84,6 +84,8 @@
   "wordgame_not_in": "Du bist in diesem Spiel kein Mitspieler!",
 
   "wordgame_incorrect_word_end": "Dein Wort muss mit dem Buchstaben beginnen, auf den das letzte Wort geendet ist!",
+  "wordgame_eliminated": "&1 hat dieses Wort wiederverwendet und wurde eliminiert!",
+  "wordgame_joined": "&1 ist dem Spiel beigetreten!",
 
   "numbers_invalid_octal": "Ungültige Oktalzahl: 8 und 9 sind keine zulässigen oktale Ziffern!",
   "decimal": "Dezimal",

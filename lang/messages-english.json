@@ -83,6 +83,8 @@
   "wordgame_win": "&1 won!",
   "wordgame_not_in": "You are not in this game!",
   "wordgame_incorrect_word_end": "Your word must begin with the last sound of the previous word!",
+  "wordgame_eliminated": "&1 reused a word and has been eliminated!",
+  "wordgame_joined": "&1 joined!",
   "numbers_invalid_octal": "Invalid octal number: 8 and 9 are not valid octal digits!",
   "decimal": "Decimal",
   "octal": "Octal",
