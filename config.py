@@ -14,7 +14,7 @@ with open('requirements.txt', 'r') as f:
 token = token.strip()
 prefix = "?"
 description = "Oe skxawng asrunga' lu."
-version = "2.0.0 pre-5"
+version = "2.0.0"
 repository = "https://github.com/Kelutral-org/ewo-bot"
 test_server_link = "https://discord.gg/B9rT2mHJTW"
 discord_library = "Disnake"
