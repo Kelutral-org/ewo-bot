@@ -1,45 +1,45 @@
 ```
-Game
+Spiel
 ```
-Wordgame is a basic word-based game designed to enhance a student's vocabulary, speed, and understanding of the sound system.
-The exact goal of the game depends on the gamemode, but the basic principle is universal: Say a word that **begins** with *the same letter* that the previous word **ends** with.
-For example:
+Das Wortspiel ist ein auf Wörtern basiertes Spiel, das entwickelt wurde, um das Vokabular, die Geschwindigkeit und Verständnis des Lautsystems der Sprache zu verbessern.
+Das genaue Ziel des Spiels basiert auf dem Spielmodus, aber das Grundprinzip ist universell: Nenne ein Wort, das mit demselben Buchstaben beginnt, auf den das vorangegangene Wort geendet ist.
+Zum Beispiel:
 ``plltxe``
 ``eltu``
 ``utral``
-etc.
+usw.
 
 ```
-Playmodes
+Spielmodi
 ```
-Wordgame has two playmodes: Solo and Multiplayer.
-**Solo:**
-    ・The bot will automatically respond.
-    ・Only the player who started the game can play.
-    ・Points cannot be earned.
+Das Wortspiel hat zwei Modi: Einzel- und Mehrspieler:
+**Einzelspieler:**
+    ・Der Bot wird automatisch antworten bzw. mitspielen.
+    ・Nur der Spieler, der das Spiel gestartet hat, kann spielen.
+    ・Punkte können nicht gesammelt werden.
 
-**Multiplayer:**
-    ・The bot will *not* respond.
-    ・More than one player *is required*.
-    ・Points can be earned.
+**Mehrspieler:**
+    ・Der Bot wird nicht antworten bzw. mitspielen.
+    ・Mehr als ein Spieler wird benötigt.
+    ・Punkte können gesammelt werden.
 
 ```
-Gamemodes
+Schwierigkeitsstufen
 ```
-Wordgame has 3 gamemodes: Casual, Competitive, and Deathmatch.
+Das Wortspiel hat drei Schwierigkeitsstufen: Casual, Wettkampf oder Deathmatch.
 **Casual:**
-    ・Words can be reused, just not too frequently (five other words must be used in order for a word to be reused).
-    ・The game will not end until manually stopped.
-    ・Points are awarded to everyone, and no bonuses are given.
+    ・Wörter können wiederverwendet werden, jedoch nicht zu häufig (fünf andere Wörter müssen zwischen der Nennung desselben Wortes genannt werden, um es erneut nennen zu können).
+    ・Das Spiel wird nicht enden, solange man es nicht manuell beendet.
+    ・Punkte werden an jeden Mitspieler verteilt, und Boni werden nicht vergeben.
 
-**Competitive**:
-    ・Words *cannot* be reused.
-    ・The first player to say a word that leaves no more options for other players wins.
-    ・Points are still awarded to everyone, but the winner is given a bonus.
+**Wettkampf**:
+    ・Wörter können nicht wiederverwendet werden.
+    ・Der Spieler, der zuerst ein Wort nennt, das keine Optionen zum Weiterspielen offen lässt, gewinnt.
+    ・Punkte werden an jeden Mitspieler verteilt, der Gewinner erhält jedoch einen Bonus.
 
 **Deathmatch**:
-    ・You must join the game when it starts.
-    ・If a player says a word that has already been used, they are eliminated.
-    ・The last player left wins.
-    ・Points are still awarded to everyone, but the winner is given a bonus.
-    ・Forces multiplayer.
+    ・Du musst dem Spiel beitreten, wenn es beginnt.
+    ・Wenn ein Spieler ein Wort nennt, das bereits verwendet wurde, wird er aus dem Spiel ausgeschlossen.
+    ・Der letzte Spieler, der übrig bleibt, gewinnt.
+    ・Punkte werden an jeden Mitspieler verteilt, der Gewinner erhält jedoch einen Bonus.
+    ・Erzwingt den Mehrspieler-Modus.

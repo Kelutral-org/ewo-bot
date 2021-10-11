@@ -5,12 +5,12 @@
     "example": "/help scream"
   },
   {"command": "**/options**",
-    "usage": "/options <subcommand>",
-    "description": "ADMIN ONLY. Manage server options.",
+    "usage": "/options <Unterbefehl>",
+    "description": "NUR FÜR ADMINS. Editiere die Serveroptionen.",
     "arg_types": {
-      "list [<option>, all]": "List info about a specific option, or list all manageable options.",
+      "list [<option>, all]": "Nenne Infos über eine bestimmte Option, oder alle verfügbaren Optionen.",
       "set <option> <value>": "Set an option to the given value.",
-      "toggle <option>": "Toggle a true/false option."
+      "toggle <option>": "Schalte eine korrekt/falsch Option an oder aus."
     },
     "example": "/options set language German"
   },
@@ -20,15 +20,15 @@
     "example": "/info"
   },
   {"command": "**/wordgame**",
-    "usage": "/wordgame <subcommand>",
+    "usage": "/wordgame <Unterbefehl>",
     "description": "Der Hauptbefehl für mein Wortspiel.",
     "arg_types": {
-      "start": "Begins a game in the current channel.",
-      "stop": "Stops the game in the current channel.",
-      "addchannel": "Admin only. Add this channel to the list of wordgame channels.",
-      "removechannel": "Admin only. Remove this channel from the list of wordgame channels.",
-      "info": "Show important info about the game.",
-      "points": "Show the leaderboard of points in this server."
+      "start": "Startet ein Spiel im derzeit aktiven Channel.",
+      "stop": "Beendet ein Spiel im derzeit aktiven Channel.",
+      "addchannel": "Nur für Admins. Füge diesen Channel zur Liste der Wortspielchannel hinzu.",
+      "removechannel": "Nur für Admins. Entferne diesen Channel von der Liste der Wortspielchannel.",
+      "info": "Zeigt wichtige Infos über das Spiel an.",
+      "points": "Zeigt die Bestenliste inkl. Punkte dieses Servers."
     },
     "example": "/wordgame start"
   },

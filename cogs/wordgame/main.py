@@ -317,16 +317,6 @@ class DeathmatchStartView(disnake.ui.View):
                 self.value = True
                 self.stop()
 
-    # Cancel button
-    @disnake.ui.button(label='Cancel', style=disnake.ButtonStyle.red)
-    async def cancel(self, button: disnake.ui.Button, interaction: disnake.MessageInteraction):
-        # Do nothing
-        await interaction.response.defer()
-
-        # More weird stuff
-        self.value = False
-        self.stop()
-
 
 # The class for the wordgame start ui.
 class StartGameView(disnake.ui.View):
@@ -431,16 +421,6 @@ class StartGameView(disnake.ui.View):
                 # Some stuff I don't really understand for buttons
                 self.value = True
                 self.stop()
-
-    # Cancel button
-    @disnake.ui.button(label='Cancel', style=disnake.ButtonStyle.red)
-    async def cancel(self, button: disnake.ui.Button, interaction: disnake.MessageInteraction):
-        # Do nothing
-        await interaction.response.defer()
-
-        # More weird stuff
-        self.value = False
-        self.stop()
 
 
 # Wordgame Cog

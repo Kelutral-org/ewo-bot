@@ -4816,7 +4816,7 @@
         },
         "pronunciation": "FWA",
         "pos": "ctr",
-        "frequency": 1.45,
+        "frequency": 1.46,
         "first_sound": "f",
         "last_sound": "a"
     },
@@ -9420,7 +9420,7 @@
         },
         "pronunciation": "LA-he",
         "pos": "adj",
-        "frequency": 0.39,
+        "frequency": 0.38,
         "first_sound": "l",
         "last_sound": "e"
     },
@@ -11377,7 +11377,7 @@
         },
         "pronunciation": "MA",
         "pos": "part",
-        "frequency": 0.79,
+        "frequency": 0.8,
         "first_sound": "m",
         "last_sound": "a"
     },
@@ -15991,7 +15991,7 @@
         },
         "pronunciation": "O-e",
         "pos": "pn",
-        "frequency": 4.89,
+        "frequency": 4.9,
         "first_sound": "o",
         "last_sound": "e"
     },
@@ -19845,7 +19845,7 @@
         },
         "pronunciation": "SI",
         "pos": "v:si",
-        "frequency": 0.64,
+        "frequency": 0.63,
         "first_sound": "s",
         "last_sound": "i"
     },
@@ -20643,7 +20643,7 @@
         },
         "pronunciation": "SNGÄ-'i",
         "pos": "v:m",
-        "frequency": 0.16,
+        "frequency": 0.17,
         "first_sound": "s",
         "last_sound": "i"
     },
@@ -20841,7 +20841,7 @@
         },
         "pronunciation": "SO'-ha",
         "pos": "v:tr",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "s",
         "last_sound": "a"
     },
@@ -34035,7 +34035,7 @@
         },
         "pronunciation": "TU-te",
         "pos": "n",
-        "frequency": 1.49,
+        "frequency": 1.48,
         "first_sound": "t",
         "last_sound": "e"
     },
