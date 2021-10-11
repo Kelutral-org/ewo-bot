@@ -9,7 +9,7 @@
     "description": "NUR FÜR ADMINS. Editiere die Serveroptionen.",
     "arg_types": {
       "list [<option>, all]": "Nenne Infos über eine bestimmte Option, oder alle verfügbaren Optionen.",
-      "set <option> <value>": "Ändere eine Option auf den eigegebenen Wert um.",
+      "set <option> <value>": "Ändere eine Option auf den eingegebenen Wert um.",
       "toggle <option>": "Schalte eine korrekt/falsch Option an oder aus."
     },
     "example": "/options set language German"
