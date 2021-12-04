@@ -447,6 +447,8 @@ class WordgameCog(commands.Cog):
         # Get the list of every word_info in Na'vi from reykunyu
         reykunyu_all = requests.get("https://reykunyu.wimiso.nl/api/frau").json()
 
+        ignore_startswith = ['aw', 'ew', 'ay', 'ey', 'll', 'rr', 'ì', 'ä']
+
         # For every word_info in above list
         for word in reykunyu_all:
             # If the word_info ends in aw, add it to unusable words. Not enough words start with it.
@@ -486,6 +488,9 @@ class WordgameCog(commands.Cog):
             elif ' ' in reykunyu_all.get(word).get("na'vi").lower():
                 if reykunyu_all.get(word).get("na'vi").lower() not in self.invalid_words.get("space"):
                     self.invalid_words["space"].append(reykunyu_all.get(word).get("na'vi").lower())
+
+            elif reykunyu_all.get(word).get("na'vi").lower().startswith(tuple(ignore_startswith)):
+                pass
 
             # If all above tests pass, we know the word_info is valid and can add it to the list
             else:
