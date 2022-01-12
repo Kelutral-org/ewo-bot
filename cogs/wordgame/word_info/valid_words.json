@@ -14,7 +14,7 @@
         },
         "pronunciation": "'RR-ta",
         "pos": "n:pr",
-        "frequency": 0,
+        "frequency": 0.09,
         "first_sound": "'",
         "last_sound": "a"
     },
@@ -88,27 +88,9 @@
         },
         "pronunciation": "'AM-pi",
         "pos": "v:tr",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "'",
         "last_sound": "i"
-    },
-    "'ampirikx": {
-        "translations": {
-            "de": "KannenblattPflanze, pseudocenia simplex",
-            "en": "leaf pitcher plant",
-            "et": "Lehekukutaja (leaf pitcher plant)",
-            "fr": "feuilles de la Pitcher plant | [Pseudocenia simplex]",
-            "hu": "levélkancsóka (érintésre mozgó) (pandorai növényfaj)",
-            "nl": "bladbekerplant",
-            "ru": "кувшинолистное растение",
-            "sv": "löv tillbringarplanta",
-            "x-navi": "fne’ä’o a yom ioangit ahì’i"
-        },
-        "pronunciation": "'AM-pi-rikx",
-        "pos": "n",
-        "frequency": 0,
-        "first_sound": "'",
-        "last_sound": "g"
     },
     "'ana": {
         "translations": {
@@ -257,25 +239,6 @@
         "first_sound": "'",
         "last_sound": "m"
     },
-    "'awnìm": {
-        "translations": {
-            "de": "meiden, vermeiden, jdn/et umgehen",
-            "en": "avoid",
-            "et": "vältima",
-            "fr": "éviter",
-            "hu": "elkerül",
-            "nl": "vermijden",
-            "pl": "unikać",
-            "ru": "избежать",
-            "sv": "undvika",
-            "x-navi": "ta tuteo fu ’uo fu tìfkeytoko ’ì’awn alìm fteke tsat ultxarivun"
-        },
-        "pronunciation": "'AW-nìm",
-        "pos": "v:tr",
-        "frequency": 0.0,
-        "first_sound": "'",
-        "last_sound": "m"
-    },
     "'awsiteng": {
         "translations": {
             "de": "zusammen, gemeinsam",
@@ -364,7 +327,7 @@
         },
         "pronunciation": "'E-ko",
         "pos": "v:tr",
-        "frequency": 0.09,
+        "frequency": 0.1,
         "first_sound": "'",
         "last_sound": "o"
     },
@@ -420,7 +383,7 @@
         },
         "pronunciation": "'EM",
         "pos": "v:tr",
-        "frequency": 0.11,
+        "frequency": 0.1,
         "first_sound": "'",
         "last_sound": "m"
     },
@@ -496,7 +459,7 @@
         },
         "pronunciation": "'E-veng",
         "pos": "n",
-        "frequency": 0.06,
+        "frequency": 0.07,
         "first_sound": "'",
         "last_sound": "ŋ"
     },
@@ -721,25 +684,6 @@
         "first_sound": "'",
         "last_sound": "n"
     },
-    "'ong": {
-        "translations": {
-            "de": "erblühen, sich entfalten",
-            "en": "unfold, blossom",
-            "et": "õitsema",
-            "fr": "fleurir | s'épanouir",
-            "hu": "kinyílik, kivirágzik",
-            "nl": "bloeien",
-            "pl": "rozwijać, kwitnąć",
-            "ru": "раскрываться, распускаться, цвести, процветать",
-            "sv": "slå ut, blomstra",
-            "x-navi": "aysyulang sngä'i pivaw mì ewll; (olo', pongu, sl.) tsawl slu kuma flä: <b>’ivong Na’vi</b> sìlpey oe tsnì lì'fya leNa'vi tsawl slìyevu"
-        },
-        "pronunciation": "'ONG",
-        "pos": "v:?",
-        "frequency": 0.01,
-        "first_sound": "'",
-        "last_sound": "ŋ"
-    },
     "'opin": {
         "translations": {
             "de": "Farbe",
@@ -880,7 +824,7 @@
         },
         "pronunciation": "'UM-tsa",
         "pos": "n",
-        "frequency": 0.06,
+        "frequency": 0.05,
         "first_sound": "'",
         "last_sound": "a"
     },
@@ -899,7 +843,7 @@
         },
         "pronunciation": "'u-PXA-re",
         "pos": "n",
-        "frequency": 0.07,
+        "frequency": 0.06,
         "first_sound": "'",
         "last_sound": "e"
     },
@@ -1011,7 +955,7 @@
         },
         "pronunciation": "'ì-'AWN",
         "pos": "v:in",
-        "frequency": 0.06,
+        "frequency": 0.07,
         "first_sound": "'",
         "last_sound": "n"
     },
@@ -1093,7 +1037,7 @@
         },
         "pronunciation": "A-nu-ra-i",
         "pos": "n:pr",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "a",
         "last_sound": "i"
     },
@@ -1163,22 +1107,9 @@
         },
         "pronunciation": "e-u-RO-pa",
         "pos": "n:pr",
-        "frequency": 0,
+        "frequency": 0.03,
         "first_sound": "e",
         "last_sound": "a"
-    },
-    "hrh": {
-        "translations": {
-            "en": "LOL (\"laughing out loud\")",
-            "nl": "LOL (uiting van gelach)",
-            "fr": "LOL ou MDR",
-            "x-navi": "“herangham”, <i>yewn futa pamrelsiyu hangham tsa’upxareteri</i>"
-        },
-        "pronunciation": "N/A",
-        "pos": "intj",
-        "frequency": 0,
-        "first_sound": "h",
-        "last_sound": "h"
     },
     "iknimaya": {
         "translations": {
@@ -1190,7 +1121,7 @@
         },
         "pronunciation": "ik-ni-MA-ya",
         "pos": "n:pr",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "i",
         "last_sound": "a"
     },
@@ -1229,7 +1160,7 @@
         },
         "pronunciation": "KEL-ut-ral",
         "pos": "n:pr",
-        "frequency": 0,
+        "frequency": 0.02,
         "first_sound": "k",
         "last_sound": "l"
     },
@@ -1281,7 +1212,7 @@
         },
         "pronunciation": "met-ka-YI-na",
         "pos": "n:pr",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "m",
         "last_sound": "a"
     },
@@ -1320,7 +1251,7 @@
         },
         "pronunciation": "MO-'at",
         "pos": "n:pr",
-        "frequency": 0,
+        "frequency": 0.01,
         "first_sound": "m",
         "last_sound": "t"
     },
@@ -1339,7 +1270,7 @@
         },
         "pronunciation": "NA'-vi",
         "pos": "n:pr",
-        "frequency": 0,
+        "frequency": 0.07,
         "first_sound": "n",
         "last_sound": "i"
     },
@@ -1391,7 +1322,7 @@
         },
         "pronunciation": "ney-TI-ri",
         "pos": "n:pr",
-        "frequency": 0,
+        "frequency": 0.03,
         "first_sound": "n",
         "last_sound": "i"
     },
@@ -1417,7 +1348,7 @@
         },
         "pronunciation": "o-ma-ti-KA-ya",
         "pos": "n:pr",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "o",
         "last_sound": "a"
     },
@@ -1449,7 +1380,7 @@
         },
         "pronunciation": "PA-ri",
         "pos": "n:pr",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "p",
         "last_sound": "i"
     },
@@ -1491,7 +1422,7 @@
         },
         "pronunciation": "RA-lu",
         "pos": "n:pr",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "r",
         "last_sound": "u"
     },
@@ -1547,19 +1478,6 @@
         "first_sound": "r",
         "last_sound": "o"
     },
-    "satu'li": {
-        "translations": {
-            "de": "Kantine im Tal von Mo'ara",
-            "en": "Canteen in the Valley of Mo'ara",
-            "fr": "cantine dans la vallée de Mo'ara",
-            "nl": "kantine in de Mo'ara Vallei (Uit Disney's Pandora - The World of Avatar)"
-        },
-        "pronunciation": "SATU'-li",
-        "pos": "n:pr",
-        "frequency": 0,
-        "first_sound": "s",
-        "last_sound": "i"
-    },
     "seze": {
         "translations": {
             "de": "Name von Neytiris Ikran (Bedeut.: Blaue Blume)",
@@ -1585,21 +1503,6 @@
         "frequency": 0,
         "first_sound": "s",
         "last_sound": "n"
-    },
-    "snrrtsyìp": {
-        "translations": {
-            "de": "Alpha Centauri C aka Proxima Centauri (umgangssprachlich)",
-            "en": "Alpha Centauri C aka Proxima Centauri (Colloquial)",
-            "et": "Alpha Centauri C aka Proxima Centauri (kõnekeelne)",
-            "fr": "Proxima du Centaure | Alpha du Centaure C | ([abréviation de] Tawsnrrtsyìp)",
-            "hu": "Alpha Centauri C avagy Proxima Centauri (bizalmas stílusban)",
-            "nl": "Alpha Centauri C (Proxima Centauri) (spreektaal)"
-        },
-        "pronunciation": "SNRR-tsyìp",
-        "pos": "n",
-        "frequency": 0,
-        "first_sound": "s",
-        "last_sound": "p"
     },
     "sorewn": {
         "translations": {
@@ -1628,7 +1531,7 @@
         },
         "pronunciation": "SWERIYE",
         "pos": "n:pr",
-        "frequency": 0,
+        "frequency": 0.01,
         "first_sound": "s",
         "last_sound": "e"
     },
@@ -1644,21 +1547,6 @@
         "frequency": 0,
         "first_sound": "s",
         "last_sound": "u"
-    },
-    "tawsnrrtsyìp": {
-        "translations": {
-            "de": "Alpha Centauri C aka Proxima Centauri",
-            "en": "Alpha Centauri C aka Proxima Centauri",
-            "et": "Alpha Centauri C aka Proxima Centauri",
-            "fr": "Proxima du Centaure | Alpha du Centaure C | ([souvent abrégé en] Snrrtsyìp)",
-            "hu": "Alpha Centauri C avagy Proxima Centauri",
-            "nl": "Alpha Centauri C (Proxima Centauri)"
-        },
-        "pronunciation": "taw-SNRR-tsyìp",
-        "pos": "n",
-        "frequency": 0,
-        "first_sound": "t",
-        "last_sound": "p"
     },
     "tipani": {
         "translations": {
@@ -1688,7 +1576,7 @@
         },
         "pronunciation": "TO-i-tslan",
         "pos": "n:pr",
-        "frequency": 0,
+        "frequency": 0.02,
         "first_sound": "t",
         "last_sound": "n"
     },
@@ -1707,7 +1595,7 @@
         },
         "pronunciation": "TO-i-tsye",
         "pos": "adj",
-        "frequency": 0,
+        "frequency": 0.02,
         "first_sound": "t",
         "last_sound": "e"
     },
@@ -1723,19 +1611,6 @@
         "frequency": 0,
         "first_sound": "t",
         "last_sound": "i"
-    },
-    "tsahìk": {
-        "translations": {
-            "de": "spirituelle Führerin, die (ähnlich einer Schamanin)",
-            "en": "matriarch, high priestess, interpreter",
-            "fr": "matriarche, grande prêtresse, interprète",
-            "nl": "moeder van de stam, hogepriesteres, shamaan"
-        },
-        "pronunciation": "TSA-hìk",
-        "pos": "n:pr",
-        "frequency": 0,
-        "first_sound": "c",
-        "last_sound": "k"
     },
     "tsenu": {
         "translations": {
@@ -1989,7 +1864,7 @@
         },
         "pronunciation": "a-PXA",
         "pos": "adj",
-        "frequency": 0.12,
+        "frequency": 0.14,
         "first_sound": "a",
         "last_sound": "a"
     },
@@ -2043,7 +1918,7 @@
         },
         "pronunciation": "atx-KXE",
         "pos": "n",
-        "frequency": 0.15,
+        "frequency": 0.14,
         "first_sound": "a",
         "last_sound": "e"
     },
@@ -2153,7 +2028,7 @@
         },
         "pronunciation": "EL-tu",
         "pos": "n",
-        "frequency": 0.28,
+        "frequency": 0.27,
         "first_sound": "e",
         "last_sound": "u"
     },
@@ -2225,7 +2100,7 @@
         },
         "pronunciation": "ET-rìp",
         "pos": "adj",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "e",
         "last_sound": "p"
     },
@@ -2243,7 +2118,7 @@
         },
         "pronunciation": "FA",
         "pos": "adp",
-        "frequency": 0.33,
+        "frequency": 0.34,
         "first_sound": "f",
         "last_sound": "a"
     },
@@ -2330,45 +2205,9 @@
         },
         "pronunciation": "FKAN",
         "pos": "v:in",
-        "frequency": 0.07,
+        "frequency": 0.06,
         "first_sound": "f",
         "last_sound": "n"
-    },
-    "fkarut": {
-        "translations": {
-            "de": "schälen, häuten",
-            "en": "peel",
-            "et": "koorima",
-            "fr": "éplucher",
-            "hu": "hámoz",
-            "nl": "pellen",
-            "pl": "obierać",
-            "ru": "сдирать, соскабливать, чистить",
-            "sv": "skala"
-        },
-        "pronunciation": "FKA-rut",
-        "pos": "v:?",
-        "frequency": 0,
-        "first_sound": "f",
-        "last_sound": "t"
-    },
-    "fkeytok": {
-        "translations": {
-            "de": "existieren",
-            "en": "exist",
-            "et": "olema, eksisteerima",
-            "fr": "exister",
-            "hu": "létezik",
-            "nl": "bestaan",
-            "pl": "istnieć",
-            "ru": "существовать",
-            "sv": "existera "
-        },
-        "pronunciation": "FKEY-tok",
-        "pos": "v:in",
-        "frequency": 0.1,
-        "first_sound": "f",
-        "last_sound": "k"
     },
     "fkio": {
         "translations": {
@@ -2420,7 +2259,7 @@
         },
         "pronunciation": "FKO",
         "pos": "pn",
-        "frequency": 0.98,
+        "frequency": 1.0,
         "first_sound": "f",
         "last_sound": "o"
     },
@@ -2576,7 +2415,7 @@
         },
         "pronunciation": "FMAWN",
         "pos": "n",
-        "frequency": 0.11,
+        "frequency": 0.1,
         "first_sound": "f",
         "last_sound": "n"
     },
@@ -2612,7 +2451,7 @@
         },
         "pronunciation": "FMI",
         "pos": "v:m",
-        "frequency": 0.2,
+        "frequency": 0.19,
         "first_sound": "f",
         "last_sound": "i"
     },
@@ -2703,7 +2542,7 @@
         },
         "pronunciation": "FNGAP",
         "pos": "n",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "f",
         "last_sound": "p"
     },
@@ -2828,7 +2667,7 @@
         },
         "pronunciation": "FPI",
         "pos": "adp:len",
-        "frequency": 0.12,
+        "frequency": 0.13,
         "first_sound": "f",
         "last_sound": "i"
     },
@@ -2846,7 +2685,7 @@
         },
         "pronunciation": "FPOM",
         "pos": "n",
-        "frequency": 0.12,
+        "frequency": 0.13,
         "first_sound": "f",
         "last_sound": "m"
     },
@@ -2898,7 +2737,7 @@
         },
         "pronunciation": "FPÌL",
         "pos": "v:tr",
-        "frequency": 0.44,
+        "frequency": 0.43,
         "first_sound": "f",
         "last_sound": "l"
     },
@@ -2950,7 +2789,7 @@
         },
         "pronunciation": "FRÌP",
         "pos": "v:tr",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "f",
         "last_sound": "p"
     },
@@ -2985,7 +2824,7 @@
         },
         "pronunciation": "FTANG",
         "pos": "v:m",
-        "frequency": 0.11,
+        "frequency": 0.1,
         "first_sound": "f",
         "last_sound": "ŋ"
     },
@@ -3205,7 +3044,7 @@
         },
         "pronunciation": "FWEL",
         "pos": "adj",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "f",
         "last_sound": "l"
     },
@@ -3272,7 +3111,7 @@
         },
         "pronunciation": "FWOPX",
         "pos": "n",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "f",
         "last_sound": "b"
     },
@@ -3305,7 +3144,7 @@
         },
         "pronunciation": "FYA-'o",
         "pos": "n",
-        "frequency": 0.15,
+        "frequency": 0.14,
         "first_sound": "f",
         "last_sound": "o"
     },
@@ -3459,24 +3298,6 @@
         "first_sound": "f",
         "last_sound": "p"
     },
-    "fìtsap": {
-        "translations": {
-            "de": "einander, gegenseitig",
-            "en": "each other",
-            "et": "teineteist",
-            "fr": "l'un l'autre | les uns les autres",
-            "hu": "egymást",
-            "nl": "elkaar",
-            "pl": "wzajemnie",
-            "ru": "друг друга",
-            "sv": "varandra"
-        },
-        "pronunciation": "fì-TSAP",
-        "pos": "adv",
-        "frequency": 0.02,
-        "first_sound": "f",
-        "last_sound": "p"
-    },
     "ha'": {
         "translations": {
             "de": "(zusammen) passen, übereinstimmen, ergänzen, grundsätzlich verbessern",
@@ -3557,7 +3378,7 @@
         },
         "pronunciation": "HAN",
         "pos": "v:tr",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "h",
         "last_sound": "n"
     },
@@ -3629,7 +3450,7 @@
         },
         "pronunciation": "HAW-nu",
         "pos": "v:tr",
-        "frequency": 0.05,
+        "frequency": 0.04,
         "first_sound": "h",
         "last_sound": "u"
     },
@@ -3763,7 +3584,7 @@
         },
         "pronunciation": "HIPX",
         "pos": "v:tr",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "h",
         "last_sound": "b"
     },
@@ -3812,7 +3633,7 @@
         },
         "pronunciation": "HO-an",
         "pos": "n",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "h",
         "last_sound": "n"
     },
@@ -3901,7 +3722,7 @@
         },
         "pronunciation": "HU",
         "pos": "adp",
-        "frequency": 0.33,
+        "frequency": 0.34,
         "first_sound": "h",
         "last_sound": "u"
     },
@@ -3919,7 +3740,7 @@
         },
         "pronunciation": "hu-FWA",
         "pos": "conj",
-        "frequency": 0.08,
+        "frequency": 0.07,
         "first_sound": "h",
         "last_sound": "a"
     },
@@ -4154,7 +3975,7 @@
         },
         "pronunciation": "i-NAN",
         "pos": "v:tr",
-        "frequency": 0.13,
+        "frequency": 0.12,
         "first_sound": "i",
         "last_sound": "n"
     },
@@ -4262,7 +4083,7 @@
         },
         "pronunciation": "KA",
         "pos": "adp",
-        "frequency": 0.03,
+        "frequency": 0.04,
         "first_sound": "k",
         "last_sound": "a"
     },
@@ -4352,7 +4173,7 @@
         },
         "pronunciation": "KA-nom",
         "pos": "v:tr",
-        "frequency": 0.15,
+        "frequency": 0.16,
         "first_sound": "k",
         "last_sound": "m"
     },
@@ -4371,7 +4192,7 @@
         },
         "pronunciation": "KA-nu",
         "pos": "adj",
-        "frequency": 0.02,
+        "frequency": 0.01,
         "first_sound": "k",
         "last_sound": "u"
     },
@@ -4455,7 +4276,7 @@
         },
         "pronunciation": "KAWL",
         "pos": "adv",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "k",
         "last_sound": "l"
     },
@@ -4473,7 +4294,7 @@
         },
         "pronunciation": "KAWNG",
         "pos": "adj",
-        "frequency": 0.04,
+        "frequency": 0.03,
         "first_sound": "k",
         "last_sound": "ŋ"
     },
@@ -4510,7 +4331,7 @@
         },
         "pronunciation": "KE",
         "pos": "part",
-        "frequency": 2.18,
+        "frequency": 2.17,
         "first_sound": "k",
         "last_sound": "e"
     },
@@ -4546,7 +4367,7 @@
         },
         "pronunciation": "KE-he",
         "pos": "part",
-        "frequency": 0.16,
+        "frequency": 0.15,
         "first_sound": "k",
         "last_sound": "e"
     },
@@ -4613,7 +4434,7 @@
         },
         "pronunciation": "KENG",
         "pos": "adv",
-        "frequency": 0.05,
+        "frequency": 0.06,
         "first_sound": "k",
         "last_sound": "ŋ"
     },
@@ -4751,7 +4572,7 @@
         },
         "pronunciation": "KIN",
         "pos": "v:tr",
-        "frequency": 0.16,
+        "frequency": 0.15,
         "first_sound": "k",
         "last_sound": "n"
     },
@@ -4840,7 +4661,7 @@
         },
         "pronunciation": "KO",
         "pos": "part",
-        "frequency": 0.13,
+        "frequency": 0.12,
         "first_sound": "k",
         "last_sound": "o"
     },
@@ -4858,7 +4679,7 @@
         },
         "pronunciation": "KO-ak",
         "pos": "adj",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "k",
         "last_sound": "k"
     },
@@ -4961,7 +4782,7 @@
         },
         "pronunciation": "KU-lat",
         "pos": "v:tr",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "k",
         "last_sound": "t"
     },
@@ -5061,7 +4882,7 @@
         },
         "pronunciation": "KXA",
         "pos": "n",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "g",
         "last_sound": "a"
     },
@@ -5144,7 +4965,7 @@
         },
         "pronunciation": "KXAWM",
         "pos": "adv",
-        "frequency": 0.15,
+        "frequency": 0.16,
         "first_sound": "g",
         "last_sound": "m"
     },
@@ -5162,7 +4983,7 @@
         },
         "pronunciation": "KXAYL",
         "pos": "adj",
-        "frequency": 0.02,
+        "frequency": 0.01,
         "first_sound": "g",
         "last_sound": "l"
     },
@@ -5510,7 +5331,7 @@
         },
         "pronunciation": "LA-he",
         "pos": "adj",
-        "frequency": 0.38,
+        "frequency": 0.37,
         "first_sound": "l",
         "last_sound": "e"
     },
@@ -5543,7 +5364,7 @@
         },
         "pronunciation": "LAM",
         "pos": "v:in",
-        "frequency": 0.1,
+        "frequency": 0.11,
         "first_sound": "l",
         "last_sound": "m"
     },
@@ -5639,27 +5460,9 @@
         },
         "pronunciation": "LA-tem",
         "pos": "v:in",
-        "frequency": 0.11,
+        "frequency": 0.12,
         "first_sound": "l",
         "last_sound": "m"
-    },
-    "latsi": {
-        "translations": {
-            "de": "mit jemandem mithalten, mit jemandem Schritt halten",
-            "en": "keep up with someone",
-            "et": "sammu pidama (kellegagi)",
-            "fr": "continuer/maintenir avec quelqu'un",
-            "hu": "lépést tart",
-            "nl": "(iemand) bijhouden",
-            "pl": "pozostawać w kontakcie",
-            "ru": "идти вместе с кемлибо, не отставать",
-            "sv": "hänga med någon, inte halka efter"
-        },
-        "pronunciation": "la-TSI",
-        "pos": "v:?",
-        "frequency": 0,
-        "first_sound": "l",
-        "last_sound": "i"
     },
     "lawk": {
         "translations": {
@@ -5745,7 +5548,7 @@
         },
         "pronunciation": "le-NA'-vi",
         "pos": "adj",
-        "frequency": 0,
+        "frequency": 0.14,
         "first_sound": "l",
         "last_sound": "i"
     },
@@ -5913,7 +5716,7 @@
         },
         "pronunciation": "LI",
         "pos": "adv",
-        "frequency": 0.19,
+        "frequency": 0.2,
         "first_sound": "l",
         "last_sound": "i"
     },
@@ -6100,7 +5903,7 @@
         },
         "pronunciation": "LOR",
         "pos": "adj",
-        "frequency": 0.04,
+        "frequency": 0.03,
         "first_sound": "l",
         "last_sound": "r"
     },
@@ -6137,7 +5940,7 @@
         },
         "pronunciation": "LU",
         "pos": "v:cp",
-        "frequency": 3.88,
+        "frequency": 3.87,
         "first_sound": "l",
         "last_sound": "u"
     },
@@ -6207,7 +6010,7 @@
         },
         "pronunciation": "LÌ-'u",
         "pos": "n",
-        "frequency": 0.41,
+        "frequency": 0.4,
         "first_sound": "l",
         "last_sound": "u"
     },
@@ -6242,24 +6045,6 @@
         "first_sound": "l",
         "last_sound": "m"
     },
-    "lìng": {
-        "translations": {
-            "de": "in der Luft schweben",
-            "en": "float in the air, hover",
-            "et": "(õhus) hõljuma",
-            "fr": "planer | flotter dans les airs",
-            "hu": "levegőben úszik, lebeg",
-            "nl": "zweven in de lucht",
-            "pl": "unosić się w powietrzu, dryfować",
-            "ru": "парить (в воздухе)",
-            "sv": "hänga i luften, sväva"
-        },
-        "pronunciation": "LÌNG",
-        "pos": "v:in",
-        "frequency": 0.0,
-        "first_sound": "l",
-        "last_sound": "ŋ"
-    },
     "ma": {
         "translations": {
             "de": "Oh (Marker für den Vokativ)",
@@ -6274,7 +6059,7 @@
         },
         "pronunciation": "MA",
         "pos": "part",
-        "frequency": 0.83,
+        "frequency": 0.8,
         "first_sound": "m",
         "last_sound": "a"
     },
@@ -6292,7 +6077,7 @@
         },
         "pronunciation": "MAK-to",
         "pos": "v:tr",
-        "frequency": 0.15,
+        "frequency": 0.14,
         "first_sound": "m",
         "last_sound": "o"
     },
@@ -6526,7 +6311,7 @@
         },
         "pronunciation": "me-U-i-a",
         "pos": "n",
-        "frequency": 0.04,
+        "frequency": 0.05,
         "first_sound": "m",
         "last_sound": "a"
     },
@@ -6544,7 +6329,7 @@
         },
         "pronunciation": "me-YAM",
         "pos": "v:tr",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "m",
         "last_sound": "m"
     },
@@ -6580,7 +6365,7 @@
         },
         "pronunciation": "MI",
         "pos": "adv",
-        "frequency": 0.23,
+        "frequency": 0.24,
         "first_sound": "m",
         "last_sound": "i"
     },
@@ -6598,7 +6383,7 @@
         },
         "pronunciation": "MIK-yun",
         "pos": "n",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "m",
         "last_sound": "n"
     },
@@ -6616,7 +6401,7 @@
         },
         "pronunciation": "MIP",
         "pos": "adj",
-        "frequency": 0.23,
+        "frequency": 0.26,
         "first_sound": "m",
         "last_sound": "p"
     },
@@ -6634,7 +6419,7 @@
         },
         "pronunciation": "mll-TE",
         "pos": "v:in",
-        "frequency": 0.15,
+        "frequency": 0.14,
         "first_sound": "m",
         "last_sound": "e"
     },
@@ -6669,7 +6454,7 @@
         },
         "pronunciation": "MOK",
         "pos": "v:tr",
-        "frequency": 0.02,
+        "frequency": 0.01,
         "first_sound": "m",
         "last_sound": "k"
     },
@@ -6738,7 +6523,7 @@
         },
         "pronunciation": "mo-WAR",
         "pos": "n",
-        "frequency": 0.02,
+        "frequency": 0.01,
         "first_sound": "m",
         "last_sound": "r"
     },
@@ -6759,24 +6544,6 @@
         "first_sound": "m",
         "last_sound": "r"
     },
-    "mun'i": {
-        "translations": {
-            "de": "schneiden",
-            "en": "cut",
-            "et": "lõikama, raiuma",
-            "fr": "couper",
-            "hu": "vág",
-            "nl": "snijden",
-            "pl": "ciąć",
-            "ru": "резать, разрезать",
-            "sv": "skära"
-        },
-        "pronunciation": "mun-'I",
-        "pos": "v:?",
-        "frequency": 0.01,
-        "first_sound": "m",
-        "last_sound": "i"
-    },
     "mune": {
         "translations": {
             "de": "zwei",
@@ -6791,7 +6558,7 @@
         },
         "pronunciation": "MU-ne",
         "pos": "num",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "m",
         "last_sound": "e"
     },
@@ -6809,7 +6576,7 @@
         },
         "pronunciation": "MU-nge",
         "pos": "v:tr",
-        "frequency": 0.02,
+        "frequency": 0.01,
         "first_sound": "m",
         "last_sound": "e"
     },
@@ -6899,7 +6666,7 @@
         },
         "pronunciation": "NA'-rìng",
         "pos": "n",
-        "frequency": 0.05,
+        "frequency": 0.04,
         "first_sound": "n",
         "last_sound": "ŋ"
     },
@@ -6917,7 +6684,7 @@
         },
         "pronunciation": "NA",
         "pos": "adp",
-        "frequency": 0.19,
+        "frequency": 0.18,
         "first_sound": "n",
         "last_sound": "a"
     },
@@ -6986,7 +6753,7 @@
         },
         "pronunciation": "NA-ri",
         "pos": "n",
-        "frequency": 0.04,
+        "frequency": 0.05,
         "first_sound": "n",
         "last_sound": "i"
     },
@@ -7136,7 +6903,7 @@
         },
         "pronunciation": "NGA",
         "pos": "pn",
-        "frequency": 1.79,
+        "frequency": 1.76,
         "first_sound": "ŋ",
         "last_sound": "a"
     },
@@ -7294,7 +7061,7 @@
         },
         "pronunciation": "NGIM",
         "pos": "adj",
-        "frequency": 0.07,
+        "frequency": 0.06,
         "first_sound": "ŋ",
         "last_sound": "m"
     },
@@ -7325,7 +7092,7 @@
         },
         "pronunciation": "NGO-a",
         "pos": "n",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "ŋ",
         "last_sound": "a"
     },
@@ -7361,7 +7128,7 @@
         },
         "pronunciation": "NGOP",
         "pos": "v:tr",
-        "frequency": 0.23,
+        "frequency": 0.22,
         "first_sound": "ŋ",
         "last_sound": "p"
     },
@@ -7513,7 +7280,7 @@
         },
         "pronunciation": "NI-vi",
         "pos": "n",
-        "frequency": 0.05,
+        "frequency": 0.06,
         "first_sound": "n",
         "last_sound": "i"
     },
@@ -7535,24 +7302,6 @@
         "first_sound": "n",
         "last_sound": "g"
     },
-    "nong": {
-        "translations": {
-            "de": "folgen, nachfolgen",
-            "en": "follow, proceed after",
-            "et": "järgnema, järel käima",
-            "fr": "suivre | avoir lieu après",
-            "hu": "követ",
-            "nl": "volgen",
-            "pl": "podążać (za)",
-            "ru": "следовать за чемлибо, происходить вслед за чемлибо",
-            "sv": "följa, härma"
-        },
-        "pronunciation": "NONG",
-        "pos": "v:tr",
-        "frequency": 0.01,
-        "first_sound": "n",
-        "last_sound": "ŋ"
-    },
     "nopx": {
         "translations": {
             "de": "wegtun, wegstecken, bei Seite legen, verstauen, ablegen",
@@ -7564,7 +7313,7 @@
         },
         "pronunciation": "NOPX",
         "pos": "v:tr",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "n",
         "last_sound": "b"
     },
@@ -7602,24 +7351,6 @@
         "first_sound": "n",
         "last_sound": "i"
     },
-    "nume": {
-        "translations": {
-            "de": "lernen, Wissen oder Verstehen erlangen",
-            "en": "learn",
-            "et": "õppima, teada saama",
-            "fr": "apprendre",
-            "hu": "tanul",
-            "nl": "leren",
-            "pl": "uczyć",
-            "ru": "учиться, изучать",
-            "sv": "lära"
-        },
-        "pronunciation": "NU-me",
-        "pos": "v:in",
-        "frequency": 0.12,
-        "first_sound": "n",
-        "last_sound": "e"
-    },
     "nutx": {
         "translations": {
             "de": "dick",
@@ -7634,7 +7365,7 @@
         },
         "pronunciation": "NUTX",
         "pos": "adj",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "n",
         "last_sound": "d"
     },
@@ -7669,7 +7400,7 @@
         },
         "pronunciation": "NÄN",
         "pos": "v:in",
-        "frequency": 0.02,
+        "frequency": 0.01,
         "first_sound": "n",
         "last_sound": "n"
     },
@@ -7687,7 +7418,7 @@
         },
         "pronunciation": "nì-FRAN-se",
         "pos": "adv",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "n",
         "last_sound": "e"
     },
@@ -7705,7 +7436,7 @@
         },
         "pronunciation": "nì-NA'-vi",
         "pos": "adv",
-        "frequency": 0,
+        "frequency": 0.22,
         "first_sound": "n",
         "last_sound": "i"
     },
@@ -7723,7 +7454,7 @@
         },
         "pronunciation": "nì-TO-i-tsye",
         "pos": "adv",
-        "frequency": 0,
+        "frequency": 0.01,
         "first_sound": "n",
         "last_sound": "e"
     },
@@ -7757,7 +7488,7 @@
         },
         "pronunciation": "NÌN",
         "pos": "v:tr",
-        "frequency": 0.1,
+        "frequency": 0.11,
         "first_sound": "n",
         "last_sound": "n"
     },
@@ -7772,7 +7503,7 @@
         },
         "pronunciation": "o-A-re",
         "pos": "n",
-        "frequency": 0.05,
+        "frequency": 0.07,
         "first_sound": "o",
         "last_sound": "e"
     },
@@ -7791,7 +7522,7 @@
         },
         "pronunciation": "O-e",
         "pos": "pn",
-        "frequency": 5.17,
+        "frequency": 5.13,
         "first_sound": "o",
         "last_sound": "e"
     },
@@ -7809,7 +7540,7 @@
         },
         "pronunciation": "o-EYK",
         "pos": "n",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "o",
         "last_sound": "k"
     },
@@ -7861,7 +7592,7 @@
         },
         "pronunciation": "O-kup",
         "pos": "n",
-        "frequency": 0.04,
+        "frequency": 0.03,
         "first_sound": "o",
         "last_sound": "p"
     },
@@ -7879,7 +7610,7 @@
         },
         "pronunciation": "o-LO'",
         "pos": "n",
-        "frequency": 0.12,
+        "frequency": 0.11,
         "first_sound": "o",
         "last_sound": "'"
     },
@@ -7897,7 +7628,7 @@
         },
         "pronunciation": "o-MUM",
         "pos": "v:tr",
-        "frequency": 0.26,
+        "frequency": 0.25,
         "first_sound": "o",
         "last_sound": "m"
     },
@@ -7951,7 +7682,7 @@
         },
         "pronunciation": "PA'-li",
         "pos": "n",
-        "frequency": 0.1,
+        "frequency": 0.11,
         "first_sound": "p",
         "last_sound": "i"
     },
@@ -8051,7 +7782,7 @@
         },
         "pronunciation": "PAM",
         "pos": "n",
-        "frequency": 0.06,
+        "frequency": 0.08,
         "first_sound": "p",
         "last_sound": "m"
     },
@@ -8069,7 +7800,7 @@
         },
         "pronunciation": "pam-REL",
         "pos": "n:si",
-        "frequency": 0.3,
+        "frequency": 0.29,
         "first_sound": "p",
         "last_sound": "l"
     },
@@ -8087,7 +7818,7 @@
         },
         "pronunciation": "PAM-tse-o",
         "pos": "n:si",
-        "frequency": 0.1,
+        "frequency": 0.09,
         "first_sound": "p",
         "last_sound": "o"
     },
@@ -8120,7 +7851,7 @@
         },
         "pronunciation": "pa-RUL",
         "pos": "n",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "p",
         "last_sound": "l"
     },
@@ -8138,24 +7869,6 @@
         "frequency": 0,
         "first_sound": "p",
         "last_sound": "k"
-    },
-    "pate": {
-        "translations": {
-            "de": "ankommen, zu einem Ort gelangen",
-            "en": "get to a place, arrive",
-            "et": "kohale saabuma",
-            "fr": "arriver (dans le sens 'arriver quelque part')",
-            "hu": "megérkezik, eljut/elér valahová",
-            "nl": "aankomen (op een plaats), arriveren",
-            "pl": "przybyć, dotrzeć na miejsce",
-            "ru": "приходить, добираться до места",
-            "sv": "komma till en plats, anlända"
-        },
-        "pronunciation": "PA-te",
-        "pos": "v:?",
-        "frequency": 0.03,
-        "first_sound": "p",
-        "last_sound": "e"
     },
     "pawk": {
         "translations": {
@@ -8187,7 +7900,7 @@
         },
         "pronunciation": "PAWM",
         "pos": "v:tr",
-        "frequency": 0.26,
+        "frequency": 0.24,
         "first_sound": "p",
         "last_sound": "m"
     },
@@ -8205,7 +7918,7 @@
         },
         "pronunciation": "PE-'un",
         "pos": "v:tr",
-        "frequency": 0.12,
+        "frequency": 0.11,
         "first_sound": "p",
         "last_sound": "n"
     },
@@ -8223,7 +7936,7 @@
         },
         "pronunciation": "PENG",
         "pos": "v:tr",
-        "frequency": 0.29,
+        "frequency": 0.28,
         "first_sound": "p",
         "last_sound": "ŋ"
     },
@@ -8259,7 +7972,7 @@
         },
         "pronunciation": "pi-AK",
         "pos": "adj",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "p",
         "last_sound": "k"
     },
@@ -8313,7 +8026,7 @@
         },
         "pronunciation": "pll-TXE",
         "pos": "v:tr",
-        "frequency": 0.4,
+        "frequency": 0.38,
         "first_sound": "p",
         "last_sound": "e"
     },
@@ -8332,7 +8045,7 @@
         },
         "pronunciation": "PO",
         "pos": "pn",
-        "frequency": 1.67,
+        "frequency": 1.63,
         "first_sound": "p",
         "last_sound": "o"
     },
@@ -8531,7 +8244,7 @@
         },
         "pronunciation": "PXEK",
         "pos": "v:tr",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "b",
         "last_sound": "k"
     },
@@ -8567,7 +8280,7 @@
         },
         "pronunciation": "PXEN",
         "pos": "n",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "b",
         "last_sound": "n"
     },
@@ -8621,7 +8334,7 @@
         },
         "pronunciation": "PXOR",
         "pos": "v:in",
-        "frequency": 0.07,
+        "frequency": 0.06,
         "first_sound": "b",
         "last_sound": "r"
     },
@@ -8693,7 +8406,7 @@
         },
         "pronunciation": "päng-KXO",
         "pos": "v:in",
-        "frequency": 0.23,
+        "frequency": 0.22,
         "first_sound": "p",
         "last_sound": "o"
     },
@@ -8729,7 +8442,7 @@
         },
         "pronunciation": "pì-WOPX",
         "pos": "n",
-        "frequency": 0.02,
+        "frequency": 0.01,
         "first_sound": "p",
         "last_sound": "b"
     },
@@ -8747,7 +8460,7 @@
         },
         "pronunciation": "RAL",
         "pos": "n",
-        "frequency": 0.06,
+        "frequency": 0.05,
         "first_sound": "r",
         "last_sound": "l"
     },
@@ -8873,7 +8586,7 @@
         },
         "pronunciation": "RAWN",
         "pos": "v:tr",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "r",
         "last_sound": "n"
     },
@@ -8943,7 +8656,7 @@
         },
         "pronunciation": "REL",
         "pos": "n",
-        "frequency": 0.29,
+        "frequency": 0.31,
         "first_sound": "r",
         "last_sound": "l"
     },
@@ -9172,24 +8885,6 @@
         "first_sound": "r",
         "last_sound": "o"
     },
-    "rol": {
-        "translations": {
-            "de": "singen",
-            "en": "sing",
-            "et": "laulma (r«eyk»ol muusikat tegema, laulma panema (lüüriline))",
-            "fr": "chanter",
-            "hu": "énekel",
-            "nl": "zingen",
-            "pl": "śpiewać",
-            "ru": "петь",
-            "sv": "sjunga"
-        },
-        "pronunciation": "ROL",
-        "pos": "v:?",
-        "frequency": 0.03,
-        "first_sound": "r",
-        "last_sound": "l"
-    },
     "rong": {
         "translations": {
             "de": "Tunnel",
@@ -9326,7 +9021,7 @@
         },
         "pronunciation": "ru-TXE",
         "pos": "intj",
-        "frequency": 0.07,
+        "frequency": 0.08,
         "first_sound": "r",
         "last_sound": "e"
     },
@@ -9342,7 +9037,7 @@
         },
         "pronunciation": "räp-TUM",
         "pos": "adj",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "r",
         "last_sound": "m"
     },
@@ -9479,7 +9174,7 @@
         },
         "pronunciation": "SAN",
         "pos": "part",
-        "frequency": 0.21,
+        "frequency": 0.2,
         "first_sound": "s",
         "last_sound": "n"
     },
@@ -9515,9 +9210,24 @@
         },
         "pronunciation": "SAR",
         "pos": "v:tr",
-        "frequency": 0.21,
+        "frequency": 0.2,
         "first_sound": "s",
         "last_sound": "r"
+    },
+    "satu'li": {
+        "translations": {
+            "de": "(kulturelles) Erbe",
+            "en": "heritage",
+            "et": "pärand",
+            "fr": "héritage | patrimoine",
+            "hu": "örökség",
+            "nl": "erfgoed"
+        },
+        "pronunciation": "sa-TU'-li",
+        "pos": "n",
+        "frequency": 0,
+        "first_sound": "s",
+        "last_sound": "i"
     },
     "sau": {
         "translations": {
@@ -9603,7 +9313,7 @@
         },
         "pronunciation": "SET",
         "pos": "adv",
-        "frequency": 0.43,
+        "frequency": 0.41,
         "first_sound": "s",
         "last_sound": "t"
     },
@@ -9728,7 +9438,7 @@
         },
         "pronunciation": "ska-'A",
         "pos": "v:tr",
-        "frequency": 0.12,
+        "frequency": 0.14,
         "first_sound": "s",
         "last_sound": "a"
     },
@@ -9782,7 +9492,7 @@
         },
         "pronunciation": "SKO",
         "pos": "adp:len",
-        "frequency": 0.05,
+        "frequency": 0.06,
         "first_sound": "s",
         "last_sound": "o"
     },
@@ -9833,7 +9543,7 @@
         },
         "pronunciation": "SKXIR",
         "pos": "n",
-        "frequency": 0.04,
+        "frequency": 0.03,
         "first_sound": "s",
         "last_sound": "r"
     },
@@ -9869,7 +9579,7 @@
         },
         "pronunciation": "SLA'-tsu",
         "pos": "v:tr",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "s",
         "last_sound": "u"
     },
@@ -9903,7 +9613,7 @@
         },
         "pronunciation": "slan-ti-RE",
         "pos": "n:si",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "s",
         "last_sound": "e"
     },
@@ -10235,7 +9945,7 @@
         },
         "pronunciation": "SNO",
         "pos": "pn",
-        "frequency": 0.22,
+        "frequency": 0.23,
         "first_sound": "s",
         "last_sound": "o"
     },
@@ -10305,7 +10015,7 @@
         },
         "pronunciation": "so-A-i-a",
         "pos": "n",
-        "frequency": 0.07,
+        "frequency": 0.08,
         "first_sound": "s",
         "last_sound": "a"
     },
@@ -10343,7 +10053,7 @@
         },
         "pronunciation": "SOM",
         "pos": "adj",
-        "frequency": 0.09,
+        "frequency": 0.08,
         "first_sound": "s",
         "last_sound": "m"
     },
@@ -10415,7 +10125,7 @@
         },
         "pronunciation": "SPENG",
         "pos": "v:tr",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "s",
         "last_sound": "ŋ"
     },
@@ -10505,7 +10215,7 @@
         },
         "pronunciation": "SPXIN",
         "pos": "adj",
-        "frequency": 0.07,
+        "frequency": 0.08,
         "first_sound": "s",
         "last_sound": "n"
     },
@@ -10539,7 +10249,7 @@
         },
         "pronunciation": "SRA-ne",
         "pos": "part",
-        "frequency": 0.33,
+        "frequency": 0.32,
         "first_sound": "s",
         "last_sound": "e"
     },
@@ -10696,7 +10406,7 @@
         },
         "pronunciation": "STAR-sìm",
         "pos": "v:tr",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "s",
         "last_sound": "m"
     },
@@ -10714,7 +10424,7 @@
         },
         "pronunciation": "STAWM",
         "pos": "v:tr",
-        "frequency": 0.04,
+        "frequency": 0.05,
         "first_sound": "s",
         "last_sound": "m"
     },
@@ -10750,7 +10460,7 @@
         },
         "pronunciation": "STI",
         "pos": "v:in",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "s",
         "last_sound": "i"
     },
@@ -10819,7 +10529,7 @@
         },
         "pronunciation": "STXE-li",
         "pos": "n",
-        "frequency": 0.05,
+        "frequency": 0.07,
         "first_sound": "s",
         "last_sound": "i"
     },
@@ -10855,7 +10565,7 @@
         },
         "pronunciation": "STXONG",
         "pos": "adj",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "s",
         "last_sound": "ŋ"
     },
@@ -10939,7 +10649,7 @@
         },
         "pronunciation": "SUR",
         "pos": "n",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "s",
         "last_sound": "r"
     },
@@ -11177,7 +10887,7 @@
         },
         "pronunciation": "SYE-we",
         "pos": "n",
-        "frequency": 0.02,
+        "frequency": 0.01,
         "first_sound": "s",
         "last_sound": "e"
     },
@@ -11318,7 +11028,7 @@
         },
         "pronunciation": "SÄ-'o",
         "pos": "n",
-        "frequency": 0.09,
+        "frequency": 0.08,
         "first_sound": "s",
         "last_sound": "o"
     },
@@ -11370,24 +11080,6 @@
         "first_sound": "s",
         "last_sound": "k"
     },
-    "sìltsan": {
-        "translations": {
-            "de": "gut, gut gemacht",
-            "en": "good (of its kind), well done",
-            "et": "hea",
-            "fr": "bon | bien",
-            "hu": "jó (megfelelő)",
-            "nl": "goed (in z'n soort), goed gedaan",
-            "pl": "dobry, dobrze zrobiony",
-            "ru": "хороший",
-            "sv": "bra, duktig, bra gjort"
-        },
-        "pronunciation": "sìl-TSAN",
-        "pos": "adj",
-        "frequency": 0.2,
-        "first_sound": "s",
-        "last_sound": "n"
-    },
     "sìn": {
         "translations": {
             "de": "auf, nach, an, hinauf",
@@ -11402,7 +11094,7 @@
         },
         "pronunciation": "SÌN",
         "pos": "adp",
-        "frequency": 0.03,
+        "frequency": 0.04,
         "first_sound": "s",
         "last_sound": "n"
     },
@@ -11438,7 +11130,7 @@
         },
         "pronunciation": "TA",
         "pos": "adp",
-        "frequency": 0.32,
+        "frequency": 0.31,
         "first_sound": "t",
         "last_sound": "a"
     },
@@ -11456,7 +11148,7 @@
         },
         "pronunciation": "TA-kuk",
         "pos": "v:tr",
-        "frequency": 0.03,
+        "frequency": 0.04,
         "first_sound": "t",
         "last_sound": "k"
     },
@@ -11491,7 +11183,7 @@
         },
         "pronunciation": "TA-re",
         "pos": "v:tr",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "t",
         "last_sound": "e"
     },
@@ -11510,7 +11202,7 @@
         },
         "pronunciation": "TA-ron",
         "pos": "v:tr",
-        "frequency": 0.02,
+        "frequency": 0.01,
         "first_sound": "t",
         "last_sound": "n"
     },
@@ -11562,7 +11254,7 @@
         },
         "pronunciation": "TEK-re",
         "pos": "n",
-        "frequency": 0.14,
+        "frequency": 0.13,
         "first_sound": "t",
         "last_sound": "e"
     },
@@ -11580,7 +11272,7 @@
         },
         "pronunciation": "TEL",
         "pos": "v:tr",
-        "frequency": 0.04,
+        "frequency": 0.05,
         "first_sound": "t",
         "last_sound": "l"
     },
@@ -11672,7 +11364,7 @@
         },
         "pronunciation": "TER-kup",
         "pos": "v:in",
-        "frequency": 0.2,
+        "frequency": 0.21,
         "first_sound": "t",
         "last_sound": "p"
     },
@@ -11795,7 +11487,7 @@
         },
         "pronunciation": "TI-am",
         "pos": "v:tr",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "t",
         "last_sound": "m"
     },
@@ -11816,24 +11508,6 @@
         "frequency": 0,
         "first_sound": "t",
         "last_sound": "a"
-    },
-    "tireapängkxo": {
-        "translations": {
-            "de": "kommunizieren (nicht verbal)",
-            "en": "commune",
-            "et": "lähedaselt suhtlema",
-            "fr": "communier (être en communion au sens spirituel)",
-            "hu": "tanácskozik",
-            "nl": "in nauw contact staan (b.v. met natuur)",
-            "pl": "obcować, przebywać",
-            "ru": "общаться интимно",
-            "sv": "samtala i förtroende"
-        },
-        "pronunciation": "ti-RE-a-päng-kxo",
-        "pos": "v:?",
-        "frequency": 0.0,
-        "first_sound": "t",
-        "last_sound": "o"
     },
     "tok": {
         "translations": {
@@ -12023,7 +11697,7 @@
         },
         "pronunciation": "TSAW-ke",
         "pos": "n",
-        "frequency": 0.07,
+        "frequency": 0.06,
         "first_sound": "c",
         "last_sound": "e"
     },
@@ -12075,7 +11749,7 @@
         },
         "pronunciation": "tse-'A",
         "pos": "v:tr",
-        "frequency": 0.18,
+        "frequency": 0.17,
         "first_sound": "c",
         "last_sound": "a"
     },
@@ -12094,7 +11768,7 @@
         },
         "pronunciation": "TSE",
         "pos": "intj",
-        "frequency": 0.11,
+        "frequency": 0.12,
         "first_sound": "c",
         "last_sound": "e"
     },
@@ -12129,7 +11803,7 @@
         },
         "pronunciation": "TSE-nge",
         "pos": "n",
-        "frequency": 0.14,
+        "frequency": 0.13,
         "first_sound": "c",
         "last_sound": "e"
     },
@@ -12214,7 +11888,7 @@
         },
         "pronunciation": "TSIM",
         "pos": "n",
-        "frequency": 0.04,
+        "frequency": 0.03,
         "first_sound": "c",
         "last_sound": "m"
     },
@@ -12298,7 +11972,7 @@
         },
         "pronunciation": "TSKXE",
         "pos": "n",
-        "frequency": 0.04,
+        "frequency": 0.06,
         "first_sound": "c",
         "last_sound": "e"
     },
@@ -12488,7 +12162,7 @@
         },
         "pronunciation": "TSON",
         "pos": "n",
-        "frequency": 0.05,
+        "frequency": 0.07,
         "first_sound": "c",
         "last_sound": "n"
     },
@@ -12641,7 +12315,7 @@
         },
         "pronunciation": "TSTUN-wi",
         "pos": "adj",
-        "frequency": 0.02,
+        "frequency": 0.01,
         "first_sound": "c",
         "last_sound": "i"
     },
@@ -12746,7 +12420,7 @@
         },
         "pronunciation": "TSUN",
         "pos": "v:m",
-        "frequency": 1.09,
+        "frequency": 1.06,
         "first_sound": "c",
         "last_sound": "n"
     },
@@ -12916,7 +12590,7 @@
         },
         "pronunciation": "TSYEYM",
         "pos": "n",
-        "frequency": 0.02,
+        "frequency": 0.01,
         "first_sound": "c",
         "last_sound": "m"
     },
@@ -12937,22 +12611,6 @@
         "frequency": 0.0,
         "first_sound": "c",
         "last_sound": "o"
-    },
-    "tsyoklìt": {
-        "translations": {
-            "de": "Schokolade",
-            "en": "chocolate",
-            "et": "šokolaad",
-            "fr": "chocolat",
-            "hu": "csokoládé",
-            "nl": "chocolade",
-            "ru": "шоколад"
-        },
-        "pronunciation": "TSYOK-lìt",
-        "pos": "n",
-        "frequency": 0.01,
-        "first_sound": "c",
-        "last_sound": "t"
     },
     "tsyokx": {
         "translations": {
@@ -12984,7 +12642,7 @@
         },
         "pronunciation": "TSYUL",
         "pos": "v:tr",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "c",
         "last_sound": "l"
     },
@@ -13002,7 +12660,7 @@
         },
         "pronunciation": "TSYÄR",
         "pos": "v:tr",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "c",
         "last_sound": "r"
     },
@@ -13020,24 +12678,6 @@
         "frequency": 0.0,
         "first_sound": "c",
         "last_sound": "l"
-    },
-    "tsä'": {
-        "translations": {
-            "de": "spritzen",
-            "en": "squirt",
-            "et": "pritsima",
-            "fr": "jaillir",
-            "hu": "(ki)lövellni",
-            "nl": "spuiten",
-            "pl": "tryskać",
-            "ru": "брызгать",
-            "sv": "spruta"
-        },
-        "pronunciation": "TSÄ'",
-        "pos": "v:?",
-        "frequency": 0,
-        "first_sound": "c",
-        "last_sound": "'"
     },
     "tsìk": {
         "translations": {
@@ -13143,7 +12783,7 @@
         },
         "pronunciation": "TUNG",
         "pos": "v:tr",
-        "frequency": 0.06,
+        "frequency": 0.07,
         "first_sound": "t",
         "last_sound": "ŋ"
     },
@@ -13194,27 +12834,9 @@
         },
         "pronunciation": "tu-VOM",
         "pos": "adj",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "t",
         "last_sound": "m"
-    },
-    "tuvon": {
-        "translations": {
-            "de": "lehnen, anlehnen",
-            "en": "lean",
-            "et": "nõjatuma, toetuma",
-            "fr": "appuyer",
-            "hu": "hajlik",
-            "nl": "leunen",
-            "pl": "pochylić się",
-            "ru": "облокачиваться, наваливаться, опираться",
-            "sv": "luta"
-        },
-        "pronunciation": "TU-von",
-        "pos": "v:?",
-        "frequency": 0,
-        "first_sound": "t",
-        "last_sound": "n"
     },
     "txa'": {
         "translations": {
@@ -13266,7 +12888,7 @@
         },
         "pronunciation": "TXAN",
         "pos": "adj",
-        "frequency": 0.14,
+        "frequency": 0.16,
         "first_sound": "d",
         "last_sound": "n"
     },
@@ -13330,7 +12952,7 @@
         },
         "pronunciation": "txe'-LAN",
         "pos": "n",
-        "frequency": 0.04,
+        "frequency": 0.03,
         "first_sound": "d",
         "last_sound": "n"
     },
@@ -13348,7 +12970,7 @@
         },
         "pronunciation": "TXE-le",
         "pos": "n",
-        "frequency": 0.09,
+        "frequency": 0.08,
         "first_sound": "d",
         "last_sound": "e"
     },
@@ -13366,7 +12988,7 @@
         },
         "pronunciation": "TXEN",
         "pos": "adj",
-        "frequency": 0.05,
+        "frequency": 0.04,
         "first_sound": "d",
         "last_sound": "n"
     },
@@ -13438,7 +13060,7 @@
         },
         "pronunciation": "TXI",
         "pos": "n",
-        "frequency": 0.02,
+        "frequency": 0.01,
         "first_sound": "d",
         "last_sound": "i"
     },
@@ -13478,24 +13100,6 @@
         "first_sound": "d",
         "last_sound": "u"
     },
-    "txo": {
-        "translations": {
-            "de": "wenn, falls",
-            "en": "if",
-            "et": "kui, juhul kui, kas",
-            "fr": "si (dans le sens de la supposition)",
-            "hu": "ha",
-            "nl": "als, wanneer",
-            "pl": "jeżeli, jeśli",
-            "ru": "если",
-            "sv": "om"
-        },
-        "pronunciation": "TXO",
-        "pos": "conj",
-        "frequency": 0.31,
-        "first_sound": "d",
-        "last_sound": "o"
-    },
     "txoa": {
         "translations": {
             "de": "Vergebung, Verzeihung",
@@ -13510,7 +13114,7 @@
         },
         "pronunciation": "TXO-a",
         "pos": "n",
-        "frequency": 0.02,
+        "frequency": 0.01,
         "first_sound": "d",
         "last_sound": "a"
     },
@@ -13528,7 +13132,7 @@
         },
         "pronunciation": "TXON",
         "pos": "n",
-        "frequency": 0.07,
+        "frequency": 0.08,
         "first_sound": "d",
         "last_sound": "n"
     },
@@ -13668,7 +13272,7 @@
         },
         "pronunciation": "TXÌM",
         "pos": "n",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "d",
         "last_sound": "m"
     },
@@ -13686,7 +13290,7 @@
         },
         "pronunciation": "TXÌNG",
         "pos": "v:tr",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "d",
         "last_sound": "ŋ"
     },
@@ -13777,22 +13381,6 @@
         "pronunciation": "tì-KANG-kem",
         "pos": "n",
         "frequency": 0.27,
-        "first_sound": "t",
-        "last_sound": "m"
-    },
-    "tìkxìm": {
-        "translations": {
-            "de": "in der Rangfolge über jemandem sein, jemandes Vorgesetzter sein",
-            "en": "be above someone in a heirarchy, be someone's superior",
-            "et": "hierarhias kõrgemal asuma, ülemus olema",
-            "fr": "être au-dessus de qqn dans une hiérarchie | être le supérieur de qqn",
-            "hu": "felette áll (rangsorban), a főnökének lenni",
-            "nl": "boven iemand staan (in hierarchie)",
-            "ru": "командовать, начальствовать"
-        },
-        "pronunciation": "tì-KXÌM",
-        "pos": "n:si",
-        "frequency": 0.01,
         "first_sound": "t",
         "last_sound": "m"
     },
@@ -13912,7 +13500,7 @@
         },
         "pronunciation": "UK",
         "pos": "n",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "u",
         "last_sound": "k"
     },
@@ -13949,7 +13537,7 @@
         },
         "pronunciation": "UL-te",
         "pos": "conj",
-        "frequency": 1.44,
+        "frequency": 1.46,
         "first_sound": "u",
         "last_sound": "e"
     },
@@ -13967,7 +13555,7 @@
         },
         "pronunciation": "ul-TXA",
         "pos": "n",
-        "frequency": 0.06,
+        "frequency": 0.07,
         "first_sound": "u",
         "last_sound": "a"
     },
@@ -14037,7 +13625,7 @@
         },
         "pronunciation": "U-o",
         "pos": "adp",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "u",
         "last_sound": "o"
     },
@@ -14055,7 +13643,7 @@
         },
         "pronunciation": "U-ran",
         "pos": "n",
-        "frequency": 0.03,
+        "frequency": 0.04,
         "first_sound": "u",
         "last_sound": "n"
     },
@@ -14107,7 +13695,7 @@
         },
         "pronunciation": "u-VAN",
         "pos": "n",
-        "frequency": 0.26,
+        "frequency": 0.25,
         "first_sound": "u",
         "last_sound": "n"
     },
@@ -14125,7 +13713,7 @@
         },
         "pronunciation": "VAR",
         "pos": "v:m",
-        "frequency": 0.11,
+        "frequency": 0.1,
         "first_sound": "v",
         "last_sound": "r"
     },
@@ -14229,26 +13817,9 @@
         },
         "pronunciation": "VEWNG",
         "pos": "v:tr",
-        "frequency": 0.03,
+        "frequency": 0.04,
         "first_sound": "v",
         "last_sound": "ŋ"
-    },
-    "vezo": {
-        "translations": {
-            "de": "ordentlich sein, organisiert sein, aufgeräumt sein",
-            "en": "be in order, be organized",
-            "et": "korras olema, organiseeritud olema",
-            "fr": "être organisé | être ordonné",
-            "hu": "rendben van, rendezett",
-            "nl": "op orde zijn, georganiseerd zijn",
-            "pl": "być uporządkowanym, być dobrze zorganizowanym",
-            "ru": "быть в порядке"
-        },
-        "pronunciation": "ve-ZO",
-        "pos": "v:in",
-        "frequency": 0,
-        "first_sound": "v",
-        "last_sound": "o"
     },
     "vin": {
         "translations": {
@@ -14457,7 +14028,7 @@
         },
         "pronunciation": "WAN",
         "pos": "v:tr",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "w",
         "last_sound": "n"
     },
@@ -14544,7 +14115,7 @@
         },
         "pronunciation": "WIN",
         "pos": "adj",
-        "frequency": 0.02,
+        "frequency": 0.01,
         "first_sound": "w",
         "last_sound": "n"
     },
@@ -14579,7 +14150,7 @@
         },
         "pronunciation": "WI-ya",
         "pos": "intj",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "w",
         "last_sound": "a"
     },
@@ -14633,7 +14204,7 @@
         },
         "pronunciation": "WOTX",
         "pos": "n",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "w",
         "last_sound": "d"
     },
@@ -14759,7 +14330,7 @@
         },
         "pronunciation": "YA",
         "pos": "n",
-        "frequency": 0.19,
+        "frequency": 0.21,
         "first_sound": "y",
         "last_sound": "a"
     },
@@ -14865,7 +14436,7 @@
         },
         "pronunciation": "YE'-rìn",
         "pos": "adv",
-        "frequency": 0.05,
+        "frequency": 0.06,
         "first_sound": "y",
         "last_sound": "n"
     },
@@ -14883,7 +14454,7 @@
         },
         "pronunciation": "YE",
         "pos": "adj",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "y",
         "last_sound": "e"
     },
@@ -15002,7 +14573,7 @@
         },
         "pronunciation": "YO-a",
         "pos": "adp",
-        "frequency": 0.04,
+        "frequency": 0.05,
         "first_sound": "y",
         "last_sound": "a"
     },
@@ -15015,7 +14586,7 @@
         },
         "pronunciation": "YOKX",
         "pos": "n",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "y",
         "last_sound": "g"
     },
@@ -15051,7 +14622,7 @@
         },
         "pronunciation": "YOM",
         "pos": "v:tr",
-        "frequency": 0.26,
+        "frequency": 0.25,
         "first_sound": "y",
         "last_sound": "m"
     },
@@ -15119,7 +14690,7 @@
         },
         "pronunciation": "YÄKX",
         "pos": "v:tr",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "y",
         "last_sound": "g"
     },
@@ -15173,7 +14744,7 @@
         },
         "pronunciation": "ZA-'u",
         "pos": "v:in",
-        "frequency": 0.21,
+        "frequency": 0.23,
         "first_sound": "z",
         "last_sound": "u"
     },
@@ -15191,7 +14762,7 @@
         },
         "pronunciation": "ZAM",
         "pos": "num",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "z",
         "last_sound": "m"
     },
@@ -15244,22 +14815,6 @@
         "frequency": 0.01,
         "first_sound": "z",
         "last_sound": "r"
-    },
-    "zel": {
-        "translations": {
-            "de": "dann (für irreale Folgesätze)",
-            "en": "then (counterfactual use)",
-            "et": "siis (vastupidise olukorra puhul, võrdle tsakrr, Näide Zun zivup tompa, zel ke tsivun oe kivä.  Kui vihma sajaks, siis ma ei saaks minna)",
-            "fr": "donc ([dans une phrase au conditionel avec] zun)",
-            "hu": "akkor",
-            "nl": "dan (contrafeitelijk gebruik)",
-            "ru": "то (в зависимости от фактов)"
-        },
-        "pronunciation": "ZEL",
-        "pos": "adv",
-        "frequency": 0.01,
-        "first_sound": "z",
-        "last_sound": "l"
     },
     "zene": {
         "translations": {
@@ -15437,22 +14992,6 @@
         "first_sound": "z",
         "last_sound": "m"
     },
-    "zun": {
-        "translations": {
-            "de": "wenn (für irreale Bedingungssätze)",
-            "en": "if (counterfactual use)",
-            "et": "kui (vastupidise olukorra puhul, võrdle txo, Näide Zun zivup tompa, zel ke tsivun oe kivä.  Kui vihma sajaks, siis ma ei saaks minna)",
-            "fr": "si ([conditionnel])",
-            "hu": "ha",
-            "nl": "als (contrafeitelijk gebruik)",
-            "ru": "если (в зависимости от фактов)"
-        },
-        "pronunciation": "ZUN",
-        "pos": "conj",
-        "frequency": 0.01,
-        "first_sound": "z",
-        "last_sound": "n"
-    },
     "zung": {
         "translations": {
             "de": "hocken, kauern, sich ducken",
@@ -15482,7 +15021,7 @@
         },
         "pronunciation": "ZUP",
         "pos": "v:in",
-        "frequency": 0.13,
+        "frequency": 0.14,
         "first_sound": "z",
         "last_sound": "p"
     },
@@ -15500,7 +15039,7 @@
         },
         "pronunciation": "ZÄ-fi",
         "pos": "adj",
-        "frequency": 0.02,
+        "frequency": 0.01,
         "first_sound": "z",
         "last_sound": "i"
     },
@@ -15553,7 +15092,7 @@
         },
         "pronunciation": "ZÌ-sìt",
         "pos": "n",
-        "frequency": 0.31,
+        "frequency": 0.32,
         "first_sound": "z",
         "last_sound": "t"
     },
@@ -15571,7 +15110,7 @@
         },
         "pronunciation": "KAN",
         "pos": "v:tr",
-        "frequency": 0.04,
+        "frequency": 0.03,
         "first_sound": "k",
         "last_sound": "n"
     },
@@ -15590,7 +15129,7 @@
         },
         "pronunciation": "TU-te",
         "pos": "n",
-        "frequency": 1.4,
+        "frequency": 1.43,
         "first_sound": "t",
         "last_sound": "e"
     },
@@ -15649,24 +15188,6 @@
         "first_sound": "t",
         "last_sound": "ŋ"
     },
-    "kenong": {
-        "translations": {
-            "en": "model, represent, exemplify",
-            "sv": "representera, företräder, exemplifierar",
-            "ru": "иллюстрировать (на примере), приводить пример, представлять в качестве образца",
-            "pl": "demonstrować, reprezentować (ii)",
-            "nl": "representeren",
-            "hu": "példát mutat, elől jár",
-            "fr": "représenter",
-            "et": "kujutama, esindama, näiteks olema (e)",
-            "de": "darstellen, veranschaulichen, bedeuten, repräsentieren"
-        },
-        "pronunciation": "N/A",
-        "pos": "v:in",
-        "frequency": 0.02,
-        "first_sound": "k",
-        "last_sound": "ŋ"
-    },
     "loho": {
         "translations": {
             "en": "be surprising (experiencer in dative)",
@@ -15714,7 +15235,7 @@
         },
         "pronunciation": "TSYEYK",
         "pos": "n:pr",
-        "frequency": 0,
+        "frequency": 0.02,
         "first_sound": "c",
         "last_sound": "k"
     },
@@ -15757,7 +15278,7 @@
         },
         "pronunciation": "tì-KE-zin",
         "pos": "n:si",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "t",
         "last_sound": "n"
     },
@@ -15770,7 +15291,7 @@
         },
         "pronunciation": "ki-AN",
         "pos": "v:tr",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "k",
         "last_sound": "n"
     },
@@ -15815,7 +15336,7 @@
         },
         "pronunciation": "A-lu",
         "pos": "conj",
-        "frequency": 1.35,
+        "frequency": 1.38,
         "first_sound": "a",
         "last_sound": "u"
     },
@@ -15833,7 +15354,7 @@
         },
         "pronunciation": "'EYNG",
         "pos": "v:in",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "'",
         "last_sound": "ŋ"
     },
@@ -15903,7 +15424,7 @@
         },
         "pronunciation": "YEWN",
         "pos": "v:tr",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "y",
         "last_sound": "n"
     },
@@ -15916,7 +15437,7 @@
         },
         "pronunciation": "VO-ìk",
         "pos": "n:si",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "v",
         "last_sound": "k"
     },
@@ -15968,7 +15489,7 @@
         },
         "pronunciation": "LA-'ang",
         "pos": "n",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "l",
         "last_sound": "ŋ"
     },
@@ -16112,7 +15633,7 @@
         },
         "pronunciation": "TXIN-fpìl",
         "pos": "n",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "d",
         "last_sound": "l"
     },
@@ -16182,7 +15703,7 @@
         },
         "pronunciation": "TAM",
         "pos": "v:in",
-        "frequency": 0.29,
+        "frequency": 0.28,
         "first_sound": "t",
         "last_sound": "m"
     },
@@ -16208,7 +15729,7 @@
         },
         "pronunciation": "N/A",
         "pos": "aff:in",
-        "frequency": 0,
+        "frequency": 0.01,
         "first_sound": "a",
         "last_sound": "m"
     },
@@ -16468,24 +15989,6 @@
         "first_sound": "t",
         "last_sound": "m"
     },
-    "kämakto": {
-        "translations": {
-            "en": "ride out",
-            "sv": "rid ut",
-            "ru": "выезжать, выдвигаться",
-            "pl": "wyruszać",
-            "nl": "uitrijden",
-            "hu": "kilovagol",
-            "fr": "chevaucher",
-            "et": "välja lendama/ratsutama/sõitma",
-            "de": "ausreiten"
-        },
-        "pronunciation": "kä-MAK-to",
-        "pos": "v:?",
-        "frequency": 0,
-        "first_sound": "k",
-        "last_sound": "o"
-    },
     "loran": {
         "translations": {
             "en": "elegance, grace",
@@ -16552,22 +16055,6 @@
         "first_sound": "y",
         "last_sound": "a"
     },
-    "salewfya": {
-        "translations": {
-            "en": "direction, course",
-            "ru": "направление",
-            "nl": "richting, koers",
-            "hu": "irány, menetirány",
-            "fr": "direction",
-            "et": "suund, kurss",
-            "de": "Richtung, Kurs"
-        },
-        "pronunciation": "sa-LEW-fya",
-        "pos": "n",
-        "frequency": 0.0,
-        "first_sound": "s",
-        "last_sound": "a"
-    },
     "fyalì'u": {
         "translations": {
             "en": "adverb",
@@ -16594,7 +16081,7 @@
         },
         "pronunciation": "FYAN-yo",
         "pos": "n",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "f",
         "last_sound": "o"
     },
@@ -16629,7 +16116,7 @@
         },
         "pronunciation": "tsawl-ul-TXA",
         "pos": "n",
-        "frequency": 0.04,
+        "frequency": 0.05,
         "first_sound": "c",
         "last_sound": "a"
     },
@@ -16647,7 +16134,7 @@
         },
         "pronunciation": "tì-KANG-kem-vi",
         "pos": "n",
-        "frequency": 0.05,
+        "frequency": 0.04,
         "first_sound": "t",
         "last_sound": "i"
     },
@@ -16683,7 +16170,7 @@
         },
         "pronunciation": "NUM-tseng",
         "pos": "n",
-        "frequency": 0.05,
+        "frequency": 0.06,
         "first_sound": "n",
         "last_sound": "ŋ"
     },
@@ -16856,7 +16343,7 @@
         },
         "pronunciation": "lì'-fya-o-LO'",
         "pos": "n",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "l",
         "last_sound": "'"
     },
@@ -16921,7 +16408,7 @@
         },
         "pronunciation": "LÌ-'u-vi",
         "pos": "n",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "l",
         "last_sound": "i"
     },
@@ -16988,7 +16475,7 @@
         },
         "pronunciation": "TXUR-tel",
         "pos": "n",
-        "frequency": 0.02,
+        "frequency": 0.01,
         "first_sound": "d",
         "last_sound": "l"
     },
@@ -17182,7 +16669,7 @@
         },
         "pronunciation": "TXIN-tseng",
         "pos": "n",
-        "frequency": 0.04,
+        "frequency": 0.05,
         "first_sound": "d",
         "last_sound": "ŋ"
     },
@@ -17301,28 +16788,9 @@
         },
         "pronunciation": "ZONG-tseng",
         "pos": "n",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "z",
         "last_sound": "ŋ"
-    },
-    "'okrol": {
-        "translations": {
-            "de": "(alte) Geschichte",
-            "en": "history (ancient)",
-            "et": "ajalugu (vanem)",
-            "fr": "histoire (ancienne)",
-            "hu": "történelem (ősi)",
-            "nl": "geschiedenis (oud)",
-            "pl": "historia (starożytna)",
-            "ru": "история (древняя)",
-            "sv": "historia (uråldrig)",
-            "x-navi": "ayhem a lolen txana krrkam, a fkol zerok fa aysìrol"
-        },
-        "pronunciation": "'ok-ROL",
-        "pos": "n",
-        "frequency": 0.01,
-        "first_sound": "'",
-        "last_sound": "l"
     },
     "'okvur": {
         "translations": {
@@ -17339,7 +16807,7 @@
         },
         "pronunciation": "'ok-VUR",
         "pos": "n",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "'",
         "last_sound": "r"
     },
@@ -17513,20 +16981,6 @@
         "frequency": 0,
         "first_sound": "'",
         "last_sound": "p"
-    },
-    "'onglawn": {
-        "translations": {
-            "en": "exhiliration of first bonding",
-            "nl": "euforie bij de eerste bond",
-            "de": "Euphorie / Hochgefühl des Ersten Bandes",
-            "fr": "euphorie du premier lien",
-            "x-navi": "nitrama tì'efu a fko 'efu krra tsaheyl si nì'awve"
-        },
-        "pronunciation": "'ONG-lawn",
-        "pos": "n",
-        "frequency": 0.0,
-        "first_sound": "'",
-        "last_sound": "n"
     },
     "am'ake": {
         "translations": {
@@ -17714,25 +17168,9 @@
         },
         "pronunciation": "SRA-ke",
         "pos": "part",
-        "frequency": 0.17,
+        "frequency": 0.16,
         "first_sound": "s",
         "last_sound": "e"
-    },
-    "srefpìl": {
-        "translations": {
-            "en": "assume",
-            "de": "annehmen",
-            "et": "eeldama",
-            "fr": "présumer | supposer | ([vin. et transitif]) | ([s'il est intransitif, on utilise] tsnì)",
-            "hu": "feltételez",
-            "nl": "aannemen",
-            "ru": "подразумевать"
-        },
-        "pronunciation": "sre-FPÌL",
-        "pos": "v:tr",
-        "frequency": 0.0,
-        "first_sound": "s",
-        "last_sound": "l"
     },
     "srefwa": {
         "translations": {
@@ -17782,7 +17220,7 @@
         },
         "pronunciation": "sre-se-'A",
         "pos": "v:tr",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "s",
         "last_sound": "a"
     },
@@ -17835,7 +17273,7 @@
         },
         "pronunciation": "SRUNG-si-yu",
         "pos": "n",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "s",
         "last_sound": "u"
     },
@@ -17869,7 +17307,7 @@
         },
         "pronunciation": "WENG",
         "pos": "pn",
-        "frequency": 0.17,
+        "frequency": 0.16,
         "first_sound": "w",
         "last_sound": "ŋ"
     },
@@ -17924,24 +17362,6 @@
         "frequency": 0.0,
         "first_sound": "n",
         "last_sound": "u"
-    },
-    "oetsyìp": {
-        "translations": {
-            "de": "ich Kleines",
-            "en": "little me, little I",
-            "et": "pisike mina",
-            "fr": "petit moi",
-            "hu": "csekélységem",
-            "nl": "kleine ik",
-            "pl": "ja (zdrobniale)",
-            "ru": "маленький я ",
-            "sv": "lilla jag, lilla mig"
-        },
-        "pronunciation": "OE-tsyìp",
-        "pos": "pn",
-        "frequency": 0,
-        "first_sound": "o",
-        "last_sound": "p"
     },
     "oeyktìng": {
         "translations": {
@@ -18313,7 +17733,7 @@
         },
         "pronunciation": "pay-O-ang",
         "pos": "n",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "p",
         "last_sound": "ŋ"
     },
@@ -18541,7 +17961,7 @@
         },
         "pronunciation": "HA",
         "pos": "conj",
-        "frequency": 0.39,
+        "frequency": 0.37,
         "first_sound": "h",
         "last_sound": "a"
     },
@@ -18705,7 +18125,7 @@
         },
         "pronunciation": "KUN-sìp",
         "pos": "n",
-        "frequency": 0.02,
+        "frequency": 0.01,
         "first_sound": "k",
         "last_sound": "p"
     },
@@ -18755,7 +18175,7 @@
         },
         "pronunciation": "tì-REYN",
         "pos": "n",
-        "frequency": 0.04,
+        "frequency": 0.03,
         "first_sound": "t",
         "last_sound": "n"
     },
@@ -18861,23 +18281,6 @@
         "pronunciation": "'O-pin-vul-tsyìp",
         "pos": "n",
         "frequency": 0,
-        "first_sound": "'",
-        "last_sound": "p"
-    },
-    "'oratsyìp": {
-        "translations": {
-            "de": "Teich, Tümpel, Weiher",
-            "en": "pond, pool",
-            "et": "tiik",
-            "fr": "étang | mare",
-            "hu": "kis tó, medence",
-            "nl": "plas, poel",
-            "ru": "пруд, бассейн ",
-            "x-navi": "hì'ia 'ora"
-        },
-        "pronunciation": "'O-ra-tsyìp",
-        "pos": "n",
-        "frequency": 0.0,
         "first_sound": "'",
         "last_sound": "p"
     },
@@ -19040,24 +18443,6 @@
         "first_sound": "f",
         "last_sound": "a"
     },
-    "fäpa": {
-        "translations": {
-            "de": "Spitze, Gipfel",
-            "en": "top",
-            "et": "peal",
-            "fr": "sommet | haut | début",
-            "hu": "tető, csúcs",
-            "nl": "top, bovenkant",
-            "pl": "wierzchołek, góra",
-            "ru": "верх, макушка",
-            "sv": "topp"
-        },
-        "pronunciation": "FÄ-pa",
-        "pos": "n",
-        "frequency": 0.01,
-        "first_sound": "f",
-        "last_sound": "a"
-    },
     "fäza'u": {
         "translations": {
             "de": "hinaufkommen, heraufkommen",
@@ -19093,23 +18478,6 @@
         "frequency": 0,
         "first_sound": "n",
         "last_sound": "n"
-    },
-    "fe'lup": {
-        "translations": {
-            "de": "geschmacklos, kitschig, billig, schlechter Stil/Geschmack",
-            "en": "tacky, in poor taste",
-            "et": "kõhetu, vähese stiiliga",
-            "fr": "mauvais (goût)",
-            "hu": "giccses",
-            "nl": "goedkoop, smakeloos",
-            "ru": "безвкусный",
-            "x-navi": "('u) a lu vä' fìtxan kuma law si fura tute a tsat ngolop/sar ke omum teyngta peu tìlor lu"
-        },
-        "pronunciation": "FE-'lu",
-        "pos": "adj",
-        "frequency": 0,
-        "first_sound": "f",
-        "last_sound": "u"
     },
     "fe'ran": {
         "translations": {
@@ -19243,7 +18611,7 @@
         },
         "pronunciation": "fì-KEM",
         "pos": "pn",
-        "frequency": 0.05,
+        "frequency": 0.04,
         "first_sound": "f",
         "last_sound": "m"
     },
@@ -19279,7 +18647,7 @@
         },
         "pronunciation": "fì-TSENG",
         "pos": "adv",
-        "frequency": 0.25,
+        "frequency": 0.27,
         "first_sound": "f",
         "last_sound": "ŋ"
     },
@@ -19315,7 +18683,7 @@
         },
         "pronunciation": "fì-TSE-nge",
         "pos": "n",
-        "frequency": 0.1,
+        "frequency": 0.09,
         "first_sound": "f",
         "last_sound": "e"
     },
@@ -19447,7 +18815,7 @@
         },
         "pronunciation": "FMAWN-ta",
         "pos": "ctr",
-        "frequency": 0.13,
+        "frequency": 0.14,
         "first_sound": "f",
         "last_sound": "a"
     },
@@ -19555,7 +18923,7 @@
         },
         "pronunciation": "FPÌL-fya",
         "pos": "n",
-        "frequency": 0.02,
+        "frequency": 0.01,
         "first_sound": "f",
         "last_sound": "a"
     },
@@ -19572,56 +18940,6 @@
         "pronunciation": "fpom-RO-nga'",
         "pos": "adj",
         "frequency": 0,
-        "first_sound": "f",
-        "last_sound": "'"
-    },
-    "fpomron": {
-        "translations": {
-            "de": "(mentalle) Gesundheit oder Wohlsein",
-            "en": "health or wellbeing (mental)",
-            "et": "tervis, heaolu (vaimne; inimeste kohta)",
-            "fr": "santé mentale | bien être mental",
-            "hu": "egészség vagy jólét (szellemi)",
-            "nl": "gezondheid of welzijn (mentaal)",
-            "ru": "здоровье (душевное)"
-        },
-        "pronunciation": "fpom-RON",
-        "pos": "n",
-        "frequency": 0.01,
-        "first_sound": "f",
-        "last_sound": "n"
-    },
-    "fpomtokx": {
-        "translations": {
-            "de": "(physische) Gesundheit",
-            "en": "health (physical)",
-            "et": "tervis (füüsiline)",
-            "fr": "santé (au sens physique)",
-            "hu": "egészség (fizikai)",
-            "nl": "gezondheid (fysiek)",
-            "pl": "zdrowie",
-            "ru": "физическое здоровье",
-            "sv": "hälsa (fysisk)"
-        },
-        "pronunciation": "fpom-TOKX",
-        "pos": "n",
-        "frequency": 0.02,
-        "first_sound": "f",
-        "last_sound": "g"
-    },
-    "fpomtokxnga'": {
-        "translations": {
-            "de": "(physisch) heilsam",
-            "en": "healthful (physically)",
-            "et": "tervislik(füüsiliselt; mitte inimeste kohta)",
-            "fr": "bon pour la santé (physique)",
-            "hu": "egészséges (fizikailag)",
-            "nl": "gezond (fysiek)",
-            "x-navi": "('u) a lefpomtokx sleyku "
-        },
-        "pronunciation": "fpom-TOKX-nga'",
-        "pos": "adj",
-        "frequency": 0.01,
         "first_sound": "f",
         "last_sound": "'"
     },
@@ -19711,7 +19029,7 @@
         },
         "pronunciation": "FRA-to",
         "pos": "part",
-        "frequency": 0.08,
+        "frequency": 0.09,
         "first_sound": "f",
         "last_sound": "o"
     },
@@ -19785,7 +19103,7 @@
         },
         "pronunciation": "FRR-tu",
         "pos": "n",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "f",
         "last_sound": "u"
     },
@@ -19798,7 +19116,7 @@
         },
         "pronunciation": "ftang-LEN",
         "pos": "v:tr",
-        "frequency": 0.02,
+        "frequency": 0.01,
         "first_sound": "f",
         "last_sound": "n"
     },
@@ -19884,7 +19202,7 @@
         },
         "pronunciation": "ftxì-LOR",
         "pos": "adj",
-        "frequency": 0.1,
+        "frequency": 0.09,
         "first_sound": "f",
         "last_sound": "r"
     },
@@ -20542,7 +19860,7 @@
         },
         "pronunciation": "ING-yen-tsim",
         "pos": "n",
-        "frequency": 0.02,
+        "frequency": 0.01,
         "first_sound": "i",
         "last_sound": "m"
     },
@@ -20658,7 +19976,7 @@
         },
         "pronunciation": "kä-MU-nge",
         "pos": "v:tr",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "k",
         "last_sound": "e"
     },
@@ -20798,7 +20116,7 @@
         },
         "pronunciation": "KAW-tu",
         "pos": "pn",
-        "frequency": 0.08,
+        "frequency": 0.07,
         "first_sound": "k",
         "last_sound": "u"
     },
@@ -20903,39 +20221,6 @@
         "first_sound": "k",
         "last_sound": "'"
     },
-    "kefpomtokxnga'": {
-        "translations": {
-            "de": "(physisch) unheilsam",
-            "en": "unhealthful (physically)",
-            "et": "ebatervislik, (füüsiliselt; mitte inimeste kohta)",
-            "fr": "mauvais pour la santé (physique)",
-            "hu": "egészségtelen (fizikailag)",
-            "nl": "ongezond (fysiek)"
-        },
-        "pronunciation": "ke-fpom-TOKX-nga'",
-        "pos": "adj",
-        "frequency": 0,
-        "first_sound": "k",
-        "last_sound": "'"
-    },
-    "kekem": {
-        "translations": {
-            "de": "nichts (keine Handlung)",
-            "en": "no action or activity",
-            "et": "mitte midagi (tegude puhul)",
-            "fr": "aucune action | aucune activité | rien",
-            "hu": "tett/cselekvés nélkül",
-            "nl": "geen actie of activiteit",
-            "pl": "żadna (czyność), bez (żadej czyności)",
-            "ru": "безделие",
-            "sv": "ingen aktivitet eller handlig"
-        },
-        "pronunciation": "KE-kem",
-        "pos": "n",
-        "frequency": 0.03,
-        "first_sound": "k",
-        "last_sound": "m"
-    },
     "kefyak": {
         "translations": {
             "en": "isn't it?, right?",
@@ -20950,7 +20235,7 @@
         },
         "pronunciation": "ke-FYAK",
         "pos": "part",
-        "frequency": 0.1,
+        "frequency": 0.09,
         "first_sound": "k",
         "last_sound": "k"
     },
@@ -21029,7 +20314,7 @@
         },
         "pronunciation": "kel-KIN",
         "pos": "adj",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "k",
         "last_sound": "n"
     },
@@ -21202,42 +20487,6 @@
         "first_sound": "k",
         "last_sound": "ŋ"
     },
-    "'ongop": {
-        "translations": {
-            "de": "entwerfen, entwickeln, gestalten (von größeren, groberen Aspekten)",
-            "en": "design",
-            "et": "disain, kujundus",
-            "fr": "dessiner | concevoir",
-            "hu": "tervez",
-            "nl": "ontwerpen",
-            "ru": "проектировать",
-            "x-navi": "ngop 'uoä renut fu 'onti fu 'urti"
-        },
-        "pronunciation": "'O-ngop",
-        "pos": "v:tr",
-        "frequency": 0,
-        "first_sound": "'",
-        "last_sound": "p"
-    },
-    "'ongokx": {
-        "translations": {
-            "de": "geboren werden",
-            "en": "be born",
-            "et": "sündima",
-            "fr": "naître | (être né)",
-            "hu": "születik",
-            "nl": "geboren worden",
-            "pl": "rodzić się",
-            "ru": "родиться",
-            "sv": "födas",
-            "x-navi": "(prrnen) wrrza’u prrkuftu"
-        },
-        "pronunciation": "'O-ngokx",
-        "pos": "v:in",
-        "frequency": 0.02,
-        "first_sound": "'",
-        "last_sound": "g"
-    },
     "txeptsyìp": {
         "translations": {
             "en": "flame",
@@ -21399,7 +20648,7 @@
         },
         "pronunciation": "KE-tu-wong",
         "pos": "n",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "k",
         "last_sound": "ŋ"
     },
@@ -21498,7 +20747,7 @@
         },
         "pronunciation": "ke-zem-pll-TXE",
         "pos": "adv",
-        "frequency": 0.11,
+        "frequency": 0.12,
         "first_sound": "k",
         "last_sound": "e"
     },
@@ -21606,7 +20855,7 @@
         },
         "pronunciation": "kll-PXÌL-tu",
         "pos": "n",
-        "frequency": 0.02,
+        "frequency": 0.04,
         "first_sound": "k",
         "last_sound": "u"
     },
@@ -21778,7 +21027,7 @@
         },
         "pronunciation": "KO-ak-tu",
         "pos": "n",
-        "frequency": 0.02,
+        "frequency": 0.01,
         "first_sound": "k",
         "last_sound": "u"
     },
@@ -21856,7 +21105,7 @@
         },
         "pronunciation": "KRR-a",
         "pos": "conj",
-        "frequency": 0.22,
+        "frequency": 0.24,
         "first_sound": "k",
         "last_sound": "a"
     },
@@ -21872,7 +21121,7 @@
         },
         "pronunciation": "KRR-ka",
         "pos": "adp",
-        "frequency": 0.16,
+        "frequency": 0.18,
         "first_sound": "k",
         "last_sound": "a"
     },
@@ -22072,7 +21321,7 @@
         },
         "pronunciation": "KXU-ke",
         "pos": "adj",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "g",
         "last_sound": "e"
     },
@@ -22152,7 +21401,7 @@
         },
         "pronunciation": "u-nil-tì-RAN-tokx",
         "pos": "n",
-        "frequency": 0.01,
+        "frequency": 0.04,
         "first_sound": "u",
         "last_sound": "g"
     },
@@ -22186,7 +21435,7 @@
         },
         "pronunciation": "u-nil-tì-RAN-tokx-o-lo'",
         "pos": "n",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "u",
         "last_sound": "'"
     },
@@ -22383,7 +21632,7 @@
         },
         "pronunciation": "VE-fya",
         "pos": "n",
-        "frequency": 0.04,
+        "frequency": 0.03,
         "first_sound": "v",
         "last_sound": "a"
     },
@@ -22564,7 +21813,7 @@
         },
         "pronunciation": "ral-PENG",
         "pos": "v:tr",
-        "frequency": 0.06,
+        "frequency": 0.05,
         "first_sound": "r",
         "last_sound": "ŋ"
     },
@@ -22616,19 +21865,6 @@
         "frequency": 0.0,
         "first_sound": "l",
         "last_sound": "n"
-    },
-    "la'um": {
-        "translations": {
-            "en": "pretend",
-            "de": "vortäuschen, vorspielen, heucheln; so tun, als ob (verwendet mit tsnì)",
-            "fr": "prétendre (utilisé avec tsnì)",
-            "nl": "doen alsof, voorwenden (gebruikt met tsnì)"
-        },
-        "pronunciation": "LA-'um",
-        "pos": "v:in",
-        "frequency": 0.0,
-        "first_sound": "l",
-        "last_sound": "m"
     },
     "lanutral": {
         "translations": {
@@ -22792,7 +22028,7 @@
         },
         "pronunciation": "le-FNGAP",
         "pos": "adj",
-        "frequency": 0.29,
+        "frequency": 0.3,
         "first_sound": "l",
         "last_sound": "p"
     },
@@ -22826,7 +22062,7 @@
         },
         "pronunciation": "le-fpom-TOKX",
         "pos": "adj",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "l",
         "last_sound": "g"
     },
@@ -22920,7 +22156,7 @@
         },
         "pronunciation": "le-HRR-ap",
         "pos": "adj",
-        "frequency": 0.06,
+        "frequency": 0.07,
         "first_sound": "l",
         "last_sound": "p"
     },
@@ -22982,7 +22218,7 @@
         },
         "pronunciation": "le-KXU-tslu",
         "pos": "adj",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "l",
         "last_sound": "u"
     },
@@ -23018,7 +22254,7 @@
         },
         "pronunciation": "le-LÌ'-fya",
         "pos": "adj",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "l",
         "last_sound": "a"
     },
@@ -23340,7 +22576,7 @@
         },
         "pronunciation": "le-TSRAN-ten",
         "pos": "adj",
-        "frequency": 0.03,
+        "frequency": 0.04,
         "first_sound": "l",
         "last_sound": "n"
     },
@@ -23490,36 +22726,6 @@
         "first_sound": "l",
         "last_sound": "k"
     },
-    "leymfe'": {
-        "translations": {
-            "en": "complain",
-            "nl": "klagen",
-            "hu": "panaszkodik",
-            "fr": "se plaindre",
-            "et": "kurtma, kaebama",
-            "de": "beschweren, beklagen"
-        },
-        "pronunciation": "leym-FE'",
-        "pos": "v:in",
-        "frequency": 0.03,
-        "first_sound": "l",
-        "last_sound": "'"
-    },
-    "leymkem": {
-        "translations": {
-            "en": "protest",
-            "nl": "protesteren",
-            "hu": "tiltakozik",
-            "fr": "protester",
-            "et": "protesteerima, vastu seisma, meelt avaldama",
-            "de": "protestieren"
-        },
-        "pronunciation": "leyng-KEM",
-        "pos": "v:in",
-        "frequency": 0.07,
-        "first_sound": "l",
-        "last_sound": "m"
-    },
     "leytslam": {
         "translations": {
             "en": "appreciate",
@@ -23581,7 +22787,7 @@
         },
         "pronunciation": "LÌ'-fya",
         "pos": "n",
-        "frequency": 0.24,
+        "frequency": 0.23,
         "first_sound": "l",
         "last_sound": "a"
     },
@@ -23596,7 +22802,7 @@
         },
         "pronunciation": "LÌ-'u-kìng",
         "pos": "n",
-        "frequency": 0.18,
+        "frequency": 0.17,
         "first_sound": "l",
         "last_sound": "ŋ"
     },
@@ -23714,7 +22920,7 @@
         },
         "pronunciation": "LI-sre",
         "pos": "adp:len",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "l",
         "last_sound": "e"
     },
@@ -23810,7 +23016,7 @@
         },
         "pronunciation": "MAW-fwa",
         "pos": "conj",
-        "frequency": 0.05,
+        "frequency": 0.06,
         "first_sound": "m",
         "last_sound": "a"
     },
@@ -24049,7 +23255,7 @@
         },
         "pronunciation": "mì-SO",
         "pos": "adv",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "m",
         "last_sound": "o"
     },
@@ -24129,7 +23335,7 @@
         },
         "pronunciation": "mung-WRRTXO",
         "pos": "conj",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "m",
         "last_sound": "o"
     },
@@ -24182,7 +23388,7 @@
         },
         "pronunciation": "mun-TXA-tan",
         "pos": "n",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "m",
         "last_sound": "n"
     },
@@ -24236,7 +23442,7 @@
         },
         "pronunciation": "MU-ve",
         "pos": "adj",
-        "frequency": 0.04,
+        "frequency": 0.06,
         "first_sound": "m",
         "last_sound": "e"
     },
@@ -24272,7 +23478,7 @@
         },
         "pronunciation": "na-fì-'U",
         "pos": "adj",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "n",
         "last_sound": "u"
     },
@@ -24319,7 +23525,7 @@
         },
         "pronunciation": "NAN-tang-tsyìp",
         "pos": "n",
-        "frequency": 0.05,
+        "frequency": 0.04,
         "first_sound": "n",
         "last_sound": "p"
     },
@@ -24367,7 +23573,7 @@
         },
         "pronunciation": "nat-KE-nong",
         "pos": "conj",
-        "frequency": 0.08,
+        "frequency": 0.09,
         "first_sound": "n",
         "last_sound": "ŋ"
     },
@@ -24385,24 +23591,6 @@
         "frequency": 0.0,
         "first_sound": "n",
         "last_sound": "e"
-    },
-    "nawmtu": {
-        "translations": {
-            "de": "ehrwürdige Person, großartige Person",
-            "en": "great person",
-            "et": "hea/suur inimene",
-            "fr": "Grande Personne",
-            "hu": "hős, nagy ember",
-            "nl": "groot persoon",
-            "pl": "wielka osoba",
-            "ru": "важный человек",
-            "sv": "stor person (som i mäktig, väldig)"
-        },
-        "pronunciation": "NAWM-tu",
-        "pos": "n",
-        "frequency": 0.01,
-        "first_sound": "n",
-        "last_sound": "u"
     },
     "ne'ìm": {
         "translations": {
@@ -24436,7 +23624,7 @@
         },
         "pronunciation": "NEM-fa",
         "pos": "adp",
-        "frequency": 0.04,
+        "frequency": 0.03,
         "first_sound": "n",
         "last_sound": "a"
     },
@@ -24472,7 +23660,7 @@
         },
         "pronunciation": "new-O-mum",
         "pos": "v:in",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "n",
         "last_sound": "m"
     },
@@ -24493,24 +23681,6 @@
         "frequency": 0,
         "first_sound": "n",
         "last_sound": "n"
-    },
-    "ngatsyìp": {
-        "translations": {
-            "de": "du Kleines",
-            "en": "little you, you little",
-            "et": "väike sina, sa väike",
-            "fr": "petit toi, toi petit",
-            "hu": "kicsi te, csekélységed",
-            "nl": "kleine jij",
-            "pl": "ty (zdrobniale)",
-            "ru": "маленький ты",
-            "sv": "lilla du"
-        },
-        "pronunciation": "NGA-tsyìp",
-        "pos": "pn",
-        "frequency": 0,
-        "first_sound": "ŋ",
-        "last_sound": "p"
     },
     "ngaytxoa": {
         "translations": {
@@ -24563,7 +23733,7 @@
         },
         "pronunciation": "NGOP-yu",
         "pos": "n",
-        "frequency": 0.04,
+        "frequency": 0.05,
         "first_sound": "ŋ",
         "last_sound": "u"
     },
@@ -24777,7 +23947,7 @@
         },
         "pronunciation": "nì-'IT",
         "pos": "adv",
-        "frequency": 0.2,
+        "frequency": 0.21,
         "first_sound": "n",
         "last_sound": "t"
     },
@@ -25106,7 +24276,7 @@
         },
         "pronunciation": "nì-HAWNG",
         "pos": "adv",
-        "frequency": 0.14,
+        "frequency": 0.16,
         "first_sound": "n",
         "last_sound": "ŋ"
     },
@@ -25384,7 +24554,7 @@
         },
         "pronunciation": "nìk-tung-ZUP",
         "pos": "adv",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "n",
         "last_sound": "p"
     },
@@ -25500,7 +24670,7 @@
         },
         "pronunciation": "nì-LO-ho",
         "pos": "adv",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "n",
         "last_sound": "o"
     },
@@ -25658,7 +24828,7 @@
         },
         "pronunciation": "nì-NÄN-än",
         "pos": "adv",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "n",
         "last_sound": "n"
     },
@@ -25831,24 +25001,6 @@
         "frequency": 0.0,
         "first_sound": "n",
         "last_sound": "n"
-    },
-    "rangal": {
-        "translations": {
-            "en": "wish",
-            "de": "wünschen",
-            "et": "soovima",
-            "fr": "souhaiter (que [devient] tsnì [pour introduire la subordonnée])",
-            "hu": "kíván, óhajt",
-            "nl": "wensen",
-            "pl": "mieć nadzieję",
-            "ru": "желать",
-            "sv": "önska"
-        },
-        "pronunciation": "RA-ngal",
-        "pos": "v:in",
-        "frequency": 0.01,
-        "first_sound": "r",
-        "last_sound": "l"
     },
     "nìrangal": {
         "translations": {
@@ -26068,7 +25220,7 @@
         },
         "pronunciation": "nì-SUNG",
         "pos": "adv",
-        "frequency": 0.04,
+        "frequency": 0.05,
         "first_sound": "n",
         "last_sound": "ŋ"
     },
@@ -26173,7 +25325,7 @@
         },
         "pronunciation": "nì-TENG",
         "pos": "adv",
-        "frequency": 0.5,
+        "frequency": 0.52,
         "first_sound": "n",
         "last_sound": "ŋ"
     },
@@ -26327,7 +25479,7 @@
         },
         "pronunciation": "nì-TXAN",
         "pos": "adv",
-        "frequency": 0.5,
+        "frequency": 0.49,
         "first_sound": "n",
         "last_sound": "n"
     },
@@ -26468,7 +25620,7 @@
         },
         "pronunciation": "nì-WIN",
         "pos": "adv",
-        "frequency": 0.06,
+        "frequency": 0.07,
         "first_sound": "n",
         "last_sound": "n"
     },
@@ -26504,7 +25656,7 @@
         },
         "pronunciation": "nì-WOTX",
         "pos": "adv",
-        "frequency": 0.14,
+        "frequency": 0.16,
         "first_sound": "n",
         "last_sound": "d"
     },
@@ -26570,7 +25722,7 @@
         },
         "pronunciation": "nì-YO'",
         "pos": "adv",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "n",
         "last_sound": "'"
     },
@@ -26723,7 +25875,7 @@
         },
         "pronunciation": "pe-FYA",
         "pos": "inter",
-        "frequency": 0.1,
+        "frequency": 0.09,
         "first_sound": "p",
         "last_sound": "a"
     },
@@ -27049,7 +26201,7 @@
         },
         "pronunciation": "pe-SU",
         "pos": "inter",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "p",
         "last_sound": "u"
     },
@@ -27263,7 +26415,7 @@
         },
         "pronunciation": "PUK",
         "pos": "n",
-        "frequency": 0.09,
+        "frequency": 0.08,
         "first_sound": "p",
         "last_sound": "k"
     },
@@ -27282,7 +26434,7 @@
         },
         "pronunciation": "PUK-tsyìp",
         "pos": "n",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "p",
         "last_sound": "p"
     },
@@ -27300,7 +26452,7 @@
         },
         "pronunciation": "PU-ve",
         "pos": "adj",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "p",
         "last_sound": "e"
     },
@@ -27315,7 +26467,7 @@
         },
         "pronunciation": "PXAW-ngip",
         "pos": "n",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "b",
         "last_sound": "p"
     },
@@ -27460,23 +26612,6 @@
         "first_sound": "b",
         "last_sound": "e"
     },
-    "pxìmun'i": {
-        "translations": {
-            "de": "teilen, trennen, entzweien",
-            "en": "divide, cut into parts",
-            "et": "jagama, jaotama, tükkideks lõikama",
-            "fr": "diviser",
-            "hu": "feloszt, részekre vág",
-            "nl": "verdelen, in stukken snijden",
-            "pl": "dzielić",
-            "ru": "делить"
-        },
-        "pronunciation": "pxì-mun-'I",
-        "pos": "v:tr",
-        "frequency": 0.01,
-        "first_sound": "b",
-        "last_sound": "i"
-    },
     "pxir": {
         "translations": {
             "de": "Bier",
@@ -27527,7 +26662,7 @@
         },
         "pronunciation": "pxi-SRE",
         "pos": "adp:len",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "b",
         "last_sound": "e"
     },
@@ -27566,24 +26701,6 @@
         "frequency": 0,
         "first_sound": "b",
         "last_sound": "t"
-    },
-    "pxiye'rìn": {
-        "translations": {
-            "de": "gleich (nicht so bald wie pxiswaway)",
-            "en": "immediately (not as soon as pxiswaway)",
-            "et": "otsekohe (mitte nii ruttu nagu pxisaway)",
-            "fr": "diviser",
-            "hu": "mindjárt (nem olyan hamar, mint pxiswaway)",
-            "nl": "direct (niet zo snel als pxiswaway)",
-            "pl": "natychmiast (nie tak szybko jak pxiswaway)",
-            "ru": "немедленно (но не так скоро, как pxiswaway)",
-            "sv": "omedelbart (inte så snart som pxiswaway)"
-        },
-        "pronunciation": "pxi-YE'-rìn",
-        "pos": "adv",
-        "frequency": 0.0,
-        "first_sound": "b",
-        "last_sound": "n"
     },
     "pxorna'lor": {
         "translations": {
@@ -27687,7 +26804,7 @@
         },
         "pronunciation": "REL-tse-o",
         "pos": "n",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "r",
         "last_sound": "o"
     },
@@ -27705,7 +26822,7 @@
         },
         "pronunciation": "REL-tse-o-tu",
         "pos": "n",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "r",
         "last_sound": "u"
     },
@@ -27860,23 +26977,6 @@
         "first_sound": "r",
         "last_sound": "a"
     },
-    "reykol": {
-        "translations": {
-            "de": "musizieren, veranlassen zu singen (poetisch)",
-            "en": "play music, make to sing (poetic)",
-            "et": "muusikat mängima, laulma",
-            "fr": "jouer de la musique | jouer d'un instrument | ([poétique])",
-            "hu": "zenél, énekeltet (költői)",
-            "nl": "muziek maken, laten zingen (dichterlijk)",
-            "pl": "grać muzyke, sklaniać do śpiewu",
-            "ru": "играть музыку, петь (поэтично)"
-        },
-        "pronunciation": "rey-KOL",
-        "pos": "v:tr",
-        "frequency": 0,
-        "first_sound": "r",
-        "last_sound": "l"
-    },
     "rolun": {
         "translations": {
             "de": "Heureka! Ich hab's!",
@@ -27891,7 +26991,7 @@
         },
         "pronunciation": "ro-LUN",
         "pos": "intj",
-        "frequency": 0.09,
+        "frequency": 0.08,
         "first_sound": "r",
         "last_sound": "n"
     },
@@ -28159,7 +27259,7 @@
         },
         "pronunciation": "sä-ftxu-LÌ-'u",
         "pos": "n",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "s",
         "last_sound": "u"
     },
@@ -28374,7 +27474,7 @@
         },
         "pronunciation": "sä-MU-nge",
         "pos": "n",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "s",
         "last_sound": "e"
     },
@@ -28477,7 +27577,7 @@
         },
         "pronunciation": "sä-O-mum",
         "pos": "n",
-        "frequency": 0.25,
+        "frequency": 0.23,
         "first_sound": "s",
         "last_sound": "m"
     },
@@ -28495,7 +27595,7 @@
         },
         "pronunciation": "sä-pll-TXE",
         "pos": "n",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "s",
         "last_sound": "e"
     },
@@ -29035,20 +28135,6 @@
         "first_sound": "s",
         "last_sound": "m"
     },
-    "sivako": {
-        "translations": {
-            "en": "you can do it!; rise to the challenge!",
-            "de": "Du kannst das! Stell dich der Herausforderung!",
-            "nl": "je kunt het!; ga ervoor!",
-            "fr": "tu peux réussir; relève le défi!",
-            "x-navi": "(ftu <b>siva ko</b>) <i>lì’u a fko sar fte slivan lapoti a zene ngäzìka kem sivi</i>"
-        },
-        "pronunciation": "si-VA-ko",
-        "pos": "intj",
-        "frequency": 0,
-        "first_sound": "s",
-        "last_sound": "o"
-    },
     "skayp": {
         "translations": {
             "en": "Skype",
@@ -29132,7 +28218,7 @@
         },
         "pronunciation": "sley-KU",
         "pos": "v:tr",
-        "frequency": 0.07,
+        "frequency": 0.06,
         "first_sound": "s",
         "last_sound": "u"
     },
@@ -29421,21 +28507,6 @@
         "first_sound": "s",
         "last_sound": "b"
     },
-    "so'yu": {
-        "translations": {
-            "en": "fan, enthusiast",
-            "nl": "spreektaal voor txanso'hayu (fan, enthousiasteling)",
-            "hu": "rajongó(ja vminek) (társalgási nyelvben)",
-            "fr": "fan | passionné | partisan | amateur | [forme familière de] txanso'hayu",
-            "et": "kõnekeelne väljend sõnale txanso'hayu (fänn, huviline)",
-            "de": "umgangsspr. Form von txanso'hayu (Fan, Enthusiast)"
-        },
-        "pronunciation": "SO-'yu",
-        "pos": "n",
-        "frequency": 0,
-        "first_sound": "s",
-        "last_sound": "u"
-    },
     "somtìlor": {
         "translations": {
             "de": "Popsicle, heiße Schönheit (Pflanze), capsulatum virgatum",
@@ -29453,24 +28524,6 @@
         "frequency": 0,
         "first_sound": "s",
         "last_sound": "r"
-    },
-    "somwewpe": {
-        "translations": {
-            "de": "welche Temperatur? (gebräuchlicher)",
-            "en": "what temperature? (more common)",
-            "et": "mis temperatuur on?, kui soe on? (tavapärasem)",
-            "fr": "quelle température?",
-            "hu": "Milyen hőmérsékletű? (gyakoribb)",
-            "nl": "welke temperatuur? (meer gebruikelijk)",
-            "pl": "jak ciepło (częściej używane)",
-            "ru": "какая температура? (более общее)",
-            "sv": "vilken temperatur? (vardagligt)"
-        },
-        "pronunciation": "som-WEW-pe",
-        "pos": "inter",
-        "frequency": 0,
-        "first_sound": "s",
-        "last_sound": "e"
     },
     "sopyu": {
         "translations": {
@@ -29539,7 +28592,7 @@
         },
         "pronunciation": "spul-MOK-ri",
         "pos": "n",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "s",
         "last_sound": "i"
     },
@@ -29558,7 +28611,7 @@
         },
         "pronunciation": "SRAN",
         "pos": "part",
-        "frequency": 0.2,
+        "frequency": 0.18,
         "first_sound": "s",
         "last_sound": "n"
     },
@@ -29577,7 +28630,7 @@
         },
         "pronunciation": "SRAK",
         "pos": "part",
-        "frequency": 0.52,
+        "frequency": 0.48,
         "first_sound": "s",
         "last_sound": "k"
     },
@@ -29659,7 +28712,7 @@
         },
         "pronunciation": "stey-KI",
         "pos": "v:tr",
-        "frequency": 0.03,
+        "frequency": 0.04,
         "first_sound": "s",
         "last_sound": "i"
     },
@@ -29725,7 +28778,7 @@
         },
         "pronunciation": "SU-lìn",
         "pos": "v:in",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "s",
         "last_sound": "n"
     },
@@ -29904,7 +28957,7 @@
         },
         "pronunciation": "SYON-lì-'u",
         "pos": "n",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "s",
         "last_sound": "u"
     },
@@ -29991,7 +29044,7 @@
         },
         "pronunciation": "ta-LUN-a",
         "pos": "conj",
-        "frequency": 0.57,
+        "frequency": 0.55,
         "first_sound": "t",
         "last_sound": "a"
     },
@@ -30277,7 +29330,7 @@
         },
         "pronunciation": "TAW-tu-te",
         "pos": "n",
-        "frequency": 0.0,
+        "frequency": 0.09,
         "first_sound": "t",
         "last_sound": "e"
     },
@@ -30346,7 +29399,7 @@
         },
         "pronunciation": "TEYNG-a",
         "pos": "ctr",
-        "frequency": 0.27,
+        "frequency": 0.25,
         "first_sound": "t",
         "last_sound": "a"
     },
@@ -30486,7 +29539,7 @@
         },
         "pronunciation": "tì-'I'-a",
         "pos": "n",
-        "frequency": 0.03,
+        "frequency": 0.04,
         "first_sound": "t",
         "last_sound": "a"
     },
@@ -30539,24 +29592,6 @@
         "frequency": 0.01,
         "first_sound": "t",
         "last_sound": "'"
-    },
-    "tì'ong": {
-        "translations": {
-            "de": "Aufblühen, Ausblühen",
-            "en": "blooming, unfolding",
-            "et": "õitsemine",
-            "fr": "éclosion | floraison",
-            "hu": "virágzás, kinyílás",
-            "nl": "bloeien",
-            "pl": "kwitnienie, rozwój",
-            "ru": "цветение",
-            "sv": "blommning"
-        },
-        "pronunciation": "tì-'ONG",
-        "pos": "n",
-        "frequency": 0,
-        "first_sound": "t",
-        "last_sound": "ŋ"
     },
     "tì'ongokx": {
         "translations": {
@@ -30651,24 +29686,9 @@
         },
         "pronunciation": "tì-FKEY-tok",
         "pos": "n",
-        "frequency": 0.1,
+        "frequency": 0.11,
         "first_sound": "t",
         "last_sound": "k"
-    },
-    "tìflänga'": {
-        "translations": {
-            "de": "erfolgreich",
-            "en": "successful",
-            "et": "edukas (mitte inimeste kohta)",
-            "fr": "ayant du succès | réussi | réussissant",
-            "hu": "sikeres",
-            "nl": "succesvol"
-        },
-        "pronunciation": "tì-FLÄ-nga",
-        "pos": "adj",
-        "frequency": 0,
-        "first_sound": "t",
-        "last_sound": "a"
     },
     "tìfmetok": {
         "translations": {
@@ -30763,7 +29783,7 @@
         },
         "pronunciation": "tì-FNU-nga'",
         "pos": "adj",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "t",
         "last_sound": "'"
     },
@@ -30824,7 +29844,7 @@
         },
         "pronunciation": "tì-fti-A-tu",
         "pos": "n",
-        "frequency": 0.09,
+        "frequency": 0.08,
         "first_sound": "t",
         "last_sound": "u"
     },
@@ -30928,7 +29948,7 @@
         },
         "pronunciation": "tì-HAWL",
         "pos": "n",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "t",
         "last_sound": "l"
     },
@@ -31028,7 +30048,7 @@
         },
         "pronunciation": "tì-KAN",
         "pos": "n",
-        "frequency": 0.05,
+        "frequency": 0.06,
         "first_sound": "t",
         "last_sound": "n"
     },
@@ -31105,7 +30125,7 @@
         },
         "pronunciation": "tì-ke-FTXO",
         "pos": "n",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "t",
         "last_sound": "o"
     },
@@ -31226,6 +30246,22 @@
         "first_sound": "t",
         "last_sound": "r"
     },
+    "tìkxìm": {
+        "translations": {
+            "de": "Befehlen, Befehligen, Auftragserteilung",
+            "en": "commanding, ordering, assigning tasks",
+            "et": "käskimine, määramine",
+            "fr": "commandement | ordre",
+            "hu": "parancsolás, utasítás",
+            "nl": "gecommandeer",
+            "ru": "приказание, назначение задачи"
+        },
+        "pronunciation": "tì-KXÌM",
+        "pos": "n",
+        "frequency": 0.01,
+        "first_sound": "t",
+        "last_sound": "m"
+    },
     "tìkxuke": {
         "translations": {
             "de": "Sicherheit",
@@ -31237,7 +30273,7 @@
         },
         "pronunciation": "tì-KXU-ke",
         "pos": "n",
-        "frequency": 0.03,
+        "frequency": 0.04,
         "first_sound": "t",
         "last_sound": "e"
     },
@@ -31519,19 +30555,6 @@
         "first_sound": "t",
         "last_sound": "k"
     },
-    "tìmu'ni": {
-        "translations": {
-            "en": "achievement, accomplishment",
-            "de": "Errungenschaft, Leistung, Bewerkstelligung, Erfolg",
-            "nl": "verdienste, prestatie",
-            "fr": "accomplissement"
-        },
-        "pronunciation": "tì-MU'-ni",
-        "pos": "n",
-        "frequency": 0.01,
-        "first_sound": "t",
-        "last_sound": "i"
-    },
     "tìmuntxa": {
         "translations": {
             "de": "Paarung, Heirat, Verpartnerung",
@@ -31681,7 +30704,7 @@
         },
         "pronunciation": "tì-NGOP",
         "pos": "n",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "t",
         "last_sound": "p"
     },
@@ -32023,24 +31046,6 @@
         "first_sound": "t",
         "last_sound": "u"
     },
-    "tìrol": {
-        "translations": {
-            "de": "Lied, Song, Gesang",
-            "en": "song (vocal)",
-            "et": "laul (vokaalne)",
-            "fr": "chant",
-            "hu": "dal, ének",
-            "nl": "lied (vocaal)",
-            "pl": "pieśń",
-            "ru": "песня",
-            "sv": "sång (vokal)"
-        },
-        "pronunciation": "tì-ROL",
-        "pos": "n",
-        "frequency": 0.03,
-        "first_sound": "t",
-        "last_sound": "l"
-    },
     "tìronsrel": {
         "translations": {
             "de": "Vorstellungskraft",
@@ -32215,7 +31220,7 @@
         },
         "pronunciation": "tì-SPXIN",
         "pos": "n",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "t",
         "last_sound": "n"
     },
@@ -32266,7 +31271,7 @@
         },
         "pronunciation": "tì-SUNG",
         "pos": "n",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "t",
         "last_sound": "ŋ"
     },
@@ -32437,21 +31442,6 @@
         "first_sound": "t",
         "last_sound": "i"
     },
-    "tìtstunwinga'": {
-        "translations": {
-            "de": "nett",
-            "en": "kind",
-            "et": "lahke, hooliv (mitte inimeste kohta)",
-            "fr": "gentil | aimable | ([comme tstunwi, mais s'applique aux choses])",
-            "hu": "kedves",
-            "nl": "aardig"
-        },
-        "pronunciation": "tì-TSTU-nw-ing",
-        "pos": "adj",
-        "frequency": 0.0,
-        "first_sound": "t",
-        "last_sound": "ŋ"
-    },
     "tìtsukanom": {
         "translations": {
             "en": "availability",
@@ -32590,7 +31580,7 @@
         },
         "pronunciation": "tì-TXU-la",
         "pos": "n",
-        "frequency": 0.06,
+        "frequency": 0.08,
         "first_sound": "t",
         "last_sound": "a"
     },
@@ -32812,24 +31802,6 @@
         "pronunciation": "tì-YO'",
         "pos": "n",
         "frequency": 0.0,
-        "first_sound": "t",
-        "last_sound": "'"
-    },
-    "tìyora'": {
-        "translations": {
-            "de": "Sieg",
-            "en": "victory, a win",
-            "et": "võit",
-            "fr": "victoire",
-            "hu": "győzelem, nyerés",
-            "nl": "zege, overwinning",
-            "pl": "zwycięstwo, wygrana",
-            "ru": "победа ",
-            "sv": "vinst"
-        },
-        "pronunciation": "tì-YORA'",
-        "pos": "n",
-        "frequency": 0.01,
         "first_sound": "t",
         "last_sound": "'"
     },
@@ -33141,7 +32113,7 @@
         },
         "pronunciation": "trr-KI-ve",
         "pos": "n",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "t",
         "last_sound": "e"
     },
@@ -33162,24 +32134,6 @@
         "frequency": 0.1,
         "first_sound": "t",
         "last_sound": "m"
-    },
-    "trr'ong": {
-        "translations": {
-            "de": "Morgengrauen",
-            "en": "dawn, sunrise",
-            "et": "koit, päiksetõus",
-            "fr": "aube | aurore",
-            "hu": "hajnal, napkelte",
-            "nl": "vroege ochtend, zonsopgang",
-            "pl": "brzask, jutrzenka",
-            "ru": "восход",
-            "sv": "soluppgång, gryning"
-        },
-        "pronunciation": "trr-'ONG",
-        "pos": "n",
-        "frequency": 0.0,
-        "first_sound": "t",
-        "last_sound": "ŋ"
     },
     "trrtxon": {
         "translations": {
@@ -33268,7 +32222,7 @@
         },
         "pronunciation": "N/A",
         "pos": "n",
-        "frequency": 0.29,
+        "frequency": 0.3,
         "first_sound": "c",
         "last_sound": "m"
     },
@@ -33337,7 +32291,7 @@
         },
         "pronunciation": "TSAM-si-yu",
         "pos": "n",
-        "frequency": 0.1,
+        "frequency": 0.09,
         "first_sound": "c",
         "last_sound": "u"
     },
@@ -33420,7 +32374,7 @@
         },
         "pronunciation": "TSA-po",
         "pos": "pn",
-        "frequency": 0.02,
+        "frequency": 0.01,
         "first_sound": "c",
         "last_sound": "o"
     },
@@ -33475,7 +32429,7 @@
         },
         "pronunciation": "FWA",
         "pos": "ctr",
-        "frequency": 1.47,
+        "frequency": 1.49,
         "first_sound": "f",
         "last_sound": "a"
     },
@@ -33575,7 +32529,7 @@
         },
         "pronunciation": "TSENG",
         "pos": "n",
-        "frequency": 0.19,
+        "frequency": 0.2,
         "first_sound": "c",
         "last_sound": "ŋ"
     },
@@ -33678,7 +32632,7 @@
         },
         "pronunciation": "TSÌ-ve",
         "pos": "adj",
-        "frequency": 0.02,
+        "frequency": 0.01,
         "first_sound": "c",
         "last_sound": "e"
     },
@@ -33711,7 +32665,7 @@
         },
         "pronunciation": "tslo-LAM",
         "pos": "intj",
-        "frequency": 0.07,
+        "frequency": 0.06,
         "first_sound": "c",
         "last_sound": "m"
     },
@@ -34157,7 +33111,7 @@
         },
         "pronunciation": "TU-te-o",
         "pos": "pn",
-        "frequency": 0.07,
+        "frequency": 0.06,
         "first_sound": "t",
         "last_sound": "o"
     },
@@ -34258,7 +33212,7 @@
         },
         "pronunciation": "txan-lo-KXE",
         "pos": "n",
-        "frequency": 0.29,
+        "frequency": 0.28,
         "first_sound": "d",
         "last_sound": "e"
     },
@@ -34290,7 +33244,7 @@
         },
         "pronunciation": "txan-SO'-ha-yu",
         "pos": "n",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "d",
         "last_sound": "u"
     },
@@ -34326,7 +33280,7 @@
         },
         "pronunciation": "TXAN-tsan",
         "pos": "adj",
-        "frequency": 0.13,
+        "frequency": 0.12,
         "first_sound": "d",
         "last_sound": "n"
     },
@@ -34408,7 +33362,7 @@
         },
         "pronunciation": "txan-wa-WE",
         "pos": "adj",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "d",
         "last_sound": "e"
     },
@@ -34559,24 +33513,6 @@
         "first_sound": "d",
         "last_sound": "r"
     },
-    "txon'ong": {
-        "translations": {
-            "de": "Dämmerung, Sonnenuntergang",
-            "en": "nightfall, sunset, dusk, gloaming",
-            "et": "videvik, päikeseloojang, koidukuma",
-            "fr": "soir | crépuscule",
-            "hu": "naplemente, napszállta",
-            "nl": "zonsondergang",
-            "pl": "zmierzch, zmrok",
-            "ru": "закат, наступление ночи",
-            "sv": "skymning, solnedgång"
-        },
-        "pronunciation": "txon-'ONG",
-        "pos": "n",
-        "frequency": 0.01,
-        "first_sound": "d",
-        "last_sound": "ŋ"
-    },
     "txonam": {
         "translations": {
             "de": "letzte Nacht",
@@ -34660,7 +33596,7 @@
         },
         "pronunciation": "VRR-ìn",
         "pos": "v:in",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "v",
         "last_sound": "n"
     },
@@ -34768,7 +33704,7 @@
         },
         "pronunciation": "vo-spxì-vo-MUN",
         "pos": "n",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "v",
         "last_sound": "n"
     },
@@ -34783,7 +33719,7 @@
         },
         "pronunciation": "vo-spxì-vo-SÌNG",
         "pos": "n",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "v",
         "last_sound": "ŋ"
     },
@@ -34833,7 +33769,7 @@
         },
         "pronunciation": "wä-TE",
         "pos": "v:tr",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "w",
         "last_sound": "e"
     },
@@ -34851,7 +33787,7 @@
         },
         "pronunciation": "WÄ-tu",
         "pos": "n",
-        "frequency": 0.04,
+        "frequency": 0.03,
         "first_sound": "w",
         "last_sound": "u"
     },
@@ -35056,7 +33992,7 @@
         },
         "pronunciation": "YE-hakx",
         "pos": "adj",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "y",
         "last_sound": "g"
     },
@@ -35092,7 +34028,7 @@
         },
         "pronunciation": "YEM-stokx",
         "pos": "v:tr",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "y",
         "last_sound": "g"
     },
@@ -35257,7 +34193,7 @@
         },
         "pronunciation": "YRR-ap",
         "pos": "n",
-        "frequency": 0.12,
+        "frequency": 0.13,
         "first_sound": "y",
         "last_sound": "p"
     },
@@ -35338,7 +34274,7 @@
         },
         "pronunciation": "zaw-PRR-te'",
         "pos": "v:in",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "z",
         "last_sound": "'"
     },
@@ -35373,7 +34309,7 @@
         },
         "pronunciation": "zey-KO",
         "pos": "v:tr",
-        "frequency": 0.06,
+        "frequency": 0.05,
         "first_sound": "z",
         "last_sound": "o"
     },
@@ -35388,7 +34324,7 @@
         },
         "pronunciation": "zey-KO-yu",
         "pos": "n",
-        "frequency": 0.04,
+        "frequency": 0.03,
         "first_sound": "z",
         "last_sound": "u"
     },
@@ -35469,7 +34405,7 @@
         },
         "pronunciation": "wrr-ZA-'u",
         "pos": "v:in",
-        "frequency": 0.02,
+        "frequency": 0.01,
         "first_sound": "w",
         "last_sound": "u"
     },
@@ -35486,19 +34422,6 @@
         "first_sound": "w",
         "last_sound": "p"
     },
-    "säfrrfen": {
-        "translations": {
-            "en": "visit",
-            "nl": "bezoek",
-            "de": "Besuch",
-            "fr": "visite"
-        },
-        "pronunciation": "sä-FRR-fen",
-        "pos": "n",
-        "frequency": 0,
-        "first_sound": "s",
-        "last_sound": "n"
-    },
     "pung": {
         "translations": {
             "en": "hurt, injure",
@@ -35508,7 +34431,7 @@
         },
         "pronunciation": "N/A",
         "pos": "v:tr",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "p",
         "last_sound": "ŋ"
     },
@@ -35637,7 +34560,7 @@
         },
         "pronunciation": "LEW-nga'",
         "pos": "adj",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "l",
         "last_sound": "'"
     },
@@ -35707,91 +34630,21 @@
     },
     "nga'": {
         "translations": {
-            "en": "containing (creates adjectives from nouns)",
-            "fr": "qui contient (crée des adjectifs à partir de noms)"
+            "en": "contain",
+            "sv": "innehålla",
+            "ru": "содержать",
+            "pl": "zawierać",
+            "nl": "bevatten",
+            "hu": "tartalmaz",
+            "fr": "contenir",
+            "et": "sisaldama",
+            "de": "enthalten, beinhalten, umfassen"
         },
-        "pronunciation": "N/A",
-        "pos": "aff:suf",
+        "pronunciation": "NGA'",
+        "pos": "v:tr",
         "frequency": 0.07,
         "first_sound": "ŋ",
         "last_sound": "'"
-    },
-    "sna": {
-        "translations": {
-            "en": "group of ... (prefix indicating naturally occuring groups or collections)",
-            "fr": "groupe de... (préfixe indiquant des regroupements naturels ou des collections)"
-        },
-        "pronunciation": "N/A",
-        "pos": "aff:pre",
-        "frequency": 0,
-        "first_sound": "s",
-        "last_sound": "a"
-    },
-    "tu": {
-        "translations": {
-            "en": "... person (noun-making suffix)",
-            "fr": "(suffixe créant des noms communs de personnes)"
-        },
-        "pronunciation": "N/A",
-        "pos": "aff:suf",
-        "frequency": 0,
-        "first_sound": "t",
-        "last_sound": "u"
-    },
-    "vi": {
-        "translations": {
-            "en": "(particle used for something spawned from something bigger)",
-            "fr": "(particule utilisée pour une chose issue d'une chose plus grande)"
-        },
-        "pronunciation": "N/A",
-        "pos": "aff:suf",
-        "frequency": 0,
-        "first_sound": "v",
-        "last_sound": "i"
-    },
-    "an": {
-        "translations": {
-            "en": "(male gender suffix)",
-            "fr": "(suffixe masculin)"
-        },
-        "pronunciation": "N/A",
-        "pos": "aff:suf",
-        "frequency": 0.0,
-        "first_sound": "a",
-        "last_sound": "n"
-    },
-    "e": {
-        "translations": {
-            "en": "(female gender suffix)",
-            "fr": "(suffixe féminin)"
-        },
-        "pronunciation": "N/A",
-        "pos": "aff:suf",
-        "frequency": 0,
-        "first_sound": "e",
-        "last_sound": "e"
-    },
-    "ve": {
-        "translations": {
-            "en": "...th (makes ordinal numbers from cardinal numbers)",
-            "fr": "...ième (forme des nombres ordinaux à partir de nombres cardinaux)"
-        },
-        "pronunciation": "N/A",
-        "pos": "aff:suf",
-        "frequency": 0,
-        "first_sound": "v",
-        "last_sound": "e"
-    },
-    "le": {
-        "translations": {
-            "en": "having to do with... (makes adjectives from nouns and verbs, non-productive)",
-            "fr": "ayant à voir avec... (forme des adjectifs à partir de noms ou de verbes, non productif)"
-        },
-        "pronunciation": "N/A",
-        "pos": "aff:pre",
-        "frequency": 0,
-        "first_sound": "l",
-        "last_sound": "e"
     },
     "yu": {
         "translations": {
@@ -35828,7 +34681,7 @@
         },
         "pronunciation": "taw-KA-mi",
         "pos": "n:pr",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "t",
         "last_sound": "i"
     },
@@ -35844,7 +34697,7 @@
         },
         "pronunciation": "nì-TSYUNG-wen",
         "pos": "adv",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "n",
         "last_sound": "n"
     },
@@ -35905,14 +34758,1358 @@
         "first_sound": "t",
         "last_sound": "n"
     },
+    "somwewpe": {
+        "translations": {
+            "en": "what temperature?",
+            "sv": "vilken temperatur? (vardagligt)",
+            "ru": "какая температура? (более общее)",
+            "pl": "jak ciepło (częściej używane)",
+            "nl": "welke temperatuur? (meer gebruikelijk)",
+            "hu": "Milyen hőmérsékletű? (gyakoribb)",
+            "fr": "quelle température?",
+            "et": "mis temperatuur on?, kui soe on? (tavapärasem)",
+            "de": "welche Temperatur? (gebräuchlicher)"
+        },
+        "pronunciation": "som-WEW-pe",
+        "pos": "inter",
+        "frequency": 0,
+        "first_sound": "s",
+        "last_sound": "e"
+    },
+    "tìyora'": {
+        "translations": {
+            "en": "victory, a win",
+            "sv": "vinst",
+            "ru": "победа ",
+            "pl": "zwycięstwo, wygrana",
+            "nl": "zege, overwinning",
+            "hu": "győzelem, nyerés",
+            "fr": "victoire",
+            "et": "võit",
+            "de": "Sieg"
+        },
+        "pronunciation": "tì-yo-RA'",
+        "pos": "n",
+        "frequency": 0.01,
+        "first_sound": "t",
+        "last_sound": "'"
+    },
+    "tìtstunwinga'": {
+        "translations": {
+            "en": "kind",
+            "nl": "aardig",
+            "hu": "kedves",
+            "fr": "gentil | aimable | ([comme tstunwi, mais s'applique aux choses])",
+            "et": "lahke, hooliv (mitte inimeste kohta)",
+            "de": "nett"
+        },
+        "pronunciation": "tì-TSTUN-wi-nga'",
+        "pos": "adj",
+        "frequency": 0.0,
+        "first_sound": "t",
+        "last_sound": "'"
+    },
+    "tìflänga'": {
+        "translations": {
+            "en": "successful",
+            "nl": "succesvol",
+            "hu": "sikeres",
+            "fr": "ayant du succès | réussi | réussissant",
+            "et": "edukas (mitte inimeste kohta)",
+            "de": "erfolgreich"
+        },
+        "pronunciation": "tì-FLÄ-nga'",
+        "pos": "adj",
+        "frequency": 0.0,
+        "first_sound": "t",
+        "last_sound": "'"
+    },
+    "so'yu": {
+        "translations": {
+            "en": "fan, enthusiast",
+            "de": "umgangsspr. Form von txanso'hayu (Fan, Enthusiast)",
+            "et": "kõnekeelne väljend sõnale txanso'hayu (fänn, huviline)",
+            "fr": "fan | passionné | partisan | amateur | [forme familière de] txanso'hayu",
+            "hu": "rajongó(ja vminek) (társalgási nyelvben)",
+            "nl": "spreektaal voor txanso'hayu (fan, enthousiasteling)"
+        },
+        "pronunciation": "SO'-yu",
+        "pos": "n",
+        "frequency": 0,
+        "first_sound": "s",
+        "last_sound": "u"
+    },
+    "fe'lup": {
+        "translations": {
+            "en": "tacky, in poor taste",
+            "xNavi": "('u) a lu vä' fìtxan kuma law si fura tute a tsat ngolop/sar ke omum teyngta peu tìlor lu",
+            "ru": "безвкусный",
+            "nl": "goedkoop, smakeloos",
+            "hu": "giccses",
+            "fr": "mauvais (goût)",
+            "et": "kõhetu, vähese stiiliga",
+            "de": "geschmacklos, kitschig, billig, schlechter Stil/Geschmack"
+        },
+        "pronunciation": "FE'-lup",
+        "pos": "adj",
+        "frequency": 0,
+        "first_sound": "f",
+        "last_sound": "p"
+    },
+    "tsahìk": {
+        "translations": {
+            "en": "matriarch, high priestess, interpreter",
+            "de": "spirituelle Führerin, die (ähnlich einer Schamanin)",
+            "fr": "matriarche, grande prêtresse, interprète",
+            "nl": "moeder van de stam, hogepriesteres, shamaan"
+        },
+        "pronunciation": "TSA-hìk",
+        "pos": "n",
+        "frequency": 0,
+        "first_sound": "c",
+        "last_sound": "k"
+    },
+    "tawsnrrtsyìp": {
+        "translations": {
+            "en": "Alpha Centauri C, Proxima Centauri",
+            "de": "Alpha Centauri C aka Proxima Centauri",
+            "et": "Alpha Centauri C aka Proxima Centauri",
+            "fr": "Proxima du Centaure | Alpha du Centaure C | ([souvent abrégé en] Snrrtsyìp)",
+            "hu": "Alpha Centauri C avagy Proxima Centauri",
+            "nl": "Alpha Centauri C (Proxima Centauri)"
+        },
+        "pronunciation": "taw-SNRR-tsyìp",
+        "pos": "n:pr",
+        "frequency": 0,
+        "first_sound": "t",
+        "last_sound": "p"
+    },
+    "snrrtsyìp": {
+        "translations": {
+            "en": "Alpha Centauri C, Proxima Centauri",
+            "de": "Alpha Centauri C aka Proxima Centauri (umgangssprachlich)",
+            "et": "Alpha Centauri C aka Proxima Centauri (kõnekeelne)",
+            "fr": "Proxima du Centaure | Alpha du Centaure C | ([abréviation de] Tawsnrrtsyìp)",
+            "hu": "Alpha Centauri C avagy Proxima Centauri (bizalmas stílusban)",
+            "nl": "Alpha Centauri C (Proxima Centauri) (spreektaal)"
+        },
+        "pronunciation": "SNRR-tsyìp",
+        "pos": "n:pr",
+        "frequency": 0,
+        "first_sound": "s",
+        "last_sound": "p"
+    },
+    "oetsyìp": {
+        "translations": {
+            "en": "little me, little I",
+            "sv": "lilla jag, lilla mig",
+            "ru": "маленький я ",
+            "pl": "ja (zdrobniale)",
+            "nl": "kleine ik",
+            "hu": "csekélységem",
+            "fr": "petit moi",
+            "et": "pisike mina",
+            "de": "ich Kleines"
+        },
+        "pronunciation": "WE-tsyìp",
+        "pos": "pn",
+        "frequency": 0,
+        "first_sound": "w",
+        "last_sound": "p"
+    },
+    "ngatsyìp": {
+        "translations": {
+            "en": "little you, you little",
+            "sv": "lilla du",
+            "ru": "маленький ты",
+            "pl": "ty (zdrobniale)",
+            "nl": "kleine jij",
+            "hu": "kicsi te, csekélységed",
+            "fr": "petit toi, toi petit",
+            "et": "väike sina, sa väike",
+            "de": "du Kleines"
+        },
+        "pronunciation": "NGA-tsyìp",
+        "pos": "pn",
+        "frequency": 0,
+        "first_sound": "ŋ",
+        "last_sound": "p"
+    },
+    "kekem": {
+        "translations": {
+            "en": "no action or activity",
+            "de": "nichts (keine Handlung)",
+            "et": "mitte midagi (tegude puhul)",
+            "fr": "aucune action | aucune activité | rien",
+            "hu": "tett/cselekvés nélkül",
+            "nl": "geen actie of activiteit",
+            "pl": "żadna (czyność), bez (żadej czyności)",
+            "ru": "безделие",
+            "sv": "ingen aktivitet eller handlig"
+        },
+        "pronunciation": "KE-kem",
+        "pos": "pn",
+        "frequency": 0.03,
+        "first_sound": "k",
+        "last_sound": "m"
+    },
+    "sivako": {
+        "translations": {
+            "en": "you can do it!; rise to the challenge!",
+            "xNavi": "(ftu <b>siva ko</b>) <i>lì’u a fko sar fte slivan lapoti a zene ngäzìka kem sivi</i>",
+            "fr": "tu peux réussir; relève le défi!",
+            "nl": "je kunt het!; ga ervoor!",
+            "de": "Du kannst das! Stell dich der Herausforderung!"
+        },
+        "pronunciation": "si-VA-ko",
+        "pos": "intj",
+        "frequency": 0,
+        "first_sound": "s",
+        "last_sound": "o"
+    },
+    "rangal": {
+        "translations": {
+            "en": "wish",
+            "sv": "önska",
+            "ru": "желать",
+            "pl": "mieć nadzieję",
+            "nl": "wensen",
+            "hu": "kíván, óhajt",
+            "fr": "souhaiter (que [devient] tsnì [pour introduire la subordonnée])",
+            "et": "soovima",
+            "de": "wünschen"
+        },
+        "pronunciation": "RA-ngal",
+        "pos": "v:in",
+        "frequency": 0.01,
+        "first_sound": "r",
+        "last_sound": "l"
+    },
+    "leymkem": {
+        "translations": {
+            "en": "protest",
+            "de": "protestieren",
+            "et": "protesteerima, vastu seisma, meelt avaldama",
+            "fr": "protester",
+            "hu": "tiltakozik",
+            "nl": "protesteren"
+        },
+        "pronunciation": "leyng-KEM",
+        "pos": "v:in",
+        "frequency": 0.09,
+        "first_sound": "l",
+        "last_sound": "m"
+    },
+    "leymfe'": {
+        "translations": {
+            "en": "complain",
+            "de": "beschweren, beklagen",
+            "et": "kurtma, kaebama",
+            "fr": "se plaindre",
+            "hu": "panaszkodik",
+            "nl": "klagen"
+        },
+        "pronunciation": "leym-FE'",
+        "pos": "v:in",
+        "frequency": 0.03,
+        "first_sound": "l",
+        "last_sound": "'"
+    },
+    "la'um": {
+        "translations": {
+            "en": "pretend",
+            "nl": "doen alsof, voorwenden (gebruikt met tsnì)",
+            "fr": "prétendre (utilisé avec tsnì)",
+            "de": "vortäuschen, vorspielen, heucheln; so tun, als ob (verwendet mit tsnì)"
+        },
+        "pronunciation": "LA-'um",
+        "pos": "v:in",
+        "frequency": 0.0,
+        "first_sound": "l",
+        "last_sound": "m"
+    },
+    "srefpìl": {
+        "translations": {
+            "en": "assume",
+            "ru": "подразумевать",
+            "nl": "aannemen",
+            "hu": "feltételez",
+            "fr": "présumer | supposer | ([vin. et transitif]) | ([s'il est intransitif, on utilise] tsnì)",
+            "et": "eeldama",
+            "de": "annehmen"
+        },
+        "pronunciation": "sre-FPÌL",
+        "pos": "v:tr",
+        "frequency": 0.0,
+        "first_sound": "s",
+        "last_sound": "l"
+    },
+    "fpomtokxnga'": {
+        "translations": {
+            "en": "healthful (physically)",
+            "xNavi": "('u) a lefpomtokx sleyku ",
+            "nl": "gezond (fysiek)",
+            "hu": "egészséges (fizikailag)",
+            "fr": "bon pour la santé (physique)",
+            "et": "tervislik(füüsiliselt; mitte inimeste kohta)",
+            "de": "(physisch) heilsam"
+        },
+        "pronunciation": "fpom-TOK-nga'",
+        "pos": "adj",
+        "frequency": 0.01,
+        "first_sound": "f",
+        "last_sound": "'"
+    },
+    "zel": {
+        "translations": {
+            "en": "then (counterfactual use)",
+            "ru": "то (в зависимости от фактов)",
+            "nl": "dan (contrafeitelijk gebruik)",
+            "hu": "akkor",
+            "fr": "donc ([dans une phrase au conditionel avec] zun)",
+            "et": "siis (vastupidise olukorra puhul, võrdle tsakrr, Näide Zun zivup tompa, zel ke tsivun oe kivä.  Kui vihma sajaks, siis ma ei saaks minna)",
+            "de": "dann (für irreale Folgesätze)"
+        },
+        "pronunciation": "ZEL",
+        "pos": "adv",
+        "frequency": 0.01,
+        "first_sound": "z",
+        "last_sound": "l"
+    },
+    "zun": {
+        "translations": {
+            "en": "if (counterfactual use)",
+            "ru": "если (в зависимости от фактов)",
+            "nl": "als (contrafeitelijk gebruik)",
+            "hu": "ha",
+            "fr": "si ([conditionnel])",
+            "et": "kui (vastupidise olukorra puhul, võrdle txo, Näide Zun zivup tompa, zel ke tsivun oe kivä.  Kui vihma sajaks, siis ma ei saaks minna)",
+            "de": "wenn (für irreale Bedingungssätze)"
+        },
+        "pronunciation": "ZUN",
+        "pos": "conj",
+        "frequency": 0.01,
+        "first_sound": "z",
+        "last_sound": "n"
+    },
+    "txo": {
+        "translations": {
+            "en": "if",
+            "sv": "om",
+            "ru": "если",
+            "pl": "jeżeli, jeśli",
+            "nl": "als, wanneer",
+            "hu": "ha",
+            "fr": "si (dans le sens de la supposition)",
+            "et": "kui, juhul kui, kas",
+            "de": "wenn, falls"
+        },
+        "pronunciation": "TXO",
+        "pos": "conj",
+        "frequency": 0.31,
+        "first_sound": "d",
+        "last_sound": "o"
+    },
+    "kefpomtokxnga'": {
+        "translations": {
+            "en": "unhealthful (physically)",
+            "nl": "ongezond (fysiek)",
+            "hu": "egészségtelen (fizikailag)",
+            "fr": "mauvais pour la santé (physique)",
+            "et": "ebatervislik, (füüsiliselt; mitte inimeste kohta)",
+            "de": "(physisch) unheilsam"
+        },
+        "pronunciation": "ke-fpom-TOK-nga'",
+        "pos": "adj",
+        "frequency": 0,
+        "first_sound": "k",
+        "last_sound": "'"
+    },
+    "fpomtokx": {
+        "translations": {
+            "en": "health (physical)",
+            "sv": "hälsa (fysisk)",
+            "ru": "физическое здоровье",
+            "pl": "zdrowie",
+            "nl": "gezondheid (fysiek)",
+            "hu": "egészség (fizikai)",
+            "fr": "santé (au sens physique)",
+            "et": "tervis (füüsiline)",
+            "de": "(physische) Gesundheit"
+        },
+        "pronunciation": "fpom-TOKX",
+        "pos": "n",
+        "frequency": 0.02,
+        "first_sound": "f",
+        "last_sound": "g"
+    },
+    "fpomron": {
+        "translations": {
+            "en": "health, wellbeing (mental)",
+            "ru": "здоровье (душевное)",
+            "nl": "gezondheid of welzijn (mentaal)",
+            "hu": "egészség vagy jólét (szellemi)",
+            "fr": "santé mentale | bien être mental",
+            "et": "tervis, heaolu (vaimne; inimeste kohta)",
+            "de": "(mentalle) Gesundheit oder Wohlsein"
+        },
+        "pronunciation": "fpom-RON",
+        "pos": "n",
+        "frequency": 0.01,
+        "first_sound": "f",
+        "last_sound": "n"
+    },
+    "'awnìm": {
+        "translations": {
+            "en": "avoid",
+            "xNavi": "ta tuteo fu ’uo fu tìfkeytoko ’ì’awn alìm fteke tsat ultxarivun",
+            "sv": "undvika",
+            "ru": "избежать",
+            "pl": "unikać",
+            "nl": "vermijden",
+            "hu": "elkerül",
+            "fr": "éviter",
+            "et": "vältima",
+            "de": "meiden, vermeiden, jdn/et umgehen"
+        },
+        "pronunciation": "'AW-nìm",
+        "pos": "v:tr",
+        "frequency": 0.0,
+        "first_sound": "'",
+        "last_sound": "m"
+    },
+    "'ong": {
+        "translations": {
+            "en": "unfold, blossom",
+            "xNavi": "aysyulang sngä'i pivaw mì ewll; (olo', pongu, sl.) tsawl slu kuma flä: <b>’ivong Na’vi</b> sìlpey oe tsnì lì'fya leNa'vi tsawl slìyevu",
+            "sv": "slå ut, blomstra",
+            "ru": "раскрываться, распускаться, цвести, процветать",
+            "pl": "rozwijać, kwitnąć",
+            "nl": "bloeien",
+            "hu": "kinyílik, kivirágzik",
+            "fr": "fleurir | s'épanouir",
+            "et": "õitsema",
+            "de": "erblühen, sich entfalten"
+        },
+        "pronunciation": "'ONG",
+        "pos": "v:in",
+        "frequency": 0.01,
+        "first_sound": "'",
+        "last_sound": "ŋ"
+    },
+    "fkarut": {
+        "translations": {
+            "en": "peel",
+            "sv": "skala",
+            "ru": "сдирать, соскабливать, чистить",
+            "pl": "obierać",
+            "nl": "pellen",
+            "hu": "hámoz",
+            "fr": "éplucher",
+            "et": "koorima",
+            "de": "schälen, häuten"
+        },
+        "pronunciation": "FKA-rut",
+        "pos": "v:tr",
+        "frequency": 0,
+        "first_sound": "f",
+        "last_sound": "t"
+    },
+    "kämakto": {
+        "translations": {
+            "en": "ride out",
+            "de": "ausreiten",
+            "et": "välja lendama/ratsutama/sõitma",
+            "fr": "chevaucher",
+            "hu": "kilovagol",
+            "nl": "uitrijden",
+            "pl": "wyruszać",
+            "ru": "выезжать, выдвигаться",
+            "sv": "rid ut"
+        },
+        "pronunciation": "kä-MAK-to",
+        "pos": "v:in",
+        "frequency": 0.0,
+        "first_sound": "k",
+        "last_sound": "o"
+    },
+    "mun'i": {
+        "translations": {
+            "en": "cut",
+            "sv": "skära",
+            "ru": "резать, разрезать",
+            "pl": "ciąć",
+            "nl": "snijden",
+            "hu": "vág",
+            "fr": "couper",
+            "et": "lõikama, raiuma",
+            "de": "schneiden"
+        },
+        "pronunciation": "mun-'I",
+        "pos": "v:tr",
+        "frequency": 0.01,
+        "first_sound": "m",
+        "last_sound": "i"
+    },
+    "rol": {
+        "translations": {
+            "en": "sing",
+            "sv": "sjunga",
+            "ru": "петь",
+            "pl": "śpiewać",
+            "nl": "zingen",
+            "hu": "énekel",
+            "fr": "chanter",
+            "et": "laulma (r«eyk»ol muusikat tegema, laulma panema (lüüriline))",
+            "de": "singen"
+        },
+        "pronunciation": "ROL",
+        "pos": "v:in",
+        "frequency": 0.04,
+        "first_sound": "r",
+        "last_sound": "l"
+    },
+    "tireapängkxo": {
+        "translations": {
+            "en": "commune",
+            "sv": "samtala i förtroende",
+            "ru": "общаться интимно",
+            "pl": "obcować, przebywać",
+            "nl": "in nauw contact staan (b.v. met natuur)",
+            "hu": "tanácskozik",
+            "fr": "communier (être en communion au sens spirituel)",
+            "et": "lähedaselt suhtlema",
+            "de": "kommunizieren (nicht verbal)"
+        },
+        "pronunciation": "ti-RE-a-päng-kxo",
+        "pos": "v:in",
+        "frequency": 0.0,
+        "first_sound": "t",
+        "last_sound": "o"
+    },
+    "latsi": {
+        "translations": {
+            "en": "keep up with someone",
+            "sv": "hänga med någon, inte halka efter",
+            "ru": "идти вместе с кемлибо, не отставать",
+            "pl": "pozostawać w kontakcie",
+            "nl": "(iemand) bijhouden",
+            "hu": "lépést tart",
+            "fr": "continuer/maintenir avec quelqu'un",
+            "et": "sammu pidama (kellegagi)",
+            "de": "mit jemandem mithalten, mit jemandem Schritt halten"
+        },
+        "pronunciation": "la-TSI",
+        "pos": "v:in",
+        "frequency": 0,
+        "first_sound": "l",
+        "last_sound": "i"
+    },
+    "pate": {
+        "translations": {
+            "en": "get to a place, arrive",
+            "sv": "komma till en plats, anlända",
+            "ru": "приходить, добираться до места",
+            "pl": "przybyć, dotrzeć na miejsce",
+            "nl": "aankomen (op een plaats), arriveren",
+            "hu": "megérkezik, eljut/elér valahová",
+            "fr": "arriver (dans le sens 'arriver quelque part')",
+            "et": "kohale saabuma",
+            "de": "ankommen, zu einem Ort gelangen"
+        },
+        "pronunciation": "PA-te",
+        "pos": "v:in",
+        "frequency": 0.02,
+        "first_sound": "p",
+        "last_sound": "e"
+    },
+    "tsä'": {
+        "translations": {
+            "en": "squirt",
+            "sv": "spruta",
+            "ru": "брызгать",
+            "pl": "tryskać",
+            "nl": "spuiten",
+            "hu": "(ki)lövellni",
+            "fr": "jaillir",
+            "et": "pritsima",
+            "de": "spritzen"
+        },
+        "pronunciation": "TSÄ'",
+        "pos": "v:in",
+        "frequency": 0,
+        "first_sound": "c",
+        "last_sound": "'"
+    },
+    "tuvon": {
+        "translations": {
+            "en": "lean",
+            "sv": "luta",
+            "ru": "облокачиваться, наваливаться, опираться",
+            "pl": "pochylić się",
+            "nl": "leunen",
+            "hu": "hajlik",
+            "fr": "appuyer",
+            "et": "nõjatuma, toetuma",
+            "de": "lehnen, anlehnen"
+        },
+        "pronunciation": "TU-von",
+        "pos": "v:in",
+        "frequency": 0,
+        "first_sound": "t",
+        "last_sound": "n"
+    },
+    "'onglawn": {
+        "translations": {
+            "en": "exhiliration of first bonding",
+            "nl": "euforie bij de eerste bond",
+            "de": "Euphorie / Hochgefühl des Ersten Bandes",
+            "fr": "euphorie du premier lien",
+            "x-navi": "nitrama tì'efu a fko 'efu krra tsaheyl si nì'awve"
+        },
+        "pronunciation": "'ONG-lawn",
+        "pos": "n",
+        "frequency": 0.0,
+        "first_sound": "'",
+        "last_sound": "n"
+    },
+    "'ongokx": {
+        "translations": {
+            "de": "geboren werden",
+            "en": "be born",
+            "et": "sündima",
+            "fr": "naître | (être né)",
+            "hu": "születik",
+            "nl": "geboren worden",
+            "pl": "rodzić się",
+            "ru": "родиться",
+            "sv": "födas",
+            "x-navi": "(prrnen) wrrza’u prrkuftu"
+        },
+        "pronunciation": "'O-ngokx",
+        "pos": "v:in",
+        "frequency": 0.01,
+        "first_sound": "'",
+        "last_sound": "g"
+    },
+    "'ongop": {
+        "translations": {
+            "de": "entwerfen, entwickeln, gestalten (von größeren, groberen Aspekten)",
+            "en": "design",
+            "et": "disain, kujundus",
+            "fr": "dessiner | concevoir",
+            "hu": "tervez",
+            "nl": "ontwerpen",
+            "ru": "проектировать",
+            "x-navi": "ngop 'uoä renut fu 'onti fu 'urti"
+        },
+        "pronunciation": "'O-ngop",
+        "pos": "v:tr",
+        "frequency": 0,
+        "first_sound": "'",
+        "last_sound": "p"
+    },
+    "'okrol": {
+        "translations": {
+            "de": "(alte) Geschichte",
+            "en": "history (ancient)",
+            "et": "ajalugu (vanem)",
+            "fr": "histoire (ancienne)",
+            "hu": "történelem (ősi)",
+            "nl": "geschiedenis (oud)",
+            "pl": "historia (starożytna)",
+            "ru": "история (древняя)",
+            "sv": "historia (uråldrig)",
+            "x-navi": "ayhem a lolen txana krrkam, a fkol zerok fa aysìrol"
+        },
+        "pronunciation": "'ok-ROL",
+        "pos": "n",
+        "frequency": 0.01,
+        "first_sound": "'",
+        "last_sound": "l"
+    },
+    "pxìmun'i": {
+        "translations": {
+            "de": "teilen, trennen, entzweien",
+            "en": "divide, cut into parts",
+            "et": "jagama, jaotama, tükkideks lõikama",
+            "fr": "diviser",
+            "hu": "feloszt, részekre vág",
+            "nl": "verdelen, in stukken snijden",
+            "pl": "dzielić",
+            "ru": "делить"
+        },
+        "pronunciation": "pxì-mun-'I",
+        "pos": "v:tr",
+        "frequency": 0.01,
+        "first_sound": "b",
+        "last_sound": "i"
+    },
+    "reykol": {
+        "translations": {
+            "de": "musizieren, veranlassen zu singen (poetisch)",
+            "en": "play music, make to sing (poetic)",
+            "et": "muusikat mängima, laulma",
+            "fr": "jouer de la musique | jouer d'un instrument | ([poétique])",
+            "hu": "zenél, énekeltet (költői)",
+            "nl": "muziek maken, laten zingen (dichterlijk)",
+            "pl": "grać muzyke, sklaniać do śpiewu",
+            "ru": "играть музыку, петь (поэтично)"
+        },
+        "pronunciation": "rey-KOL",
+        "pos": "v:tr",
+        "frequency": 0,
+        "first_sound": "r",
+        "last_sound": "l"
+    },
+    "salewfya": {
+        "translations": {
+            "en": "direction, course",
+            "ru": "направление",
+            "nl": "richting, koers",
+            "hu": "irány, menetirány",
+            "fr": "direction",
+            "et": "suund, kurss",
+            "de": "Richtung, Kurs"
+        },
+        "pronunciation": "sa-LEW-fya",
+        "pos": "n",
+        "frequency": 0.01,
+        "first_sound": "s",
+        "last_sound": "a"
+    },
+    "tì'ong": {
+        "translations": {
+            "de": "Aufblühen, Ausblühen",
+            "en": "blooming, unfolding",
+            "et": "õitsemine",
+            "fr": "éclosion | floraison",
+            "hu": "virágzás, kinyílás",
+            "nl": "bloeien",
+            "pl": "kwitnienie, rozwój",
+            "ru": "цветение",
+            "sv": "blommning"
+        },
+        "pronunciation": "tì-'ONG",
+        "pos": "n",
+        "frequency": 0,
+        "first_sound": "t",
+        "last_sound": "ŋ"
+    },
+    "tìmu'ni": {
+        "translations": {
+            "en": "achievement, accomplishment",
+            "de": "Errungenschaft, Leistung, Bewerkstelligung, Erfolg",
+            "nl": "verdienste, prestatie",
+            "fr": "accomplissement"
+        },
+        "pronunciation": "tì-MU'-ni",
+        "pos": "n",
+        "frequency": 0.01,
+        "first_sound": "t",
+        "last_sound": "i"
+    },
+    "tìrol": {
+        "translations": {
+            "de": "Lied, Song, Gesang",
+            "en": "song (vocal)",
+            "et": "laul (vokaalne)",
+            "fr": "chant",
+            "hu": "dal, ének",
+            "nl": "lied (vocaal)",
+            "pl": "pieśń",
+            "ru": "песня",
+            "sv": "sång (vokal)"
+        },
+        "pronunciation": "tì-ROL",
+        "pos": "n",
+        "frequency": 0.02,
+        "first_sound": "t",
+        "last_sound": "l"
+    },
+    "trr'ong": {
+        "translations": {
+            "de": "Morgengrauen",
+            "en": "dawn, sunrise",
+            "et": "koit, päiksetõus",
+            "fr": "aube | aurore",
+            "hu": "hajnal, napkelte",
+            "nl": "vroege ochtend, zonsopgang",
+            "pl": "brzask, jutrzenka",
+            "ru": "восход",
+            "sv": "soluppgång, gryning"
+        },
+        "pronunciation": "trr-'ONG",
+        "pos": "n",
+        "frequency": 0.0,
+        "first_sound": "t",
+        "last_sound": "ŋ"
+    },
+    "txon'ong": {
+        "translations": {
+            "de": "Dämmerung, Sonnenuntergang",
+            "en": "nightfall, sunset, dusk, gloaming",
+            "et": "videvik, päikeseloojang, koidukuma",
+            "fr": "soir | crépuscule",
+            "hu": "naplemente, napszállta",
+            "nl": "zonsondergang",
+            "pl": "zmierzch, zmrok",
+            "ru": "закат, наступление ночи",
+            "sv": "skymning, solnedgång"
+        },
+        "pronunciation": "txon-'ONG",
+        "pos": "n",
+        "frequency": 0.01,
+        "first_sound": "d",
+        "last_sound": "ŋ"
+    },
+    "'ampirikx": {
+        "translations": {
+            "de": "KannenblattPflanze, pseudocenia simplex",
+            "en": "leaf pitcher plant",
+            "et": "Lehekukutaja (leaf pitcher plant)",
+            "fr": "feuilles de la Pitcher plant | [Pseudocenia simplex]",
+            "hu": "levélkancsóka (érintésre mozgó) (pandorai növényfaj)",
+            "nl": "bladbekerplant",
+            "ru": "кувшинолистное растение",
+            "sv": "löv tillbringarplanta",
+            "x-navi": "fne’ä’o a yom ioangit ahì’i"
+        },
+        "pronunciation": "'AM-pi-rikx",
+        "pos": "n",
+        "frequency": 0,
+        "first_sound": "'",
+        "last_sound": "g"
+    },
+    "'oratsyìp": {
+        "translations": {
+            "de": "Teich, Tümpel, Weiher",
+            "en": "pond, pool",
+            "et": "tiik",
+            "fr": "étang | mare",
+            "hu": "kis tó, medence",
+            "nl": "plas, poel",
+            "ru": "пруд, бассейн ",
+            "x-navi": "hì'ia 'ora"
+        },
+        "pronunciation": "'O-ra-tsyìp",
+        "pos": "n",
+        "frequency": 0.0,
+        "first_sound": "'",
+        "last_sound": "p"
+    },
+    "fkeytok": {
+        "translations": {
+            "de": "existieren",
+            "en": "exist",
+            "et": "olema, eksisteerima",
+            "fr": "exister",
+            "hu": "létezik",
+            "nl": "bestaan",
+            "pl": "istnieć",
+            "ru": "существовать",
+            "sv": "existera "
+        },
+        "pronunciation": "FKEY-tok",
+        "pos": "v:in",
+        "frequency": 0.1,
+        "first_sound": "f",
+        "last_sound": "k"
+    },
+    "fìtsap": {
+        "translations": {
+            "de": "einander, gegenseitig",
+            "en": "each other",
+            "et": "teineteist",
+            "fr": "l'un l'autre | les uns les autres",
+            "hu": "egymást",
+            "nl": "elkaar",
+            "pl": "wzajemnie",
+            "ru": "друг друга",
+            "sv": "varandra"
+        },
+        "pronunciation": "fì-TSAP",
+        "pos": "adv",
+        "frequency": 0.02,
+        "first_sound": "f",
+        "last_sound": "p"
+    },
+    "vezo": {
+        "translations": {
+            "de": "ordentlich sein, organisiert sein, aufgeräumt sein",
+            "en": "be in order, be organized",
+            "et": "korras olema, organiseeritud olema",
+            "fr": "être organisé | être ordonné",
+            "hu": "rendben van, rendezett",
+            "nl": "op orde zijn, georganiseerd zijn",
+            "pl": "być uporządkowanym, być dobrze zorganizowanym",
+            "ru": "быть в порядке"
+        },
+        "pronunciation": "ve-ZO",
+        "pos": "v:in",
+        "frequency": 0,
+        "first_sound": "v",
+        "last_sound": "o"
+    },
+    "tsyoklìt": {
+        "translations": {
+            "de": "Schokolade",
+            "en": "chocolate",
+            "et": "šokolaad",
+            "fr": "chocolat",
+            "hu": "csokoládé",
+            "nl": "chocolade",
+            "ru": "шоколад"
+        },
+        "pronunciation": "TSYOK-lìt",
+        "pos": "n",
+        "frequency": 0.01,
+        "first_sound": "c",
+        "last_sound": "t"
+    },
+    "sìltsan": {
+        "translations": {
+            "de": "gut, gut gemacht",
+            "en": "good (of its kind), well done",
+            "et": "hea",
+            "fr": "bon | bien",
+            "hu": "jó (megfelelő)",
+            "nl": "goed (in z'n soort), goed gedaan",
+            "pl": "dobry, dobrze zrobiony",
+            "ru": "хороший",
+            "sv": "bra, duktig, bra gjort"
+        },
+        "pronunciation": "sìl-TSAN",
+        "pos": "adj",
+        "frequency": 0.2,
+        "first_sound": "s",
+        "last_sound": "n"
+    },
+    "säfrrfen": {
+        "translations": {
+            "en": "visit, an instance of visiting",
+            "fr": "visite",
+            "de": "Besuch",
+            "nl": "bezoek"
+        },
+        "pronunciation": "sä-FRR-fen",
+        "pos": "n",
+        "frequency": 0,
+        "first_sound": "s",
+        "last_sound": "n"
+    },
+    "lìng": {
+        "translations": {
+            "en": "float (in the air or under water), hover",
+            "sv": "hänga i luften, sväva",
+            "ru": "парить (в воздухе)",
+            "pl": "unosić się w powietrzu, dryfować",
+            "nl": "zweven in de lucht",
+            "hu": "levegőben úszik, lebeg",
+            "fr": "planer | flotter dans les airs",
+            "et": "(õhus) hõljuma",
+            "de": "in der Luft schweben"
+        },
+        "pronunciation": "LÌNG",
+        "pos": "v:in",
+        "frequency": 0.01,
+        "first_sound": "l",
+        "last_sound": "ŋ"
+    },
+    "hrh": {
+        "translations": {
+            "en": "LOL (\"laughing out loud\")",
+            "xNavi": "“herangham”, <i>yewn futa pamrelsiyu hangham tsa’upxareteri</i>",
+            "fr": "LOL ou MDR",
+            "nl": "LOL (uiting van gelach)",
+            "de": "LOL (\"lauthals lachen\")"
+        },
+        "pronunciation": "N/A",
+        "pos": "intj",
+        "frequency": 1.32,
+        "first_sound": "h",
+        "last_sound": "h"
+    },
+    "sna": {
+        "translations": {
+            "en": "group of ... (prefix indicating naturally occuring groups or collections)",
+            "fr": "groupe de... (préfixe indiquant des regroupements naturels ou des collections)",
+            "de": "Gruppe von... (Präfix für natürlich vorkommende Gruppen oder Ansammlungen)"
+        },
+        "pronunciation": "N/A",
+        "pos": "aff:pre",
+        "frequency": 0,
+        "first_sound": "s",
+        "last_sound": "a"
+    },
+    "tu": {
+        "translations": {
+            "en": "... person (noun-making suffix)",
+            "fr": "(suffixe créant des noms communs de personnes)",
+            "de": "(substantivierendes und personifizierendes Suffix)"
+        },
+        "pronunciation": "N/A",
+        "pos": "aff:suf",
+        "frequency": 0,
+        "first_sound": "t",
+        "last_sound": "u"
+    },
+    "vi": {
+        "translations": {
+            "en": "(particle used for something spawned from something bigger)",
+            "fr": "(particule utilisée pour une chose issue d'une chose plus grande)",
+            "de": "(Partikel, die einen kleineren Teil von etwas Größerem abteilt)"
+        },
+        "pronunciation": "N/A",
+        "pos": "aff:suf",
+        "frequency": 0,
+        "first_sound": "v",
+        "last_sound": "i"
+    },
+    "an": {
+        "translations": {
+            "en": "(male gender suffix)",
+            "fr": "(suffixe masculin)",
+            "de": "(maskulines Suffix)"
+        },
+        "pronunciation": "N/A",
+        "pos": "aff:suf",
+        "frequency": 0.0,
+        "first_sound": "a",
+        "last_sound": "n"
+    },
+    "e": {
+        "translations": {
+            "en": "(female gender suffix)",
+            "fr": "(suffixe féminin)",
+            "de": "(feminines Suffix)"
+        },
+        "pronunciation": "N/A",
+        "pos": "aff:suf",
+        "frequency": 0,
+        "first_sound": "e",
+        "last_sound": "e"
+    },
+    "ve": {
+        "translations": {
+            "en": "...th (makes ordinal numbers from cardinal numbers)",
+            "fr": "...ième (forme des nombres ordinaux à partir de nombres cardinaux)",
+            "de": "...te (formt Ordinalzahlen aus Kardinalzahlen)"
+        },
+        "pronunciation": "N/A",
+        "pos": "aff:suf",
+        "frequency": 0,
+        "first_sound": "v",
+        "last_sound": "e"
+    },
+    "le": {
+        "translations": {
+            "en": "having to do with... (makes adjectives from nouns and verbs, non-productive)",
+            "fr": "ayant à voir avec... (forme des adjectifs à partir de noms ou de verbes, non productif)",
+            "de": "-sch, mit ... zu tun habend (formt Adjektive aus Substantiven und Verben, nicht produktiv)"
+        },
+        "pronunciation": "N/A",
+        "pos": "aff:pre",
+        "frequency": 0,
+        "first_sound": "l",
+        "last_sound": "e"
+    },
     "us": {
         "translations": {
-            "en": "(active participle)"
+            "en": "(active participle)",
+            "fr": "(participe actif)",
+            "de": "(Partizip aktiv)"
         },
         "pronunciation": "N/A",
         "pos": "aff:in",
         "frequency": 0,
         "first_sound": "u",
         "last_sound": "s"
+    },
+    "tarep": {
+        "translations": {
+            "en": "save, rescue",
+            "de": "retten, jemanden vor Übel bewahren (z.B. einer gefährlichen Situation)",
+            "nl": "redden",
+            "fr": "sauver, secourir, rescaper"
+        },
+        "pronunciation": "TA-rep",
+        "pos": "v:tr",
+        "frequency": 0,
+        "first_sound": "t",
+        "last_sound": "p"
+    },
+    "tareptu": {
+        "translations": {
+            "en": "rescuee, someone who has been rescued or saved",
+            "de": "jemand, der gerettet ist oder wird",
+            "nl": "geredde persoon, iemand die gered is",
+            "fr": "rescapé, personne ayant été sauvée, secourue ou rescapée"
+        },
+        "pronunciation": "TA-rep-tu",
+        "pos": "n",
+        "frequency": 0,
+        "first_sound": "t",
+        "last_sound": "u"
+    },
+    "sätarep": {
+        "translations": {
+            "en": "rescue, an instance of rescuing",
+            "de": "Rettung, Instanz einer Rettung",
+            "nl": "redding",
+            "fr": "sauvetage, secours"
+        },
+        "pronunciation": "sä-TA-rep",
+        "pos": "n",
+        "frequency": 0,
+        "first_sound": "s",
+        "last_sound": "p"
+    },
+    "tsantu": {
+        "translations": {
+            "en": "good person, \"good guy\"",
+            "de": "gutmütige Person, Gutmensch, jemand, der Gutes tut",
+            "nl": "goede persoon, iemand die aan de goede kant staat",
+            "fr": "bonne personne, \"le gentil\""
+        },
+        "pronunciation": "TSAN-tu",
+        "pos": "n",
+        "frequency": 0,
+        "first_sound": "c",
+        "last_sound": "u"
+    },
+    "nawmtu": {
+        "translations": {
+            "en": "great person, noble person",
+            "de": "ehrwürdige Person, großartige Person",
+            "et": "hea/suur inimene",
+            "fr": "grande personne, noble personne",
+            "hu": "hős, nagy ember",
+            "nl": "groot persoon",
+            "pl": "wielka osoba",
+            "ru": "важный человек",
+            "sv": "stor person (som i mäktig, väldig)"
+        },
+        "pronunciation": "NAWM-tu",
+        "pos": "n",
+        "frequency": 0.01,
+        "first_sound": "n",
+        "last_sound": "u"
+    },
+    "kawngtu": {
+        "translations": {
+            "en": "bad person, \"bad guy\"",
+            "de": "schlechte Person, böse Person, jemand, der Böses tut",
+            "nl": "slechte persoon, iemand die aan de verkeerde kant staat",
+            "fr": "mauvaise personne, personne méchante, \"le méchant\""
+        },
+        "pronunciation": "KAWNG-tu",
+        "pos": "n",
+        "frequency": 0,
+        "first_sound": "k",
+        "last_sound": "u"
+    },
+    "tìk": {
+        "translations": {
+            "en": "immediately, without delay",
+            "de": "sofort, schleunigst, unmittelbar, augenblicklich, auf der Stelle",
+            "fr": "immédiatement, sans délai, sur-le-champ"
+        },
+        "pronunciation": "TÌK",
+        "pos": "adv",
+        "frequency": 0,
+        "first_sound": "t",
+        "last_sound": "k"
+    },
+    "pxiye'rìn": {
+        "translations": {
+            "en": "immediately (not as soon as pxiswaway)",
+            "sv": "omedelbart (inte så snart som pxiswaway)",
+            "ru": "немедленно (но не так скоро, как pxiswaway)",
+            "pl": "natychmiast (nie tak szybko jak pxiswaway)",
+            "nl": "direct (niet zo snel als pxiswaway)",
+            "hu": "mindjárt (nem olyan hamar, mint pxiswaway)",
+            "fr": "immédiatement (pas aussi rapidement que pxiswaway)",
+            "et": "otsekohe (mitte nii ruttu nagu pxisaway)",
+            "de": "gleich (nicht so bald wie pxiswaway)"
+        },
+        "pronunciation": "pxi-YE'-rìn",
+        "pos": "adv",
+        "frequency": 0.0,
+        "first_sound": "b",
+        "last_sound": "n"
+    },
+    "spakat": {
+        "translations": {
+            "en": "drown",
+            "de": "ertrinken, untergehen",
+            "fr": "se noyer"
+        },
+        "pronunciation": "SPA-kat",
+        "pos": "v:in",
+        "frequency": 0,
+        "first_sound": "s",
+        "last_sound": "t"
+    },
+    "fwum": {
+        "translations": {
+            "en": "float (on the surface of a liquid)",
+            "de": "treiben (auf der Oberfläche einer Flüssigkeit, z.B. Wasser), aufschwimmen",
+            "nl": "drijven (op een vloeistof)",
+            "fr": "flotter (sur la surface d'un liquide)"
+        },
+        "pronunciation": "FWUM",
+        "pos": "v:in",
+        "frequency": 0,
+        "first_sound": "f",
+        "last_sound": "m"
+    },
+    "wapx": {
+        "translations": {
+            "en": "sink",
+            "de": "sinken, untergehen",
+            "nl": "zinken",
+            "fr": "couler"
+        },
+        "pronunciation": "WAPX",
+        "pos": "v:in",
+        "frequency": 0,
+        "first_sound": "w",
+        "last_sound": "b"
+    },
+    "tamìfa": {
+        "translations": {
+            "en": "internal",
+            "de": "intern, innerlich",
+            "fr": "interne, à l'intérieur"
+        },
+        "pronunciation": "ta-MÌ-fa",
+        "pos": "adj",
+        "frequency": 0,
+        "first_sound": "t",
+        "last_sound": "a"
+    },
+    "tawrrpa": {
+        "translations": {
+            "en": "external",
+            "de": "extern, äußerlich",
+            "fr": "externe, à l'extérieur"
+        },
+        "pronunciation": "ta-WRR-pa",
+        "pos": "adj",
+        "frequency": 0,
+        "first_sound": "t",
+        "last_sound": "a"
+    },
+    "tsantxäl": {
+        "translations": {
+            "en": "invitation",
+            "de": "Einladung",
+            "nl": "uitnodiging",
+            "fr": "invitation"
+        },
+        "pronunciation": "tsan-TXÄL",
+        "pos": "n",
+        "frequency": 0,
+        "first_sound": "c",
+        "last_sound": "l"
+    },
+    "fäpa": {
+        "translations": {
+            "en": "top",
+            "sv": "topp",
+            "ru": "верх, макушка",
+            "pl": "wierzchołek, góra",
+            "nl": "top, bovenkant",
+            "hu": "tető, csúcs",
+            "fr": "sommet, haut",
+            "et": "peal",
+            "de": "Spitze, Gipfel"
+        },
+        "pronunciation": "FÄ-pa",
+        "pos": "n",
+        "frequency": 0.01,
+        "first_sound": "f",
+        "last_sound": "a"
+    },
+    "särangal": {
+        "translations": {
+            "en": "wish",
+            "de": "Wunsch",
+            "fr": "vœu, souhait",
+            "nl": "wens"
+        },
+        "pronunciation": "sä-RA-ngal",
+        "pos": "n",
+        "frequency": 0,
+        "first_sound": "s",
+        "last_sound": "l"
+    },
+    "nong": {
+        "translations": {
+            "en": "follow, proceed after",
+            "sv": "följa, härma",
+            "ru": "следовать за чемлибо, происходить вслед за чемлибо",
+            "pl": "podążać (za)",
+            "nl": "volgen",
+            "hu": "követ",
+            "fr": "suivre",
+            "et": "järgnema, järel käima",
+            "de": "folgen, nachfolgen"
+        },
+        "pronunciation": "NONG",
+        "pos": "v:tr",
+        "frequency": 0.01,
+        "first_sound": "n",
+        "last_sound": "ŋ"
+    },
+    "nume": {
+        "translations": {
+            "en": "learn",
+            "de": "lernen, Wissen oder Verstehen erlangen",
+            "et": "õppima, teada saama",
+            "fr": "apprendre",
+            "hu": "tanul",
+            "nl": "leren",
+            "pl": "uczyć",
+            "ru": "учиться, изучать",
+            "sv": "lära"
+        },
+        "pronunciation": "NU-me",
+        "pos": "v:in",
+        "frequency": 0.12,
+        "first_sound": "n",
+        "last_sound": "e"
+    },
+    "'avun": {
+        "translations": {
+            "en": "save (time, food, etc.)",
+            "de": "sparen (z.B. Zeit, Nahrung etc.)",
+            "nl": "besparen (tijd, voedsel, enz.)",
+            "fr": "épargner, économiser (temps, nourriture, etc.)"
+        },
+        "pronunciation": "'A-vun",
+        "pos": "v:tr",
+        "frequency": 0,
+        "first_sound": "'",
+        "last_sound": "n"
+    },
+    "kenong": {
+        "translations": {
+            "en": "model, represent, exemplify",
+            "sv": "representera, företräder, exemplifierar",
+            "ru": "иллюстрировать (на примере), приводить пример, представлять в качестве образца",
+            "pl": "demonstrować, reprezentować (ii)",
+            "nl": "representeren",
+            "hu": "példát mutat, elől jár",
+            "fr": "représenter",
+            "et": "kujutama, esindama, näiteks olema (e)",
+            "de": "darstellen, veranschaulichen, bedeuten, repräsentieren"
+        },
+        "pronunciation": "KE-nong",
+        "pos": "v:tr",
+        "frequency": 0.03,
+        "first_sound": "k",
+        "last_sound": "ŋ"
     }
 }

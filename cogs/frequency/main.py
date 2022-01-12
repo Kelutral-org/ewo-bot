@@ -136,7 +136,7 @@ class FrequencyCog(commands.Cog):
                     for word in response:
                         try:
                             root_object = word.get('sì\'eyng')[0]
-                            word = root_object.get('na\'vi').replace('\'', '’')
+                            word = root_object.get('na\'vi').replace('\'', '’').lower()
 
                             if not execute_read_query(wordlist, "SELECT * FROM words WHERE word = '" + word + "'"):
                                 execute_query(wordlist, """
