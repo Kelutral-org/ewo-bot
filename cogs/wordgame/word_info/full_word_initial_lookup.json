@@ -351,12 +351,12 @@
         "hìmtxampe",
         "hìmtxan",
         "hìtxoa",
-        "hìno",
         "holpxaype",
         "horenleykekyu",
         "hufwetsyìp",
         "hawmpam",
-        "hrh"
+        "hrh",
+        "hìno"
     ],
     "i": [
         "iknimaya",
@@ -455,7 +455,6 @@
         "kaw'it",
         "kawkxan",
         "kawtseng",
-        "kawtu",
         "kawnomum",
         "kawnglan",
         "kawngsar",
@@ -527,7 +526,8 @@
         "kefpomtokxnga'",
         "kämakto",
         "kawngtu",
-        "kenong"
+        "kenong",
+        "kawtu"
     ],
     "g": [
         "kxa",
@@ -650,7 +650,6 @@
         "lekxutslu",
         "lekye'ung",
         "lelì'fya",
-        "leno",
         "lenomum",
         "lenrra",
         "lepxìmrun",
@@ -701,13 +700,13 @@
         "la'um",
         "latsi",
         "lìng",
-        "le"
+        "le",
+        "leno"
     ],
     "m": [
         "metkayina",
         "mo'ara",
         "mo'at'ite",
-        "mo'at",
         "ma",
         "makto",
         "mal",
@@ -744,7 +743,6 @@
         "mìfa",
         "mìn",
         "mungsye",
-        "malmok",
         "mu'ni",
         "mektseng",
         "mrrve",
@@ -784,15 +782,14 @@
         "manga",
         "matu",
         "manawmtu",
-        "mun'i"
+        "mun'i",
+        "mo'at"
     ],
     "n": [
         "na'vi",
         "naranawm",
         "nawmtoruktek",
         "neteyam",
-        "neytiri",
-        "ninat",
         "na'rìng",
         "na",
         "naer",
@@ -970,7 +967,9 @@
         "nìtsyungwen",
         "nawmtu",
         "nong",
-        "nume"
+        "nume",
+        "neytiri",
+        "ninat"
     ],
     "ŋ": [
         "nga",
@@ -1024,7 +1023,6 @@
     ],
     "p": [
         "pari",
-        "peyral",
         "poston",
         "pa'li",
         "pa'o",
@@ -1126,7 +1124,8 @@
         "puve",
         "pamrelvul",
         "pung",
-        "pate"
+        "pate",
+        "peyral"
     ],
     "b": [
         "pxan",
@@ -1557,7 +1556,6 @@
         "tìnvi",
         "tìran",
         "tìtxen",
-        "tute",
         "tawng",
         "to",
         "tunu",
@@ -1677,7 +1675,6 @@
         "tìngäzìk",
         "tìngong",
         "tìngop",
-        "tìno",
         "tìnomum",
         "tìnui",
         "tìoeyktìng",
@@ -1789,7 +1786,9 @@
         "tareptu",
         "tìk",
         "tamìfa",
-        "tawrrpa"
+        "tawrrpa",
+        "tute",
+        "tìno"
     ],
     "c": [
         "tsenu",

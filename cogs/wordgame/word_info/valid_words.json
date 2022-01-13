@@ -308,7 +308,7 @@
         },
         "pronunciation": "'E-fu",
         "pos": "v:tr",
-        "frequency": 0.38,
+        "frequency": 0.39,
         "first_sound": "'",
         "last_sound": "u"
     },
@@ -625,7 +625,7 @@
         },
         "pronunciation": "'O'",
         "pos": "adj",
-        "frequency": 0.06,
+        "frequency": 0.07,
         "first_sound": "'",
         "last_sound": "'"
     },
@@ -790,7 +790,7 @@
         },
         "pronunciation": "'U",
         "pos": "n",
-        "frequency": 0.37,
+        "frequency": 0.38,
         "first_sound": "'",
         "last_sound": "u"
     },
@@ -880,7 +880,7 @@
         },
         "pronunciation": "'Ä'",
         "pos": "intj",
-        "frequency": 0.05,
+        "frequency": 0.04,
         "first_sound": "'",
         "last_sound": "'"
     },
@@ -1011,7 +1011,7 @@
         },
         "pronunciation": "'ÌP",
         "pos": "v:in",
-        "frequency": 0.05,
+        "frequency": 0.04,
         "first_sound": "'",
         "last_sound": "p"
     },
@@ -1242,19 +1242,6 @@
         "first_sound": "m",
         "last_sound": "e"
     },
-    "mo'at": {
-        "translations": {
-            "de": "weiblicher Name",
-            "en": "tsahìk of the Omatikaya",
-            "fr": "tsahìk du clan Omatikaya",
-            "nl": "tsahìk van de Omatikaya"
-        },
-        "pronunciation": "MO-'at",
-        "pos": "n:pr",
-        "frequency": 0.01,
-        "first_sound": "m",
-        "last_sound": "t"
-    },
     "na'vi": {
         "translations": {
             "de": "Volk (der Na'vi), eingeborenes Volk Pandoras",
@@ -1313,32 +1300,6 @@
         "first_sound": "n",
         "last_sound": "m"
     },
-    "neytiri": {
-        "translations": {
-            "de": "weiblicher Name",
-            "en": "female Na'vi of the Omatikaya Clan",
-            "fr": "femme Na'vi du clan Omatikaya",
-            "nl": "vrouw van de Omatikaya Stam"
-        },
-        "pronunciation": "ney-TI-ri",
-        "pos": "n:pr",
-        "frequency": 0.03,
-        "first_sound": "n",
-        "last_sound": "i"
-    },
-    "ninat": {
-        "translations": {
-            "de": "weiblicher Name",
-            "en": "female singer of the Omatikaya Clan",
-            "fr": "chanteuse du clan Omatikaya",
-            "nl": "zangeres van de Omatikaya Stam"
-        },
-        "pronunciation": "ni-NAT",
-        "pos": "n:pr",
-        "frequency": 0,
-        "first_sound": "n",
-        "last_sound": "t"
-    },
     "omatikaya": {
         "translations": {
             "de": "Omatikaya (Name eines Clanes), Clan der Blauen Flöte",
@@ -1383,19 +1344,6 @@
         "frequency": 0.0,
         "first_sound": "p",
         "last_sound": "i"
-    },
-    "peyral": {
-        "translations": {
-            "de": "weiblicher Name",
-            "en": "female Na'vi of the Omatikaya Clan",
-            "fr": "femme Na'vi du clan Omatikaya",
-            "nl": "vrouw van de Omatikaya Stam"
-        },
-        "pronunciation": "pey-RAL",
-        "pos": "n:pr",
-        "frequency": 0,
-        "first_sound": "p",
-        "last_sound": "l"
     },
     "poston": {
         "translations": {
@@ -2009,7 +1957,7 @@
         },
         "pronunciation": "ekx-TXU",
         "pos": "adj",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "e",
         "last_sound": "u"
     },
@@ -2028,7 +1976,7 @@
         },
         "pronunciation": "EL-tu",
         "pos": "n",
-        "frequency": 0.27,
+        "frequency": 0.26,
         "first_sound": "e",
         "last_sound": "u"
     },
@@ -2118,7 +2066,7 @@
         },
         "pronunciation": "FA",
         "pos": "adp",
-        "frequency": 0.34,
+        "frequency": 0.33,
         "first_sound": "f",
         "last_sound": "a"
     },
@@ -2259,7 +2207,7 @@
         },
         "pronunciation": "FKO",
         "pos": "pn",
-        "frequency": 1.0,
+        "frequency": 0.99,
         "first_sound": "f",
         "last_sound": "o"
     },
@@ -2292,7 +2240,7 @@
         },
         "pronunciation": "FKXA-ra",
         "pos": "n",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "f",
         "last_sound": "a"
     },
@@ -2415,7 +2363,7 @@
         },
         "pronunciation": "FMAWN",
         "pos": "n",
-        "frequency": 0.1,
+        "frequency": 0.11,
         "first_sound": "f",
         "last_sound": "n"
     },
@@ -2595,7 +2543,7 @@
         },
         "pronunciation": "FNU",
         "pos": "v:in",
-        "frequency": 0.05,
+        "frequency": 0.04,
         "first_sound": "f",
         "last_sound": "u"
     },
@@ -2737,7 +2685,7 @@
         },
         "pronunciation": "FPÌL",
         "pos": "v:tr",
-        "frequency": 0.43,
+        "frequency": 0.44,
         "first_sound": "f",
         "last_sound": "l"
     },
@@ -3432,7 +3380,7 @@
         },
         "pronunciation": "HAWNG",
         "pos": "n",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "h",
         "last_sound": "ŋ"
     },
@@ -4065,7 +4013,7 @@
         },
         "pronunciation": "i-RA-yo",
         "pos": "intj",
-        "frequency": 0.19,
+        "frequency": 0.2,
         "first_sound": "i",
         "last_sound": "o"
     },
@@ -4156,7 +4104,7 @@
         },
         "pronunciation": "KA-me",
         "pos": "v:tr",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "k",
         "last_sound": "e"
     },
@@ -4331,7 +4279,7 @@
         },
         "pronunciation": "KE",
         "pos": "part",
-        "frequency": 2.17,
+        "frequency": 2.18,
         "first_sound": "k",
         "last_sound": "e"
     },
@@ -4385,7 +4333,7 @@
         },
         "pronunciation": "KEL-ku",
         "pos": "n",
-        "frequency": 0.47,
+        "frequency": 0.46,
         "first_sound": "k",
         "last_sound": "u"
     },
@@ -5460,7 +5408,7 @@
         },
         "pronunciation": "LA-tem",
         "pos": "v:in",
-        "frequency": 0.12,
+        "frequency": 0.11,
         "first_sound": "l",
         "last_sound": "m"
     },
@@ -5548,7 +5496,7 @@
         },
         "pronunciation": "le-NA'-vi",
         "pos": "adj",
-        "frequency": 0.14,
+        "frequency": 0.13,
         "first_sound": "l",
         "last_sound": "i"
     },
@@ -5903,7 +5851,7 @@
         },
         "pronunciation": "LOR",
         "pos": "adj",
-        "frequency": 0.03,
+        "frequency": 0.04,
         "first_sound": "l",
         "last_sound": "r"
     },
@@ -5940,7 +5888,7 @@
         },
         "pronunciation": "LU",
         "pos": "v:cp",
-        "frequency": 3.87,
+        "frequency": 3.88,
         "first_sound": "l",
         "last_sound": "u"
     },
@@ -6010,7 +5958,7 @@
         },
         "pronunciation": "LÌ-'u",
         "pos": "n",
-        "frequency": 0.4,
+        "frequency": 0.39,
         "first_sound": "l",
         "last_sound": "u"
     },
@@ -6666,7 +6614,7 @@
         },
         "pronunciation": "NA'-rìng",
         "pos": "n",
-        "frequency": 0.04,
+        "frequency": 0.05,
         "first_sound": "n",
         "last_sound": "ŋ"
     },
@@ -6903,7 +6851,7 @@
         },
         "pronunciation": "NGA",
         "pos": "pn",
-        "frequency": 1.76,
+        "frequency": 1.77,
         "first_sound": "ŋ",
         "last_sound": "a"
     },
@@ -7522,7 +7470,7 @@
         },
         "pronunciation": "O-e",
         "pos": "pn",
-        "frequency": 5.13,
+        "frequency": 5.15,
         "first_sound": "o",
         "last_sound": "e"
     },
@@ -7628,7 +7576,7 @@
         },
         "pronunciation": "o-MUM",
         "pos": "v:tr",
-        "frequency": 0.25,
+        "frequency": 0.26,
         "first_sound": "o",
         "last_sound": "m"
     },
@@ -8388,7 +8336,7 @@
         },
         "pronunciation": "PÄ-hem",
         "pos": "v:in",
-        "frequency": 0.03,
+        "frequency": 0.04,
         "first_sound": "p",
         "last_sound": "m"
     },
@@ -8656,7 +8604,7 @@
         },
         "pronunciation": "REL",
         "pos": "n",
-        "frequency": 0.31,
+        "frequency": 0.3,
         "first_sound": "r",
         "last_sound": "l"
     },
@@ -8950,7 +8898,7 @@
         },
         "pronunciation": "RO-u",
         "pos": "v:in",
-        "frequency": 0.05,
+        "frequency": 0.04,
         "first_sound": "r",
         "last_sound": "u"
     },
@@ -9401,7 +9349,7 @@
         },
         "pronunciation": "SI",
         "pos": "v:si",
-        "frequency": 0.62,
+        "frequency": 0.61,
         "first_sound": "s",
         "last_sound": "i"
     },
@@ -9438,7 +9386,7 @@
         },
         "pronunciation": "ska-'A",
         "pos": "v:tr",
-        "frequency": 0.14,
+        "frequency": 0.13,
         "first_sound": "s",
         "last_sound": "a"
     },
@@ -9543,7 +9491,7 @@
         },
         "pronunciation": "SKXIR",
         "pos": "n",
-        "frequency": 0.03,
+        "frequency": 0.04,
         "first_sound": "s",
         "last_sound": "r"
     },
@@ -10371,7 +10319,7 @@
         },
         "pronunciation": "SRÄTX",
         "pos": "v:tr",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "s",
         "last_sound": "d"
     },
@@ -11272,7 +11220,7 @@
         },
         "pronunciation": "TEL",
         "pos": "v:tr",
-        "frequency": 0.05,
+        "frequency": 0.04,
         "first_sound": "t",
         "last_sound": "l"
     },
@@ -11345,7 +11293,7 @@
         },
         "pronunciation": "te-RI",
         "pos": "adp",
-        "frequency": 0.28,
+        "frequency": 0.29,
         "first_sound": "t",
         "last_sound": "i"
     },
@@ -11505,7 +11453,7 @@
         },
         "pronunciation": "ti-RE-a",
         "pos": "n",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "t",
         "last_sound": "a"
     },
@@ -12888,7 +12836,7 @@
         },
         "pronunciation": "TXAN",
         "pos": "adj",
-        "frequency": 0.16,
+        "frequency": 0.15,
         "first_sound": "d",
         "last_sound": "n"
     },
@@ -12952,7 +12900,7 @@
         },
         "pronunciation": "txe'-LAN",
         "pos": "n",
-        "frequency": 0.03,
+        "frequency": 0.04,
         "first_sound": "d",
         "last_sound": "n"
     },
@@ -12970,7 +12918,7 @@
         },
         "pronunciation": "TXE-le",
         "pos": "n",
-        "frequency": 0.08,
+        "frequency": 0.09,
         "first_sound": "d",
         "last_sound": "e"
     },
@@ -13431,7 +13379,7 @@
         },
         "pronunciation": "TÌN-vi",
         "pos": "n:si",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "t",
         "last_sound": "i"
     },
@@ -14330,7 +14278,7 @@
         },
         "pronunciation": "YA",
         "pos": "n",
-        "frequency": 0.21,
+        "frequency": 0.2,
         "first_sound": "y",
         "last_sound": "a"
     },
@@ -15114,25 +15062,6 @@
         "first_sound": "k",
         "last_sound": "n"
     },
-    "tute": {
-        "translations": {
-            "en": "person",
-            "de": "Person, Mensch (Na'vi)",
-            "et": "isik",
-            "fr": "femme",
-            "hu": "személy",
-            "nl": "persoon",
-            "pl": "osoba",
-            "ru": "персона (на'ви или человек)",
-            "sv": "person",
-            "x-navi": "’awa rusey a lu kanu nìftxan kuma po tsun fpivìl snoteri, nìpxi hapxì Na'viyä fu tawtute"
-        },
-        "pronunciation": "TU-te",
-        "pos": "n",
-        "frequency": 1.43,
-        "first_sound": "t",
-        "last_sound": "e"
-    },
     "koren": {
         "translations": {
             "en": "rule, guideline",
@@ -15166,7 +15095,7 @@
         },
         "pronunciation": "A",
         "pos": "part",
-        "frequency": 2.07,
+        "frequency": 2.06,
         "first_sound": "a",
         "last_sound": "a"
     },
@@ -15252,7 +15181,7 @@
         },
         "pronunciation": "TO",
         "pos": "part",
-        "frequency": 0.09,
+        "frequency": 0.1,
         "first_sound": "t",
         "last_sound": "o"
     },
@@ -15336,7 +15265,7 @@
         },
         "pronunciation": "A-lu",
         "pos": "conj",
-        "frequency": 1.38,
+        "frequency": 1.37,
         "first_sound": "a",
         "last_sound": "u"
     },
@@ -15545,19 +15474,6 @@
         "frequency": 0,
         "first_sound": "c",
         "last_sound": "b"
-    },
-    "malmok": {
-        "translations": {
-            "en": "stone arch",
-            "de": "Steinbogen",
-            "nl": "steenboog",
-            "fr": "arc en pierre"
-        },
-        "pronunciation": "N/A",
-        "pos": "n",
-        "frequency": 0,
-        "first_sound": "m",
-        "last_sound": "k"
     },
     "zevakx": {
         "translations": {
@@ -17307,7 +17223,7 @@
         },
         "pronunciation": "WENG",
         "pos": "pn",
-        "frequency": 0.16,
+        "frequency": 0.15,
         "first_sound": "w",
         "last_sound": "ŋ"
     },
@@ -19712,24 +19628,6 @@
         "first_sound": "h",
         "last_sound": "a"
     },
-    "hìno": {
-        "translations": {
-            "de": "detailiert, präzise, genau (für Dinge)",
-            "en": "fine, detailed, precise, intricate (of things)",
-            "et": "detailne, täpne (asjade kohta)",
-            "fr": "fin | précis | détaillé",
-            "hu": "finom, részletes, precíz, bonyolult (dolog)",
-            "nl": "fijn, precies, gedetailleerd (van dingen)",
-            "pl": "szegółowy, dokładny, zawiły",
-            "ru": "точный, углубленный,сложный (о вещи)",
-            "sv": "detaljerad, precis (om saker)"
-        },
-        "pronunciation": "hì-NO",
-        "pos": "adj",
-        "frequency": 0.01,
-        "first_sound": "h",
-        "last_sound": "o"
-    },
     "holpxaype": {
         "translations": {
             "de": "Wie viele? (welche Nummer?)",
@@ -20101,24 +19999,6 @@
         "frequency": 0,
         "first_sound": "k",
         "last_sound": "ŋ"
-    },
-    "kawtu": {
-        "translations": {
-            "en": "no one",
-            "sv": "ingen",
-            "ru": "никто",
-            "pl": "nikt",
-            "nl": "niemand",
-            "hu": "senki",
-            "fr": "personne",
-            "et": "mitte keegi",
-            "de": "niemand"
-        },
-        "pronunciation": "KAW-tu",
-        "pos": "pn",
-        "frequency": 0.07,
-        "first_sound": "k",
-        "last_sound": "u"
     },
     "kawnomum": {
         "translations": {
@@ -21719,7 +21599,7 @@
         },
         "pronunciation": "ME-lo",
         "pos": "adv",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "m",
         "last_sound": "o"
     },
@@ -22028,7 +21908,7 @@
         },
         "pronunciation": "le-FNGAP",
         "pos": "adj",
-        "frequency": 0.3,
+        "frequency": 0.29,
         "first_sound": "l",
         "last_sound": "p"
     },
@@ -22138,7 +22018,7 @@
         },
         "pronunciation": "le-HO-an",
         "pos": "adj",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "l",
         "last_sound": "n"
     },
@@ -22257,24 +22137,6 @@
         "frequency": 0.01,
         "first_sound": "l",
         "last_sound": "a"
-    },
-    "leno": {
-        "translations": {
-            "de": "genau, detailorientiert, gründlich (für Menschen)",
-            "en": "thorough, detailorientated (of a person)",
-            "et": "täpne, põhjalik (inimeste kohta)",
-            "fr": "direct (pour une personne)",
-            "hu": "alapos, részletességre törekvő (személy)",
-            "nl": "diepgaand, gedetailleerd (van een persoon)",
-            "pl": "skrupulatny, skupiony na szczegółach (o osobie)",
-            "ru": "вдумчивый",
-            "sv": "grundlig, fokuserad på detaljer (om en person)"
-        },
-        "pronunciation": "le-NO",
-        "pos": "adj",
-        "frequency": 0,
-        "first_sound": "l",
-        "last_sound": "o"
     },
     "lenomum": {
         "translations": {
@@ -22512,7 +22374,7 @@
         },
         "pronunciation": "le-TOKX",
         "pos": "adj",
-        "frequency": 0.05,
+        "frequency": 0.04,
         "first_sound": "l",
         "last_sound": "g"
     },
@@ -22787,7 +22649,7 @@
         },
         "pronunciation": "LÌ'-fya",
         "pos": "n",
-        "frequency": 0.23,
+        "frequency": 0.24,
         "first_sound": "l",
         "last_sound": "a"
     },
@@ -24950,7 +24812,7 @@
         },
         "pronunciation": "nì-PXI",
         "pos": "adv",
-        "frequency": 0.05,
+        "frequency": 0.04,
         "first_sound": "n",
         "last_sound": "i"
     },
@@ -25479,7 +25341,7 @@
         },
         "pronunciation": "nì-TXAN",
         "pos": "adv",
-        "frequency": 0.49,
+        "frequency": 0.5,
         "first_sound": "n",
         "last_sound": "n"
     },
@@ -25875,7 +25737,7 @@
         },
         "pronunciation": "pe-FYA",
         "pos": "inter",
-        "frequency": 0.09,
+        "frequency": 0.1,
         "first_sound": "p",
         "last_sound": "a"
     },
@@ -29704,7 +29566,7 @@
         },
         "pronunciation": "tì-FME-tok",
         "pos": "n",
-        "frequency": 0.1,
+        "frequency": 0.12,
         "first_sound": "t",
         "last_sound": "k"
     },
@@ -30707,24 +30569,6 @@
         "frequency": 0.0,
         "first_sound": "t",
         "last_sound": "p"
-    },
-    "tìno": {
-        "translations": {
-            "de": "Gründlichkeit, Liebe zum Detail",
-            "en": "thoroughness, attention to detail",
-            "et": "täpsus, põhjalikkus, detailsus",
-            "fr": "perfection",
-            "hu": "alaposság, részletesség",
-            "nl": "diepgaandheid, precisie, gedetailleerdheid",
-            "pl": "skrupulatność, zwracanie uwagi na szczegóły",
-            "ru": "вдумчивость, внимание к деталям",
-            "sv": "grundlighet, uppmärksamhet på detaljer"
-        },
-        "pronunciation": "tì-NO",
-        "pos": "n",
-        "frequency": 0,
-        "first_sound": "t",
-        "last_sound": "o"
     },
     "tìnomum": {
         "translations": {
@@ -32168,7 +32012,7 @@
         },
         "pronunciation": "TSA-'u",
         "pos": "pn",
-        "frequency": 0.93,
+        "frequency": 0.94,
         "first_sound": "c",
         "last_sound": "u"
     },
@@ -32632,7 +32476,7 @@
         },
         "pronunciation": "TSÌ-ve",
         "pos": "adj",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "c",
         "last_sound": "e"
     },
@@ -33395,7 +33239,7 @@
         },
         "pronunciation": "txa-SU-nu",
         "pos": "v:in",
-        "frequency": 0.05,
+        "frequency": 0.04,
         "first_sound": "d",
         "last_sound": "u"
     },
@@ -36111,5 +35955,148 @@
         "frequency": 0.03,
         "first_sound": "k",
         "last_sound": "ŋ"
+    },
+    "neytiri": {
+        "translations": {
+            "en": "Neytiri (female Na'vi of the Omatikaya Clan)",
+            "nl": "vrouw van de Omatikaya Stam",
+            "fr": "femme Na'vi du clan Omatikaya",
+            "de": "weiblicher Name"
+        },
+        "pronunciation": "ney-TI-ri",
+        "pos": "n:pr",
+        "frequency": 0.03,
+        "first_sound": "n",
+        "last_sound": "i"
+    },
+    "mo'at": {
+        "translations": {
+            "en": "Mo'at (tsahìk of the Omatikaya)",
+            "nl": "tsahìk van de Omatikaya",
+            "fr": "tsahìk du clan Omatikaya",
+            "de": "weiblicher Name"
+        },
+        "pronunciation": "MO-'at",
+        "pos": "n:pr",
+        "frequency": 0.01,
+        "first_sound": "m",
+        "last_sound": "t"
+    },
+    "ninat": {
+        "translations": {
+            "en": "Ninat (female singer of the Omatikaya Clan)",
+            "nl": "zangeres van de Omatikaya Stam",
+            "fr": "chanteuse du clan Omatikaya",
+            "de": "weiblicher Name"
+        },
+        "pronunciation": "ni-NAT",
+        "pos": "n:pr",
+        "frequency": 0,
+        "first_sound": "n",
+        "last_sound": "t"
+    },
+    "peyral": {
+        "translations": {
+            "en": "Peyral (female Na'vi of the Omatikaya Clan)",
+            "nl": "vrouw van de Omatikaya Stam",
+            "fr": "femme Na'vi du clan Omatikaya",
+            "de": "weiblicher Name"
+        },
+        "pronunciation": "pey-RAL",
+        "pos": "n:pr",
+        "frequency": 0,
+        "first_sound": "p",
+        "last_sound": "l"
+    },
+    "tute": {
+        "translations": {
+            "en": "person",
+            "xNavi": "’awa rusey a lu kanu nìftxan kuma po tsun fpivìl snoteri, nìpxi hapxì Na'viyä fu tawtute",
+            "sv": "person",
+            "ru": "персона (на'ви или человек)",
+            "pl": "osoba",
+            "nl": "persoon",
+            "hu": "személy",
+            "fr": "personne",
+            "et": "isik",
+            "de": "Person, Mensch (Na'vi)"
+        },
+        "pronunciation": "TU-te",
+        "pos": "n",
+        "frequency": 1.42,
+        "first_sound": "t",
+        "last_sound": "e"
+    },
+    "kawtu": {
+        "translations": {
+            "en": "no one",
+            "de": "niemand",
+            "et": "mitte keegi",
+            "fr": "(aucune) personne, nul",
+            "hu": "senki",
+            "nl": "niemand",
+            "pl": "nikt",
+            "ru": "никто",
+            "sv": "ingen"
+        },
+        "pronunciation": "KAW-tu",
+        "pos": "pn",
+        "frequency": 0.07,
+        "first_sound": "k",
+        "last_sound": "u"
+    },
+    "leno": {
+        "translations": {
+            "en": "thorough, detailorientated (of a person)",
+            "sv": "grundlig, fokuserad på detaljer (om en person)",
+            "ru": "вдумчивый",
+            "pl": "skrupulatny, skupiony na szczegółach (o osobie)",
+            "nl": "diepgaand, gedetailleerd (van een persoon)",
+            "hu": "alapos, részletességre törekvő (személy)",
+            "fr": "direct, soucieux des détails (pour une personne)",
+            "et": "täpne, põhjalik (inimeste kohta)",
+            "de": "genau, detailorientiert, gründlich (für Menschen)"
+        },
+        "pronunciation": "le-NO",
+        "pos": "adj",
+        "frequency": 0,
+        "first_sound": "l",
+        "last_sound": "o"
+    },
+    "tìno": {
+        "translations": {
+            "en": "thoroughness, attention to detail",
+            "sv": "grundlighet, uppmärksamhet på detaljer",
+            "ru": "вдумчивость, внимание к деталям",
+            "pl": "skrupulatność, zwracanie uwagi na szczegóły",
+            "nl": "diepgaandheid, precisie, gedetailleerdheid",
+            "hu": "alaposság, részletesség",
+            "fr": "souci du détail, perfection",
+            "et": "täpsus, põhjalikkus, detailsus",
+            "de": "Gründlichkeit, Liebe zum Detail"
+        },
+        "pronunciation": "tì-NO",
+        "pos": "n",
+        "frequency": 0,
+        "first_sound": "t",
+        "last_sound": "o"
+    },
+    "hìno": {
+        "translations": {
+            "en": "fine, detailed, precise, intricate (of things)",
+            "sv": "detaljerad, precis (om saker)",
+            "ru": "точный, углубленный,сложный (о вещи)",
+            "pl": "szegółowy, dokładny, zawiły",
+            "nl": "fijn, precies, gedetailleerd (van dingen)",
+            "hu": "finom, részletes, precíz, bonyolult (dolog)",
+            "fr": "détaillé, précis, fin",
+            "et": "detailne, täpne (asjade kohta)",
+            "de": "detailiert, präzise, genau (für Dinge)"
+        },
+        "pronunciation": "hì-NO",
+        "pos": "adj",
+        "frequency": 0.01,
+        "first_sound": "h",
+        "last_sound": "o"
     }
 }
