@@ -52,7 +52,7 @@
         },
         "pronunciation": "'A-ku",
         "pos": "v:tr",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "'",
         "last_sound": "u"
     },
@@ -327,7 +327,7 @@
         },
         "pronunciation": "'E-ko",
         "pos": "v:tr",
-        "frequency": 0.1,
+        "frequency": 0.09,
         "first_sound": "'",
         "last_sound": "o"
     },
@@ -346,7 +346,7 @@
         },
         "pronunciation": "'E-kong",
         "pos": "n",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "'",
         "last_sound": "ŋ"
     },
@@ -383,7 +383,7 @@
         },
         "pronunciation": "'EM",
         "pos": "v:tr",
-        "frequency": 0.1,
+        "frequency": 0.09,
         "first_sound": "'",
         "last_sound": "m"
     },
@@ -625,7 +625,7 @@
         },
         "pronunciation": "'O'",
         "pos": "adj",
-        "frequency": 0.07,
+        "frequency": 0.08,
         "first_sound": "'",
         "last_sound": "'"
     },
@@ -699,7 +699,7 @@
         },
         "pronunciation": "'O-pin",
         "pos": "n",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "'",
         "last_sound": "n"
     },
@@ -790,7 +790,7 @@
         },
         "pronunciation": "'U",
         "pos": "n",
-        "frequency": 0.38,
+        "frequency": 0.37,
         "first_sound": "'",
         "last_sound": "u"
     },
@@ -880,7 +880,7 @@
         },
         "pronunciation": "'Ä'",
         "pos": "intj",
-        "frequency": 0.04,
+        "frequency": 0.05,
         "first_sound": "'",
         "last_sound": "'"
     },
@@ -1313,19 +1313,6 @@
         "first_sound": "o",
         "last_sound": "a"
     },
-    "otranyu": {
-        "translations": {
-            "de": "männlicher Name",
-            "en": "male Na'vi",
-            "fr": "homme Na'vi",
-            "nl": "mannelijke Na'vi"
-        },
-        "pronunciation": "ot-RAN-yu",
-        "pos": "n:pr",
-        "frequency": 0,
-        "first_sound": "o",
-        "last_sound": "u"
-    },
     "pari": {
         "translations": {
             "de": "Paris (Hauptstadt Frankreichs)",
@@ -1736,7 +1723,7 @@
         },
         "pronunciation": "a-HO",
         "pos": "v:in",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "a",
         "last_sound": "o"
     },
@@ -1793,7 +1780,7 @@
         },
         "pronunciation": "am-'A",
         "pos": "n",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "a",
         "last_sound": "a"
     },
@@ -1976,7 +1963,7 @@
         },
         "pronunciation": "EL-tu",
         "pos": "n",
-        "frequency": 0.26,
+        "frequency": 0.28,
         "first_sound": "e",
         "last_sound": "u"
     },
@@ -2153,7 +2140,7 @@
         },
         "pronunciation": "FKAN",
         "pos": "v:in",
-        "frequency": 0.06,
+        "frequency": 0.07,
         "first_sound": "f",
         "last_sound": "n"
     },
@@ -2381,7 +2368,7 @@
         },
         "pronunciation": "FME-tok",
         "pos": "v:tr",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "f",
         "last_sound": "k"
     },
@@ -2490,7 +2477,7 @@
         },
         "pronunciation": "FNGAP",
         "pos": "n",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "f",
         "last_sound": "p"
     },
@@ -2719,7 +2706,7 @@
         },
         "pronunciation": "FRR-fen",
         "pos": "v:tr",
-        "frequency": 0.06,
+        "frequency": 0.05,
         "first_sound": "f",
         "last_sound": "n"
     },
@@ -2772,7 +2759,7 @@
         },
         "pronunciation": "FTANG",
         "pos": "v:m",
-        "frequency": 0.1,
+        "frequency": 0.09,
         "first_sound": "f",
         "last_sound": "ŋ"
     },
@@ -2791,7 +2778,7 @@
         },
         "pronunciation": "FTE",
         "pos": "conj",
-        "frequency": 0.5,
+        "frequency": 0.49,
         "first_sound": "f",
         "last_sound": "e"
     },
@@ -2902,7 +2889,7 @@
         },
         "pronunciation": "FTÄR",
         "pos": "adj",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "f",
         "last_sound": "r"
     },
@@ -2937,7 +2924,7 @@
         },
         "pronunciation": "FWAM-pop",
         "pos": "n",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "f",
         "last_sound": "p"
     },
@@ -3311,7 +3298,7 @@
         },
         "pronunciation": "HAM",
         "pos": "adj",
-        "frequency": 0.06,
+        "frequency": 0.07,
         "first_sound": "h",
         "last_sound": "m"
     },
@@ -3532,7 +3519,7 @@
         },
         "pronunciation": "HIPX",
         "pos": "v:tr",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "h",
         "last_sound": "b"
     },
@@ -3670,7 +3657,7 @@
         },
         "pronunciation": "HU",
         "pos": "adp",
-        "frequency": 0.34,
+        "frequency": 0.32,
         "first_sound": "h",
         "last_sound": "u"
     },
@@ -3688,7 +3675,7 @@
         },
         "pronunciation": "hu-FWA",
         "pos": "conj",
-        "frequency": 0.07,
+        "frequency": 0.08,
         "first_sound": "h",
         "last_sound": "a"
     },
@@ -3785,7 +3772,7 @@
         },
         "pronunciation": "HÄN",
         "pos": "n",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "h",
         "last_sound": "n"
     },
@@ -3803,7 +3790,7 @@
         },
         "pronunciation": "HÌ-'i",
         "pos": "adj",
-        "frequency": 0.07,
+        "frequency": 0.08,
         "first_sound": "h",
         "last_sound": "i"
     },
@@ -3858,7 +3845,7 @@
         },
         "pronunciation": "IK-ran",
         "pos": "n",
-        "frequency": 0.06,
+        "frequency": 0.07,
         "first_sound": "i",
         "last_sound": "n"
     },
@@ -3923,7 +3910,7 @@
         },
         "pronunciation": "i-NAN",
         "pos": "v:tr",
-        "frequency": 0.12,
+        "frequency": 0.15,
         "first_sound": "i",
         "last_sound": "n"
     },
@@ -4013,7 +4000,7 @@
         },
         "pronunciation": "i-RA-yo",
         "pos": "intj",
-        "frequency": 0.2,
+        "frequency": 0.19,
         "first_sound": "i",
         "last_sound": "o"
     },
@@ -4086,7 +4073,7 @@
         },
         "pronunciation": "KAM",
         "pos": "adp",
-        "frequency": 0.1,
+        "frequency": 0.09,
         "first_sound": "k",
         "last_sound": "m"
     },
@@ -4104,7 +4091,7 @@
         },
         "pronunciation": "KA-me",
         "pos": "v:tr",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "k",
         "last_sound": "e"
     },
@@ -4121,7 +4108,7 @@
         },
         "pronunciation": "KA-nom",
         "pos": "v:tr",
-        "frequency": 0.16,
+        "frequency": 0.17,
         "first_sound": "k",
         "last_sound": "m"
     },
@@ -4140,7 +4127,7 @@
         },
         "pronunciation": "KA-nu",
         "pos": "adj",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "k",
         "last_sound": "u"
     },
@@ -4158,7 +4145,7 @@
         },
         "pronunciation": "KAR",
         "pos": "v:tr",
-        "frequency": 0.09,
+        "frequency": 0.08,
         "first_sound": "k",
         "last_sound": "r"
     },
@@ -4260,7 +4247,7 @@
         },
         "pronunciation": "KAYM",
         "pos": "n",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "k",
         "last_sound": "m"
     },
@@ -4279,7 +4266,7 @@
         },
         "pronunciation": "KE",
         "pos": "part",
-        "frequency": 2.18,
+        "frequency": 2.16,
         "first_sound": "k",
         "last_sound": "e"
     },
@@ -4315,7 +4302,7 @@
         },
         "pronunciation": "KE-he",
         "pos": "part",
-        "frequency": 0.15,
+        "frequency": 0.16,
         "first_sound": "k",
         "last_sound": "e"
     },
@@ -4351,7 +4338,7 @@
         },
         "pronunciation": "KEM",
         "pos": "n",
-        "frequency": 0.2,
+        "frequency": 0.19,
         "first_sound": "k",
         "last_sound": "m"
     },
@@ -4502,7 +4489,7 @@
         },
         "pronunciation": "kil-VAN",
         "pos": "n",
-        "frequency": 0.04,
+        "frequency": 0.05,
         "first_sound": "k",
         "last_sound": "n"
     },
@@ -4592,7 +4579,7 @@
         },
         "pronunciation": "KLL-te",
         "pos": "n",
-        "frequency": 0.08,
+        "frequency": 0.09,
         "first_sound": "k",
         "last_sound": "e"
     },
@@ -4931,7 +4918,7 @@
         },
         "pronunciation": "KXAYL",
         "pos": "adj",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "g",
         "last_sound": "l"
     },
@@ -5138,7 +5125,7 @@
         },
         "pronunciation": "KXÌM",
         "pos": "v:tr",
-        "frequency": 0.08,
+        "frequency": 0.07,
         "first_sound": "g",
         "last_sound": "m"
     },
@@ -5442,7 +5429,7 @@
         },
         "pronunciation": "LAW-nol",
         "pos": "n",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "l",
         "last_sound": "l"
     },
@@ -5513,7 +5500,7 @@
         },
         "pronunciation": "le-i-o-A-e",
         "pos": "n",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "l",
         "last_sound": "e"
     },
@@ -5549,7 +5536,7 @@
         },
         "pronunciation": "LEN",
         "pos": "v:in",
-        "frequency": 0.38,
+        "frequency": 0.37,
         "first_sound": "l",
         "last_sound": "n"
     },
@@ -5664,7 +5651,7 @@
         },
         "pronunciation": "LI",
         "pos": "adv",
-        "frequency": 0.2,
+        "frequency": 0.19,
         "first_sound": "l",
         "last_sound": "i"
     },
@@ -6007,7 +5994,7 @@
         },
         "pronunciation": "MA",
         "pos": "part",
-        "frequency": 0.8,
+        "frequency": 0.78,
         "first_sound": "m",
         "last_sound": "a"
     },
@@ -6313,7 +6300,7 @@
         },
         "pronunciation": "MI",
         "pos": "adv",
-        "frequency": 0.24,
+        "frequency": 0.23,
         "first_sound": "m",
         "last_sound": "i"
     },
@@ -6349,7 +6336,7 @@
         },
         "pronunciation": "MIP",
         "pos": "adj",
-        "frequency": 0.26,
+        "frequency": 0.27,
         "first_sound": "m",
         "last_sound": "p"
     },
@@ -6632,7 +6619,7 @@
         },
         "pronunciation": "NA",
         "pos": "adp",
-        "frequency": 0.18,
+        "frequency": 0.19,
         "first_sound": "n",
         "last_sound": "a"
     },
@@ -6683,7 +6670,7 @@
         },
         "pronunciation": "NAN-tang",
         "pos": "n",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "n",
         "last_sound": "ŋ"
     },
@@ -6701,7 +6688,7 @@
         },
         "pronunciation": "NA-ri",
         "pos": "n",
-        "frequency": 0.05,
+        "frequency": 0.06,
         "first_sound": "n",
         "last_sound": "i"
     },
@@ -6714,7 +6701,7 @@
         },
         "pronunciation": "na-TXU",
         "pos": "v:tr",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "n",
         "last_sound": "u"
     },
@@ -6780,7 +6767,7 @@
         },
         "pronunciation": "NE",
         "pos": "adp",
-        "frequency": 0.4,
+        "frequency": 0.39,
         "first_sound": "n",
         "last_sound": "e"
     },
@@ -6851,7 +6838,7 @@
         },
         "pronunciation": "NGA",
         "pos": "pn",
-        "frequency": 1.77,
+        "frequency": 1.8,
         "first_sound": "ŋ",
         "last_sound": "a"
     },
@@ -6903,7 +6890,7 @@
         },
         "pronunciation": "NGAWNG",
         "pos": "n",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "ŋ",
         "last_sound": "ŋ"
     },
@@ -7058,7 +7045,7 @@
         },
         "pronunciation": "NGONG",
         "pos": "adj",
-        "frequency": 0.04,
+        "frequency": 0.05,
         "first_sound": "ŋ",
         "last_sound": "ŋ"
     },
@@ -7076,7 +7063,7 @@
         },
         "pronunciation": "NGOP",
         "pos": "v:tr",
-        "frequency": 0.22,
+        "frequency": 0.23,
         "first_sound": "ŋ",
         "last_sound": "p"
     },
@@ -7094,7 +7081,7 @@
         },
         "pronunciation": "NGUL",
         "pos": "adj",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "ŋ",
         "last_sound": "l"
     },
@@ -7147,7 +7134,7 @@
         },
         "pronunciation": "NGÄ-zìk",
         "pos": "adj",
-        "frequency": 0.11,
+        "frequency": 0.12,
         "first_sound": "ŋ",
         "last_sound": "k"
     },
@@ -7228,7 +7215,7 @@
         },
         "pronunciation": "NI-vi",
         "pos": "n",
-        "frequency": 0.06,
+        "frequency": 0.07,
         "first_sound": "n",
         "last_sound": "i"
     },
@@ -7384,7 +7371,7 @@
         },
         "pronunciation": "nì-NA'-vi",
         "pos": "adv",
-        "frequency": 0.22,
+        "frequency": 0.21,
         "first_sound": "n",
         "last_sound": "i"
     },
@@ -7470,7 +7457,7 @@
         },
         "pronunciation": "O-e",
         "pos": "pn",
-        "frequency": 5.15,
+        "frequency": 5.25,
         "first_sound": "o",
         "last_sound": "e"
     },
@@ -7558,7 +7545,7 @@
         },
         "pronunciation": "o-LO'",
         "pos": "n",
-        "frequency": 0.11,
+        "frequency": 0.1,
         "first_sound": "o",
         "last_sound": "'"
     },
@@ -7666,7 +7653,7 @@
         },
         "pronunciation": "PAK",
         "pos": "part",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "p",
         "last_sound": "k"
     },
@@ -7730,7 +7717,7 @@
         },
         "pronunciation": "PAM",
         "pos": "n",
-        "frequency": 0.08,
+        "frequency": 0.07,
         "first_sound": "p",
         "last_sound": "m"
     },
@@ -7748,7 +7735,7 @@
         },
         "pronunciation": "pam-REL",
         "pos": "n:si",
-        "frequency": 0.29,
+        "frequency": 0.27,
         "first_sound": "p",
         "last_sound": "l"
     },
@@ -7766,7 +7753,7 @@
         },
         "pronunciation": "PAM-tse-o",
         "pos": "n:si",
-        "frequency": 0.09,
+        "frequency": 0.1,
         "first_sound": "p",
         "last_sound": "o"
     },
@@ -7848,7 +7835,7 @@
         },
         "pronunciation": "PAWM",
         "pos": "v:tr",
-        "frequency": 0.24,
+        "frequency": 0.23,
         "first_sound": "p",
         "last_sound": "m"
     },
@@ -7884,7 +7871,7 @@
         },
         "pronunciation": "PENG",
         "pos": "v:tr",
-        "frequency": 0.28,
+        "frequency": 0.27,
         "first_sound": "p",
         "last_sound": "ŋ"
     },
@@ -7974,7 +7961,7 @@
         },
         "pronunciation": "pll-TXE",
         "pos": "v:tr",
-        "frequency": 0.38,
+        "frequency": 0.36,
         "first_sound": "p",
         "last_sound": "e"
     },
@@ -7993,7 +7980,7 @@
         },
         "pronunciation": "PO",
         "pos": "pn",
-        "frequency": 1.63,
+        "frequency": 1.6,
         "first_sound": "p",
         "last_sound": "o"
     },
@@ -8030,7 +8017,7 @@
         },
         "pronunciation": "PO-ngu",
         "pos": "n",
-        "frequency": 0.26,
+        "frequency": 0.25,
         "first_sound": "p",
         "last_sound": "u"
     },
@@ -8354,7 +8341,7 @@
         },
         "pronunciation": "päng-KXO",
         "pos": "v:in",
-        "frequency": 0.22,
+        "frequency": 0.21,
         "first_sound": "p",
         "last_sound": "o"
     },
@@ -8390,7 +8377,7 @@
         },
         "pronunciation": "pì-WOPX",
         "pos": "n",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "p",
         "last_sound": "b"
     },
@@ -8427,7 +8414,7 @@
         },
         "pronunciation": "RAM",
         "pos": "n",
-        "frequency": 0.04,
+        "frequency": 0.05,
         "first_sound": "r",
         "last_sound": "m"
     },
@@ -8604,7 +8591,7 @@
         },
         "pronunciation": "REL",
         "pos": "n",
-        "frequency": 0.3,
+        "frequency": 0.29,
         "first_sound": "r",
         "last_sound": "l"
     },
@@ -8691,7 +8678,7 @@
         },
         "pronunciation": "RE-won",
         "pos": "n",
-        "frequency": 0.08,
+        "frequency": 0.07,
         "first_sound": "r",
         "last_sound": "n"
     },
@@ -8829,7 +8816,7 @@
         },
         "pronunciation": "RO",
         "pos": "adp:len",
-        "frequency": 0.04,
+        "frequency": 0.05,
         "first_sound": "r",
         "last_sound": "o"
     },
@@ -8969,7 +8956,7 @@
         },
         "pronunciation": "ru-TXE",
         "pos": "intj",
-        "frequency": 0.08,
+        "frequency": 0.07,
         "first_sound": "r",
         "last_sound": "e"
     },
@@ -8985,7 +8972,7 @@
         },
         "pronunciation": "räp-TUM",
         "pos": "adj",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "r",
         "last_sound": "m"
     },
@@ -9140,7 +9127,7 @@
         },
         "pronunciation": "SANG",
         "pos": "adj",
-        "frequency": 0.03,
+        "frequency": 0.04,
         "first_sound": "s",
         "last_sound": "ŋ"
     },
@@ -9158,7 +9145,7 @@
         },
         "pronunciation": "SAR",
         "pos": "v:tr",
-        "frequency": 0.2,
+        "frequency": 0.21,
         "first_sound": "s",
         "last_sound": "r"
     },
@@ -9243,7 +9230,7 @@
         },
         "pronunciation": "SEM-pul",
         "pos": "n",
-        "frequency": 0.03,
+        "frequency": 0.04,
         "first_sound": "s",
         "last_sound": "l"
     },
@@ -9261,7 +9248,7 @@
         },
         "pronunciation": "SET",
         "pos": "adv",
-        "frequency": 0.41,
+        "frequency": 0.4,
         "first_sound": "s",
         "last_sound": "t"
     },
@@ -9279,7 +9266,7 @@
         },
         "pronunciation": "se-VIN",
         "pos": "adj",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "s",
         "last_sound": "n"
     },
@@ -9349,7 +9336,7 @@
         },
         "pronunciation": "SI",
         "pos": "v:si",
-        "frequency": 0.61,
+        "frequency": 0.62,
         "first_sound": "s",
         "last_sound": "i"
     },
@@ -9544,7 +9531,7 @@
         },
         "pronunciation": "SLAN",
         "pos": "v:tr",
-        "frequency": 0.03,
+        "frequency": 0.04,
         "first_sound": "s",
         "last_sound": "n"
     },
@@ -9893,7 +9880,7 @@
         },
         "pronunciation": "SNO",
         "pos": "pn",
-        "frequency": 0.23,
+        "frequency": 0.22,
         "first_sound": "s",
         "last_sound": "o"
     },
@@ -10197,7 +10184,7 @@
         },
         "pronunciation": "SRA-ne",
         "pos": "part",
-        "frequency": 0.32,
+        "frequency": 0.33,
         "first_sound": "s",
         "last_sound": "e"
     },
@@ -10215,7 +10202,7 @@
         },
         "pronunciation": "SRE'",
         "pos": "n",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "s",
         "last_sound": "'"
     },
@@ -10301,7 +10288,7 @@
         },
         "pronunciation": "SRUNG",
         "pos": "n",
-        "frequency": 0.1,
+        "frequency": 0.09,
         "first_sound": "s",
         "last_sound": "ŋ"
     },
@@ -10319,7 +10306,7 @@
         },
         "pronunciation": "SRÄTX",
         "pos": "v:tr",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "s",
         "last_sound": "d"
     },
@@ -10459,7 +10446,7 @@
         },
         "pronunciation": "STUM",
         "pos": "adv",
-        "frequency": 0.07,
+        "frequency": 0.08,
         "first_sound": "s",
         "last_sound": "m"
     },
@@ -10477,7 +10464,7 @@
         },
         "pronunciation": "STXE-li",
         "pos": "n",
-        "frequency": 0.07,
+        "frequency": 0.06,
         "first_sound": "s",
         "last_sound": "i"
     },
@@ -10528,7 +10515,7 @@
         },
         "pronunciation": "STÄ'-nì-pam",
         "pos": "n:si",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "s",
         "last_sound": "m"
     },
@@ -10580,7 +10567,7 @@
         },
         "pronunciation": "SU-nu",
         "pos": "v:in",
-        "frequency": 0.47,
+        "frequency": 0.52,
         "first_sound": "s",
         "last_sound": "u"
     },
@@ -10941,7 +10928,7 @@
         },
         "pronunciation": "SYU-ve",
         "pos": "n",
-        "frequency": 0.11,
+        "frequency": 0.1,
         "first_sound": "s",
         "last_sound": "e"
     },
@@ -11060,7 +11047,7 @@
         },
         "pronunciation": "TA'-leng",
         "pos": "n",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "t",
         "last_sound": "ŋ"
     },
@@ -11202,7 +11189,7 @@
         },
         "pronunciation": "TEK-re",
         "pos": "n",
-        "frequency": 0.13,
+        "frequency": 0.14,
         "first_sound": "t",
         "last_sound": "e"
     },
@@ -11220,7 +11207,7 @@
         },
         "pronunciation": "TEL",
         "pos": "v:tr",
-        "frequency": 0.04,
+        "frequency": 0.05,
         "first_sound": "t",
         "last_sound": "l"
     },
@@ -11312,7 +11299,7 @@
         },
         "pronunciation": "TER-kup",
         "pos": "v:in",
-        "frequency": 0.21,
+        "frequency": 0.2,
         "first_sound": "t",
         "last_sound": "p"
     },
@@ -11472,7 +11459,7 @@
         },
         "pronunciation": "TOK",
         "pos": "v:tr",
-        "frequency": 0.29,
+        "frequency": 0.28,
         "first_sound": "t",
         "last_sound": "k"
     },
@@ -11645,7 +11632,7 @@
         },
         "pronunciation": "TSAW-ke",
         "pos": "n",
-        "frequency": 0.06,
+        "frequency": 0.07,
         "first_sound": "c",
         "last_sound": "e"
     },
@@ -11663,7 +11650,7 @@
         },
         "pronunciation": "TSAWL",
         "pos": "adj",
-        "frequency": 0.06,
+        "frequency": 0.07,
         "first_sound": "c",
         "last_sound": "l"
     },
@@ -11769,7 +11756,7 @@
         },
         "pronunciation": "TSE-o",
         "pos": "n",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "c",
         "last_sound": "o"
     },
@@ -11803,7 +11790,7 @@
         },
         "pronunciation": "TSEWTX",
         "pos": "adj",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "c",
         "last_sound": "d"
     },
@@ -11836,7 +11823,7 @@
         },
         "pronunciation": "TSIM",
         "pos": "n",
-        "frequency": 0.03,
+        "frequency": 0.04,
         "first_sound": "c",
         "last_sound": "m"
     },
@@ -11920,7 +11907,7 @@
         },
         "pronunciation": "TSKXE",
         "pos": "n",
-        "frequency": 0.06,
+        "frequency": 0.05,
         "first_sound": "c",
         "last_sound": "e"
     },
@@ -11938,7 +11925,7 @@
         },
         "pronunciation": "TSKXE-keng",
         "pos": "n",
-        "frequency": 0.11,
+        "frequency": 0.12,
         "first_sound": "c",
         "last_sound": "ŋ"
     },
@@ -12094,7 +12081,7 @@
         },
         "pronunciation": "TSNGEM",
         "pos": "n",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "c",
         "last_sound": "m"
     },
@@ -12263,7 +12250,7 @@
         },
         "pronunciation": "TSTUN-wi",
         "pos": "adj",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "c",
         "last_sound": "i"
     },
@@ -12368,7 +12355,7 @@
         },
         "pronunciation": "TSUN",
         "pos": "v:m",
-        "frequency": 1.06,
+        "frequency": 1.05,
         "first_sound": "c",
         "last_sound": "n"
     },
@@ -12437,7 +12424,7 @@
         },
         "pronunciation": "TSWAY-on",
         "pos": "v:in",
-        "frequency": 0.03,
+        "frequency": 0.04,
         "first_sound": "c",
         "last_sound": "n"
     },
@@ -12623,7 +12610,7 @@
         },
         "pronunciation": "TSYÌL",
         "pos": "v:tr",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "c",
         "last_sound": "l"
     },
@@ -12659,7 +12646,7 @@
         },
         "pronunciation": "TSÌNG",
         "pos": "num",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "c",
         "last_sound": "ŋ"
     },
@@ -12900,7 +12887,7 @@
         },
         "pronunciation": "txe'-LAN",
         "pos": "n",
-        "frequency": 0.04,
+        "frequency": 0.03,
         "first_sound": "d",
         "last_sound": "n"
     },
@@ -12936,7 +12923,7 @@
         },
         "pronunciation": "TXEN",
         "pos": "adj",
-        "frequency": 0.04,
+        "frequency": 0.05,
         "first_sound": "d",
         "last_sound": "n"
     },
@@ -13008,7 +12995,7 @@
         },
         "pronunciation": "TXI",
         "pos": "n",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "d",
         "last_sound": "i"
     },
@@ -13026,7 +13013,7 @@
         },
         "pronunciation": "TXIN",
         "pos": "adj",
-        "frequency": 0.07,
+        "frequency": 0.08,
         "first_sound": "d",
         "last_sound": "n"
     },
@@ -13117,7 +13104,7 @@
         },
         "pronunciation": "TXUKX",
         "pos": "adj",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "d",
         "last_sound": "g"
     },
@@ -13328,7 +13315,7 @@
         },
         "pronunciation": "tì-KANG-kem",
         "pos": "n",
-        "frequency": 0.27,
+        "frequency": 0.28,
         "first_sound": "t",
         "last_sound": "m"
     },
@@ -13364,7 +13351,7 @@
         },
         "pronunciation": "TÌNG",
         "pos": "v:tr",
-        "frequency": 0.14,
+        "frequency": 0.15,
         "first_sound": "t",
         "last_sound": "ŋ"
     },
@@ -13414,7 +13401,7 @@
         },
         "pronunciation": "tì-TXEN",
         "pos": "n:si",
-        "frequency": 0.13,
+        "frequency": 0.14,
         "first_sound": "t",
         "last_sound": "n"
     },
@@ -13485,7 +13472,7 @@
         },
         "pronunciation": "UL-te",
         "pos": "conj",
-        "frequency": 1.46,
+        "frequency": 1.44,
         "first_sound": "u",
         "last_sound": "e"
     },
@@ -13503,7 +13490,7 @@
         },
         "pronunciation": "ul-TXA",
         "pos": "n",
-        "frequency": 0.07,
+        "frequency": 0.06,
         "first_sound": "u",
         "last_sound": "a"
     },
@@ -13538,7 +13525,7 @@
         },
         "pronunciation": "U-nil",
         "pos": "n",
-        "frequency": 0.03,
+        "frequency": 0.04,
         "first_sound": "u",
         "last_sound": "l"
     },
@@ -13610,7 +13597,7 @@
         },
         "pronunciation": "UT-ral",
         "pos": "n",
-        "frequency": 0.04,
+        "frequency": 0.05,
         "first_sound": "u",
         "last_sound": "l"
     },
@@ -13643,7 +13630,7 @@
         },
         "pronunciation": "u-VAN",
         "pos": "n",
-        "frequency": 0.25,
+        "frequency": 0.27,
         "first_sound": "u",
         "last_sound": "n"
     },
@@ -13712,7 +13699,7 @@
         },
         "pronunciation": "VE-'o",
         "pos": "n",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "v",
         "last_sound": "o"
     },
@@ -13747,7 +13734,7 @@
         },
         "pronunciation": "VE-nu",
         "pos": "n",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "v",
         "last_sound": "u"
     },
@@ -14063,7 +14050,7 @@
         },
         "pronunciation": "WIN",
         "pos": "adj",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "w",
         "last_sound": "n"
     },
@@ -14116,7 +14103,7 @@
         },
         "pronunciation": "WO",
         "pos": "v:tr",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "w",
         "last_sound": "o"
     },
@@ -14187,7 +14174,7 @@
         },
         "pronunciation": "WUM",
         "pos": "adv",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "w",
         "last_sound": "m"
     },
@@ -14205,7 +14192,7 @@
         },
         "pronunciation": "WUR",
         "pos": "adj",
-        "frequency": 0.04,
+        "frequency": 0.03,
         "first_sound": "w",
         "last_sound": "r"
     },
@@ -14242,7 +14229,7 @@
         },
         "pronunciation": "WÄTX",
         "pos": "v:tr",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "w",
         "last_sound": "d"
     },
@@ -14260,7 +14247,7 @@
         },
         "pronunciation": "wìn-TXU",
         "pos": "v:tr",
-        "frequency": 0.07,
+        "frequency": 0.06,
         "first_sound": "w",
         "last_sound": "u"
     },
@@ -14278,7 +14265,7 @@
         },
         "pronunciation": "YA",
         "pos": "n",
-        "frequency": 0.2,
+        "frequency": 0.21,
         "first_sound": "y",
         "last_sound": "a"
     },
@@ -14330,7 +14317,7 @@
         },
         "pronunciation": "ya-YAYR",
         "pos": "n",
-        "frequency": 0.09,
+        "frequency": 0.08,
         "first_sound": "y",
         "last_sound": "r"
     },
@@ -14384,7 +14371,7 @@
         },
         "pronunciation": "YE'-rìn",
         "pos": "adv",
-        "frequency": 0.06,
+        "frequency": 0.07,
         "first_sound": "y",
         "last_sound": "n"
     },
@@ -14420,7 +14407,7 @@
         },
         "pronunciation": "YEM",
         "pos": "v:tr",
-        "frequency": 0.05,
+        "frequency": 0.04,
         "first_sound": "y",
         "last_sound": "m"
     },
@@ -14454,7 +14441,7 @@
         },
         "pronunciation": "YE-rik",
         "pos": "n",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "y",
         "last_sound": "k"
     },
@@ -14570,7 +14557,7 @@
         },
         "pronunciation": "YOM",
         "pos": "v:tr",
-        "frequency": 0.25,
+        "frequency": 0.24,
         "first_sound": "y",
         "last_sound": "m"
     },
@@ -14605,7 +14592,7 @@
         },
         "pronunciation": "YU-ne",
         "pos": "v:tr",
-        "frequency": 0.09,
+        "frequency": 0.1,
         "first_sound": "y",
         "last_sound": "e"
     },
@@ -14692,7 +14679,7 @@
         },
         "pronunciation": "ZA-'u",
         "pos": "v:in",
-        "frequency": 0.23,
+        "frequency": 0.22,
         "first_sound": "z",
         "last_sound": "u"
     },
@@ -14885,7 +14872,7 @@
         },
         "pronunciation": "ZO",
         "pos": "v:in",
-        "frequency": 0.1,
+        "frequency": 0.09,
         "first_sound": "z",
         "last_sound": "o"
     },
@@ -14936,7 +14923,7 @@
         },
         "pronunciation": "ZUM",
         "pos": "n",
-        "frequency": 0.12,
+        "frequency": 0.11,
         "first_sound": "z",
         "last_sound": "m"
     },
@@ -14969,7 +14956,7 @@
         },
         "pronunciation": "ZUP",
         "pos": "v:in",
-        "frequency": 0.14,
+        "frequency": 0.15,
         "first_sound": "z",
         "last_sound": "p"
     },
@@ -15040,7 +15027,7 @@
         },
         "pronunciation": "ZÌ-sìt",
         "pos": "n",
-        "frequency": 0.32,
+        "frequency": 0.31,
         "first_sound": "z",
         "last_sound": "t"
     },
@@ -15058,7 +15045,7 @@
         },
         "pronunciation": "KAN",
         "pos": "v:tr",
-        "frequency": 0.03,
+        "frequency": 0.04,
         "first_sound": "k",
         "last_sound": "n"
     },
@@ -15076,7 +15063,7 @@
         },
         "pronunciation": "ko-REN",
         "pos": "n",
-        "frequency": 0.2,
+        "frequency": 0.21,
         "first_sound": "k",
         "last_sound": "n"
     },
@@ -15265,7 +15252,7 @@
         },
         "pronunciation": "A-lu",
         "pos": "conj",
-        "frequency": 1.37,
+        "frequency": 1.39,
         "first_sound": "a",
         "last_sound": "u"
     },
@@ -15301,7 +15288,7 @@
         },
         "pronunciation": "SKXAWNG",
         "pos": "n",
-        "frequency": 0.06,
+        "frequency": 0.07,
         "first_sound": "s",
         "last_sound": "ŋ"
     },
@@ -15340,7 +15327,7 @@
         },
         "pronunciation": "PXUL",
         "pos": "adj",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "b",
         "last_sound": "l"
     },
@@ -15588,7 +15575,7 @@
         },
         "pronunciation": "ko-MUM",
         "pos": "phr",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "k",
         "last_sound": "m"
     },
@@ -15967,7 +15954,7 @@
         },
         "pronunciation": "YO'-ko-fya",
         "pos": "n",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "y",
         "last_sound": "a"
     },
@@ -16122,7 +16109,7 @@
         },
         "pronunciation": "a-to-ki-RI-na'",
         "pos": "n",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "a",
         "last_sound": "'"
     },
@@ -16172,7 +16159,7 @@
         },
         "pronunciation": "txep-RAM",
         "pos": "n",
-        "frequency": 0.03,
+        "frequency": 0.04,
         "first_sound": "d",
         "last_sound": "m"
     },
@@ -16259,7 +16246,7 @@
         },
         "pronunciation": "lì'-fya-o-LO'",
         "pos": "n",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "l",
         "last_sound": "'"
     },
@@ -16585,7 +16572,7 @@
         },
         "pronunciation": "TXIN-tseng",
         "pos": "n",
-        "frequency": 0.05,
+        "frequency": 0.04,
         "first_sound": "d",
         "last_sound": "ŋ"
     },
@@ -16653,7 +16640,7 @@
         },
         "pronunciation": "KXAM-tseng",
         "pos": "n",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "g",
         "last_sound": "ŋ"
     },
@@ -16742,7 +16729,7 @@
         },
         "pronunciation": "'OM-pin",
         "pos": "n",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "'",
         "last_sound": "n"
     },
@@ -17000,7 +16987,7 @@
         },
         "pronunciation": "E-am-pin",
         "pos": "n",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "e",
         "last_sound": "n"
     },
@@ -17084,7 +17071,7 @@
         },
         "pronunciation": "SRA-ke",
         "pos": "part",
-        "frequency": 0.16,
+        "frequency": 0.17,
         "first_sound": "s",
         "last_sound": "e"
     },
@@ -17223,7 +17210,7 @@
         },
         "pronunciation": "WENG",
         "pos": "pn",
-        "frequency": 0.15,
+        "frequency": 0.16,
         "first_sound": "w",
         "last_sound": "ŋ"
     },
@@ -17594,7 +17581,7 @@
         },
         "pronunciation": "PAY-fya",
         "pos": "n",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "p",
         "last_sound": "a"
     },
@@ -17649,7 +17636,7 @@
         },
         "pronunciation": "pay-O-ang",
         "pos": "n",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "p",
         "last_sound": "ŋ"
     },
@@ -17877,7 +17864,7 @@
         },
         "pronunciation": "HA",
         "pos": "conj",
-        "frequency": 0.37,
+        "frequency": 0.36,
         "first_sound": "h",
         "last_sound": "a"
     },
@@ -17987,7 +17974,7 @@
         },
         "pronunciation": "'AW-ve",
         "pos": "adj",
-        "frequency": 0.11,
+        "frequency": 0.12,
         "first_sound": "'",
         "last_sound": "e"
     },
@@ -18288,7 +18275,7 @@
         },
         "pronunciation": "a-LUN-ta",
         "pos": "conj",
-        "frequency": 0.03,
+        "frequency": 0.04,
         "first_sound": "a",
         "last_sound": "a"
     },
@@ -18324,7 +18311,7 @@
         },
         "pronunciation": "a-SIM",
         "pos": "adv",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "a",
         "last_sound": "m"
     },
@@ -18355,7 +18342,7 @@
         },
         "pronunciation": "fay-LU-ta",
         "pos": "ctr",
-        "frequency": 0.1,
+        "frequency": 0.09,
         "first_sound": "f",
         "last_sound": "a"
     },
@@ -18373,7 +18360,7 @@
         },
         "pronunciation": "fä-ZA-'u",
         "pos": "v:in",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "f",
         "last_sound": "u"
     },
@@ -18563,7 +18550,7 @@
         },
         "pronunciation": "fì-TSENG",
         "pos": "adv",
-        "frequency": 0.27,
+        "frequency": 0.26,
         "first_sound": "f",
         "last_sound": "ŋ"
     },
@@ -18731,7 +18718,7 @@
         },
         "pronunciation": "FMAWN-ta",
         "pos": "ctr",
-        "frequency": 0.14,
+        "frequency": 0.13,
         "first_sound": "f",
         "last_sound": "a"
     },
@@ -18839,7 +18826,7 @@
         },
         "pronunciation": "FPÌL-fya",
         "pos": "n",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "f",
         "last_sound": "a"
     },
@@ -18926,7 +18913,7 @@
         },
         "pronunciation": "FRA-po",
         "pos": "pn",
-        "frequency": 0.33,
+        "frequency": 0.32,
         "first_sound": "f",
         "last_sound": "o"
     },
@@ -18945,7 +18932,7 @@
         },
         "pronunciation": "FRA-to",
         "pos": "part",
-        "frequency": 0.09,
+        "frequency": 0.11,
         "first_sound": "f",
         "last_sound": "o"
     },
@@ -19049,7 +19036,7 @@
         },
         "pronunciation": "FTÄR-pa",
         "pos": "n",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "f",
         "last_sound": "a"
     },
@@ -19067,7 +19054,7 @@
         },
         "pronunciation": "FTE-ke",
         "pos": "conj",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "f",
         "last_sound": "e"
     },
@@ -19084,7 +19071,7 @@
         },
         "pronunciation": "FTUM-fa",
         "pos": "adp",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "f",
         "last_sound": "a"
     },
@@ -19661,7 +19648,7 @@
         },
         "pronunciation": "FEW-tu-sok",
         "pos": "adj",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "f",
         "last_sound": "k"
     },
@@ -19874,7 +19861,7 @@
         },
         "pronunciation": "kä-MU-nge",
         "pos": "v:tr",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "k",
         "last_sound": "e"
     },
@@ -19928,7 +19915,7 @@
         },
         "pronunciation": "KAR-yu",
         "pos": "n",
-        "frequency": 0.1,
+        "frequency": 0.09,
         "first_sound": "k",
         "last_sound": "u"
     },
@@ -19963,7 +19950,7 @@
         },
         "pronunciation": "kaw-'IT",
         "pos": "adv",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "k",
         "last_sound": "t"
     },
@@ -20115,7 +20102,7 @@
         },
         "pronunciation": "ke-FYAK",
         "pos": "part",
-        "frequency": 0.09,
+        "frequency": 0.1,
         "first_sound": "k",
         "last_sound": "k"
     },
@@ -20177,7 +20164,7 @@
         },
         "pronunciation": "kel-HO-an",
         "pos": "adj",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "k",
         "last_sound": "n"
     },
@@ -20312,7 +20299,7 @@
         },
         "pronunciation": "ke-MU-i-a-nga'",
         "pos": "adj",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "k",
         "last_sound": "'"
     },
@@ -20456,7 +20443,7 @@
         },
         "pronunciation": "ke-TSRAN",
         "pos": "adj",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "k",
         "last_sound": "n"
     },
@@ -20663,7 +20650,7 @@
         },
         "pronunciation": "KIN-trr-am",
         "pos": "n",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "k",
         "last_sound": "m"
     },
@@ -20699,7 +20686,7 @@
         },
         "pronunciation": "kll-KXEM",
         "pos": "v:in",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "k",
         "last_sound": "m"
     },
@@ -20735,7 +20722,7 @@
         },
         "pronunciation": "kll-PXÌL-tu",
         "pos": "n",
-        "frequency": 0.04,
+        "frequency": 0.03,
         "first_sound": "k",
         "last_sound": "u"
     },
@@ -20985,7 +20972,7 @@
         },
         "pronunciation": "KRR-a",
         "pos": "conj",
-        "frequency": 0.24,
+        "frequency": 0.26,
         "first_sound": "k",
         "last_sound": "a"
     },
@@ -21232,7 +21219,7 @@
         },
         "pronunciation": "KXU-tslu",
         "pos": "n",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "g",
         "last_sound": "u"
     },
@@ -21281,7 +21268,7 @@
         },
         "pronunciation": "u-nil-tì-RAN-tokx",
         "pos": "n",
-        "frequency": 0.04,
+        "frequency": 0.05,
         "first_sound": "u",
         "last_sound": "g"
     },
@@ -21563,7 +21550,7 @@
         },
         "pronunciation": "ZENG-ke",
         "pos": "v:m",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "z",
         "last_sound": "e"
     },
@@ -21599,7 +21586,7 @@
         },
         "pronunciation": "ME-lo",
         "pos": "adv",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "m",
         "last_sound": "o"
     },
@@ -21693,7 +21680,7 @@
         },
         "pronunciation": "ral-PENG",
         "pos": "v:tr",
-        "frequency": 0.05,
+        "frequency": 0.06,
         "first_sound": "r",
         "last_sound": "ŋ"
     },
@@ -21890,7 +21877,7 @@
         },
         "pronunciation": "le-FPOM",
         "pos": "adj",
-        "frequency": 0.11,
+        "frequency": 0.1,
         "first_sound": "l",
         "last_sound": "m"
     },
@@ -22036,7 +22023,7 @@
         },
         "pronunciation": "le-HRR-ap",
         "pos": "adj",
-        "frequency": 0.07,
+        "frequency": 0.06,
         "first_sound": "l",
         "last_sound": "p"
     },
@@ -22374,7 +22361,7 @@
         },
         "pronunciation": "le-TOKX",
         "pos": "adj",
-        "frequency": 0.04,
+        "frequency": 0.05,
         "first_sound": "l",
         "last_sound": "g"
     },
@@ -22387,7 +22374,7 @@
         },
         "pronunciation": "N/A",
         "pos": "adj",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "l",
         "last_sound": "p"
     },
@@ -22584,7 +22571,7 @@
         },
         "pronunciation": "ley-KEK",
         "pos": "v:tr",
-        "frequency": 0.07,
+        "frequency": 0.06,
         "first_sound": "l",
         "last_sound": "k"
     },
@@ -22649,7 +22636,7 @@
         },
         "pronunciation": "LÌ'-fya",
         "pos": "n",
-        "frequency": 0.24,
+        "frequency": 0.23,
         "first_sound": "l",
         "last_sound": "a"
     },
@@ -22664,7 +22651,7 @@
         },
         "pronunciation": "LÌ-'u-kìng",
         "pos": "n",
-        "frequency": 0.17,
+        "frequency": 0.16,
         "first_sound": "l",
         "last_sound": "ŋ"
     },
@@ -23034,7 +23021,7 @@
         },
         "pronunciation": "mì-KAM",
         "pos": "adp",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "m",
         "last_sound": "m"
     },
@@ -23184,7 +23171,7 @@
         },
         "pronunciation": "mo-WAR-si-yu",
         "pos": "n",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "m",
         "last_sound": "u"
     },
@@ -23197,7 +23184,7 @@
         },
         "pronunciation": "mung-WRRTXO",
         "pos": "conj",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "m",
         "last_sound": "o"
     },
@@ -23286,7 +23273,7 @@
         },
         "pronunciation": "mun-TXA-tu",
         "pos": "n",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "m",
         "last_sound": "u"
     },
@@ -23402,7 +23389,7 @@
         },
         "pronunciation": "nar-LOR",
         "pos": "adj",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "n",
         "last_sound": "r"
     },
@@ -23486,7 +23473,7 @@
         },
         "pronunciation": "NEM-fa",
         "pos": "adp",
-        "frequency": 0.03,
+        "frequency": 0.04,
         "first_sound": "n",
         "last_sound": "a"
     },
@@ -23809,7 +23796,7 @@
         },
         "pronunciation": "nì-'IT",
         "pos": "adv",
-        "frequency": 0.21,
+        "frequency": 0.2,
         "first_sound": "n",
         "last_sound": "t"
     },
@@ -24033,7 +24020,7 @@
         },
         "pronunciation": "nì-FTXAN",
         "pos": "adv",
-        "frequency": 0.08,
+        "frequency": 0.07,
         "first_sound": "n",
         "last_sound": "n"
     },
@@ -24550,7 +24537,7 @@
         },
         "pronunciation": "nìl-TSAN",
         "pos": "adv",
-        "frequency": 0.08,
+        "frequency": 0.07,
         "first_sound": "n",
         "last_sound": "n"
     },
@@ -24673,7 +24660,7 @@
         },
         "pronunciation": "nì-NÄN",
         "pos": "adv",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "n",
         "last_sound": "n"
     },
@@ -24812,7 +24799,7 @@
         },
         "pronunciation": "nì-PXI",
         "pos": "adv",
-        "frequency": 0.04,
+        "frequency": 0.05,
         "first_sound": "n",
         "last_sound": "i"
     },
@@ -25028,7 +25015,7 @@
         },
         "pronunciation": "nì-SOK",
         "pos": "adv",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "n",
         "last_sound": "k"
     },
@@ -25168,7 +25155,7 @@
         },
         "pronunciation": "nì-TAM",
         "pos": "adv",
-        "frequency": 0.04,
+        "frequency": 0.03,
         "first_sound": "n",
         "last_sound": "m"
     },
@@ -25222,7 +25209,7 @@
         },
         "pronunciation": "nìt-KAN",
         "pos": "adv",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "n",
         "last_sound": "n"
     },
@@ -25341,7 +25328,7 @@
         },
         "pronunciation": "nì-TXAN",
         "pos": "adv",
-        "frequency": 0.5,
+        "frequency": 0.53,
         "first_sound": "n",
         "last_sound": "n"
     },
@@ -25534,7 +25521,7 @@
         },
         "pronunciation": "nì-YAWR",
         "pos": "adv",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "n",
         "last_sound": "r"
     },
@@ -25662,7 +25649,7 @@
         },
         "pronunciation": "nong-SPE'",
         "pos": "v:tr",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "n",
         "last_sound": "'"
     },
@@ -25873,7 +25860,7 @@
         },
         "pronunciation": "pe-LUN",
         "pos": "inter",
-        "frequency": 0.11,
+        "frequency": 0.12,
         "first_sound": "p",
         "last_sound": "n"
     },
@@ -26277,7 +26264,7 @@
         },
         "pronunciation": "PUK",
         "pos": "n",
-        "frequency": 0.08,
+        "frequency": 0.1,
         "first_sound": "p",
         "last_sound": "k"
     },
@@ -26542,7 +26529,7 @@
         },
         "pronunciation": "pxi-swaw-AM",
         "pos": "adv",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "b",
         "last_sound": "m"
     },
@@ -27527,7 +27514,7 @@
         },
         "pronunciation": "sä-RE-ngop",
         "pos": "n",
-        "frequency": 0,
+        "frequency": 0.01,
         "first_sound": "s",
         "last_sound": "p"
     },
@@ -27560,7 +27547,7 @@
         },
         "pronunciation": "sä-SPXIN",
         "pos": "n",
-        "frequency": 0.06,
+        "frequency": 0.07,
         "first_sound": "s",
         "last_sound": "n"
     },
@@ -27809,7 +27796,7 @@
         },
         "pronunciation": "sä-WÄ-sul",
         "pos": "n",
-        "frequency": 0.03,
+        "frequency": 0.04,
         "first_sound": "s",
         "last_sound": "l"
     },
@@ -27826,7 +27813,7 @@
         },
         "pronunciation": "sä-WÄ-sul-tsyìp",
         "pos": "n",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "s",
         "last_sound": "p"
     },
@@ -28080,7 +28067,7 @@
         },
         "pronunciation": "sley-KU",
         "pos": "v:tr",
-        "frequency": 0.06,
+        "frequency": 0.07,
         "first_sound": "s",
         "last_sound": "u"
     },
@@ -28473,7 +28460,7 @@
         },
         "pronunciation": "SRAN",
         "pos": "part",
-        "frequency": 0.18,
+        "frequency": 0.19,
         "first_sound": "s",
         "last_sound": "n"
     },
@@ -28539,7 +28526,7 @@
         },
         "pronunciation": "STAR-lì-'u",
         "pos": "n",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "s",
         "last_sound": "u"
     },
@@ -28673,7 +28660,7 @@
         },
         "pronunciation": "SWAW-tsyìp",
         "pos": "n",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "s",
         "last_sound": "p"
     },
@@ -28819,7 +28806,7 @@
         },
         "pronunciation": "SYON-lì-'u",
         "pos": "n",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "s",
         "last_sound": "u"
     },
@@ -29192,7 +29179,7 @@
         },
         "pronunciation": "TAW-tu-te",
         "pos": "n",
-        "frequency": 0.09,
+        "frequency": 0.08,
         "first_sound": "t",
         "last_sound": "e"
     },
@@ -29261,7 +29248,7 @@
         },
         "pronunciation": "TEYNG-a",
         "pos": "ctr",
-        "frequency": 0.25,
+        "frequency": 0.24,
         "first_sound": "t",
         "last_sound": "a"
     },
@@ -29330,7 +29317,7 @@
         },
         "pronunciation": "tì-'E-fu",
         "pos": "n",
-        "frequency": 0.09,
+        "frequency": 0.08,
         "first_sound": "t",
         "last_sound": "u"
     },
@@ -29451,7 +29438,7 @@
         },
         "pronunciation": "tì-'O'",
         "pos": "n",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "t",
         "last_sound": "'"
     },
@@ -29566,7 +29553,7 @@
         },
         "pronunciation": "tì-FME-tok",
         "pos": "n",
-        "frequency": 0.12,
+        "frequency": 0.11,
         "first_sound": "t",
         "last_sound": "k"
     },
@@ -30002,7 +29989,7 @@
         },
         "pronunciation": "tì-ke-FTXO-nga'",
         "pos": "adj",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "t",
         "last_sound": "'"
     },
@@ -30655,7 +30642,7 @@
         },
         "pronunciation": "tì-O-mum",
         "pos": "n",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "t",
         "last_sound": "m"
     },
@@ -30740,7 +30727,7 @@
         },
         "pronunciation": "tì-PAWM",
         "pos": "n",
-        "frequency": 0.04,
+        "frequency": 0.05,
         "first_sound": "t",
         "last_sound": "m"
     },
@@ -31424,7 +31411,7 @@
         },
         "pronunciation": "tì-TXU-la",
         "pos": "n",
-        "frequency": 0.08,
+        "frequency": 0.07,
         "first_sound": "t",
         "last_sound": "a"
     },
@@ -31457,7 +31444,7 @@
         },
         "pronunciation": "tì-TXUR-nga'",
         "pos": "adj",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "t",
         "last_sound": "'"
     },
@@ -31528,7 +31515,7 @@
         },
         "pronunciation": "tì-WÄ-sul",
         "pos": "n",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "t",
         "last_sound": "l"
     },
@@ -31597,7 +31584,7 @@
         },
         "pronunciation": "tì-YAWN",
         "pos": "n",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "t",
         "last_sound": "n"
     },
@@ -31744,7 +31731,7 @@
         },
         "pronunciation": "tol-TEM",
         "pos": "v:tr",
-        "frequency": 0.04,
+        "frequency": 0.03,
         "first_sound": "t",
         "last_sound": "m"
     },
@@ -31831,7 +31818,7 @@
         },
         "pronunciation": "trr-'AW-ve",
         "pos": "n",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "t",
         "last_sound": "e"
     },
@@ -31885,7 +31872,7 @@
         },
         "pronunciation": "trr-TSÌ-ve",
         "pos": "n",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "t",
         "last_sound": "e"
     },
@@ -31975,7 +31962,7 @@
         },
         "pronunciation": "trr-AM",
         "pos": "adv",
-        "frequency": 0.1,
+        "frequency": 0.11,
         "first_sound": "t",
         "last_sound": "m"
     },
@@ -32084,7 +32071,7 @@
         },
         "pronunciation": "TSA-mo-pin",
         "pos": "n",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "c",
         "last_sound": "n"
     },
@@ -32273,7 +32260,7 @@
         },
         "pronunciation": "FWA",
         "pos": "ctr",
-        "frequency": 1.49,
+        "frequency": 1.47,
         "first_sound": "f",
         "last_sound": "a"
     },
@@ -32373,7 +32360,7 @@
         },
         "pronunciation": "TSENG",
         "pos": "n",
-        "frequency": 0.2,
+        "frequency": 0.21,
         "first_sound": "c",
         "last_sound": "ŋ"
     },
@@ -32690,7 +32677,7 @@
         },
         "pronunciation": "tsu-KA-nom",
         "pos": "adj",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "c",
         "last_sound": "m"
     },
@@ -33175,7 +33162,7 @@
         },
         "pronunciation": "TXAN-tur",
         "pos": "adj",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "d",
         "last_sound": "r"
     },
@@ -33239,7 +33226,7 @@
         },
         "pronunciation": "txa-SU-nu",
         "pos": "v:in",
-        "frequency": 0.04,
+        "frequency": 0.05,
         "first_sound": "d",
         "last_sound": "u"
     },
@@ -33353,7 +33340,7 @@
         },
         "pronunciation": "TXO-lar",
         "pos": "n",
-        "frequency": 0.08,
+        "frequency": 0.07,
         "first_sound": "d",
         "last_sound": "r"
     },
@@ -33503,7 +33490,7 @@
         },
         "pronunciation": "vo-spxì-PUK",
         "pos": "n",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "v",
         "last_sound": "k"
     },
@@ -34037,7 +34024,7 @@
         },
         "pronunciation": "YRR-ap",
         "pos": "n",
-        "frequency": 0.13,
+        "frequency": 0.12,
         "first_sound": "y",
         "last_sound": "p"
     },
@@ -34118,7 +34105,7 @@
         },
         "pronunciation": "zaw-PRR-te'",
         "pos": "v:in",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "z",
         "last_sound": "'"
     },
@@ -34249,7 +34236,7 @@
         },
         "pronunciation": "wrr-ZA-'u",
         "pos": "v:in",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "w",
         "last_sound": "u"
     },
@@ -34825,7 +34812,7 @@
         },
         "pronunciation": "RA-ngal",
         "pos": "v:in",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "r",
         "last_sound": "l"
     },
@@ -35232,7 +35219,7 @@
         },
         "pronunciation": "'O-ngokx",
         "pos": "v:in",
-        "frequency": 0.01,
+        "frequency": 0.02,
         "first_sound": "'",
         "last_sound": "g"
     },
@@ -35385,7 +35372,7 @@
         },
         "pronunciation": "trr-'ONG",
         "pos": "n",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "t",
         "last_sound": "ŋ"
     },
@@ -35456,7 +35443,7 @@
         },
         "pronunciation": "FKEY-tok",
         "pos": "v:in",
-        "frequency": 0.1,
+        "frequency": 0.09,
         "first_sound": "f",
         "last_sound": "k"
     },
@@ -35538,27 +35525,9 @@
         },
         "pronunciation": "sä-FRR-fen",
         "pos": "n",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "s",
         "last_sound": "n"
-    },
-    "lìng": {
-        "translations": {
-            "en": "float (in the air or under water), hover",
-            "sv": "hänga i luften, sväva",
-            "ru": "парить (в воздухе)",
-            "pl": "unosić się w powietrzu, dryfować",
-            "nl": "zweven in de lucht",
-            "hu": "levegőben úszik, lebeg",
-            "fr": "planer | flotter dans les airs",
-            "et": "(õhus) hõljuma",
-            "de": "in der Luft schweben"
-        },
-        "pronunciation": "LÌNG",
-        "pos": "v:in",
-        "frequency": 0.01,
-        "first_sound": "l",
-        "last_sound": "ŋ"
     },
     "hrh": {
         "translations": {
@@ -35570,7 +35539,7 @@
         },
         "pronunciation": "N/A",
         "pos": "intj",
-        "frequency": 1.32,
+        "frequency": 1.23,
         "first_sound": "h",
         "last_sound": "h"
     },
@@ -35606,7 +35575,7 @@
         },
         "pronunciation": "N/A",
         "pos": "aff:suf",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "v",
         "last_sound": "i"
     },
@@ -35630,7 +35599,7 @@
         },
         "pronunciation": "N/A",
         "pos": "aff:suf",
-        "frequency": 0,
+        "frequency": 0.0,
         "first_sound": "e",
         "last_sound": "e"
     },
@@ -35679,7 +35648,7 @@
         },
         "pronunciation": "TA-rep",
         "pos": "v:tr",
-        "frequency": 0,
+        "frequency": 0.01,
         "first_sound": "t",
         "last_sound": "p"
     },
@@ -35738,19 +35707,6 @@
         "pos": "n",
         "frequency": 0.01,
         "first_sound": "n",
-        "last_sound": "u"
-    },
-    "kawngtu": {
-        "translations": {
-            "en": "bad person, \"bad guy\"",
-            "de": "schlechte Person, böse Person, jemand, der Böses tut",
-            "nl": "slechte persoon, iemand die aan de verkeerde kant staat",
-            "fr": "mauvaise personne, personne méchante, \"le méchant\""
-        },
-        "pronunciation": "KAWNG-tu",
-        "pos": "n",
-        "frequency": 0,
-        "first_sound": "k",
         "last_sound": "u"
     },
     "tìk": {
@@ -36023,7 +35979,7 @@
         },
         "pronunciation": "TU-te",
         "pos": "n",
-        "frequency": 1.42,
+        "frequency": 1.36,
         "first_sound": "t",
         "last_sound": "e"
     },
@@ -36098,5 +36054,62 @@
         "frequency": 0.01,
         "first_sound": "h",
         "last_sound": "o"
+    },
+    "lìng": {
+        "translations": {
+            "en": "float (in the air or under water), hover",
+            "de": "in der Luft oder im Wasser schweben",
+            "et": "(õhus) hõljuma",
+            "fr": "planer | flotter dans les airs",
+            "hu": "levegőben úszik, lebeg",
+            "nl": "zweven (in de lucht of onder water)",
+            "pl": "unosić się w powietrzu, dryfować",
+            "ru": "парить (в воздухе)",
+            "sv": "hänga i luften, sväva"
+        },
+        "pronunciation": "LÌNG",
+        "pos": "v:in",
+        "frequency": 0.01,
+        "first_sound": "l",
+        "last_sound": "ŋ"
+    },
+    "kawngtu": {
+        "translations": {
+            "en": "bad person, \"bad guy\"",
+            "fr": "mauvaise personne, personne méchante, \"le méchant\"",
+            "nl": "slechterik, slechte persoon",
+            "de": "schlechte Person, böse Person, jemand, der Böses tut"
+        },
+        "pronunciation": "KAWNG-tu",
+        "pos": "n",
+        "frequency": 0,
+        "first_sound": "k",
+        "last_sound": "u"
+    },
+    "otranyu": {
+        "translations": {
+            "en": "Otranyu (probably a clan name)",
+            "nl": "mannelijke Na'vi",
+            "fr": "homme Na'vi",
+            "de": "männlicher Name"
+        },
+        "pronunciation": "ot-RAN-yu",
+        "pos": "n:pr",
+        "frequency": 0,
+        "first_sound": "o",
+        "last_sound": "u"
+    },
+    "txopunil": {
+        "translations": {
+            "en": "nightmare",
+            "nl": "nachtmerrie",
+            "fr": "cauchemar",
+            "de": "Albtraum"
+        },
+        "pronunciation": "TXO-pu-nil",
+        "pos": "n",
+        "frequency": 0.01,
+        "first_sound": "d",
+        "last_sound": "l"
     }
 }

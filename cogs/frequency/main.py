@@ -99,7 +99,6 @@ class FrequencyCog(commands.Cog):
             monographic = self.monographize(word)
         return monographic
 
-
     @commands.Cog.listener()
     async def on_message(self, message):
         if message.channel.id in [715050499203661875, 856145252310188032, 931065623491006534]:
