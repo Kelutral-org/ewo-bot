@@ -99,6 +99,21 @@ class FrequencyCog(commands.Cog):
             monographic = self.monographize(word)
         return monographic
 
+    reykunyu_all = requests.get("https://reykunyu.wimiso.nl/api/frau").json()
+    for word in reykunyu_all:
+        word_data = reykunyu_all.get(word)
+        word = reykunyu_all.get(word).get('na\'vi').lower().replace('\'', '’')
+        if ' ' not in word:
+            if not execute_read_query(wordlist, "SELECT word FROM words WHERE word = '" + word + "'"):
+                execute_query(wordlist, """
+                                        INSERT INTO
+                                          words (word, count, meaning, type)
+                                        VALUES
+                                        ('""" + word + """', """ + str(0) + """, '""" +
+                                        word_data.get('translations')[0].get('en').replace('\'', '’') + """', '""" + word_data.get('type') + """')
+                                        """)
+                print("Added " + word + "to frequency list.")
+
     @commands.Cog.listener()
     async def on_message(self, message):
         if message.channel.id in [715050499203661875, 856145252310188032, 931065623491006534]:
