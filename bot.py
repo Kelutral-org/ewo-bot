@@ -328,8 +328,6 @@ async def options(inter, action_type: str, option: str, value: str):
                                             """)
                         await inter.response.send_message(embed=disnake.Embed(description=lang.get(str(inter.guild_id)).get('options_set').replace('&1', option).replace('&2', 'True'),colour=899718), ephemeral=True)
 
-
-
         # If the action type is anything else, it's incorrect usage and we can send an error
         else:
             await inter.response.send_message(
@@ -379,7 +377,7 @@ async def help(inter, command_name: str = ""):
 
             # Find command for argument by stripping the current command's command name of its formatting and prefix,
             # then testing if the result is equal to the argument
-            if str(command["command"]).strip('**{?}**') == command_name:
+            if str(command["command"]).strip('**{/}**') == command_name:
 
                 # Add command name and description
                 display_help += "\n\n" + command["command"] + ": " + command["description"] + "\n"

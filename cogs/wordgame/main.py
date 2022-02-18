@@ -197,6 +197,9 @@ class PlaymodeDropdown(disnake.ui.Select):
 
         super().__init__(placeholder='Please select the playmode...', min_values=1, max_values=1, options=playmode_options)
 
+    async def callback(self, inter: disnake.MessageInteraction):
+        await inter.response.defer()
+
 
 # The class for the gamemode dropdown in the wordgame start ui.
 class GamemodeDropdown(disnake.ui.Select):
@@ -215,6 +218,9 @@ class GamemodeDropdown(disnake.ui.Select):
 
         super().__init__(placeholder='Please select the gamemode...', min_values=1, max_values=1, options=gamemode_options)
 
+    async def callback(self, inter: disnake.MessageInteraction):
+        await inter.response.defer()
+
 
 # The class for the deathmatch start ui.
 class DeathmatchStartView(disnake.ui.View):
@@ -232,12 +238,11 @@ class DeathmatchStartView(disnake.ui.View):
         if not inter.author.id in self.players:
             self.players.append(inter.author.id)
 
-            # Get the channel from the id
-            channel = await bot.bot.fetch_channel(inter.channel_id)
-
-            await channel.send(embed=disnake.Embed(title=bot.lang.get(str(inter.guild_id)).get('wordgame_title'),
+            await inter.response.send_message(embed=disnake.Embed(title=bot.lang.get(str(inter.guild_id)).get('wordgame_title'),
                                       description=bot.lang.get(str(inter.guild_id)).get('wordgame_joined').replace('&1', bot.get_name(inter.author.id, inter.guild)),
                                       colour=899718))
+        else:
+            await inter.response.defer()
 
     @disnake.ui.button(label='Start', style=disnake.ButtonStyle.green)
     async def start(self, button: disnake.ui.Button, inter: disnake.MessageInteraction):
@@ -316,6 +321,23 @@ class DeathmatchStartView(disnake.ui.View):
                 # Some stuff I don't really understand for buttons
                 self.value = True
                 self.stop()
+        else:
+            await inter.response.send_message(bot.lang.get(str(inter.guild_id)).get('wordgame_not_enough_players'), ephemeral=True)
+
+    @disnake.ui.button(label='Cancel', style=disnake.ButtonStyle.red)
+    async def cancel(self, button: disnake.ui.Button, inter: disnake.MessageInteraction):
+        if inter.author.id == self.initiator:
+            # Get the channel from the id
+            channel = await bot.bot.fetch_channel(inter.channel_id)
+
+            await channel.send(
+                embed=disnake.Embed(title=bot.lang.get(str(inter.guild_id)).get('wordgame_title'),
+                                    description=bot.lang.get(str(inter.guild_id)).get('wordgame_deathmatch_canceled'),
+                                    colour=899718))
+            await inter.message.delete()
+
+        else:
+            inter.response.defer()
 
 
 # The class for the wordgame start ui.
@@ -418,9 +440,9 @@ class StartGameView(disnake.ui.View):
                 # Send above embed publicly
                 await channel.send(embed=embed)
 
-                # Some stuff I don't really understand for buttons
-                self.value = True
-                self.stop()
+            # Some stuff I don't really understand for buttons
+            self.value = True
+            self.stop()
 
 
 # Wordgame Cog

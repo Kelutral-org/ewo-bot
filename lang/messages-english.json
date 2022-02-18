@@ -46,6 +46,8 @@
   "wordgame_title": "Wordgame",
   "wordgame_start_prompt": "Select the settings for this game, then press \"Start\"!",
   "wordgame_deathmatch_prompt": "A deathmatch game is starting! Press \"Join\" to join!",
+  "wordgame_deathmatch_canceled": "The deathmatch game was canceled!",
+  "wordgame_not_enough_players": "Not enough players!",
   "wordgame_added": "Added this channel (#&1) as a wordgame channel!",
   "wordgame_channel_exists": "This channel is already a wordgame channel!",
   "wordgame_removed": "Removed this channel (#&1) from wordgame channels!",
