@@ -12,7 +12,6 @@ with open('requirements.txt', 'r') as f:
 
 # System Basics
 token = token.strip()
-prefix = "?"
 description = "Oe skxawng asrunga' lu."
 version = "2.0.1"
 repository = "https://github.com/Kelutral-org/ewo-bot"

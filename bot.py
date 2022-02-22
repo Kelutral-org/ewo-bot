@@ -28,7 +28,7 @@ test_guilds = [715043968886505484, 715656323995271168, 771967854002176010]
 
 intents = disnake.Intents.default()
 intents.members = True
-bot = commands.Bot(command_prefix=config.prefix, help_command=None, description=config.description, intents=intents, test_guilds=test_guilds, sync_commands_debug=True)
+bot = commands.Bot(help_command=None, description=config.description, intents=intents, test_guilds=test_guilds, sync_commands_debug=True)
 
 # Open files for lang settings
 with open("lang/messages-english.json", encoding='utf-8') as f:
@@ -191,7 +191,7 @@ async def on_ready():
 
 # Help command
 @bot.slash_command(name="options", description="Manage server options.", default_permission=True, guild_ids=test_guilds)
-async def options(inter, action_type: str, option: str, value: str):
+async def options(inter, action_type: str, option: str, value: str = ""):
 
     # Confirm the player has operator permissions, either through guild perms or through the bot operators
     is_op = False

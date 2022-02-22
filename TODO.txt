@@ -1,8 +1,1 @@
-NOT A BOT THING BUT PUBLISH FINISHED YOUTUBE VIDEO
-
-BUGTEST MULTIPLAYER COMPETITIVE AND START WORK ON DEATHMATCH
-^^^ MAKE win() DO THINGS ^^^
-
-Implement frequency of words used in wordgame
-
 add some data to README.md

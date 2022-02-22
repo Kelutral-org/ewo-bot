@@ -246,7 +246,6 @@ class DeathmatchStartView(disnake.ui.View):
 
     @disnake.ui.button(label='Start', style=disnake.ButtonStyle.green)
     async def start(self, button: disnake.ui.Button, inter: disnake.MessageInteraction):
-        print(self.players)
 
         if not len(self.players) <= 1:
             self.playmode = "multiplayer"
@@ -327,10 +326,8 @@ class DeathmatchStartView(disnake.ui.View):
     @disnake.ui.button(label='Cancel', style=disnake.ButtonStyle.red)
     async def cancel(self, button: disnake.ui.Button, inter: disnake.MessageInteraction):
         if inter.author.id == self.initiator:
-            # Get the channel from the id
-            channel = await bot.bot.fetch_channel(inter.channel_id)
 
-            await channel.send(
+            await inter.channel.send(
                 embed=disnake.Embed(title=bot.lang.get(str(inter.guild_id)).get('wordgame_title'),
                                     description=bot.lang.get(str(inter.guild_id)).get('wordgame_deathmatch_canceled'),
                                     colour=899718))
@@ -782,13 +779,13 @@ class WordgameCog(commands.Cog):
             else:
                 break
         try:
-            if author_place == 1:
+            if str(author_place).endswith('1'):
                 string += "\n" + bot.lang.get(str(inter.guild_id)).get('points_first_place').replace('&1', str(author_player[0][1]))
-            if author_place == 2:
+            elif str(author_place).endswith('2'):
                 string += "\n" + bot.lang.get(str(inter.guild_id)).get('points_second_place').replace('&1', str(author_player[0][1]))
-            if author_place == 3:
+            elif str(author_place).endswith('3'):
                 string += "\n" + bot.lang.get(str(inter.guild_id)).get('points_third_place').replace('&1', str(author_player[0][1]))
-            if author_place >= 4:
+            else:
                 string += "\n" + bot.lang.get(str(inter.guild_id)).get('points_general_place').replace('&1', str(author_place)).replace('&2', str(author_player[0][1]))
         except IndexError:
             pass
