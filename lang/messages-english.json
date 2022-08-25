@@ -39,6 +39,7 @@
   "source": "Source",
   "topic": "Topic",
   "points": "Points",
+  "no_points": "Nobody has any points!",
   "points_first_place": "You are in 1st place at &1 points.",
   "points_second_place": "You are in 2nd place at &1 points.",
   "points_third_place": "You are in 3rd place at &1 points.",
@@ -87,11 +88,7 @@
   "wordgame_incorrect_word_end": "Your word must begin with the last sound of the previous word!",
   "wordgame_eliminated": "&1 reused a word and has been eliminated!",
   "wordgame_joined": "&1 joined!",
-  "numbers_invalid_octal": "Invalid octal number: 8 and 9 are not valid octal digits!",
-  "decimal": "Decimal",
-  "octal": "Octal",
-  "numbers_too_large": "Too large to translate!\nPlease choose a number between 0 and 32767 decimal or 77777 octal.\nUse the -c flag to convert without translating.",
-  "numbers_nan": "Not a number!",
+
   "true": "True",
   "false": "False"
 }

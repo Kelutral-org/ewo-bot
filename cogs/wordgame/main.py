@@ -460,7 +460,7 @@ class WordgameCog(commands.Cog):
         for word in words:
             word_frequency_total_processed += word[1]
 
-        print("WORDGAME: Compiling valid word_info list...")
+        print("WORDGAME: Compiling valid word list...")
         # List of unusable words, soon to be filled
         self.invalid_words = {"aw": [], "ew": [], "ay": [], "ey": [], "ll": [], "rr": [], "ì": [], "ä": [], "space": []}
         # Get the list of every word_info in Na'vi from reykunyu
@@ -470,6 +470,14 @@ class WordgameCog(commands.Cog):
 
         # For every word_info in above list
         for word in reykunyu_all:
+            # Ignore affixes
+            try:
+                if 'aff' in reykunyu_all.get(word).get("pos").lower():
+                    continue
+            except AttributeError:
+                if ':aff' in word:
+                    continue
+
             # If the word_info ends in aw, add it to unusable words. Not enough words start with it.
             if (reykunyu_all.get(word).get("na'vi").lower().endswith('aw')) and (not ' ' in reykunyu_all.get(word).get("na'vi").lower()):
                 if reykunyu_all.get(word).get("na'vi").lower() not in self.invalid_words.get("aw"):
@@ -522,8 +530,8 @@ class WordgameCog(commands.Cog):
                     monographic = ""
                     try:
                         # Get pronunciation and stress data if it exists
-                        pronunciation = reykunyu_all.get(word).get("pronunciation")[0].lower()
-                        reykunyu_stress = reykunyu_all.get(word).get("pronunciation")[1]
+                        pronunciation = reykunyu_all.get(word).get("pronunciation")[0].get("syllables").lower()
+                        reykunyu_stress = reykunyu_all.get(word).get("pronunciation")[0].get("stressed")
 
                         # Split the pronunciation data into syllables
                         split_pronunciation = pronunciation.split('-')
@@ -567,7 +575,7 @@ class WordgameCog(commands.Cog):
                     try:
                         # Calculate the frequency percentage
                         frequency_percentage = round(word_frequency[0][0] / word_frequency_total_processed * 100, 2)
-                    # If this exception is thrown, the word_info is not in the list, and the percentage is then zero
+                    # If this exception is thrown, the word is not in the list, and the percentage is then zero
                     except IndexError:
                         frequency_percentage = 0
                     except TypeError:
@@ -627,8 +635,6 @@ class WordgameCog(commands.Cog):
                     embed=disnake.Embed(title=bot.lang.get(str(inter.guild_id)).get('wordgame_title'),
                                         description=bot.lang.get(str(inter.guild_id)).get('wordgame_start_prompt'),
                                         colour=899718), ephemeral=True, view=view)
-                # Wait until the ui has been used before continuing (all start code is handled in the ui class above)
-                #await view.wait()
         # If this channel is not a wordgame channel, send an error
         else:
             await inter.response.send_message(
@@ -794,7 +800,10 @@ class WordgameCog(commands.Cog):
         embed = disnake.Embed(title=bot.lang.get(str(inter.guild_id)).get('wordgame_title'), colour=899718)
         embed.add_field(name=bot.lang.get(str(inter.guild_id)).get('points') + ":", value=string)
 
-        await inter.response.send_message(embed=embed, ephemeral=True)
+        try:
+            await inter.response.send_message(embed=embed, ephemeral=True)
+        except disnake.HTTPException:
+            await inter.response.send_message(embed=disnake.Embed(title=bot.lang.get(str(inter.guild_id)).get('wordgame_title'), description=bot.lang.get(str(inter.guild_id)).get('no_points'), colour=899718), ephemeral=True)
 
     @commands.Cog.listener()
     async def on_message(self, message):
@@ -806,7 +815,7 @@ class WordgameCog(commands.Cog):
                         playmode = active_channels.get(str(message.channel.id)).get("playmode")
                         gamemode = active_channels.get(str(message.channel.id)).get("gamemode")
 
-                        msg = message.content.lower()
+                        msg = message.content.lower().replace('’', '\'')
 
                         # Now to test if the word_info is a Na'vi word_info, and is usable.
                         # Not gonna go into detail, but it sends some errors if they aren't usable

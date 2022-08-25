@@ -39,6 +39,7 @@
   "source": "Quelle",
   "topic": "Thema",
   "points": "Punkte",
+  "no_points": "Niemand hat Punkte!",
   "points_first_place": "Du bist auf Platz 1 mit &1 Punkten.",
   "points_second_place": "Du bist auf Platz 2 mit &1 Punkten.",
   "points_third_place": "Du bist auf Platz 3 mit &1 Punkten.",
@@ -84,16 +85,10 @@
   "wordgame_used_recently": "Dieses Wort wurde erst verwendet!",
   "wordgame_win": "&1 hat gewonnen!",
   "wordgame_not_in": "Du bist in diesem Spiel kein Mitspieler!",
-
   "wordgame_incorrect_word_end": "Dein Wort muss mit dem Buchstaben beginnen, auf den das letzte Wort geendet ist!",
   "wordgame_eliminated": "&1 hat dieses Wort wiederverwendet und wurde eliminiert!",
   "wordgame_joined": "&1 ist dem Spiel beigetreten!",
 
-  "numbers_invalid_octal": "Ungültige Oktalzahl: 8 und 9 sind keine zulässigen oktale Ziffern!",
-  "decimal": "Dezimal",
-  "octal": "Oktal",
-  "numbers_too_large": "Zu lang, um übersetzt werden zu können!\nBitte wähle eine Zahl zwischen 0 und 32767 dezimal oder 77777 oktal.\nVerwende -c um die Ziffer ohne Übersetzung zu konvertieren.",
-  "numbers_nan": "Dies ist keine Ziffer!",
   "true": "ja",
   "false": "nein"
 }

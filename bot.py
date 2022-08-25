@@ -1,4 +1,5 @@
 import os
+import random
 import sys
 
 if sys.version_info[0] < 3:
@@ -187,6 +188,17 @@ async def on_ready():
                                             """)
 
     await set_lang()
+
+
+with open("cogs/fun/swears.txt", encoding='utf-8') as f:
+    swears = []
+    for line in f:
+        swears.append(line.strip())
+
+# @bot.event
+# async def on_message(message):
+#     if message.author.id == 821316706646491137:
+#         await message.channel.send(random.choice(swears) + '!')
 
 
 # Help command
