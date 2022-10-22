@@ -89,7 +89,6 @@
         "nìngay",
         "nguway",
         "tìpe'ngay",
-        "zìsìtay",
         "pe'ngay",
         "ronguway",
         "txantxewvay",
@@ -111,7 +110,6 @@
         "tsakrrvay",
         "pxiswaway",
         "tsngawpay",
-        "pllngay",
         "kay",
         "hay",
         "mesrray",
@@ -122,8 +120,6 @@
         "yemfpay",
         "tskxepay",
         "nìhay",
-        "muntrray",
-        "kintrray",
         "vospxìay",
         "klltxay",
         "txay",
@@ -149,7 +145,11 @@
         "eyktanay",
         "polpxay",
         "trray",
-        "reypay"
+        "reypay",
+        "pllngay",
+        "muntrray",
+        "kintrray",
+        "zìsìtay"
     ],
     "ey": [
         "ftxey",
@@ -183,7 +183,6 @@
         "hìpey",
         "nìhìpey",
         "fe'pey",
-        "yomvey",
         "srefey",
         "tsahey",
         "ìley",
@@ -214,7 +213,8 @@
         "tuktirey",
         "säsìlpey",
         "tsìlpey",
-        "rusey"
+        "rusey",
+        "yomvey"
     ],
     "ll": [
         "'ewll",
@@ -224,7 +224,6 @@
         "paynäpll",
         "yll",
         "nìyll",
-        "vll",
         "txumpaywll",
         "txumtsä'wll",
         "väfewll",
@@ -241,7 +240,8 @@
         "pxiwll",
         "kllpxiwll",
         "fkxakewll",
-        "sävll"
+        "sävll",
+        "vll"
     ],
     "rr": [
         "krr",
@@ -265,7 +265,6 @@
         "keltrrtrr",
         "srekamtrr",
         "kxamtrr",
-        "nrr",
         "txankrr",
         "vospxìmrr",
         "hawngkrr",
@@ -293,7 +292,6 @@
         "zìsìtsaltrr",
         "'oktrr",
         "zìtsaltrr",
-        "pllhrr",
         "säpllhrr",
         "mawkrr",
         "yrr",
@@ -305,7 +303,9 @@
         "fratrr",
         "mungwrr",
         "kawkrr",
-        "sänrr"
+        "sänrr",
+        "nrr",
+        "pllhrr"
     ],
     "ì": [
         "'ìnglìsì",
@@ -401,7 +401,6 @@
     ],
     "space": [
         "nìyu yorkì",
-        "pongu pongu",
         "swotu wayä",
         "utral aymokriyä",
         "lew säpi",
@@ -436,7 +435,6 @@
         "zola'u nìprrte'",
         "tìftiatu kifkeyä",
         "swoasey ayll",
-        "yomyo lerìk",
         "mo a fngä'",
         "tìng syawn",
         "to tìtseri",
@@ -477,6 +475,8 @@
         "pängkxoyu lekoren",
         "eltu lefngap",
         "eywa ngahu",
-        "rel arusikx"
+        "rel arusikx",
+        "yomyo lerìk",
+        "pongu pongu"
     ]
 }

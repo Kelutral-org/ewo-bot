@@ -612,7 +612,7 @@ class WordgameCog(commands.Cog):
         self.channels = execute_read_query(channels_db, "SELECT * FROM channels")
 
     # This does nothing, it just holds the subcommands
-    @commands.slash_command(name="wordgame", description="A basic wordgame to help learn vocabulary!", default_permission=True, guild_ids=bot.test_guilds)
+    @commands.slash_command(name="wordgame", description="A basic wordgame to help learn vocabulary!", guild_ids=bot.test_guilds)
     async def wordgame(self, inter):
         pass
 

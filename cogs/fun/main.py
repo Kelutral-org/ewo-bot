@@ -30,7 +30,7 @@ class Fun(commands.Cog):
         return word
 
     # Sarcasm
-    @commands.slash_command(name="sarcasm", description="thIs IS a saRcAsTIC DEsCRipTioN.", default_permission=True, guild_ids=bot.test_guilds)
+    @commands.slash_command(name="sarcasm", description="thIs IS a saRcAsTIC DEsCRipTioN.", guild_ids=bot.test_guilds)
     async def sarcasm(self, inter, string: str):
         display = ""
         for letter in string:
@@ -43,12 +43,12 @@ class Fun(commands.Cog):
         await inter.response.send_message(display)
 
     # Boop
-    @commands.slash_command(name="boop", description="Boop me I'm into it.", default_permission=True, guild_ids=bot.test_guilds)
+    @commands.slash_command(name="boop", description="Boop me I'm into it.", guild_ids=bot.test_guilds)
     async def boop(self, inter):
         await inter.response.send_message('*' + bot.lang.get(str(inter.guild_id)).get('boop') + '*')
 
     # Scream command
-    @commands.slash_command(name="scream", description="Make me scream. One number = one 'E'.", default_permission=True, guild_ids=bot.test_guilds)
+    @commands.slash_command(name="scream", description="Make me scream. One number = one 'E'.", guild_ids=bot.test_guilds)
     async def scream(self, inter, length: int):
 
         # Base string
@@ -67,7 +67,7 @@ class Fun(commands.Cog):
         await inter.response.send_message(msg)
 
     # Swear command
-    @commands.slash_command(name="swear", description="Do you feel like swearing? Keep yourself clean, I can do it for you.", default_permission=True, guild_ids=bot.test_guilds)
+    @commands.slash_command(name="swear", description="Do you feel like swearing? Keep yourself clean, I can do it for you.", guild_ids=bot.test_guilds)
     async def swear(self, inter):
 
         # Generate random swear
@@ -77,7 +77,7 @@ class Fun(commands.Cog):
         await inter.response.send_message(random_swear)
 
     # Say command
-    @commands.slash_command(name="say", description="Makes me speak for you.", default_permission=True, guild_ids=bot.test_guilds)
+    @commands.slash_command(name="say", description="Makes me speak for you.", guild_ids=bot.test_guilds)
     async def say(self, inter, msg: str):
 
         # Send the message

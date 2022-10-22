@@ -90,7 +90,7 @@
         },
         "pronunciation": "'E-ko",
         "pos": "v:tr",
-        "frequency": 0.08,
+        "frequency": 0.07,
         "first_sound": "'",
         "last_sound": "o"
     },
@@ -426,19 +426,6 @@
         "pos": "n:pr",
         "frequency": 0.0,
         "first_sound": "t",
-        "last_sound": "i"
-    },
-    "tsumongwi": {
-        "translations": {
-            "de": "Original Name der Omatikaya",
-            "en": "original name for the Omatikaya",
-            "fr": "nom d'origine des Omatikayas",
-            "nl": "oorspronkelijke naam voor de Omatikaya"
-        },
-        "pronunciation": "TSU-mong-wi",
-        "pos": "n:pr",
-        "frequency": 0.0,
-        "first_sound": "c",
         "last_sound": "i"
     },
     "uniltaron": {
@@ -817,27 +804,9 @@
         },
         "pronunciation": "FU",
         "pos": "conj",
-        "frequency": 0.37,
+        "frequency": 0.38,
         "first_sound": "f",
         "last_sound": "u"
-    },
-    "fya'o": {
-        "translations": {
-            "de": "Pfad, Weg, Verhalten, Art und Weise",
-            "en": "path, way, manner",
-            "et": "tee, rada, komme, viis",
-            "fr": "voie | chemin",
-            "hu": "ösvény, út, mód",
-            "nl": "pad, wijze, manier",
-            "pl": "spsób, zwyczaj, scieżka",
-            "ru": "путь, дорога",
-            "sv": "väg, stig, sätt"
-        },
-        "pronunciation": "FYA-'o",
-        "pos": "n",
-        "frequency": 0.14,
-        "first_sound": "f",
-        "last_sound": "o"
     },
     "hangham": {
         "translations": {
@@ -908,7 +877,7 @@
         },
         "pronunciation": "HRR-ap",
         "pos": "n",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "h",
         "last_sound": "p"
     },
@@ -1306,7 +1275,7 @@
         },
         "pronunciation": "KXA",
         "pos": "n",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "g",
         "last_sound": "a"
     },
@@ -1672,24 +1641,6 @@
         "frequency": 0.27,
         "first_sound": "m",
         "last_sound": "p"
-    },
-    "mllte": {
-        "translations": {
-            "de": "zustimmen, übereinstimmen",
-            "en": "agree",
-            "et": "nõustuma, leppima",
-            "fr": "consentir | approuver | être d'accord",
-            "hu": "egyetért",
-            "nl": "instemmen",
-            "pl": "zgadzać się",
-            "ru": "соглашаться",
-            "sv": "hålla med, samtycka"
-        },
-        "pronunciation": "mll-TE",
-        "pos": "v:in",
-        "frequency": 0.14,
-        "first_sound": "m",
-        "last_sound": "e"
     },
     "mokri": {
         "translations": {
@@ -2191,7 +2142,7 @@
         },
         "pronunciation": "pi-AK",
         "pos": "n:si",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "p",
         "last_sound": "k"
     },
@@ -2758,25 +2709,6 @@
         "first_sound": "s",
         "last_sound": "i"
     },
-    "snumìna": {
-        "translations": {
-            "de": "dumm, einfältig",
-            "en": "dim",
-            "et": "tuhm, tuim (inimese kohta)",
-            "fr": "incertain | indécis (pour une personne)",
-            "hu": "sötét, buta",
-            "nl": "suf, niet slim",
-            "pl": "słaby",
-            "ru": "плохо соображающий, недалёкий",
-            "sv": "dum, korkad (om en person)",
-            "x-navi": "(tute) a ke lu kanu, a lu skxawng"
-        },
-        "pronunciation": "SNU-mì-na",
-        "pos": "adj",
-        "frequency": 0.01,
-        "first_sound": "s",
-        "last_sound": "a"
-    },
     "som": {
         "translations": {
             "de": "heiß",
@@ -2884,7 +2816,7 @@
         },
         "pronunciation": "SRA-ne",
         "pos": "part",
-        "frequency": 0.33,
+        "frequency": 0.32,
         "first_sound": "s",
         "last_sound": "e"
     },
@@ -3334,7 +3266,7 @@
         },
         "pronunciation": "TSE-o",
         "pos": "n",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "c",
         "last_sound": "o"
     },
@@ -3478,7 +3410,7 @@
         },
         "pronunciation": "TSNGAW-vìk",
         "pos": "v:in",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "c",
         "last_sound": "k"
     },
@@ -4861,24 +4793,6 @@
         "first_sound": "'",
         "last_sound": "e"
     },
-    "eltungawng": {
-        "translations": {
-            "de": "Gehirnwurm",
-            "en": "brainworm",
-            "et": "Uneuss (brainworm)",
-            "fr": "brainworm",
-            "hu": "agyféreg (pandorai állatfaj)",
-            "nl": "breinworm",
-            "pl": "robak mózgu",
-            "ru": "мозговой червь",
-            "sv": "hjärnmask"
-        },
-        "pronunciation": "EL-tu-ngawng",
-        "pos": "n",
-        "frequency": 0.0,
-        "first_sound": "e",
-        "last_sound": "ŋ"
-    },
     "pamtseo": {
         "translations": {
             "de": "Musik",
@@ -4942,7 +4856,7 @@
         },
         "pronunciation": "HA",
         "pos": "conj",
-        "frequency": 0.34,
+        "frequency": 0.33,
         "first_sound": "h",
         "last_sound": "a"
     },
@@ -5033,7 +4947,7 @@
         },
         "pronunciation": "'AW-ve",
         "pos": "adj",
-        "frequency": 0.13,
+        "frequency": 0.12,
         "first_sound": "'",
         "last_sound": "e"
     },
@@ -6721,7 +6635,7 @@
         },
         "pronunciation": "TSAM-si-yu",
         "pos": "n",
-        "frequency": 0.08,
+        "frequency": 0.07,
         "first_sound": "c",
         "last_sound": "u"
     },
@@ -7252,24 +7166,6 @@
         "frequency": 0.0,
         "first_sound": "h",
         "last_sound": "a"
-    },
-    "tìoeyktìng": {
-        "translations": {
-            "en": "explanation",
-            "sv": "förklaring",
-            "ru": "объяснение",
-            "pl": "wyjaśnienie",
-            "nl": "uitleg",
-            "hu": "magyarázat",
-            "fr": "explication",
-            "et": "seletus",
-            "de": "Erklärung"
-        },
-        "pronunciation": "tì-o-EYK-tìng",
-        "pos": "n",
-        "frequency": 0.0,
-        "first_sound": "t",
-        "last_sound": "ŋ"
     },
     "txurtseng": {
         "translations": {
@@ -8080,23 +7976,6 @@
         "first_sound": "t",
         "last_sound": "l"
     },
-    "fnetxum": {
-        "translations": {
-            "de": "Allergen",
-            "en": "allergen",
-            "et": "allergeen, allergia tekitaja",
-            "fr": "allergène",
-            "hu": "allergén",
-            "nl": "allergeen",
-            "pl": "uczulony",
-            "ru": "аллерген"
-        },
-        "pronunciation": "fne-TXUM",
-        "pos": "n",
-        "frequency": 0.0,
-        "first_sound": "f",
-        "last_sound": "m"
-    },
     "frrfen": {
         "translations": {
             "de": "besuchen",
@@ -8184,41 +8063,6 @@
         "pos": "n",
         "frequency": 0.06,
         "first_sound": "p",
-        "last_sound": "p"
-    },
-    "fuke": {
-        "translations": {
-            "de": "oder nicht",
-            "en": "or not",
-            "et": "või mitte",
-            "fr": "... ou non",
-            "hu": "vagy nem",
-            "nl": "of niet",
-            "pl": "lub nie",
-            "ru": "или нет",
-            "sv": "eller inte"
-        },
-        "pronunciation": "fu-KE",
-        "pos": "conj",
-        "frequency": 0.03,
-        "first_sound": "f",
-        "last_sound": "e"
-    },
-    "slosneppe": {
-        "translations": {
-            "de": "wie breit?",
-            "en": "what width, how wide?",
-            "et": "kui lai?",
-            "fr": "quelle largeur?",
-            "hu": "milyen széles?",
-            "nl": "welke breedte, hoe breed?",
-            "pl": "jak szeroki",
-            "ru": "как широко"
-        },
-        "pronunciation": "slo-SNE-pp",
-        "pos": "inter",
-        "frequency": 0.0,
-        "first_sound": "s",
         "last_sound": "p"
     },
     "tìkusar": {
@@ -8709,24 +8553,6 @@
         "frequency": 0.02,
         "first_sound": "f",
         "last_sound": "k"
-    },
-    "plltxe": {
-        "translations": {
-            "en": "speak",
-            "sv": "prata, tala",
-            "ru": "говорить, изъясняться",
-            "pl": "mówić, rozmawiać",
-            "nl": "spreken, zeggen",
-            "hu": "beszél",
-            "fr": "parler",
-            "et": "rääkima",
-            "de": "sprechen, reden"
-        },
-        "pronunciation": "pll-TXE",
-        "pos": "v:tr",
-        "frequency": 0.4,
-        "first_sound": "p",
-        "last_sound": "e"
     },
     "nì'i'a": {
         "translations": {
@@ -9497,18 +9323,6 @@
         "first_sound": "w",
         "last_sound": "n"
     },
-    "olo'eykte": {
-        "translations": {
-            "en": "female clan leader",
-            "nl": "vrouwelijk stamhoofd",
-            "fr": "cheffe de clan"
-        },
-        "pronunciation": "o-lo-'eyk-TE",
-        "pos": "n",
-        "frequency": 0.0,
-        "first_sound": "o",
-        "last_sound": "e"
-    },
     "man": {
         "translations": {
             "en": "belong",
@@ -9613,13 +9427,13 @@
     },
     "tìzin": {
         "translations": {
-            "en": "tangle(ment); mass of something twisted together",
-            "nl": "kluwen, in elkaar geknoopte massa",
-            "fr": "enchevêtrement, masse de choses emmêlées ensemble",
-            "de": "Durcheinander, Gewirr, Wirrwarr"
+            "en": "tangle, tangle up",
+            "de": "verwirren, durcheinander kommen, durcheinander bringen, verheddern",
+            "nl": "in de knoop raken, verward raken",
+            "fr": "mêler, enchevêtrer"
         },
-        "pronunciation": "N/A",
-        "pos": "n",
+        "pronunciation": "tì-ZIN",
+        "pos": "n:si",
         "frequency": 0.0,
         "first_sound": "t",
         "last_sound": "n"
@@ -10508,22 +10322,6 @@
         "first_sound": "f",
         "last_sound": "p"
     },
-    "tì'al": {
-        "translations": {
-            "de": "Verschwendung",
-            "en": "wastefulness",
-            "et": "raiskamine",
-            "fr": "gaspillage",
-            "hu": "pazarlás",
-            "nl": "verspilling",
-            "ru": "напрасно"
-        },
-        "pronunciation": "tì--'al",
-        "pos": "n",
-        "frequency": 0.0,
-        "first_sound": "t",
-        "last_sound": "l"
-    },
     "uniltìrantokxolo'": {
         "translations": {
             "en": "clan or group of avatars",
@@ -10585,7 +10383,7 @@
         },
         "pronunciation": "tì-REYN",
         "pos": "n",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "t",
         "last_sound": "n"
     },
@@ -11639,7 +11437,7 @@
         },
         "pronunciation": "zaw-PRR-te'",
         "pos": "v:in",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "z",
         "last_sound": "'"
     },
@@ -15018,28 +14816,15 @@
     },
     "tsaktap": {
         "translations": {
-            "de": "Gewalt, Gewalttätigkeit, Brutalität, gewaltsames Vorgehen",
-            "en": "violence",
-            "fr": "violence",
-            "nl": "geweld"
+            "de": "Gewalt anwenden, gewalttätig sein, gewaltbereit sein",
+            "en": "be violent, use violence",
+            "fr": "être violent, utiliser la violence",
+            "nl": "geweld gebruiken, gewelddadig zijn"
         },
-        "pronunciation": "N/A",
-        "pos": "n",
-        "frequency": 0.03,
+        "pronunciation": "TSAK-tap",
+        "pos": "n:si",
+        "frequency": 0.02,
         "first_sound": "c",
-        "last_sound": "p"
-    },
-    "letsaktap": {
-        "translations": {
-            "de": "gewalttätig, gewaltsam, brutal",
-            "en": "violent",
-            "fr": "violent",
-            "nl": "gewelddadig"
-        },
-        "pronunciation": "N/A",
-        "pos": "adj",
-        "frequency": 0.0,
-        "first_sound": "l",
         "last_sound": "p"
     },
     "natxu": {
@@ -15090,7 +14875,7 @@
         },
         "pronunciation": "LA-'um",
         "pos": "v:in",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "l",
         "last_sound": "m"
     },
@@ -15273,7 +15058,7 @@
         },
         "pronunciation": "LI",
         "pos": "adv",
-        "frequency": 0.18,
+        "frequency": 0.19,
         "first_sound": "l",
         "last_sound": "i"
     },
@@ -15507,7 +15292,7 @@
         },
         "pronunciation": "me-o-a-u-ni-a-E-a",
         "pos": "n",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "m",
         "last_sound": "a"
     },
@@ -15652,7 +15437,7 @@
         },
         "pronunciation": "o-HAKX",
         "pos": "adj",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "o",
         "last_sound": "g"
     },
@@ -16664,24 +16449,6 @@
         "first_sound": "n",
         "last_sound": "n"
     },
-    "mll'an": {
-        "translations": {
-            "de": "akzeptieren, annehmen",
-            "en": "accept",
-            "et": "vastu võtma, aktsepteerima",
-            "fr": "accepter",
-            "hu": "elfogad",
-            "nl": "accepteren",
-            "pl": "akceptować",
-            "ru": "принять",
-            "sv": "acceptera"
-        },
-        "pronunciation": "mll-'AN",
-        "pos": "v:tr",
-        "frequency": 0.02,
-        "first_sound": "m",
-        "last_sound": "n"
-    },
     "steng": {
         "translations": {
             "de": "ähnlich",
@@ -17208,25 +16975,6 @@
         "first_sound": "l",
         "last_sound": "p"
     },
-    "'eyt": {
-        "translations": {
-            "de": "das Zeichen '8' (nicht der Wert 'acht')",
-            "en": "the symbol 8 (not the value eight)",
-            "et": "sümbol 8 (mitte väärtus)",
-            "fr": "([le symbole]) 8 | ([pas sa valeur])",
-            "hu": "a 8as jele (nem az értéke!) (pl. telefonszámnál használható)",
-            "nl": "het symbool 8 (niet de waarde acht)",
-            "pl": "cyfra 8 (nie wartość)",
-            "ru": "восьмерка, символ 8 (не значение числа 8)",
-            "sv": "symbolen 8 (inte värdet av åtta)",
-            "x-navi": "sawtuteyä pamrelvi a tseyä ral lu \"vol\""
-        },
-        "pronunciation": "'EYT",
-        "pos": "n",
-        "frequency": 0.0,
-        "first_sound": "'",
-        "last_sound": "t"
-    },
     "ham": {
         "translations": {
             "de": "letzte/r/s, vorige/r/s",
@@ -17280,24 +17028,6 @@
         "frequency": 0.02,
         "first_sound": "k",
         "last_sound": "m"
-    },
-    "nayn": {
-        "translations": {
-            "de": "das Zeichen '9' (nicht der Wert 'neun')",
-            "en": "the symbol 9 (not the value nine)",
-            "et": "sümbol 9 (mitte väärtus)",
-            "fr": "neuf (le symbole '9')",
-            "hu": "a 9es jele (nem az értéke!) (pl. telefonszámnál használható)",
-            "nl": "het symbool 9 (niet de waarde negen)",
-            "pl": "cyfra 9 (nie wartość)",
-            "ru": "девятка, символ 9 (не значение 9)",
-            "sv": "symbolen 9 (inte värdet av nio)"
-        },
-        "pronunciation": "NAYN",
-        "pos": "n",
-        "frequency": 0.0,
-        "first_sound": "n",
-        "last_sound": "n"
     },
     "wou": {
         "translations": {
@@ -17827,7 +17557,7 @@
         },
         "pronunciation": "ep-'ANG",
         "pos": "adj",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "e",
         "last_sound": "ŋ"
     },
@@ -18466,7 +18196,7 @@
         },
         "pronunciation": "nì-LUN",
         "pos": "adv",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "n",
         "last_sound": "n"
     },
@@ -19857,7 +19587,7 @@
         },
         "pronunciation": "SU-nu",
         "pos": "v:in",
-        "frequency": 0.69,
+        "frequency": 0.7,
         "first_sound": "s",
         "last_sound": "u"
     },
@@ -20956,7 +20686,7 @@
         },
         "pronunciation": "YA-yo",
         "pos": "n",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "y",
         "last_sound": "o"
     },
@@ -21440,7 +21170,7 @@
         },
         "pronunciation": "HOL",
         "pos": "adj",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "h",
         "last_sound": "l"
     },
@@ -23099,42 +22829,6 @@
         "first_sound": "k",
         "last_sound": "n"
     },
-    "sweriye": {
-        "translations": {
-            "de": "Schweden",
-            "en": "Sweden",
-            "et": "Rootsi",
-            "fr": "Suède",
-            "hu": "Svédország",
-            "nl": "Zweden",
-            "pl": "Szwecja",
-            "ru": "Швеция",
-            "sv": "Sverige"
-        },
-        "pronunciation": "SWERIYE",
-        "pos": "n:pr",
-        "frequency": 0.01,
-        "first_sound": "s",
-        "last_sound": "e"
-    },
-    "olo'eyktan": {
-        "translations": {
-            "en": "clan leader",
-            "sv": "klan ledare",
-            "ru": "вождь клана",
-            "pl": "przywódca klanu",
-            "nl": "stamhoofd",
-            "hu": "törzsfő, klánvezető",
-            "fr": "chef de clan",
-            "et": "hõimu valitseja",
-            "de": "Stammesanführer, Clanführer"
-        },
-        "pronunciation": "o-lo-'EYK-tan",
-        "pos": "n",
-        "frequency": 0.23,
-        "first_sound": "o",
-        "last_sound": "n"
-    },
     "nìtengfya": {
         "translations": {
             "de": "auf die gleiche Art und Weise (ähnliche Handlung)",
@@ -23185,24 +22879,6 @@
         "frequency": 0.0,
         "first_sound": "t",
         "last_sound": "i"
-    },
-    "oeyktìng": {
-        "translations": {
-            "en": "explain (why)",
-            "sv": "förklara (varför) (ii)",
-            "ru": "разъяснять (почему)",
-            "pl": "wyjaśniać (ii)",
-            "nl": "uitleggen (ii)",
-            "hu": "megmagyaráz (miért)",
-            "fr": "expliquer pourquoi",
-            "et": "selgitama, seletama (e)",
-            "de": "erklären (warum), erläutern, begründen (ii)"
-        },
-        "pronunciation": "o-EYK-tìng",
-        "pos": "v:tr",
-        "frequency": 0.05,
-        "first_sound": "o",
-        "last_sound": "ŋ"
     },
     "pìlok": {
         "translations": {
@@ -23431,7 +23107,7 @@
         },
         "pronunciation": "so-A-i-a",
         "pos": "n",
-        "frequency": 0.08,
+        "frequency": 0.07,
         "first_sound": "s",
         "last_sound": "a"
     },
@@ -23689,42 +23365,6 @@
         "first_sound": "v",
         "last_sound": "m"
     },
-    "muntrram": {
-        "translations": {
-            "de": "letztes Wochenende",
-            "en": "last weekend",
-            "et": "eelmine nädalavahetus",
-            "fr": "le weekend précédent | le weekend passé",
-            "hu": "múlt hétvége",
-            "nl": "vorig weekeinde",
-            "pl": "poprzedni weekend",
-            "ru": "последние выходные",
-            "sv": "förra helgen"
-        },
-        "pronunciation": "MUN-trr-am",
-        "pos": "n",
-        "frequency": 0.01,
-        "first_sound": "m",
-        "last_sound": "m"
-    },
-    "kintrram": {
-        "translations": {
-            "de": "letzte Woche",
-            "en": "last week",
-            "et": "eelmine nädal",
-            "fr": "la semaine précédente | la semaine passée",
-            "hu": "a múlt (előző) hét",
-            "nl": "vorige week",
-            "pl": "poprzedni tydzień",
-            "ru": "последняя неделя",
-            "sv": "förra veckan"
-        },
-        "pronunciation": "KIN-trr-am",
-        "pos": "n",
-        "frequency": 0.03,
-        "first_sound": "k",
-        "last_sound": "m"
-    },
     "trrtsìve": {
         "translations": {
             "de": "Mittwoch",
@@ -23946,7 +23586,7 @@
         },
         "pronunciation": "N/A",
         "pos": "intj",
-        "frequency": 1.05,
+        "frequency": 1.04,
         "first_sound": "h",
         "last_sound": "h"
     },
@@ -24426,7 +24066,7 @@
         },
         "pronunciation": "'O-ngokx",
         "pos": "v:in",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "'",
         "last_sound": "g"
     },
@@ -25020,7 +24660,7 @@
         },
         "pronunciation": "tìk-'ÌN",
         "pos": "n",
-        "frequency": 0.02,
+        "frequency": 0.03,
         "first_sound": "t",
         "last_sound": "n"
     },
@@ -25979,7 +25619,7 @@
         },
         "pronunciation": "VIN",
         "pos": "v:tr",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "v",
         "last_sound": "n"
     },
@@ -27172,7 +26812,7 @@
         },
         "pronunciation": "syu-RA",
         "pos": "n",
-        "frequency": 0.05,
+        "frequency": 0.06,
         "first_sound": "s",
         "last_sound": "a"
     },
@@ -27419,24 +27059,6 @@
         "first_sound": "n",
         "last_sound": "e"
     },
-    "letwan": {
-        "translations": {
-            "de": "gewieft, raffiniert (von einer Person)",
-            "en": "dodgy, sneaky (of a person)",
-            "et": "kaval, hiiliv (inimese kohta)",
-            "fr": "douteux | sournois ([pour une personne])",
-            "hu": "cseles, trükkös (személy)",
-            "nl": "achterbaks (van een persoon)",
-            "pl": "przebiegły, cwany",
-            "ru": "изворотливый, скользкий (тдл.)",
-            "sv": "mystisk, lurig, skum, lömsk (om en person)"
-        },
-        "pronunciation": "let-WAN",
-        "pos": "adj",
-        "frequency": 0.0,
-        "first_sound": "l",
-        "last_sound": "n"
-    },
     "slele": {
         "translations": {
             "de": "schwimmen",
@@ -27521,23 +27143,6 @@
         "pronunciation": "nì-NÄN",
         "pos": "adv",
         "frequency": 0.02,
-        "first_sound": "n",
-        "last_sound": "n"
-    },
-    "nän": {
-        "translations": {
-            "de": "abnehmen, vermindern, sinken, abfallen",
-            "en": "decrease",
-            "et": "vähendama",
-            "fr": "réduire | diminuer",
-            "hu": "csökkent",
-            "nl": "verlagen, verminderen",
-            "pl": "zmniejszać",
-            "ru": "уменьшить"
-        },
-        "pronunciation": "NÄN",
-        "pos": "v:in",
-        "frequency": 0.01,
         "first_sound": "n",
         "last_sound": "n"
     },
@@ -28141,20 +27746,6 @@
         "frequency": 0.0,
         "first_sound": "f",
         "last_sound": "p"
-    },
-    "'onglawn": {
-        "translations": {
-            "en": "exhiliration of first bonding",
-            "nl": "euforie bij de eerste bond",
-            "de": "Euphorie / Hochgefühl des Ersten Bandes",
-            "fr": "euphorie du premier lien",
-            "x-navi": "nitrama tì'efu a fko 'efu krra tsaheyl si nì'awve"
-        },
-        "pronunciation": "'ONG-lawn",
-        "pos": "n",
-        "frequency": 0.0,
-        "first_sound": "'",
-        "last_sound": "n"
     },
     "sätseri": {
         "translations": {
@@ -28908,24 +28499,6 @@
         "first_sound": "t",
         "last_sound": "m"
     },
-    "zenke": {
-        "translations": {
-            "de": "nicht dürfen (ii)",
-            "en": "must not",
-            "et": "mitte tohtima (e)",
-            "fr": "ne pas devoir (obligation)",
-            "hu": "tilos, nem szabad",
-            "nl": "niet moeten",
-            "pl": "nie móc, nie wolno",
-            "ru": "модальный глагол долженствования с отрицанием (не должен)",
-            "sv": "få inte"
-        },
-        "pronunciation": "ZENG-ke",
-        "pos": "v:m",
-        "frequency": 0.01,
-        "first_sound": "z",
-        "last_sound": "e"
-    },
     "teri": {
         "translations": {
             "de": "über, betreffend, bezüglich, hinsichtlich",
@@ -29283,7 +28856,7 @@
         },
         "pronunciation": "'I-a",
         "pos": "v:in",
-        "frequency": 0.0,
+        "frequency": 0.01,
         "first_sound": "'",
         "last_sound": "a"
     },
@@ -29356,7 +28929,7 @@
         },
         "pronunciation": "SRE",
         "pos": "adp:len",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "s",
         "last_sound": "e"
     },
@@ -29393,7 +28966,7 @@
         },
         "pronunciation": "FRA-to",
         "pos": "part",
-        "frequency": 0.18,
+        "frequency": 0.19,
         "first_sound": "f",
         "last_sound": "o"
     },
@@ -30041,23 +29614,6 @@
         "frequency": 0.26,
         "first_sound": "k",
         "last_sound": "a"
-    },
-    "sko": {
-        "translations": {
-            "de": "(etwas, jemand) als (etwas, jemand anderes), in der Rolle als, in der Eigenschaft als",
-            "en": "something as, in the capacity of, or in the role of, something else",
-            "et": "olev kääne (kellegina, millegina)",
-            "fr": "en tant que",
-            "hu": "mint..., ... szerepében",
-            "nl": "iets als, met de capaciteit van/in de rol van iets anders",
-            "pl": "jako, w roli",
-            "ru": "как, в роли"
-        },
-        "pronunciation": "SKO",
-        "pos": "adp:len",
-        "frequency": 0.06,
-        "first_sound": "s",
-        "last_sound": "o"
     },
     "väng": {
         "translations": {
@@ -31476,7 +31032,7 @@
         },
         "pronunciation": "leym-FE'",
         "pos": "v:in",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "l",
         "last_sound": "'"
     },
@@ -32095,22 +31651,6 @@
         "frequency": 0.0,
         "first_sound": "f",
         "last_sound": "i"
-    },
-    "momek": {
-        "translations": {
-            "de": "hohl, nicht fest",
-            "en": "hollow, not solid",
-            "et": "õõnes, mitte tahke",
-            "fr": "pas solide",
-            "hu": "üreges, nem tömör",
-            "nl": "hol, niet solide",
-            "ru": "пористый"
-        },
-        "pronunciation": "MO-mek",
-        "pos": "adj",
-        "frequency": 0.0,
-        "first_sound": "m",
-        "last_sound": "k"
     },
     "nìftär": {
         "translations": {
@@ -33756,7 +33296,7 @@
         },
         "pronunciation": "nì-TAM",
         "pos": "adv",
-        "frequency": 0.03,
+        "frequency": 0.04,
         "first_sound": "n",
         "last_sound": "m"
     },
@@ -33935,7 +33475,7 @@
         },
         "pronunciation": "SYEN",
         "pos": "adj",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "s",
         "last_sound": "n"
     },
@@ -34312,7 +33852,7 @@
         },
         "pronunciation": "TSE",
         "pos": "intj",
-        "frequency": 0.13,
+        "frequency": 0.12,
         "first_sound": "c",
         "last_sound": "e"
     },
@@ -34367,7 +33907,7 @@
         },
         "pronunciation": "SRA-ke",
         "pos": "part",
-        "frequency": 0.27,
+        "frequency": 0.28,
         "first_sound": "s",
         "last_sound": "e"
     },
@@ -35163,7 +34703,7 @@
         },
         "pronunciation": "O-e",
         "pos": "pn",
-        "frequency": 5.58,
+        "frequency": 5.59,
         "first_sound": "o",
         "last_sound": "e"
     },
@@ -35438,7 +34978,7 @@
         },
         "pronunciation": "KE-kem",
         "pos": "pn",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "k",
         "last_sound": "m"
     },
@@ -35564,7 +35104,7 @@
         },
         "pronunciation": "FMAWN-ta",
         "pos": "ctr",
-        "frequency": 0.11,
+        "frequency": 0.1,
         "first_sound": "f",
         "last_sound": "a"
     },
@@ -35891,7 +35431,7 @@
         },
         "pronunciation": "fì-TXAN",
         "pos": "adv",
-        "frequency": 0.03,
+        "frequency": 0.02,
         "first_sound": "f",
         "last_sound": "n"
     },
@@ -35910,8 +35450,499 @@
         },
         "pronunciation": "'RR-ta",
         "pos": "n:pr",
-        "frequency": 0.08,
+        "frequency": 0.07,
         "first_sound": "'",
+        "last_sound": "a"
+    },
+    "fnetxum": {
+        "translations": {
+            "de": "Allergen",
+            "en": "allergen",
+            "et": "allergeen, allergia tekitaja",
+            "fr": "allergène",
+            "hu": "allergén",
+            "nl": "allergeen",
+            "pl": "uczulony",
+            "ru": "аллерген"
+        },
+        "pronunciation": "fne-TXUM",
+        "pos": "n",
+        "frequency": 0.0,
+        "first_sound": "f",
+        "last_sound": "m"
+    },
+    "letsaktap": {
+        "translations": {
+            "en": "violent",
+            "nl": "gewelddadig",
+            "fr": "violent",
+            "de": "gewalttätig, gewaltsam, brutal"
+        },
+        "pronunciation": "le-TSAK-tap",
+        "pos": "adj",
+        "frequency": 0.0,
+        "first_sound": "l",
+        "last_sound": "p"
+    },
+    "tulkun": {
+        "translations": {
+            "en": "tulkun (sentient sea creature)"
+        },
+        "pronunciation": "N/A",
+        "pos": "n",
+        "frequency": 0.0,
+        "first_sound": "t",
+        "last_sound": "n"
+    },
+    "tsurak": {
+        "translations": {
+            "en": "skimwing"
+        },
+        "pronunciation": "TSU-rak",
+        "pos": "n",
+        "frequency": 0.0,
+        "first_sound": "c",
+        "last_sound": "k"
+    },
+    "'onglawn": {
+        "translations": {
+            "en": "exhilaration of first bonding",
+            "xNavi": "nitrama tì'efu a fko 'efu krra tsaheyl si nì'awve",
+            "fr": "euphorie du premier lien",
+            "de": "Euphorie / Hochgefühl des Ersten Bandes",
+            "nl": "euforie bij de eerste bond"
+        },
+        "pronunciation": "'ONG-lawn",
+        "pos": "n",
+        "frequency": 0.0,
+        "first_sound": "'",
+        "last_sound": "n"
+    },
+    "fuke": {
+        "translations": {
+            "de": "oder nicht",
+            "en": "or not",
+            "et": "või mitte",
+            "fr": "... ou non",
+            "hu": "vagy nem",
+            "nl": "of niet",
+            "pl": "lub nie",
+            "ru": "или нет",
+            "sv": "eller inte"
+        },
+        "pronunciation": "fu-KE",
+        "pos": "conj",
+        "frequency": 0.03,
+        "first_sound": "f",
+        "last_sound": "e"
+    },
+    "eltungawng": {
+        "translations": {
+            "en": "brainworm, glow worm",
+            "sv": "hjärnmask",
+            "ru": "мозговой червь",
+            "pl": "robak mózgu",
+            "nl": "breinworm",
+            "hu": "agyféreg (pandorai állatfaj)",
+            "fr": "brainworm",
+            "et": "Uneuss (brainworm)",
+            "de": "Gehirnwurm"
+        },
+        "pronunciation": "EL-tu-ngawng",
+        "pos": "n",
+        "frequency": 0.0,
+        "first_sound": "e",
+        "last_sound": "ŋ"
+    },
+    "sko": {
+        "translations": {
+            "en": "as, in the capacity of, or in the role of",
+            "ru": "как, в роли",
+            "pl": "jako, w roli",
+            "nl": "iets als, met de capaciteit van/in de rol van iets anders",
+            "hu": "mint..., ... szerepében",
+            "fr": "en tant que",
+            "et": "olev kääne (kellegina, millegina)",
+            "de": "(etwas, jemand) als (etwas, jemand anderes), in der Rolle als, in der Eigenschaft als"
+        },
+        "pronunciation": "SKO",
+        "pos": "adp:len",
+        "frequency": 0.06,
+        "first_sound": "s",
+        "last_sound": "o"
+    },
+    "snumìna": {
+        "translations": {
+            "en": "dim (of intelligence)",
+            "xNavi": "(tute) a ke lu kanu, a lu skxawng",
+            "sv": "dum, korkad (om en person)",
+            "ru": "плохо соображающий, недалёкий",
+            "pl": "słaby",
+            "nl": "suf, niet slim",
+            "hu": "sötét, buta",
+            "fr": "incertain | indécis (pour une personne)",
+            "et": "tuhm, tuim (inimese kohta)",
+            "de": "dumm, einfältig"
+        },
+        "pronunciation": "SNU-mì-na",
+        "pos": "adj",
+        "frequency": 0.01,
+        "first_sound": "s",
+        "last_sound": "a"
+    },
+    "zenke": {
+        "translations": {
+            "en": "must not",
+            "sv": "få inte",
+            "ru": "модальный глагол долженствования с отрицанием (не должен)",
+            "pl": "nie móc, nie wolno",
+            "nl": "niet moeten",
+            "hu": "tilos, nem szabad",
+            "fr": "ne pas devoir (obligation)",
+            "et": "mitte tohtima (e)",
+            "de": "nicht dürfen (ii)"
+        },
+        "pronunciation": "ZENG-ke",
+        "pos": "v:m",
+        "frequency": 0.01,
+        "first_sound": "z",
+        "last_sound": "e"
+    },
+    "mllte": {
+        "translations": {
+            "en": "agree",
+            "sv": "hålla med, samtycka",
+            "ru": "соглашаться",
+            "pl": "zgadzać się",
+            "nl": "instemmen",
+            "hu": "egyetért",
+            "fr": "consentir | approuver | être d'accord",
+            "et": "nõustuma, leppima",
+            "de": "zustimmen, übereinstimmen"
+        },
+        "pronunciation": "mll-TE",
+        "pos": "v:in",
+        "frequency": 0.14,
+        "first_sound": "m",
+        "last_sound": "e"
+    },
+    "mll'an": {
+        "translations": {
+            "en": "accept",
+            "sv": "acceptera",
+            "ru": "принять",
+            "pl": "akceptować",
+            "nl": "accepteren",
+            "hu": "elfogad",
+            "fr": "accepter",
+            "et": "vastu võtma, aktsepteerima",
+            "de": "akzeptieren, annehmen"
+        },
+        "pronunciation": "mll-'AN",
+        "pos": "v:tr",
+        "frequency": 0.02,
+        "first_sound": "m",
+        "last_sound": "n"
+    },
+    "plltxe": {
+        "translations": {
+            "en": "speak",
+            "de": "sprechen, reden",
+            "et": "rääkima",
+            "fr": "parler",
+            "hu": "beszél",
+            "nl": "spreken, zeggen",
+            "pl": "mówić, rozmawiać",
+            "ru": "говорить, изъясняться",
+            "sv": "prata, tala"
+        },
+        "pronunciation": "pll-TXE",
+        "pos": "v:tr",
+        "frequency": 0.4,
+        "first_sound": "p",
+        "last_sound": "e"
+    },
+    "'eyt": {
+        "translations": {
+            "en": "the symbol 8 (not the value eight)",
+            "xNavi": "sawtuteyä pamrelvi a tseyä ral lu \"vol\"",
+            "sv": "symbolen 8 (inte värdet av åtta)",
+            "ru": "восьмерка, символ 8 (не значение числа 8)",
+            "pl": "cyfra 8 (nie wartość)",
+            "nl": "het symbool 8 (niet de waarde acht)",
+            "hu": "a 8as jele (nem az értéke!) (pl. telefonszámnál használható)",
+            "fr": "([le symbole]) 8 | ([pas sa valeur])",
+            "et": "sümbol 8 (mitte väärtus)",
+            "de": "das Zeichen '8' (nicht der Wert 'acht')"
+        },
+        "pronunciation": "'EYT",
+        "pos": "n",
+        "frequency": 0.0,
+        "first_sound": "'",
+        "last_sound": "t"
+    },
+    "nayn": {
+        "translations": {
+            "en": "the symbol 9 (not the value nine)",
+            "sv": "symbolen 9 (inte värdet av nio)",
+            "ru": "девятка, символ 9 (не значение 9)",
+            "pl": "cyfra 9 (nie wartość)",
+            "nl": "het symbool 9 (niet de waarde negen)",
+            "hu": "a 9es jele (nem az értéke!) (pl. telefonszámnál használható)",
+            "fr": "neuf (le symbole '9')",
+            "et": "sümbol 9 (mitte väärtus)",
+            "de": "das Zeichen '9' (nicht der Wert 'neun')"
+        },
+        "pronunciation": "NAYN",
+        "pos": "n",
+        "frequency": 0.0,
+        "first_sound": "n",
+        "last_sound": "n"
+    },
+    "tsumongwi": {
+        "translations": {
+            "en": "original name for the Omatikaya",
+            "nl": "oorspronkelijke naam voor de Omatikaya",
+            "fr": "nom d'origine des Omatikayas",
+            "de": "Original Name der Omatikaya"
+        },
+        "pronunciation": "TSU-mong-wi",
+        "pos": "n:pr",
+        "frequency": 0.0,
+        "first_sound": "c",
+        "last_sound": "i"
+    },
+    "tì'al": {
+        "translations": {
+            "en": "wastefulness",
+            "ru": "напрасно",
+            "nl": "verspilling",
+            "hu": "pazarlás",
+            "fr": "gaspillage",
+            "et": "raiskamine",
+            "de": "Verschwendung"
+        },
+        "pronunciation": "tì-'AL",
+        "pos": "n",
+        "frequency": 0.0,
+        "first_sound": "t",
+        "last_sound": "l"
+    },
+    "slosneppe": {
+        "translations": {
+            "en": "what width, how wide?",
+            "ru": "как широко",
+            "pl": "jak szeroki",
+            "nl": "welke breedte, hoe breed?",
+            "hu": "milyen széles?",
+            "fr": "quelle largeur?",
+            "et": "kui lai?",
+            "de": "wie breit?"
+        },
+        "pronunciation": "slo-SNEP-pe",
+        "pos": "inter",
+        "frequency": 0.0,
+        "first_sound": "s",
+        "last_sound": "e"
+    },
+    "sweriye": {
+        "translations": {
+            "en": "Sweden",
+            "sv": "Sverige",
+            "ru": "Швеция",
+            "pl": "Szwecja",
+            "nl": "Zweden",
+            "hu": "Svédország",
+            "fr": "Suède",
+            "et": "Rootsi",
+            "de": "Schweden"
+        },
+        "pronunciation": "SWE-ri-ye",
+        "pos": "n:pr",
+        "frequency": 0.01,
+        "first_sound": "s",
+        "last_sound": "e"
+    },
+    "tìoeyktìng": {
+        "translations": {
+            "en": "explanation",
+            "de": "Erklärung",
+            "et": "seletus",
+            "fr": "explication",
+            "hu": "magyarázat",
+            "nl": "uitleg",
+            "pl": "wyjaśnienie",
+            "ru": "объяснение",
+            "sv": "förklaring"
+        },
+        "pronunciation": "tì-o-EYK-tìng",
+        "pos": "n",
+        "frequency": 0.0,
+        "first_sound": "t",
+        "last_sound": "ŋ"
+    },
+    "oeyktìng": {
+        "translations": {
+            "en": "explain",
+            "de": "erklären (warum), erläutern, begründen (ii)",
+            "et": "selgitama, seletama (e)",
+            "fr": "expliquer pourquoi",
+            "hu": "megmagyaráz (miért)",
+            "nl": "uitleggen (ii)",
+            "pl": "wyjaśniać (ii)",
+            "ru": "разъяснять (почему)",
+            "sv": "förklara (varför) (ii)"
+        },
+        "pronunciation": "o-EYK-tìng",
+        "pos": "v:tr",
+        "frequency": 0.05,
+        "first_sound": "o",
+        "last_sound": "ŋ"
+    },
+    "fya'o": {
+        "translations": {
+            "en": "path",
+            "sv": "väg, stig, sätt",
+            "ru": "путь, дорога",
+            "pl": "spsób, zwyczaj, scieżka",
+            "nl": "pad",
+            "hu": "ösvény, út, mód",
+            "fr": "voie | chemin",
+            "et": "tee, rada, komme, viis",
+            "de": "Pfad, Weg"
+        },
+        "pronunciation": "FYA-'o",
+        "pos": "n",
+        "frequency": 0.14,
+        "first_sound": "f",
+        "last_sound": "o"
+    },
+    "olo'eykte": {
+        "translations": {
+            "en": "female clan leader",
+            "fr": "cheffe de clan",
+            "nl": "vrouwelijk stamhoofd",
+            "de": "weiblicher Stammesanführer, Clanführer"
+        },
+        "pronunciation": "o-lo-'eyk-TE",
+        "pos": "n",
+        "frequency": 0.0,
+        "first_sound": "o",
+        "last_sound": "e"
+    },
+    "olo'eyktan": {
+        "translations": {
+            "en": "clan leader (gender-neutral)",
+            "sv": "klan ledare",
+            "ru": "вождь клана",
+            "pl": "przywódca klanu",
+            "nl": "stamhoofd (genderneutraal)",
+            "hu": "törzsfő, klánvezető",
+            "fr": "chef de clan",
+            "et": "hõimu valitseja",
+            "de": "Stammesanführer, Clanführer (Geslechtsneutral)"
+        },
+        "pronunciation": "o-lo-'EYK-tan",
+        "pos": "n",
+        "frequency": 0.23,
+        "first_sound": "o",
+        "last_sound": "n"
+    },
+    "nän": {
+        "translations": {
+            "de": "abnehmen, vermindern, sinken, abfallen",
+            "en": "decrease",
+            "et": "vähendama",
+            "fr": "réduire | diminuer",
+            "hu": "csökkent",
+            "nl": "verlagen, verminderen",
+            "pl": "zmniejszać",
+            "ru": "уменьшить"
+        },
+        "pronunciation": "NÄN",
+        "pos": "v:in",
+        "frequency": 0.01,
+        "first_sound": "n",
+        "last_sound": "n"
+    },
+    "muntrram": {
+        "translations": {
+            "en": "last weekend",
+            "sv": "förra helgen",
+            "ru": "последние выходные",
+            "pl": "poprzedni weekend",
+            "nl": "vorig weekeinde",
+            "hu": "múlt hétvége",
+            "fr": "le weekend précédent | le weekend passé",
+            "et": "eelmine nädalavahetus",
+            "de": "letztes Wochenende"
+        },
+        "pronunciation": "mun-trr-AM",
+        "pos": "n",
+        "frequency": 0.01,
+        "first_sound": "m",
+        "last_sound": "m"
+    },
+    "kintrram": {
+        "translations": {
+            "en": "last week",
+            "sv": "förra veckan",
+            "ru": "последняя неделя",
+            "pl": "poprzedni tydzień",
+            "nl": "vorige week",
+            "hu": "a múlt (előző) hét",
+            "fr": "la semaine précédente | la semaine passée",
+            "et": "eelmine nädal",
+            "de": "letzte Woche"
+        },
+        "pronunciation": "kin-trr-AM",
+        "pos": "n",
+        "frequency": 0.03,
+        "first_sound": "k",
+        "last_sound": "m"
+    },
+    "letwan": {
+        "translations": {
+            "de": "gewieft, raffiniert (von einer Person)",
+            "en": "dodgy, sneaky (of a person)",
+            "et": "kaval, hiiliv (inimese kohta)",
+            "fr": "douteux | sournois ([pour une personne])",
+            "hu": "cseles, trükkös (személy)",
+            "nl": "achterbaks (van een persoon)",
+            "pl": "przebiegły, cwany",
+            "ru": "изворотливый, скользкий (тдл.)",
+            "sv": "mystisk, lurig, skum, lömsk (om en person)"
+        },
+        "pronunciation": "let-WAN",
+        "pos": "adj",
+        "frequency": 0.0,
+        "first_sound": "l",
+        "last_sound": "n"
+    },
+    "momek": {
+        "translations": {
+            "de": "hohl, nicht fest",
+            "en": "hollow, not solid",
+            "et": "õõnes, mitte tahke",
+            "fr": "pas solide",
+            "hu": "üreges, nem tömör",
+            "nl": "hol, niet solide",
+            "ru": "пористый"
+        },
+        "pronunciation": "MO-mek",
+        "pos": "adj",
+        "frequency": 0.0,
+        "first_sound": "m",
+        "last_sound": "k"
+    },
+    "nìtrea": {
+        "translations": {
+            "en": "in spirit"
+        },
+        "pronunciation": "nìt-RE-a",
+        "pos": "adv",
+        "frequency": 0.0,
+        "first_sound": "n",
         "last_sound": "a"
     }
 }

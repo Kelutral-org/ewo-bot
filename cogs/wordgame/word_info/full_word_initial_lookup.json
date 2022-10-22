@@ -43,7 +43,6 @@
         "'on",
         "'asap",
         "'ango",
-        "'eyt",
         "'are",
         "'ewan",
         "'eylan",
@@ -66,7 +65,6 @@
         "'ìp",
         "'llngo",
         "'ul",
-        "'onglawn",
         "'ä'o",
         "'ampirikx",
         "'al",
@@ -91,7 +89,9 @@
         "'rrpxom",
         "'ekxinum",
         "'e'in",
-        "'rrta"
+        "'rrta",
+        "'onglawn",
+        "'eyt"
     ],
     "a": [
         "alaksi",
@@ -129,7 +129,6 @@
     "e": [
         "europa",
         "eltu",
-        "eltungawng",
         "emza'u",
         "emkäfya",
         "etrìp",
@@ -142,7 +141,8 @@
         "eampin",
         "ekxtxu",
         "eo",
-        "ekxan"
+        "ekxan",
+        "eltungawng"
     ],
     "é": [],
     "è": [],
@@ -162,7 +162,6 @@
         "ftue",
         "ftxavang",
         "fu",
-        "fya'o",
         "fìtseng",
         "fratxon",
         "frrtu",
@@ -173,9 +172,7 @@
         "fyengkekin",
         "fìtseng(e)",
         "fìtsenge",
-        "fnetxum",
         "frrfen",
-        "fuke",
         "fyinep'angpe",
         "fpak",
         "fmetok",
@@ -288,7 +285,10 @@
         "fwa",
         "fmawnta",
         "fayluta",
-        "fìtxan"
+        "fìtxan",
+        "fnetxum",
+        "fuke",
+        "fya'o"
     ],
     "h": [
         "hangham",
@@ -479,7 +479,6 @@
         "koak",
         "kanu",
         "kakrel",
-        "kintrram",
         "kllte",
         "kamun",
         "kenten",
@@ -519,7 +518,8 @@
         "kunsìp",
         "krrnekx",
         "kawtu",
-        "kekem"
+        "kekem",
+        "kintrram"
     ],
     "g": [
         "kxa",
@@ -616,7 +616,6 @@
         "la'ape",
         "la'a",
         "lìktap",
-        "letsaktap",
         "la'um",
         "leronsrel",
         "lisre",
@@ -663,7 +662,6 @@
         "letsim",
         "lì'uvan",
         "litx",
-        "letwan",
         "leioae",
         "lekxan",
         "la'ang",
@@ -695,7 +693,9 @@
         "lekoren",
         "lor",
         "lì'upuk",
-        "lapo"
+        "lapo",
+        "letsaktap",
+        "letwan"
     ],
     "m": [
         "metkayina",
@@ -703,7 +703,6 @@
         "meyp",
         "mikyun",
         "mip",
-        "mllte",
         "mokri",
         "munge",
         "muntxa",
@@ -732,7 +731,6 @@
         "mawl",
         "meoauniaea",
         "mal",
-        "mll'an",
         "may'",
         "maweypeyyu",
         "munsna",
@@ -752,7 +750,6 @@
         "melo",
         "mo",
         "me'em",
-        "muntrram",
         "muwìntxu",
         "mäkxu",
         "mok",
@@ -774,10 +771,13 @@
         "mìn",
         "mo'ara",
         "mìftxele",
-        "momek",
         "mowar",
         "mowarsiyu",
-        "mi"
+        "mi",
+        "mllte",
+        "mll'an",
+        "muntrram",
+        "momek"
     ],
     "n": [
         "na'rìng",
@@ -861,7 +861,6 @@
         "nìksman",
         "nìwok",
         "nìwawe",
-        "nayn",
         "nìnrra",
         "nrra",
         "nìhoet",
@@ -928,7 +927,6 @@
         "nìwan",
         "nìslele",
         "nìnän",
-        "nän",
         "nì'ul",
         "nì'ul'ul",
         "nìnänän",
@@ -963,7 +961,10 @@
         "nìsti",
         "nemfa",
         "nìso'ha",
-        "nìyawr"
+        "nìyawr",
+        "nayn",
+        "nän",
+        "nìtrea"
     ],
     "ŋ": [
         "ngawng",
@@ -1000,7 +1001,6 @@
         "omum",
         "otranyu",
         "ontu",
-        "olo'eykte",
         "oìsss",
         "okup",
         "oare",
@@ -1008,13 +1008,14 @@
         "ontsang",
         "omatikaya",
         "oeyk",
-        "olo'eyktan",
-        "oeyktìng",
         "ompu",
         "onvä'",
         "onlor",
         "oe",
-        "oeng"
+        "oeng",
+        "oeyktìng",
+        "olo'eykte",
+        "olo'eyktan"
     ],
     "p": [
         "poston",
@@ -1053,7 +1054,6 @@
         "palulukantsyìp",
         "pukap",
         "pänutìng",
-        "plltxe",
         "pum",
         "pung",
         "pil",
@@ -1122,7 +1122,8 @@
         "po",
         "poan",
         "poe",
-        "pamrelsiyu"
+        "pamrelsiyu",
+        "plltxe"
     ],
     "b": [
         "pxasul",
@@ -1244,7 +1245,6 @@
         "sngap",
         "sngel",
         "sngä'i",
-        "snumìna",
         "som",
         "sop",
         "spe'e",
@@ -1284,7 +1284,6 @@
         "swawtsyìp",
         "sa'nutsyìp",
         "späpeng",
-        "slosneppe",
         "silwanin",
         "sngä'iyu",
         "säfmong",
@@ -1400,7 +1399,6 @@
         "sa'sem",
         "sìltsan",
         "slu",
-        "sweriye",
         "soaia",
         "sweylu",
         "seysonìltsan",
@@ -1450,7 +1448,6 @@
         "sästarsìm",
         "sna'o",
         "syeha",
-        "sko",
         "sngum",
         "säwäte",
         "snaytu",
@@ -1496,7 +1493,11 @@
         "syulang",
         "sar",
         "sno",
-        "set"
+        "set",
+        "sko",
+        "snumìna",
+        "slosneppe",
+        "sweriye"
     ],
     "t": [
         "toitslan",
@@ -1535,7 +1536,6 @@
         "tungzup",
         "tupe",
         "tuté",
-        "tìoeyktìng",
         "tute",
         "tutan",
         "tìkenong",
@@ -1571,7 +1571,6 @@
         "tìnui",
         "tarnioang",
         "telem",
-        "tì'al",
         "tìreyn",
         "tìkxìm",
         "tiam",
@@ -1779,10 +1778,12 @@
         "tìng",
         "ta'leng",
         "teynga",
-        "trrpeve"
+        "trrpeve",
+        "tulkun",
+        "tì'al",
+        "tìoeyktìng"
     ],
     "c": [
-        "tsumongwi",
         "tsaheylu",
         "tsam",
         "tsap'alute",
@@ -1913,7 +1914,9 @@
         "tsatu",
         "tsakem",
         "tsawa",
-        "tsmìm"
+        "tsmìm",
+        "tsurak",
+        "tsumongwi"
     ],
     "d": [
         "txan",
@@ -2178,11 +2181,11 @@
         "zare'",
         "zärìp",
         "zave",
-        "zenke",
         "zir",
         "zìm",
         "zìmtswo",
         "zäfi",
-        "zet"
+        "zet",
+        "zenke"
     ]
 }
